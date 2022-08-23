@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script>
+      var add = function (a, b) {
+        let result;
+        result = a + b;
+        return result;
+      };
+      addResult = add(2, 3);
+      alert("Addition is: " + addResult);
+
+      var sub = function (a, b) {
+        let result;
+        setTimeout(() => {
+          result = a - b;
+        }, 3000);
+        return result;
+      };
+      subResult = sub(5, 3);
+      alert("subtraction is: " + subResult);
+
+      var mul = function (a, b) {
+        let promiseObj = new Promise(function (x, y) {
+          setTimeout(() => {
+            x(a * b);
+          }, 3000);
+        });
+        return promiseObj;
+      };
+      res = mul(2, 3);
+      console.log(res);
+
+      promiseObj = mul(2, 3); //mul() doesnt return a value ,returns promise obj
+      promiseObj.then(f1, f2);
+      function f1(result) {
+        alert("multiplication is " + result);
+      }
+      function f2(error) {
+        alert(error);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>this is title</title>
+  </head>
+
+  <body>
+    <p id="one">Hellooooooooooo</p>
+    <p id="two">hii</p>
+    <button onclick="f1()">click me</button>
+
+    <script>
+      function f1() {
+        var text = document.getElementById("one").innerText; //Read
+        document.getElementById("two").innerText = text; //Write
+        document.getElementById("two").style.color = "red";
+      }
+    </script>
+  </body>
+</html>

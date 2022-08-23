@@ -1,0 +1,17 @@
+<html>
+  <body bgcolor="cyan">
+    <script>
+      dateInput = prompt("enter date", "2019/01/15"); // yyyy/mm/dd
+      today = new Date(dateInput);
+
+      var oneJan = new Date(today.getFullYear(), 0, 1); // yyyy,mm,dd
+
+      var numberOfDays = Math.floor((today - oneJan) / (24 * 60 * 60 * 1000));
+
+      // adding 1 since today.getDay() returns value starting from 0
+
+      weekNumber = Math.floor((today.getDay() + 1 + numberOfDays) / 7);
+      alert(weekNumber);
+    </script>
+  </body>
+</html>

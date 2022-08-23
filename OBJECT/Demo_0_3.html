@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      var user = {
+        name: "sachin",
+        age: 35,
+        add: "mumbai",
+      };
+      document.writeln(user); //[object Object]
+      window.alert(user); //[object Object]
+
+      // stringify() converts object to String
+      var userStr = JSON.stringify(user);
+      document.writeln(userStr);
+      window.alert(userStr);
+    </script>
+  </body>
+</html>

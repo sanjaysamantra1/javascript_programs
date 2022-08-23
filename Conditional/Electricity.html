@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<script>
+			var unit = prompt("enter number of units consumed");
+			
+			var amt = 0;
+			
+			if(unit<=100){
+				amt = unit*2
+			}
+			else if(unit>100 && unit<=200){
+				amt = 100*2 + (unit-100)*3
+			}
+			else	
+				amt = 100*2 + 100*3 + (unit-200)*5
+				
+			alert("Amount to be paid "+amt)
+		</script>
+	</body>
+</html>

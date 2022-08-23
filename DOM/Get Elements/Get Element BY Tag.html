@@ -1,0 +1,25 @@
+<HTML>
+
+<BODY>
+    <center>
+        <h1>this is a heading</h1>
+        <h2>
+			<div>This is Div-1</div>
+			<div>This is Div-2</div>
+			<div>This is Div-3</div>
+		</h2>
+    </center>
+    <script>
+		var divs = document.getElementsByTagName("div");
+		alert("no of divs: "+divs.length);
+		
+		console.log(divs[0]);
+		console.log(divs[1]);
+		
+		divs[0].style.color="red";
+		divs[1].style.fontSize = "48px";
+		divs[2].style.backgroundColor="green";
+    </script>
+</BODY>
+
+</HTML>

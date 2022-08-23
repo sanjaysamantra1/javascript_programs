@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+      // create Set Object
+      var set = new Set();
+
+      // add data to set
+      set.add("Potato");
+      set.add("Tomato");
+      set.add("Tomato");
+      set.add("Potato");
+
+      //size of set
+      console.log(set.size);
+
+      //check if element is there in set
+      console.log(set.has("Tomato"));
+
+      // Iterate set items
+      for (var item of set) {
+        console.log(item);
+      }
+    </script>
+  </body>
+</html>

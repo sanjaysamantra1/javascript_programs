@@ -1,0 +1,22 @@
+<html>
+	<body>
+		<span id="one"></span>
+		<span id="two"></span>
+		<span id="three"></span>
+		
+		<button onclick="myFun()">click me </button>
+		
+		<script>
+			function myFun(){
+				var span = document.querySelector('#one');
+				span.innerText = "1<br>2<br>3<br>4\n5\n6\n7\n8";
+				
+				var span = document.querySelector('#two');
+				span.textContent = "1<br>2<br>3<br>4\n5\n6\n7\n8";
+				
+				var span = document.querySelector('#three');
+				span.innerHTML = "1<br>2<br>3<br>4\n5\n6\n7\n8";
+			}			
+		</script>
+	</body>
+</html>

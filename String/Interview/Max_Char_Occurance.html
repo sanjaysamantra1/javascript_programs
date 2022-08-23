@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		var str = "entertainment";
+		var obj = {};		
+		for (c of str)
+		{			
+			obj[c] = obj[c] ? obj[c]+1 : 1;
+		} 
+		maxChar = Object.entries(obj).sort().reverse()[0][0]
+		console.log(obj)
+		console.log(maxChar)
+	</script>
+</body>
+</html>

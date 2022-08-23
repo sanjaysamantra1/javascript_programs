@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <script>
+      "use strict";
+      function f1() {
+        // this = window/undefined(strict mode)
+        console.log(this);
+        this.alert("hiiiiiiiii");
+      }
+      f1();
+    </script>
+  </body>
+</html>

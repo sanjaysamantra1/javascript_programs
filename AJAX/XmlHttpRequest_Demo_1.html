@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <script>
+      function reqListener2() {
+        console.log(this.responseText);
+      }
+      function reqListener() {
+        console.log(this.responseText);
+
+        let reqObj = new XMLHttpRequest();
+        reqObj.addEventListener("load", reqListener2);
+        reqObj.open("GET", "https://jsonplaceholder.typicode.com/comments");
+        reqObj.send();
+      }
+
+      function fetchUsers() {
+        let reqObj = new XMLHttpRequest();
+        reqObj.addEventListener("load", reqListener);
+        reqObj.open("GET", "https://jsonplaceholder.typicode.com/users");
+        reqObj.send();
+      }
+    </script>
+
+    <button onclick="fetchUsers()">fetch users</button>
+  </body>
+</html>

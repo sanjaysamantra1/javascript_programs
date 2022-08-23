@@ -1,0 +1,21 @@
+<html>
+<body>
+   
+    <h2 id="demo">Click on th below button</h2></div>
+    <button type="button" id="btn1" onclick="f1()">click here</button>
+	
+	<div id="test"></div>
+
+    <script>
+		function f1(){
+			var btn = document.createElement("button");
+			btn.innerText = "CLICK ME";			
+			document.getElementById('test').appendChild(btn);
+			btn.addEventListener('click',f2);
+		}
+		function f2(){
+			alert('hiii')
+		}
+    </script>
+</body>
+</html>

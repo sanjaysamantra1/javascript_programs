@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      //Es-5
+      function add() {
+        console.log(arguments);
+
+        let sum = 0;
+        for (let ele of arguments) {
+          sum = sum + ele;
+        }
+        console.log(sum);
+      }
+      add(2, 3, 4, 5);
+      add(2, 3);
+    </script>
+  </body>
+</html>

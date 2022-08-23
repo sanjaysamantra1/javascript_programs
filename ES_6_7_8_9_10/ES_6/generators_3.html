@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      function* naturalNumbers() {
+        let num = 1;
+        while (true) {
+          yield num;
+          num = num + 1;
+        }
+      }
+      const numbers = naturalNumbers();
+      //   console.log(numbers.next().value);
+      //   console.log(numbers.next().value);
+      //   console.log(numbers.next().value);
+      for (i = 1; i <= 10; i++) {
+        console.log(numbers.next().value);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+ <html>
+	<body>
+		<script>
+			function f1(){
+				var a = 10 , b = 20;
+				return function(){
+					console.log(a,b); // a & b are not being garbage collected
+				}				
+			}
+			f1()();
+			
+			function f3(){
+				var c = 30 , d = 40;
+				return function(){
+					console.log(c); // c is not being garbage collected, d is being garbage collected
+				}				
+			}
+			f3()();
+		</script>
+	</body>
+</html>

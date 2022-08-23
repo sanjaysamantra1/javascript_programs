@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      let dateStr = prompt('enter a date','June , 2022')
+      var my_date = new Date(dateStr);
+
+      var first_date = new Date(my_date.getFullYear(), my_date.getMonth(), 1);
+      document.write(first_date);
+
+      var last_date = new Date(my_date.getFullYear(), my_date.getMonth() + 1, 0);
+      document.write("<br>"+last_date);
+
+      // Setting day parameter to 0 means one day less than first day of the month 
+      //  which is last day of the previous month
+    </script>
+  </body>
+</html>

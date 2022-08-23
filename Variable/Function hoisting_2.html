@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+</HEAD>
+
+<BODY>
+<center>
+<script>
+<!--func expression cannt be hoisted-->
+	var myvar=10;
+	
+	(function()
+	{
+	alert(myvar);
+	
+	myFun();
+	
+	var myFun=function()
+	{
+		alert("hello world")
+	}
+		
+	})();
+</script>
+</center>
+</BODY>
+</HTML>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function isAnagram(str1, str2) {
+        let a = str1.split("").sort().join("");
+        let b = str2.split("").sort().join("");
+        return a === b;
+      }
+      console.log(isAnagram("listen", "silent"));
+      console.log(isAnagram("triangle", "integral"));
+      console.log(isAnagram("listen", "listeN"));
+    </script>
+  </body>
+</html>

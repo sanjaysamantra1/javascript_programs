@@ -1,0 +1,41 @@
+<html>
+<body>
+<h1>
+	<script>
+		function job(state) {
+			return new Promise(function(resolve, reject) {
+				if (state) {
+					resolve('success');
+				} else {
+					reject('error');
+				}
+			});
+		}
+
+		let promise = job(true);
+
+		promise
+		.then(function(data) {
+			console.log(data); // 'success'
+
+			return job(false);
+		})
+		.catch(function(error) {
+			console.log(error);   // 'error'
+
+			return 'Error caught';
+		})
+		.then(function(data) {
+			console.log(data); //'error caught'
+
+			return job(true);
+		})
+
+		.catch(function(error) {
+			console.log(error);
+		});
+	
+	// 'success' 'error' 'error caught'
+	</script>
+</body>
+</html>

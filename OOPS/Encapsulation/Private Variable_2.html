@@ -1,0 +1,21 @@
+<HTML>
+<BODY>
+<h1>
+	<script>
+		function Account() {
+			var accNo = 101;
+			var accBal = 5000;
+			this.accType = "savings";
+			this.accInfo = function() {
+				document.write(accNo + "  " + accBal + " " + this.accType)
+			}
+		}
+		var ob1 = new Account();
+		ob1.accInfo();
+
+		document.write("<br>" + ob1.accNo + "  " + ob1.accBal + " "
+				+ ob1.accType);
+	</script>
+</BODY>
+
+</HTML>

@@ -1,0 +1,28 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      //block variable cann't be declared using 'var'
+      // eventhough it is declared inside a block,
+      //it becomes function  scoped
+
+      function varTest() {
+        if (true) {
+          var a = 10; // function
+          console.log("inside block " + a);
+        }
+        console.log("inside function " +a); 
+      }
+      varTest();
+
+      function letTest() {
+        if (true) {
+          let a = 20;
+          console.log("inside block " + a);
+        }
+        console.log("inside function " + a); //error
+      }
+      letTest();
+    </script>
+  </body>
+</html>

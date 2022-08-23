@@ -1,0 +1,30 @@
+<html>
+   <body>  
+      Demonstrating closure for Encapsulation in javascript: </br>
+
+      	<script>    
+			function initializeData() {
+			    var myVar = 1; 
+			    return { 
+			        getVar: function() {
+			            return myVar;
+			        },
+			        setVar: function(value) {
+			            myVar = value;
+			        }
+			    };
+			}
+
+			obj = initializeData();
+			console.dir(obj.getVar)
+		
+			document.write("Initial value of variable: " + obj.getVar() + "</br>");
+
+			obj.setVar(2);
+			document.write("Variable value after update to int: " + obj.getVar() + "</br>");
+
+			obj.setVar("Test Value");
+			document.write("Variable value after update to string: " + obj.getVar() + "</br>");
+	</script>	
+ 	</body>
+</html>

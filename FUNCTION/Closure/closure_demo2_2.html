@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script>
+        function countWrapper() {
+            var counter = 0;
+
+            function updateClickCount() {
+                ++counter;
+                document.getElementById("spnCount").innerHTML = counter;
+            }
+            updateClickCount();
+            return counter;
+        }
+		console.dir(countWrapper)
+        // we have to make sure counter=0 will run once 
+        //The self-invoking function only runs once
+        // for that refer closure_demo2_3
+    </script>
+</head>
+
+<body>
+<h1>
+    <button onclick="countWrapper()">click me</button>
+    <div> you've clicked
+        <span id="spnCount"> 0 </span> times!
+    </div>
+</body>
+
+</html>

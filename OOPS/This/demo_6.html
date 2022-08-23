@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <script>
+      // Arrow functions in class properties are slower
+      // arrow functions are part of objects, normal functions are part pf prototype
+
+      class A {
+        constructor(a) {
+          this.a = a;
+        }
+        xyz = () => {
+          console.log(this.a);
+        };
+
+        pqr() {
+          console.log(this.a);
+        }
+      }
+
+      var obj = new A(5);
+      console.log(obj.hasOwnProperty("xyz")); //prints true
+      console.log(obj.hasOwnProperty("pqr")); //prints false
+      console.log(A.prototype.hasOwnProperty("pqr")); //prints true
+    </script>
+  </body>
+</html>

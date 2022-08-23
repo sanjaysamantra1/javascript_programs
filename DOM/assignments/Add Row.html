@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<p>Click the button to add a new row at the first position of the table and then add cells and content.</p>
+
+<table id="myTable" border=2 width=50%>
+  <tr>
+    <th>Emp Id</th>
+	<th>Name</th>
+	<th>Sal</th>
+  </tr>
+  <tr>
+	<td>111</td>
+	<td>Sachin</td>
+	<td>5000</td>
+  </tr>
+</table>
+<br>
+
+<button onclick="addRow()">Add Row</button>
+
+<script>
+function addRow() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(table.rows.length);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2);
+	cell1.innerHTML = "222"
+	cell2.innerHTML = "Rahul"
+	cell3.innerHTML = "7000"
+}
+</script>
+
+</body>
+</html>
+
+

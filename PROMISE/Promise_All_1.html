@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script>
+      let promise1 = new Promise((resolve, reject) =>
+        setTimeout(() => resolve("result-promise-1"), 2000)
+      );
+      let promise2 = new Promise((resolve, reject) =>
+        setTimeout(() => resolve("result-promise-2"), 4000)
+      );
+      let promise3 = new Promise((resolve, reject) =>
+        setTimeout(() => resolve("result-promise-3"), 3000)
+      );
+
+      Promise.all([promise1, promise2, promise3]).then(
+        (res) => {
+          alert("all promise resolved");
+          console.log(res);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

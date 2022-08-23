@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script>
+      function f1() {
+        let x;
+        for (i = 1; i <= 1000000000; i++) {
+          x = i;
+        }
+        document.writeln("I am f1 ");
+        setTimeout(f1, 100);
+      }
+      setTimeout(f1, 100);
+    </script>
+  </body>
+</html>

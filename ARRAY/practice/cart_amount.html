@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      let cart = [
+        { name: "Smartphone", qty: 2, price: 5000, freeOfCharge: false },
+        { name: "Tablet", qty: 1, price: 10000, freeOfCharge: false },
+        { name: "screenProtector", qty: 2, price: 300, freeOfCharge: true },
+        { name: "laptopBattery", qty: 1, price: 1500, freeOfCharge: false },
+      ];
+      let finalAmt = cart.reduce((total, cartObj) => {
+        if (!cartObj.freeOfCharge) {
+          total = total + cartObj.price * cartObj.qty;
+        }
+        return total;
+      }, 0);
+
+      alert("amount to be paid " + finalAmt);
+    </script>
+  </body>
+</html>

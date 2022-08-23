@@ -1,0 +1,20 @@
+<html>
+	<body><h1>
+		<script>
+			function Employee(fName,lName,sal){
+				this.fName = fName;
+				this.lName = lName;
+				this.sal = sal;
+				
+				this.fullName = function(){
+								return this.fName+this.lName
+							}
+			}
+			var emp1 = new Employee('sarthak','padhy',5000);
+			var emp2 = new Employee('ram',' yadav',3000);
+			 
+			//document.write(emp1.sal);
+			document.write(emp2.fullName())
+		</script>
+	</body>
+</html>

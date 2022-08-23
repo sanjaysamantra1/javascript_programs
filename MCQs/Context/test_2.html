@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<script>
+			['aaa', 'bbb', 'cccc', 'ddd', 'eee'].forEach(function (value, i) {
+			  var btn = document.createElement('button');
+			  btn.appendChild(document.createTextNode('Button ' + value+i));
+			  btn.addEventListener('click', function() { console.log(i); });
+			  document.body.appendChild(btn);
+			});
+			//forEach() internally uses closure
+		</script>
+	</body>
+</html>

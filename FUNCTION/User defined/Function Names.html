@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+</HEAD>
+
+<BODY>
+	<script>
+		function f(){
+		}
+		alert(f.name)
+		
+		var f1 = function() {
+		}
+		alert(f1.name); // f1
+
+		var f2 = f1
+		alert(f2.name); // f1
+
+		var f3 = function f4() {
+		}
+		alert(f3.name); // f4
+	</script>
+</BODY>
+</HTML>

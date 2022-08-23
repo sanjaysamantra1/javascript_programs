@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<script>
+			let employees = [
+				{eId:101,name:'deepak',sal:5000},
+				{eId:103,name:'ajay',sal:6000},
+				{eId:102,name:'ranjan',sal:8000},
+				{eId:104,name:'manoj',sal:7000}
+			 ];
+			 employees.sort(f1);
+			 function f1(emp1,emp2){
+				if(emp1.name > emp2.name){
+					return 1;
+				}
+				else if(emp2.name > emp1.name){
+					return -1
+				}
+				else	
+					return 0
+			 }			 
+			 console.log(employees)
+			 
+			 //employees.sort((emp1,emp2)=>emp1.name>emp2.name?1:-1);
+		</script>
+	</body>
+</html>

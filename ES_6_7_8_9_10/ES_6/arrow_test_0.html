@@ -1,0 +1,22 @@
+<html>
+	<body>
+		<script>
+			name = 'ajay';
+			let obj1 = {
+				 name : "Sachin",
+				 f1 : function(){
+					console.log(`inside f1 my name is ${this.name}`); 
+					//this binding here
+				 },
+				 f2:()=>{
+					console.log(`inside f2 my name is ${this.name}`);
+					//no this binding here
+				 }
+			};
+			obj1.f1();
+			obj1.f2();	
+
+			// arrow gets 'this' from constructor/parent function
+		</script>
+	</body>
+</html>

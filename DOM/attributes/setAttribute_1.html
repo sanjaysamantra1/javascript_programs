@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<input id='test' value='sachin' ></input>
+		
+		<button onclick='f1()'>set attribute</button>
+		<button onclick='f2()'>remove attribute</button>
+		
+		<script>
+			function f1(){
+				document.getElementById('test').setAttribute('readonly',true)	
+			}
+			function f2(){
+				document.getElementById('test').removeAttribute('readonly')	
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<button onclick='f1()'>click</button>		
+		<script>
+						
+			function f1()
+			{
+				myBtn = document.createElement('Button');
+				myBtn.innerHTML = 'click'
+				document.body.appendChild(myBtn);
+				myBtn.addEventListener('click',f1)
+			}
+		</script>		
+	</body>
+</html>	

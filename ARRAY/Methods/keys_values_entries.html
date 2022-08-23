@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <script>
+      let arr = [10, 20, 30, 40, 50];
+
+      let keys = arr.keys();
+      for (key of keys) {
+        console.log(key);
+      }
+
+      let myvalues = arr.values();
+      for (val of myvalues) {
+        console.log(val);
+      }
+
+      let myentries = arr.entries();
+      for (entry of myentries) {
+        console.log(entry);
+      }
+
+      for (let ind in arr) {
+        console.log(ind + " " + arr[ind]);
+      }
+    </script>
+  </body>
+</html>

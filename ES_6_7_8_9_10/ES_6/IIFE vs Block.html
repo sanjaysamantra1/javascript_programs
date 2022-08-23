@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<script>
+			function f1(){
+				if(true){
+					var a = 10;
+					console.log("a inside block of f1: "+a) //yes
+				}
+				console.log("a inside function f1: "+a) //yes
+			}
+			f1();
+			
+			function f2(){
+				(function(){
+					var a = 10;
+					console.log("a inside block of f2: "+a) //Yes
+				})();
+				console.log("a inside block f2: "+a); //No
+			}
+			f2();
+			
+			
+			function f3(){
+				{
+					let a = 10;
+					console.log("a inside block of f3: "+a) //Yes
+				}
+				console.log("a inside function f3: "+a) //No
+			}
+			f3();
+		</script>
+	</body>
+</html>

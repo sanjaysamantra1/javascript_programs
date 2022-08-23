@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <script>
+      let person = {
+        firstName: "sachin",
+        lastName: "tendulkar",
+        address: {
+          street: "street1",
+          city: "mumbai",
+          state: "maharastra",
+          country: "india",
+        },
+      };
+      // let copiedPerson = Object.assign({}, person);
+      let copiedPerson = structuredClone(person);
+
+      console.log(copiedPerson, person);
+      copiedPerson.firstName = "rahul"; // disconnected
+      console.log(copiedPerson, person);
+
+      copiedPerson.address.street = "street2"; // connected
+      copiedPerson.address.city = "chennai"; // connected
+
+      console.log(copiedPerson, person);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <script>
+      let res1 = Math.max(10, 30, 20, 50, 40);
+      console.log(res1);
+
+      let productsPromise = window.fetch("https://fakestoreapi.com/products");
+
+      productsPromise.then(
+        (a) => {
+          console.log(a);
+        },
+        (b) => {
+          console.log(b);
+        }
+      );
+    </script>
+  </body>
+</html>

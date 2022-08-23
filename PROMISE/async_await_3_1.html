@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script>
+      let url1 = "https://api.github.com/users/sanjaysamantra1";
+      let url2 = "https://api.github.com/users/hrushi1227";
+      let url3 = "https://api.github.com/users/nichatre";
+
+      async function fetchData() {
+        const [res1, res2, res3] = await Promise.all([
+          fetch(url1),
+          fetch(url2),
+          fetch(url3),
+        ]);
+        const [data1, data2, data3] = await Promise.all([
+          res1.json(),
+          res2.json(),
+          res3.json(),
+        ]);
+        console.log(data1, data2, data3);
+      }
+
+      fetchData();
+      /*Promise.all returns an array with the resolved 
+			values once all the passed-in promises have resolved.*/
+    </script>
+  </head>
+  <body></body>
+</html>

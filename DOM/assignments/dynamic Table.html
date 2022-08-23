@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <table id="myTable" border="2" rules="all" width="50%">
+      <tr>
+        <th>Emp Id</th>
+        <th>Name</th>
+        <th>Sal</th>
+      </tr>
+    </table>
+    <script>
+      var employees = [
+        { eId: 111, name: "AAA", sal: 5000 },
+        { eId: 222, name: "BBB", sal: 6000 },
+        { eId: 333, name: "CCC", sal: 7000 },
+        { eId: 444, name: "DDD", sal: 8000 },
+        { eId: 555, name: "EEE", sal: 9000 },
+      ];
+      var table = document.getElementById("myTable");
+      for (emp of employees) {
+        var row = table.insertRow(table.rows.length);
+
+        for (key in emp) {
+          var cell = row.insertCell(row.cells.length);
+          cell.innerText = emp[key];
+        }
+      }
+    </script>
+  </body>
+</html>

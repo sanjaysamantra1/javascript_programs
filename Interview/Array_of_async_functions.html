@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		let printNumber1 = function() {
+		   return new Promise((resolve,reject) => {
+			  setTimeout(() => {
+				  console.log("Number11111111111");
+				  resolve(10);
+			  },5000);
+		   });
+		}
+
+		let printNumber2 = function() {
+		   return new Promise((resolve,reject) => {
+			  setTimeout(() => {
+				  console.log("Number222222222222");
+				  resolve(20);
+			  },5000);
+		   });
+		}
+		let printNumber3 = function() {
+		   return new Promise((resolve,reject) => {
+			  setTimeout(() => {
+				  console.log("Number3333333");
+				  resolve(30);
+			  },5000);
+		   });
+		}
+		let arr = [printNumber1, printNumber2, printNumber3]
+		
+		async function serialFunction(){
+			for(let item of arr)
+			 await item();			
+		}
+		serialFunction();
+	</script>
+</body>
+</html>

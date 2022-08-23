@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="game.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div align='center'>
+            <h2 class="welcome">Welcome to the game</h2>
+            <p>Please donot refresh the page or else all progression will be resetted</p>
+            <br><br>
+            <!-- <div class='reset' onclick='resetGame()'>RESET GAME</div> -->
+            <div class='reset' onclick='document.location.reload()'>RESET GAME</div>
+        </div>
+
+        <div class="box"></div>
+        <div class="result">
+            <h1 class="subResult win" align='center'>You have won</h1>
+            <h1 class="subResult lose" align='center'>You lose</h1>
+            <h1 class="subResult win lose" align='center'>Game has ended</h1>
+        </div>
+
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<html>
+	
+	<body>
+	
+			name: <input id="uname" value="sachin" />
+			Age: <input id="uage" value="35" />
+			
+			<button onclick="f1()">get Value</button>
+			<button onclick="f2()">set Value</button>
+		
+		
+		<script>
+			function f1(){
+				a = document.getElementById('uname').value; //get
+				b = document.getElementById('uage').value; //get
+				
+				alert(a+"  "+b)
+			}
+			function f2(){
+				document.getElementById('uname').value = 'rahul'; //set
+				document.getElementById('uage').value = 40; //set
+			}
+		</script>
+	</body>
+</html>

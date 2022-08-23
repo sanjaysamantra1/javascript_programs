@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      let obj1 = {
+        name: "sachin",
+        displayName: function () {
+          console.log(this.name, this);
+        },
+      };
+      obj1.displayName();
+
+      let f1 = obj1.displayName;
+      f1();
+
+      let f2 = obj1.displayName.bind(obj1);
+      f2();
+
+      let f3 = f2;
+      f3();
+    </script>
+  </body>
+</html>

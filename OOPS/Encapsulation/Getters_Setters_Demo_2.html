@@ -1,0 +1,25 @@
+<HTML>
+<body>
+	<script>
+var address = {
+	street: "no street",
+	city: "no City",
+	state: "no state",
+	
+	get getCity(){
+		return this.city;
+	},		
+	set setCity(city){
+        this.city = city;
+	},
+}
+document.write(address.getCity)
+document.write("<br>")
+address.setCity = "karnataka";
+document.write(address.getCity)
+document.write("<br>")
+document.write(address.city)
+</script>
+</body>
+
+</HTML>

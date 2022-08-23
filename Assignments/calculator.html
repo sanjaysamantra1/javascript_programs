@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<style>
+			.bgcolornumber{
+				background:#f1f1f1;
+				color:#333;
+				padding:10px;
+			}
+			td input{
+				border: 1px solid #cccccc;
+				width:80%;
+				padding:10px;
+				margin-top: 5px;
+				font-size: 40px;
+				outline:none;
+				height:60px;
+			}
+			.input{
+				width:500px;
+				
+			}
+			#color{
+					background:blue;
+			}			
+		</style>
+	</head>
+	<body>	
+	<center>
+		<h1>CALCULATOR</h1>
+	
+		<div id="calc" class="wow fadeInRight" >
+	<form onsubmit="Javascript:cal(document.getElementById('valueshow').value);return false;">
+		<table>
+			<tbody>
+				<tr>
+					<td colspan="4"><input type="text" id="valueshow" value="0" class="input"></td>
+				</tr>
+				<tr>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="1"></td>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="2"></td>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="3"></td>
+					<td><input class="bgoperationcolor" onclick="cals(this.value);" type="button" value="/" id="color"></td>
+				</tr>
+				<tr>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="4"></td>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="5"></td>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="6"></td>
+					<td><input class="bgoperationcolor" onclick="cals('*');" type="button" value="*" id="color"></td>
+				</tr>
+				<tr>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="7"></td>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="8"></td>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="9"></td>
+					<td><input class="bgoperationcolor" onclick="cals(this.value);" type="button" value="-" id="color"></td>
+				</tr>
+				<tr>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="0"></td>
+					<td><input class="bgcolornumber" onclick="cals(this.value);" type="button" value="."></td>
+					<td><input class="bgclear" onclick="cals(this.value);" type="button" value="C" style="background:red;"></td>
+					<td><input class="bgoperationcolor" onclick="cals(this.value);" type="button" value="+" id="color"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><input class="equal" onclick="calculate(document.getElementById('valueshow').value);" type="button" value="="></td>	
+				</tr>
+			</tbody>
+		</table>
+	</form>	
+	</div>
+	
+	<script>
+		function cals(buttonValue){
+			if(buttonValue=='C'){
+				document.getElementById('valueshow').value='0'
+			}
+			else{
+				if(document.getElementById('valueshow').value=='0')
+				{document.getElementById('valueshow').value=buttonValue}
+				else{document.getElementById('valueshow').value+=buttonValue}
+			}
+			}
+	function calculate(equation){
+		var answer = eval(equation);
+		document.getElementById('valueshow').value=answer;
+	}
+	</script>
+	</body>
+</html>

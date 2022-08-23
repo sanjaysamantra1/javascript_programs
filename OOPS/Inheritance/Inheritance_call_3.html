@@ -1,0 +1,28 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>			
+			function Person(){
+				this.name = 'sanjay';
+				this.age = 35;
+				this.add = 'bang';
+			}			
+			function Student(roll,mark){
+				Person.call(this);
+				this.roll = roll;
+				this.mark = mark;
+			}
+			var s1 = new Student(111,65);
+			console.log(s1)
+			
+			function Employee(comp,sal){
+				Person.call(this);
+				this.comp = comp;
+				this.sal = sal
+			}
+			var e1 = new Employee('IBM',5000);
+			console.log(e1);
+		</script>
+	</body>
+</html>

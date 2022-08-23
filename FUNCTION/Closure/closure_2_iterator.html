@@ -1,0 +1,31 @@
+<html>
+   <body>  
+      Demonstrating closure as iterators in javascript: </br>
+
+      	<script>    
+			function buildCounter(index) { 
+			    var counter = index;
+			    var displayConunter = function() {
+			        document.write("Value of counter variable is: " + counter + "</br>");
+			        counter++;
+			    };
+			    return displayConunter; 
+			}
+
+			var myCounter = buildCounter(1);
+			myCounter();
+			myCounter();
+			myCounter();
+
+			// Create a new counter
+			var myNextCounter = buildCounter(10);
+			myNextCounter();
+			myNextCounter();
+			myNextCounter();
+
+			// Validate that the previous counter is not impacted.
+			myCounter();
+			myCounter();
+	</script>	
+ 	</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<input id="test" value="sachin" />
+		
+		<button onclick="f1()">remove Read only</button>		
+		<button onclick="f2()">Add Read only</button>
+		
+		<script>
+			function f1(){
+				document.getElementById("test").removeAttribute('readonly')
+			}
+			function f2(){
+				document.getElementById("test").setAttribute('readonly',true)
+			}
+		</script>
+	</body>
+</html>

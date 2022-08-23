@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      promiseObj = fetch("https://jsonplaceholder.typicode.com/comments");
+
+      promiseObj
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    </script>
+  </body>
+</html>

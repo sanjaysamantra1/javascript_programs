@@ -1,0 +1,21 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			// var declaration is hoisted not the value
+			var x = 10;
+			console.log("x-1: "+x);
+			
+			function myFunc()
+			{
+				console.log("x-2: "+x);
+				var x=20;
+				console.log("x-3: "+x);
+			}
+			console.log("x-4: "+x);
+			myFunc();
+			console.log("x-5: "+x);
+		</script>
+	</body>
+</html>

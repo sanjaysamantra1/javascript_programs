@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+			var arr1 = [ 10 , 20 ];
+			var arr2 = [ 30 , 40 ];
+
+			arr1.push.apply(arr1, arr2);
+			alert(arr1)
+			alert(arr2)
+			
+			var arr3 = [ 50 , 60 ];
+			var arr4 = [ 70 , 80 ];
+
+			arr3.push(...arr4);
+			alert(arr3)
+			alert(arr4)
+		</script>
+	</body>
+</html>

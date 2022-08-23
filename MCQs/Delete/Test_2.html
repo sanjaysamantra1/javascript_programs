@@ -1,0 +1,11 @@
+<html>
+<body>
+	<script>
+		var a = (function(obj) {
+			delete obj.x;
+			return obj;
+		})({x:10,y:20});
+		console.log(a);
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+			function func() {
+				var a = 5;
+				let b = 6;
+				
+				if (true) {
+					let a = 15; // Legal Shadowing
+					// var b = 16; // Illegal Shadowing
+					console.log(a); // It will print 15
+					console.log(b); // It will print error
+				}
+			}
+			func();
+
+		</script>
+	</body>
+</html>

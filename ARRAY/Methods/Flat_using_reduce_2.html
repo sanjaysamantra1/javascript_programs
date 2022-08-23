@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      var arr1 = [1, 2, [3, 4, [5, 6, 7, [8, [9, 10]]]]];
+
+      let result = [];
+      function flatMyArray(arr) {
+        for (ele of arr) {
+          if (!Array.isArray(ele)) {
+            result.push(ele);
+          } else {
+            flatMyArray(ele);
+          }
+        }
+      }
+      flatMyArray(arr1);
+      console.log(result);
+    </script>
+  </body>
+</html>

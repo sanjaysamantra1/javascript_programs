@@ -1,0 +1,22 @@
+<html>
+	<body>
+		<script>
+			var employee = {
+				eId : 101,
+				name : 'sachin',
+				add : {
+					city : 'mumbai',
+					state: 'maharastra',
+					pin : '111111'
+				}
+			}
+			console.log(employee.add.city);
+			console.log(employee.add.state);
+			console.log(employee.add.pin);
+						
+			
+			var {city,state,pin} = employee.add;
+			console.log(city, state,pin)
+		</script>
+	</body>
+</html>

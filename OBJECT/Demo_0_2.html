@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      let user = {
+        "first name": "sachin",
+        "age": 35,
+        "add": "mumbai",
+      };
+      document.writeln(user.age); //object.key
+      document.writeln(user["age"]); //object['key']
+
+      document.writeln(user["first name"]); //Yes
+      //document.writeln(user.first name); // No
+
+      let x = "add";
+      document.writeln(user[x]); // mumbai
+      document.writeln(user.x);  // undefined
+    </script>
+  </body>
+</html>

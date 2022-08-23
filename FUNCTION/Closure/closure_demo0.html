@@ -1,0 +1,31 @@
+<html>
+  <body>
+    <script>
+      function f1() {
+        var a = 10;
+        var c = 30;
+        var d = 40;
+
+        function f3() {
+          console.log("i am f3");
+        }
+        f3();
+        console.dir(f3);
+
+        function f2() {
+          var b = 20;
+          console.log(a + b + c);
+        }
+        f2();
+        console.dir(f2);
+        return f2;
+      }
+      let returnedf2 = f1();
+
+      console.dir(f1)
+
+      console.log(returnedf2)
+      console.dir(returnedf2)
+    </script>
+  </body>
+</html>

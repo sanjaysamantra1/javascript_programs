@@ -1,0 +1,18 @@
+<html>
+<head>
+    <script>
+       // The onkeypress event is not fired for all keys (e.g. ALT, CTRL, SHIFT, ESC) in all browsers
+	   function keyPress(){
+			alert("key press event triggered")
+	   }
+	   function keydown(){
+			alert("key down event triggered")
+	   }
+    </script>
+</head>
+
+<body>
+	<input onkeypress="keyPress()" onkeydown="keydown()"></input>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <script>
+      const recursiveSearch = (obj, results = []) => {
+        const r = results;
+        Object.keys(obj).forEach((key) => {
+          const value = obj[key];
+          if (Array.isArray(value) && value.length === 0) {
+            r.push(key);
+          } else if (typeof value === "object") {
+            recursiveSearch(value, r);
+          }
+        });
+        return r;
+      };
+
+      const user = {
+        name: "sanjay",
+        age: 30,
+        cars: ["tata", "honda"],
+        address: {
+          city: "bangalore",
+          pin: [],
+          xyz: {
+            a: 10,
+            b: [],
+            c: 30,
+          },
+        },
+        emails: [],
+      };
+      console.log(recursiveSearch(user));
+    </script>
+  </body>
+</html>

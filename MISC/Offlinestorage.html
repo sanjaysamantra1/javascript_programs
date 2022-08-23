@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <button onclick="f1()">Set Data in session storage</button>
+    <button onclick="f2()">Set Data in local storage</button>
+
+    <script>
+      function f1() {
+        sessionStorage.setItem("name", "sachin");
+        sessionStorage.setItem("age", 35);
+      }
+      function f2() {
+        localStorage.setItem("address", "mumbai");
+        localStorage.setItem("gender", "male");
+      }
+    </script>
+  </body>
+</html>

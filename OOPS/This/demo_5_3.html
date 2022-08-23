@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      var name = "kumar";
+      let myObj = {
+        name: "sanjay",
+        f1: function () {
+          console.log("name is- " + this.name);
+
+          setTimeout(() => {
+            console.log("name is: " + this.name);
+          }, 2000);
+        },
+      };
+      myObj.f1();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<script>
+			let arr = [ -2, 4, 5, -3,10,20,-10]
+			
+			function clozestToZero(arr){
+				let closest = 0;
+				
+				for(let i in arr){
+					if(closest == 0){
+						closest = arr[i]
+					}
+					else if( arr[i]>0 && arr[i]<=Math.abs(closest) ){
+						closest = arr[i]
+					}
+					else if( arr[i]<0 && -arr[i]<Math.abs(closest) ){
+						closest = arr[i]
+					}
+				}
+				return closest;
+			}
+			result = clozestToZero(arr);
+			console.log(result)
+		</script>
+	</body>
+</html>

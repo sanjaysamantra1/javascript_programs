@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function myFun(input) {
+        var output = "";
+
+        arr = input.split(" ").map((word, ind) => {
+          if (ind <= 1) {
+            return word[0] + ".";
+          } else {
+            return word;
+          }
+        });
+        return arr.join(" ");
+      }
+      var input = prompt("enter a string", "rabindra nath tagore");
+      result = myFun(input);
+      alert(result);
+    </script>
+  </body>
+</html>

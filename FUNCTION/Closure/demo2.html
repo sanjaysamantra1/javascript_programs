@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script>
+      function add(a) {
+        function add2(b) {
+          console.log(a + b);
+        }
+        return add2;
+      }
+      var myAdd = add(2);
+      myAdd(3);
+      console.dir(myAdd);
+    </script>
+  </body>
+</html>

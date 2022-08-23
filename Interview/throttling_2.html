@@ -1,0 +1,34 @@
+<html>
+	<body>
+		<button id='btn1'>click me</button>
+	
+		
+		<script>
+			function printHelloWorld(){
+				console.log('Hello World')
+			}
+			let timerId;
+			function throttleHelloWorld( func , delay){
+			  
+				if (timerId) {
+					return
+				}
+				timerId  =  setTimeout(function () {
+					func()					
+					
+					timerId  =  undefined;
+				}, delay)
+			}
+			
+			let count = 0
+			document.getElementById('btn1').addEventListener
+			('click', ()=>{
+				count++;
+				console.log('total count',count);
+			
+				throttleHelloWorld( printHelloWorld , 2000)
+			});
+		</script>
+		
+	</body>
+</html>

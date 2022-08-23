@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <h1 id="test"></h1>
+    <script>
+      function timePrint() {
+        let ob = new Date();
+        document.getElementById("test").innerText = ob.toLocaleTimeString();
+      }
+      setInterval(timePrint, 1000);
+    </script>
+  </body>
+</html>

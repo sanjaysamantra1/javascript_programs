@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <script>
+      let a = 10;
+      let b = 20;
+
+      // ES-5
+      let temp;
+      temp = a;
+      a = b;
+      b = temp;
+      console.log(a + "  " + b);
+
+      // ES-6
+      let x = 30;
+      let y = 40;
+      [x, y] = [y, x];
+      console.log(x, y);
+    </script>
+  </body>
+</html>

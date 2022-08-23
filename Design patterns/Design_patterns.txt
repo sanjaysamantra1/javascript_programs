@@ -1,0 +1,119 @@
+What is a Design Pattern?
+=========================
+-A design pattern is a reusable solution for commonly occurring problems in software design.
+-Design patterns help to write maintainable, readable, and reusable code.
+
+
+Why Design Patterns?
+====================
+-They are proven solutions: Because design patterns are often used by many developers, you can be certain that they work. And not only that, you can be certain that they were revised multiple times and optimizations were probably implemented.
+-They are easily reusable: Design patterns document a reusable solution which can be modified to solve multiple particular problems, as they are not tied to a specific problem.
+-They are expressive: Design patterns can explain a large solution quite elegantly.
+-They ease communication: When developers are familiar with design patterns, they can more easily communicate with one another about potential solutions to a given problem.
+-They prevent the need for refactoring code: If an application is written with design patterns in mind, it is often the case that you won’t need to refactor the code later on because applying the correct design pattern to a given problem is already an optimal solution.
+-They lower the size of the codebase: Because design patterns are usually elegant and optimal solutions, they usually require less code than other solutions.
+
+
+
+Categories of Design Patterns
+=============================
+Creational : For handling object creation Mechanism.
+             ex: Constructor, Factory, Abstract Factory, Prototype, Singleton, Builder
+			 
+Structural : deal with object relationships.
+			 Ensure that if one part of a system changes, the entire system doesn’t need to change along with it
+			 ex: Adapter,Bridge, Composite, Decorator,Facade, Proxy
+
+Behavioral : For handling communication between different objects in a system.
+			 ensure that disparate parts of a system have synchronized information
+			 ex: Iterator, Mediator, Observer and Visitor
+			 
+			 
+Constructor Design Pattern
+==========================
+-Object constructors are used to create specific types of objects—both preparing the object for use 
+ and accepting arguments a constructor can use to set the values of member properties and methods when the object is first created.			 
+ 
+
+Factory Design Pattern
+======================
+-Factory Methods are frequently used in applications that manage, maintain, or manipulate 
+ collections of objects that are different but at the same time have many characteristics 
+ (i.e. methods and properties) in common. 
+-An example would be a collection of documents with a mix of Xml documents, Pdf documents, and Rtf documents.
+
+
+-Creator(factory method)---->abstract Product----->products
+ 
+Creator -- In sample code: Factory
+	the 'factory' object that creates new products
+	implements 'factoryMethod' which returns newly created products
+AbstractProduct -- not used in JavaScript
+	declares an interface for products
+ConcreteProduct -- In sample code: Employees
+	the product being created
+	all products support the same interface (properties and methods)
+
+
+Builder Design pattern
+======================
+-The Builder pattern allows a client to construct a complex object by specifying the type and content
+ only. Construction details are hidden from the client entirely.
+-Used to simplify client code that creates complex objects. The client can still direct the steps taken by 
+ the Builder without knowing how the actual work is accomplished.Builders frequently encapsulate 
+ construction of Composite objects because the procedures involved are often repetitive and complex.
+-Usually it is the last step that returns the newly created object which makes it easy for a Builder
+ to participate in fluent interfaces in which multiple method calls, separated by dot operators, 
+ are chained together 
+ 
+Director -- In sample code: Shop
+	constructs products by using the Builder's multistep interface
+Builder -- not used in JavaScript
+	declares a multistep interface for creating a complex product
+ConcreteBuilder -- In sample code: CarBuilder, TruckBuilder
+	implements the multistep Builder interface
+	maintains the product through the assembly process
+	offers the ability to retrieve the newly created product
+Products -- In sample code: Car, Truck
+	represents the complex objects being assembled 
+
+
+
+Prototype Design pattern
+========================
+-The Prototype Pattern creates new objects, but rather than creating non-initialized objects it returns objects that are initialized with values it copied from a prototype - or sample - object. The Prototype pattern is also referred to as the Properties pattern.
+-An example of where the Prototype pattern is useful is the initialization of business objects with values that match the default values in the database. The prototype object holds the default values that are copied over into a newly created business object.
+-Classical languages rarely use the Prototype pattern, but JavaScript being a prototypal language uses this pattern in the construction of new objects and their prototypes.
+
+Client -- In sample code: the run() function.
+	creates a new object by asking a prototype to clone itself
+Prototype -- In sample code: CustomerPrototype
+	creates an interfaces to clone itself
+Clones -- In sample code: Customer
+	the cloned objects that are being created
+
+
+
+Singleton Design pattern
+========================
+-The Singleton Pattern limits the number of instances of a particular object to just one. 
+ This single instance is called the singleton.
+-Singletons are useful in situations where system-wide actions need to be coordinated from a single 
+ central place. 
+-An example is a database connection pool. The pool manages the creation, destruction, and lifetime of 
+ all database connections for the entire application ensuring that no connections are 'lost'.
+-Singletons reduce the need for global variables which is particularly important in JavaScript 
+ because it limits namespace pollution and associated risk of name collisions. 
+ The Module pattern is JavaScript's manifestation of the Singleton pattern.
+
+Singleton -- In sample code: Singleton
+	defines getInstance() which returns the unique instance.
+	responsible for creating and managing the instance object.
+
+
+
+
+
+References:
+----------
+1. https://www.dofactory.com/javascript/design-patterns

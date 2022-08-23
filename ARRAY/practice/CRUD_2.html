@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script>
+      let products = [
+        { name: "Apple", qty: "5", price: "200" },
+        { name: "Mango", qty: "4", price: "300" },
+        { name: "Banana", qty: "3", price: "500" },
+        { name: "Orange", qty: "2", price: "700" },
+      ];
+
+      function deleteProduct(ind) {
+        products.splice(ind, 1);
+        showProducts();
+      }
+
+      function showProducts() {
+        let str = "";
+        for (i in products) {
+          str = str + "<tr>";
+          str = str + "<td>" + products[i].name + "</td>";
+          str = str + "<td>" + products[i].price + "</td>";
+          str = str + "<td>" + products[i].qty + "</td>";
+          str =
+            str +
+            "<td><button class='btn btn-danger' onclick='deleteProduct(" +
+            i +
+            ")'> <i class='glyphicon glyphicon-trash'></i> </button></td>";
+          str = str + "</tr>";
+        }
+        document.getElementById("productslist").innerHTML = str;
+      }
+      function saveProduct() {
+        let n = document.getElementById("name").value;
+        let p = document.getElementById("price").value;
+        let q = document.getElementById("qty").value;
+
+        let newproduct = { name: n, qty: q, price: p };
+        products.push(newproduct);
+        showProducts(); //to reload the list
+      }
+    </script>
+  </head>
+  <body>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 well text-center">
+          <div class="form-group">
+            <label>products Name</label>
+            <input type="text" class="form-control input-sm" id="name" />
+            <br />
+          </div>
+
+          <div class="form-group">
+            <label>products price</label>
+            <input type="text" class="form-control input-sm" id="price" />
+            <br />
+          </div>
+
+          <div class="form-group">
+            <label>products Qty</label>
+            <input type="text" class="form-control input-sm" id="qty" />
+            <br />
+          </div>
+
+          <br />
+          <button class="btn btn-success" onclick="saveProduct()">
+            Save products
+          </button>
+          <button class="btn btn-warning" onclick="showProducts()">
+            Show products
+          </button>
+          <hr />
+        </div>
+        <div class="col-sm-9 well">
+          <table class="table table-bordered">
+            <caption class="text-center">
+              products List
+            </caption>
+            <thead>
+              <tr class="active">
+                <th>products Name</th>
+                <th>products Price</th>
+                <th>products Qty</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="productslist">
+              <tr>
+                <td colspan="2">No Records! (click 'show products')</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

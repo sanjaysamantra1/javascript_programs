@@ -1,0 +1,32 @@
+<html>
+	<body>
+		<script>
+			//create an Object
+			emp = {eId:101,name:'sanjay',sal:5000};
+			
+			//print the values
+			console.log(emp.eId);
+			console.log(emp['eId']);
+			console.log(emp.name);
+			console.log(emp['name']);
+			
+			
+			//update the value
+			emp.sal = 6000;
+			console.log(emp.sal);
+			
+			//add a new field
+			emp.comp = 'IBM'
+			console.log(emp);
+			
+			//delete one field from object
+			delete emp.comp;
+			console.log(emp);
+			
+			//check if one key is there or not
+			console.log('sal' in emp);
+			console.log('comp' in emp);
+			
+		</script>
+	</body>
+</html>

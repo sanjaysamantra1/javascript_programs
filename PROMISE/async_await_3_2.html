@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script>
+      let url1 = "https://api.github.com/users/sanjaysamantra1";
+      let url2 = "https://api.github.com/users/hrushi1227";
+      let url3 = "https://api.github.com/users/nichatre";
+
+      Promise.all([fetch(url1), fetch(url2), fetch(url3)]).then(
+        ([res1, res2, res3]) => {
+          Promise.all([res1.json(), res2.json(), res3.json()]).then(
+            ([data1, data2, data3]) => {
+              console.log(data1, data2, data3);
+            }
+          );
+        }
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

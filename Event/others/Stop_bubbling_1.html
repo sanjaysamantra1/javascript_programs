@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body onclick="alert('body clicked')">
+<center><br>
+    <button type="button" onclick="f1()">click me</button>
+	
+	<script>
+		function f1(evt){
+			alert("button clicked")
+			
+			evt = evt || window.event;
+			evt.stopPropagation();
+		}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,38 @@
+1. Write a program to display the first 10 natural numbers
+   Expected Output : 1 2 3 4 5 6 7 8 9 10
+   
+2. Write a program to find the sum of first 10 natural numbers.
+   Expected Output : 55
+
+3. Write a program to display the multiplication table of a given integer.
+    15 X 1 = 15
+	...
+	...
+	15 X 10 = 150   
+
+4. fizz-buzz program, 1 - 100
+   if n%3 - fizz
+   if n%5 - buzz
+   if n%3 && n%5 - fizz buzz
+   otherwise - n
+   
+ output:  1  2  fizz  4  buzz fizz 7 8 fizz
+   
+ 
+5. Ask user to enter a number. find the sum of digits of that number.
+   input : 125
+   output : 8 
+   
+6. ask user to enter a number & check if that number is prime or not.
+   8 : not prime  
+   5 : prime
+
+7. ask user to enter a number, print the factorial of that number.
+	input: 5 
+	output: 120
+	
+8. Write a program to display the first n terms of Fibonacci series.
+   Input number of terms to display : 10
+	Expected Output :
+	Here is the Fibonacci series upto to 10 terms :
+	0 1 1 2 3 5 8 13 21 34

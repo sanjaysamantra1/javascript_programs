@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		
+		function everyAlternateCharCaps(str){
+			str = str.toLowerCase();
+			result = '';
+			for(let i=0;i<str.length;i++){
+				if(i%2==0){
+					result = result + str[i].toUpperCase()
+				}else {
+					result = result + str[i]
+				}
+			}
+			return result;
+		}
+
+		input = 'This is jaVaScRipt claSs'
+		output = everyAlternateCharCaps(input)
+		console.log(output);
+	</script>
+</body>
+</html>

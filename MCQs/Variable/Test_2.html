@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script>
+      var a = 10;
+      function myFunc() {
+        var a = 5;
+        console.log("inside " + a); //5
+      }
+      console.log("outside " + a); //10
+      myFunc();
+      console.log("outside-2 " + a); //5
+    </script>
+  </body>
+</html>

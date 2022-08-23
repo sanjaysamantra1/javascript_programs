@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script>
+			var myFunction = function(username, password) {
+			  promiseObj = new Promise(function(resolve, reject) {
+				
+				if ( username=='sanjay' && password=='abcd' ) {
+				  resolve("please allow to login");
+				} 
+				else if( username=='sanjay' && password!=='abcd'){
+					resolve("please do not allow to login");
+				}
+				else if(username=='' || password=='') {
+				  reject(Error("It broke"));
+				}
+			  });
+			  
+			  return promiseObj;
+			}
+			
+			promiseOb = myFunction('', '')
+			
+			promiseOb.then(
+				(response)=>{
+					alert(response);
+				},
+				(error)=>{
+				alert(error);
+				}
+			)
+			
+		</script>
+	</head>
+	<body>		
+	</body>
+</html>

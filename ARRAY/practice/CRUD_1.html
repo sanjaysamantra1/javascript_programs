@@ -1,0 +1,112 @@
+<html>
+   <head>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <script>
+	        var item = ["Apple", "Mango", "Orange"];
+	        function one()
+			{
+			   var newitem = document.getElementById("name").value;
+			   item.push(newitem);
+			   two(); //to reload the list
+			   // to clear the textbox
+			   document.getElementById("name").value="";
+			}
+			
+			function three()
+			{
+			   var newitem = document.getElementById("name").value;
+			   item.unshift(newitem);
+			   two(); //to reload the list
+			   // to clear the textbox
+			   document.getElementById("name").value="";
+			}
+			
+			function two()
+			{
+			   var data="";
+			  for(var i=0; i<item.length; i++)
+			  {
+			    data = data + "<tr>";
+				
+				data = data + "<td>" + item[i] + "</td>";
+				
+				data = data + "<td><button class='btn btn-danger' onclick='del("+ i +")'> <i class='glyphicon glyphicon-trash'></i> </button></td>";
+				
+				data = data + "</tr>";
+			  }
+			  //alert(data);
+			  document.getElementById("itemlist").innerHTML=data;
+			}
+			
+			function del(index){
+			
+			    var sts = confirm("Are you sure?");
+				if(sts==true)
+					{
+					  item.splice(index,1); //for delete,0 for add
+					  two(); //after delete it will reload the list
+					}
+			}
+			
+			function four(index){
+			
+			    var sts = confirm("Are you sure");
+				if(sts==true)
+					{
+					  item.shift(); // to delete 1st element
+					  two(); //after delete it will reload the list
+					}
+			}
+			
+			function five(index){
+			
+			    var sts = confirm("Are you sure");
+				if(sts==true)
+					{
+					  item.pop(); // to delete 1st element
+					  two(); //after delete it will reload the list
+					}
+			}
+	   </script>
+   </head>
+   <body>
+       <br>
+	   <div class="container">
+	      <div class="row">
+		     <div class="col-sm-4 well text-center">
+			     <label>Element Name</label>
+			     <input type="text" class="form-control input-sm" id="name">
+				 <br>
+				 <button class="btn btn-success" onclick="one()">Save Item</button>
+				 <button class="btn btn-warning" onclick="two()">Show Item</button><hr>
+				 <button class="btn btn-danger" onclick="three()">Add First</button>
+				 <button class="btn btn-info" onclick="four()">Delete First</button>
+				 <button class="btn btn-primary" onclick="five()">Delete last</button>
+				 
+			 </div>
+			 <div class="col-sm-8 well ">
+			     <table class="table table-bordered">
+				      <caption class="text-center">Item List</caption>
+					  <thead>
+					     <tr class="active">
+						    <th>Item Name</th>
+							<th>Active</th>
+						 </tr>
+					  </thead>
+					  <tbody id="itemlist">
+					     <tr>
+						   <td colspan="2">No Records !</td>
+						 </tr>
+					  </tbody>
+					  <tfoot>
+					     <tr class="danger">
+						    <th>Item Name</th>
+							<th>Active</th>
+						 </tr>
+					  </tfoot>
+				 </table>
+			 </div>
+		  </div>
+	   </div>
+   </body>
+</html>

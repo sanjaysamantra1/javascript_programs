@@ -1,0 +1,34 @@
+<html>
+<head>
+<script type="text/javascript">
+function f1(a){
+	console.log("first stmt");
+	console.log("Second stmt");	
+	console.log(a);
+	try
+	{
+	console.log(a/b);
+	}
+	catch(obj)
+	{
+	 alert("exception found")
+	 console.log(obj);
+	 alert(obj.fileName);
+     alert(obj.lineNumber);
+     alert(obj.message); 
+     alert(obj.name); 
+     alert(obj.stack);
+	}
+	console.log("Third stmt");
+	console.log("fourth stmt");
+	console.log("fifth stmt");
+}
+f1(10);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

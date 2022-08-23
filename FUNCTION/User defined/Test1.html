@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+</HEAD>
+
+<BODY>
+<script>
+	(function(x){
+		console.log(x);
+		//console.log(y);
+		
+		return (function(y){
+		 console.log(x);
+		 console.log(y);
+		})(2)
+		
+	})(1);
+</script>
+
+</BODY>
+</HTML>

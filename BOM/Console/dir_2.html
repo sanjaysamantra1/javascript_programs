@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script>
+      function f1(a) {
+        function f2(b) {
+          console.log(a + b);
+        }
+        return f2;
+      }
+      let innerFn = f1();
+      console.dir(innerFn);
+    </script>
+  </body>
+</html>

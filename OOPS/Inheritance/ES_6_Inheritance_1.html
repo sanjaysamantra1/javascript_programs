@@ -1,0 +1,50 @@
+<html>
+  <body>
+    <script>
+      class Person {
+        name;
+        age;
+        add;
+        constructor(name, age, add) {
+          this.name = name;
+          this.age = age;
+          this.add = add;
+        }
+        f1() {
+          console.log("i am f1");
+        }
+      }
+
+      class Student extends Person {
+        roll;
+        mark;
+        constructor(name, age, add, roll, mark) {
+          super(name, age, add); // parent's constructor
+          this.roll = roll;
+          this.mark = mark;
+        }
+      }
+      var std1 = new Student("ajay", 25, "marathalli", 101, 85);
+
+      Person.prototype.abc = 10;
+      Student.prototype = Person.prototype;
+
+      console.log(std1.hasOwnProperty("name"));
+      console.log(std1.hasOwnProperty("abc"));
+      console.log("name" in std1);
+      console.log("abc" in std1);
+
+      class Employee extends Person {
+        eId;
+        sal;
+        constructor(name, age, add, eId, sal) {
+          super(name, age, add); // Persons's constructor
+          this.eId = eId;
+          this.sal = sal;
+        }
+      }
+      var emp1 = new Employee("deepak", 26, "BTM", 200, 5000);
+      console.log(emp1);
+    </script>
+  </body>
+</html>

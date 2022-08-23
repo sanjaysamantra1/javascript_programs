@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<script>
+			function createQuote(quote, callback){ 
+			  var myQuote = "People say," + quote;
+			  callback(myQuote); // 2
+			}
+
+			function logQuote(quote){
+			  console.log(quote);
+			}
+
+			createQuote("Health is wealth", logQuote); // 1
+			
+			// createQuote is the higher-order function
+		</script>
+	</body>
+</html>

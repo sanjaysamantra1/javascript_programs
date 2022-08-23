@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script>
+      function f1() {
+        document.write("Hello!!! <br>");
+      }
+      let timerId = setInterval(f1, 1000);
+
+      setTimeout(() => {
+        clearInterval(timerId);
+      }, 5000);
+    </script>
+  </body>
+</html>

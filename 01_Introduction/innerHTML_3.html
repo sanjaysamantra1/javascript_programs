@@ -1,0 +1,18 @@
+<html>
+<body>
+<form name="myForm">
+<input type="text" name="one"></input>
+<input type="text" name="two"></input>
+<button type='button' onclick="add()" >ADD</button>
+<h1 id='result'></h1>
+
+<script>
+function add() {
+	var a = parseInt(myForm.one.value);
+	var b = parseInt(myForm.two.value);
+    document.getElementById('result').innerHTML = a+b;
+}
+</script>
+
+</body>
+</html> 

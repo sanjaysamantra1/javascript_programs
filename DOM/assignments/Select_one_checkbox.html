@@ -1,0 +1,25 @@
+<html>
+	<body>
+		aaa: <input type='checkbox' id="aaa"/> <br><br>
+		bbb: <input type='checkbox' id="bbb"/> <br><br>
+		ccc: <input type='checkbox' id="ccc"/> <br><br>
+		ddd: <input type='checkbox' id="ddd"/> <br><br>
+		
+		<script>
+		
+			chks = document.getElementsByTagName('input');
+			
+			for(var i=0;i<chks.length;i++)
+			{
+				chks[i].onclick = function(){
+				  for(var i=0;i<chks.length;i++)
+				  {	
+					if(chks[i] != this && this.checked){
+					 chks[i].checked = false;
+					}
+				  }
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<HTML>
+
+<BODY>
+	<div id="outer">		
+	</div>
+	
+    <script>
+		var para = document.createElement('p');		
+		document.getElementById("outer").appendChild(para);
+		var paragraphs = document.getElementsByTagName('p');
+		paragraphs[0].innerHTML = "This is a paragraph"		
+    </script>
+</BODY>
+
+</HTML>

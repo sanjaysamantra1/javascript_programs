@@ -1,0 +1,55 @@
+ES-6 Features
+=============
+1. const/let 
+2. From IIFEs to blocks
+3. concatenating strings to template literals
+4. Multi-line strings
+6. default parameter values
+7. from arguments to rest parameters
+8. Array Destructuring
+9. Object Desturcturing
+10. for-loop to for-in and for-of
+11. arrow functions
+12. From apply() to the spread operator (...)
+13. From function expressions in object literals to method definitions
+14. From constructors to classes
+15. Modules
+16. collection-Map,weakmap,set,weakset
+17. promise 
+18. inheritance
+19. generators
+20. Tail Calls
+
+
+ES-7 Features
+=============
+1. exponent operator
+2. Array includes()
+
+
+ES-8 Features
+=============
+1. Object.entries() / Object.values()
+2. String padding - padStart(),padEnd()
+3. Async await
+
+
+ES-9 Features
+=============
+1. Promise.prototype.finally
+2. Lifting template literal restriction
+
+
+ES-10 Features
+=============
+1. Array.flat()
+2. Array.flatmap()
+3. object.fromEntries()
+4. Optional param in catch()
+5. 
+
+
+
+References:
+==========
+http://es6-features.org/#Constants

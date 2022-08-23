@@ -1,0 +1,24 @@
+<HTML>
+
+<BODY><h2>
+    <form>
+		Username: 
+		<input type="text" id="uname" />
+		Age
+		<input type="number" id="age" />	
+		<input type="button" onClick="myFunction()" value="CLICK ME"/>
+		
+		<p id="test"></p>
+	</form>
+	
+	
+    <script>
+		function myFunction(){
+			var a =document.getElementById("uname").value;
+			var b=document.getElementById("age").value;
+			document.getElementById("test").innerHTML="Hi I am "+a+","+b+ " years old ";
+			}
+    </script>
+</BODY>
+
+</HTML>

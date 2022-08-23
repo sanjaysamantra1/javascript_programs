@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<ol>
+			<li>hyderabad</li>
+			<li>bangalore</li>
+			<li>pune</li>
+			<li>mumbai</li>
+			<li>delhi</li>
+		</ol>
+		<script>
+			let cities =  document.querySelectorAll('li');
+			let citiesArr = Array.from(cities);
+			
+			console.log(cities);
+			console.log(citiesArr);
+			
+			console.log(Array.isArray(cities));
+			console.log(Array.isArray(citiesArr));
+
+			filteredCities = citiesArr.filter(city=>city.textContent=='pune');
+			filteredCities[0].style.backgroundColor='red'
+			
+			filteredCities2 = Array.from(cities).filter(city=>city.textContent=='mumbai');
+			filteredCities2[0].style.color='orange'
+		</script>
+	</body>
+</html>

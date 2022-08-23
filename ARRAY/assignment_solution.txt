@@ -1,0 +1,102 @@
+1. Write a program to print all the even numbers from an array.
+ANS: 
+var arr = [1,2,3,4,5,6,7,8,9,10];
+var arr2 = arr.filter((x)=>x%2 ==0)
+console.log(arr2);
+
+2. write a program to count how many even numbers are there in an array.
+ANS: 
+var arr = [1,2,3,4,5,6,7,8,9,10];
+var arr2 = arr.filter((x)=>x%2 ==0)
+console.log(arr2.length);
+
+3. write a program to find the sum of all the digits of an array.
+ANS:
+var arr = [1,2,3,4,5,6,7,8,9,10];
+var arr2 = arr.reduce((ele,sum)=>ele+sum)
+console.log(arr2);
+
+4. write a program to find the 2nd largest number from an array.
+ANS:
+var arr1 = [13,9,1,4,12,8,16,7,3];
+var arr2 = arr1.sort((a,b)=>b-a);
+console.log(arr2[1]);
+
+5. write a program to delete the duplicate elements from an array.
+ANS:
+var arr1 = [2,9,12,4,4,12,8,16,7,3,16];
+newArr = arr1.filter((item, pos) => {
+    return arr1.indexOf(item) == pos;
+})
+console.log(newArr);
+
+6. write a program to print the first non-repeated number in an array.
+ANS:
+var arr1 = [2,2,9,9,12,4,4,12,8,16,7,3,16,8,12];
+newArr = arr1.find((x)=>arr1.indexOf(x) === arr1.lastIndexOf(x));
+console.log(newArr);
+
+7. write a program to check if an array has duplicate elements or not.(return-yes/no)
+ANS:
+var arr1 = [2,9,12,4,4,12,8,16,7,3,16];
+newArr = arr1.some((item, pos) => arr1.indexOf(item) !== pos);
+
+8. take 2 arrays and print only the common elements from the arrays.
+ANS:
+var arr1 = ["abc","def","ghi","jkl","yz","mno"];
+var arr2 = ["mno","pqr","stu","vwx","yz","abc"];
+for (x of arr1){
+  for (y of arr2){
+    if (x == y){
+    console.log(y);
+    }
+  }
+}
+
+9. write a program find missingNumber in a series.
+   input:- [2, 5, 1, 4, 9, 6, 3, 7];  output:- 8
+ANS:
+var arr1 = [2, 5, 1, 4, 9, 6, 3, 7];
+newArr = arr1.sort();
+for (x of newArr){
+  if (newArr.indexOf(x+1) != x){
+    console.log(x+1);
+    break;
+  }
+}
+
+10. write a program to check if all the elements in an array are even.
+ANS:
+var arr1 = [2,4,6,8];
+var newArr = arr1.every((x)=>x%2 == 0);
+console.log(newArr);
+
+11. declare array of employees & sort them in ascending order (empId)
+ANS:
+var arr1 = [1139, 1046, 1967, 890, 1200,763];
+var newArr = arr1.sort((a,b)=>a-b);
+console.log(newArr);
+
+12. declare array of employees & sort them in ascending order by name.
+ANS:
+var arr1 = ["Sachin","Gagana","Harini","Vijay","Ankita"];
+var newArr = arr1.sort();
+console.log(newArr);
+
+13. declare array of employees & filter the employees whose sal>6000;
+ANS:
+var arr1 = [5000,7200,1250,9025,5643,12456];
+var newArr = arr1.filter((x)=> x>=6000);
+console.log(newArr);
+
+14. declare array of employees & increase sal of every employee by 500;
+ANS:
+var arr1 = [5000,7200,1250,9025,5643,12456];
+var newArr = arr1.map((x)=> x = x + 500);
+console.log(newArr);
+
+15. declare array of employees & add "comp:ibm" to every employee;
+ANS:
+var arr1 = ["Sachin","Gagana","Harini","Vijay","Ankita"];
+var newArr = arr1.map((x)=> x = x + " comp:ibm");
+console.log(newArr);

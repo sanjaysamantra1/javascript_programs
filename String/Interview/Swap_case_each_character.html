@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		
+		function swapCase(str){
+			result = ''
+			for(ch of str){
+				ch = (/[a-z]/).test(ch) ? ch.toUpperCase() : ch.toLowerCase();
+				result += ch;
+			}
+			return result;
+		}
+
+		input = 'This is jaVaScRipt claSs'
+		output = swapCase(input)
+		console.log(output);
+	</script>
+</body>
+</html>

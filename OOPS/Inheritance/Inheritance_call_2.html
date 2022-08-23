@@ -1,0 +1,36 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>			
+			function Person(name, age, add){
+				this.name = name;
+				this.age = age;
+				this.add = add;
+				
+				this.fullname = function(){
+					return this.name +" "+ this.age
+				}
+			}			
+			Person.prototype.lastname = 'xyz';
+			
+			function Student(name,age,add,roll,mark){
+				Person.call(this,name,age,add);
+				this.roll = roll;
+				this.mark = mark;
+			}
+			var s1 = new Student('aaaa',25,'bang',111,85);
+			console.log(s1);
+			var s2 = s1.fullname();
+			console.log(s2);
+			
+			function Employee(name,age,add,eId,sal){
+				Person.call(this,name,age,add);
+				this.eId = eId;
+				this.sal = sal;
+			}
+	var emp1 = new Employee('bbbb',35,'chennai',101,500);
+	console.log(emp1)
+		</script>
+	</body>
+</html>

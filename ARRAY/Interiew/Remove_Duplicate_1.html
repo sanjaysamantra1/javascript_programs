@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<script>
+			var arr = [10,20,30,20,40,10];
+			
+			var uniqueArr = arr.filter(myFunction);
+			
+			function myFunction(val,ind){
+				return arr.indexOf(val) === ind
+			}
+			
+			console.log(uniqueArr);
+		</script>
+	</body>
+</html>

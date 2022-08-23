@@ -1,0 +1,23 @@
+<html>
+	<body><h1>
+		<script>
+			var Employee = function(eid, name, sal) {
+				this.eid = eid;
+				this.name = name;
+				this.sal = sal;
+				//this.company = "IBM"
+			};
+			Employee.prototype.comp = 'IBM'
+			
+			var emp1 = new Employee(101, "sachin", 10000)	
+			var emp2 = new Employee(102, "rahul", 25000)
+			var emp3 = new Employee(103, "Deepak", 18000)
+			
+			console.log(emp1);
+			console.log(emp2);
+			console.log(emp3);
+			
+			console.log(emp1.comp);
+		</script>
+	</body>
+</html>

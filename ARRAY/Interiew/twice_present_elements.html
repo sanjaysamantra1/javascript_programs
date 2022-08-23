@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<script>
+			//Given	  [4,3,2,7,8,2,3,1]
+			//Return  [2,3]
+
+			arr = [4, 3, 2, 7, 8, 2, 3, 1]
+			var obj = {}
+			for (ele of arr) {
+				obj[ele] = obj[ele] ? obj[ele] + 1 : 1;
+			}
+			result = []
+			for (k in obj) {
+				obj[k] == 2 ? result.push(k) : null;
+			}
+			document.write(result)
+
+		</script>
+	</body>
+</html>

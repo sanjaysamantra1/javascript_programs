@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+</HEAD>
+
+<BODY>
+<center>
+<script>
+<!--var declaration is hoisted not the value-->
+	var myvar=10;
+	
+	(function()
+	{
+	alert(myvar);
+	
+	myFun();
+	
+	function myFun()
+	{
+		alert("hello world")
+	}
+		
+	})();
+</script>
+</center>
+</BODY>
+</HTML>

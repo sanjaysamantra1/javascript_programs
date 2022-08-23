@@ -1,0 +1,17 @@
+ <html>
+	<body>
+		<script>
+			function f1(){
+				var a = 10;
+				function f2(){
+					console.log(a);
+				}
+				a = 15;
+				return f2;
+			}
+			var f3 = f1();
+			console.log(f3);
+			f3();
+		</script>
+	</body>
+</html>

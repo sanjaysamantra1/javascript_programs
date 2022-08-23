@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> form</TITLE>
+<script>
+function myFunction(){
+
+var nameVal=document.myForm.name.value;
+if(nameVal == "")
+{
+alert( "Please provide your name!" );
+document.myForm.name.focus() ;
+}
+if(nameVal <5)
+{
+alert( "name is too short" );
+}
+
+if( document.myForm.email.value == "" )
+{
+alert( "Please provide your Email-id!" );
+document.myForm.email.focus() ;
+}
+if( document.myForm.phone.value == "" )
+{
+alert( "Please provide your phone num!" );
+document.myForm.phone.focus() ;
+}
+var emailID = document.myForm.email.value;
+atpos = emailID.indexOf("@");
+dotpos = emailID.lastIndexOf(".");
+if (atpos < 1 || ( dotpos - atpos < 2 )) 
+{
+alert("Please enter correct email ID")
+document.myForm.eMail.focus() ;
+}
+}
+</script>
+</HEAD>
+
+<BODY>
+<center>
+<form name="myForm" onsubmit="myFunction()">
+1. name: <input type="text" name="name"><br><br>
+2. email: <input type="text" name="email"><br><br>
+3. phone:  <input type="text" name="phone"><br><br>
+<input type="submit" value="OK">
+<input type="reset" value="RESET">
+</form>
+</center>
+</BODY>
+
+</HTML>

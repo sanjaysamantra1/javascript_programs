@@ -1,0 +1,6 @@
+Array
+=====
+1. Merge 2 sorted arrays.
+2. Find the Frequency of each element in the array.
+3. Remove duplicate Elements of an array.
+4. 

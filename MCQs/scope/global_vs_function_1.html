@@ -1,0 +1,17 @@
+<html>
+
+<body>
+    <script>
+        var a = 10;
+        function myFunc(b) {
+            var a = b;
+            console.log("inside " + a);
+        }
+        console.log("outside " + a);
+
+        myFunc(15);
+        console.log("outside-2 " + a);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			function Account()
+			{
+				var accNo = 12345;
+				var accBal = 5000;
+				this.accType = 'savings';
+				
+				this.dispInfo = function()
+				{
+					document.write(accNo+" "+accBal+" "+this.accType+"<br>");
+				}
+				this.depositAmt = function(amt)
+				{
+					if(amt>0)
+						accBal = accBal + amt;
+					else
+						document.write("please enter a +ve amt<br>");
+				}
+			}
+			var ob = new Account();
+			document.write(ob.accNo+"  "+ob.accBal+" "+ob.accType +"<br>");
+			ob.dispInfo();			
+			ob.depositAmt(3000);
+			ob.dispInfo();	
+			ob.depositAmt(-30000);
+			ob.dispInfo();	
+		</script>
+	</body>
+</html>

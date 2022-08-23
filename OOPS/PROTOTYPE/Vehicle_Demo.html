@@ -1,0 +1,45 @@
+<HTML>
+<BODY>
+<script>
+function Vehicle(){
+   this.name = "vehicle";
+   this.wheels=0;
+}
+Vehicle.prototype.move = function(){
+	console.log(this.name+" is running with "+this.wheels +" wheels")
+}
+function Car(){
+	this.name="car";
+	this.wheels=4;
+}
+Car.prototype = new Vehicle();
+Car.prototype.constructor = Car;
+function Bike(){
+	this.name="bike";
+	this.wheels=2;
+}
+Bike.prototype = new Vehicle();
+Bike.prototype.constructor = Bike;
+
+var myVehicle=new Vehicle();
+var myCar=new Car();
+var myBike=new Bike();
+
+console.log(typeof myVehicle)
+console.log(typeof myCar)
+console.log(typeof myBike)
+
+console.log(myCar instanceof Vehicle)
+console.log(myBike instanceof Vehicle)
+
+console.log(myVehicle.wheels)
+console.log(myBike.wheels)
+console.log(myCar.wheels)
+
+myVehicle.move();
+myCar.move();
+myBike.move();
+</script>
+</BODY>
+
+</HTML>

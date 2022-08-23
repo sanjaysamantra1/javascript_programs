@@ -1,0 +1,19 @@
+<html>
+<body><center>
+   
+   <button onclick="f1(event)" id="btn1" title='my Button'>
+		BTN-1
+   </button>
+   
+   <script>
+		function f1(event1){
+			console.log(event1);	
+			console.log(event1.target);
+			alert(event1.target.id);
+			alert(event1.target.innerText);
+		}
+		
+   </script>
+    
+</body>
+</html>

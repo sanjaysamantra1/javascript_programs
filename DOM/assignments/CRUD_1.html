@@ -1,0 +1,107 @@
+<html>
+   <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script>
+         var item = [
+			 {"name":"Apple", "qty":"5" , "price": "200"},
+			 {"name":"Mango", "qty":"4" , "price": "300"},
+			 {"name":"Banana", "qty":"3" , "price": "500"}, 	
+			 {"name":"Orange", "qty":"2" , "price": "700"}
+         ];
+         
+         function deleteItem(ind){		
+			 item.splice(ind,1);
+			 getitem();
+         }
+         function getitem()
+         {
+         for( var i=0; i<item.length; i++)
+         {
+         	var data = "";
+         	for(var i=0; i<item.length; i++)
+         	{
+         	var n = item[i].name;
+         	var p = item[i].price;
+         	var q = item[i].qty;
+         	data = data + "<tr>";
+         		data = data + "<td>" +n+ "</td>";
+         		data = data + "<td>" +p+ "</td>";
+         		data = data + "<td>" +q+ "</td>";
+         
+         // add delete button for every row
+         data = data + `<td><button class='btn btn-danger' onclick='deleteItem(${i})'> DELETE </button></td>`;
+         
+         		data = data + "</tr>"; //change here
+         	}
+         }
+         
+         document.getElementById("itemlist").innerHTML = data;
+         }
+         function addItem()
+         {
+         var n = document.getElementById("name").value;
+         var p = document.getElementById("price").value;
+         var q = document.getElementById("qty").value;
+         
+         var newitem = {"name":n, "qty":q , "price": p};
+         item = item.concat(newitem);
+         //alert("Item Added");
+         getitem(); //to reload the list
+         }
+      </script>
+   </head>
+   <body onload="getitem()">
+      <br>
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-3 well text-center">
+               <div class="form-group">
+                  <label>Item Name</label>
+                  <input type="text" class="form-control input-sm" id="name">
+                  <br>
+               </div>
+               <div class="form-group">
+                  <label>Item price</label>
+                  <input type="text" class="form-control input-sm" id="price">
+                  <br>
+               </div>
+               <div class="form-group">
+                  <label>Item Qty</label>
+                  <input type="text" class="form-control input-sm" id="qty">
+                  <br>
+               </div>
+               <br>
+               <button class="btn btn-success" onclick="addItem()">Save Item</button>
+               <button class="btn btn-warning" onclick="getitem()">Show Item</button>
+               <hr>
+            </div>
+            <div class="col-sm-9 well ">
+               <table class="table table-bordered">
+                  <caption class="text-center">Item List</caption>
+                  <thead>
+                     <tr class="active">
+                        <th>Item Name</th>
+                        <th>Item Price</th>
+                        <th>Item Qty</th>
+                        <th>Action</th>
+                     </tr>
+                  </thead>
+                  <tbody id="itemlist">
+                     <tr>
+                        <td colspan="2">No Records !</td>
+                     </tr>
+                  </tbody>
+                  <tfoot>
+                     <tr class="danger">
+                        <th>Item Name</th>
+                        <th>Item Price</th>
+                        <th>Item Qty</th>
+                        <th>Action</th>
+                     </tr>
+                  </tfoot>
+               </table>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

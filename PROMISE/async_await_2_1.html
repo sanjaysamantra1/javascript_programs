@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script>
+      function who() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("sanjay");
+          }, 1000);
+        });
+      }
+      //who().then(f1,f2)
+
+      function what() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("teaches Javascript");
+          }, 2000);
+        });
+      }
+
+      function where() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("in class");
+          }, 3000);
+        });
+      }
+      //async function, when there are multiple steps involved
+      async function msg() {
+        let a = await who();
+        console.log("first promise resolved");
+        let b = await what();
+        console.log("second promise resolved");
+        let c = await where();
+        console.log("third promise resolved");
+
+        console.log(`${a} ${b} ${c}`);
+      }
+      msg();
+
+      /*each step is done sequentially, with each additional step waiting for the 
+			step before to resolve or reject before continuing.*/
+    </script>
+  </head>
+  <body></body>
+</html>

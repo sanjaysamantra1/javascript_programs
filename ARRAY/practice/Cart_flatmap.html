@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <body>
+      <script>
+        let cart = [
+          {
+            name: "Smartphone",
+            qty: 2,
+            price: 500,
+            freeOfCharge: false,
+          },
+          {
+            name: "Tablet",
+            qty: 1,
+            price: 800,
+            freeOfCharge: false,
+          },
+        ];
+        let newCart = cart.flatMap((item) => {
+          if (item.name === "Smartphone") {
+            return [
+              item,
+              {
+                name: "Screen Protector",
+                qty: item.qty,
+                price: 5,
+                freeOfCharge: true,
+              },
+            ];
+          } else {
+            return [item];
+          }
+        });
+        console.log(newCart);
+
+        const total = newCart.reduce((sum, item) => {
+          if (!item.freeOfCharge) sum += item.price * item.qty;
+          return sum;
+        }, 0);
+        console.log({ total });
+      </script>
+    </body>
+  </head>
+</html>

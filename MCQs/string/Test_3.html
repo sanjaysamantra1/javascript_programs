@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h2>Never Create Strings as objects.</h2>
+      <p>Strings and objects cannot be safely compared.</p>
+      <script>
+         var x = new String("John");    // x is an object
+         var y = new String("John");  // y is an object
+         alert(x==y)
+		 alert(x===y)
+      </script>
+   </body>
+</html>

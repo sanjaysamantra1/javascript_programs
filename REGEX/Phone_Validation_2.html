@@ -1,0 +1,26 @@
+<HTML>
+<BODY>	
+</BODY>
+<h1>
+	Enter Your Phone no: 
+	<input maxlength=10 type='text' id='phone' onkeyup="f1()">
+
+	<script>
+	function f1(){
+		var text = document.getElementById('phone').value;
+		
+		
+		regex = /[0-9]{10}/;
+		
+		if(regex.test(text) !== true)
+		{			
+			document.getElementById('phone').style.backgroundColor='red';
+			document.getElementById('phone').style.color='white';
+		}
+		else{				
+		document.getElementById('phone').style.backgroundColor='green';
+		document.getElementById('phone').style.color='white';
+			}
+		}
+	</script>
+</HTML>

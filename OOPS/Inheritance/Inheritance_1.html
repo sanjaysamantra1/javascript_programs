@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+			var Person = function(name){
+				this.name = name;
+			}
+			Person.prototype.add = 'Bangalore';
+			
+			var Employee = function(age){
+				this.age=age;
+			}
+			Employee.prototype = Person.prototype;
+			
+			var emp1 = new Employee(25);
+			console.log(emp1.add);
+			
+		</script>
+	</body>
+</html>

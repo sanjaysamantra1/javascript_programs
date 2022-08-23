@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<script>
+			var firstArray = [2, 2, 4, 1];
+			var secondArray = [1, 2, 0, 2];
+
+			result = intersection(firstArray, secondArray); // [2, 1]
+			console.log(result);
+
+			function intersection(firstArray, secondArray) {
+				var intersectionArray = [];
+				for(ele of firstArray){
+					if(secondArray.indexOf(ele)!=-1 && intersectionArray.indexOf(ele)==-1 )
+					intersectionArray.push(ele)
+				}
+
+			  return intersectionArray;			  
+			}
+		</script>
+	</body>
+</html>

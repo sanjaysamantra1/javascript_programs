@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<script>
+			function doHomework(subject, started , finished) {
+			  started();
+			  alert(`Doing my ${subject} homework.`);
+			  finished();
+			}
+			function alertStarted(){
+			  return "yes";
+			}
+			function alertFinished(){
+			  return "yes";
+			}
+			doHomework('math', alertStarted, alertFinished);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <script>
+      let obj1 = { name: "sachin", age: 35, add: "mumbai" };
+
+      //ES-5
+      let a = obj1.name;
+      let b = obj1.age;
+      let c = obj1.add;
+      alert(a + " " + b + "  " + c);
+
+      //ES-6
+      let { age, add, name } = obj1;
+      alert(name + " " + age + "  " + add);
+
+      //ES-6
+      let { name: p, age: q, add: r } = obj1;
+      alert(p + " " + q + "  " + r);
+    </script>
+  </body>
+</html>

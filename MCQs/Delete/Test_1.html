@@ -1,0 +1,11 @@
+<html>
+<body>
+	<script>
+		var a = (function(x) {
+			delete x;
+			return x;
+		})(10);
+		console.log(a);
+	</script>
+</body>
+</html>

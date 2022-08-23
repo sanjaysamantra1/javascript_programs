@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <script>
+      // stack LIFO
+      function Stack() {
+        let list = [];
+
+        function push(value) {
+          list.push(value);
+        }
+        function pop() {
+          return list.pop();
+        }
+        function peek() {
+          return list[list.length - 1];
+        }
+        return Object.freeze({
+          push,
+          pop,
+          peek,
+        });
+      }
+      let stackObj = Stack();
+      console.log(stackObj);
+      console.dir(stackObj.push);
+
+      stackObj.push("tata");
+      stackObj.push("honda");
+      stackObj.push("maruti");
+      console.log(stackObj.peek());
+    </script>
+  </body>
+</html>

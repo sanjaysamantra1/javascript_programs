@@ -1,0 +1,12 @@
+<html>
+	<body>
+		disable right click
+		<script>
+			document.addEventListener("contextmenu", f1);		
+			function f1(e) {
+				e.preventDefault();
+				alert("right click is not allowed here")
+			}
+		</script>
+	</body>
+</html>

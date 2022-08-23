@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //elements of two arrays except common elements , no duplicate
+
+      function sym(first, second) {
+        let withDuplicate = [
+          ...first.filter(x => !second.includes(x)),
+          ...second.filter(x => !first.includes(x))
+        ];
+        let result = [...new Set(withDuplicate)];
+        return result;
+      }
+      res = sym([1, 2, 3], [5, 2, 1, 4]);
+      console.log(res);
+    </script>
+  </body>
+</html>

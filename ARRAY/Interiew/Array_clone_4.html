@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <script>
+      // const clone = (items) => items.map(item => Array.isArray(item) ? clone(item) : item);
+
+      function clone(arr) {
+        let clonedArr = arr.map((ele) => {
+          if (Array.isArray(ele)) {
+            return clone(ele);
+          } else {
+            return ele;
+          }
+        });
+        return clonedArr;
+      }
+
+      let arr1 = [10, 20, [30, 31]];
+      let arr2 = clone(arr1);
+      arr1[2].push(32);
+      console.log(arr1, arr2);
+    </script>
+  </body>
+</html>

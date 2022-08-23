@@ -1,0 +1,22 @@
+<html>
+	<body>
+		<script>
+			var result = [];
+ 
+			for (var i = 0; i < 5; i++) {
+			  result[i] = function () {
+				console.log(i);
+			  };
+			}
+
+			result[0](); // 5, expected 0
+			result[1](); // 5, expected 1
+			result[2](); // 5, expected 2
+			result[3](); // 5, expected 3
+			result[4](); // 5, expected 4
+			
+			// incorrect assumption is that the scope is different for all five functions
+			// context is the same for all five functions within the result array. Therefore, every time the variable i is incremented, it updates scope — which is shared by all the functions. That’s why any of the 5 functions trying to access i returns 5 (i is equal to 5 when the for-loop exits
+		</script>
+	</body>
+</html>

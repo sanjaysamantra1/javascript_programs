@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script>
+      //await is a new operator used to wait for a promise to resolve or reject.
+      //It can only be used inside an async function.
+
+      function add(a, b) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(a + b);
+          }, 2000);
+        });
+      }
+      add(2, 3).then(
+        (res) => {
+          document.write(res);
+        },
+        (err) => {
+          document.write(err);
+        }
+      );
+
+      function sub(a, b) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(a - b);
+          }, 3000);
+        });
+      }
+      async function test() {
+        res = await sub(5, 3);
+        document.write(res);
+      }
+
+      test();
+    </script>
+  </head>
+  <body></body>
+</html>

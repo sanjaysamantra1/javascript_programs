@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1>
+	<script>
+		var emp1 = {company: 'xyz'}
+		var emp2 = Object.create(emp1);
+		delete emp2.company;
+		console.log(emp2.company);	
+		console.log(emp2);
+		
+		var emp3 = {company:'ABC'};
+		var emp4 = emp3;
+		delete emp4.company;
+		console.log(emp4.company);	
+		console.log(emp4);
+	</script>
+</body>
+</html>

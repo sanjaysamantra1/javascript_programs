@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <h1 id="one">You are eleigible for voting</h1>
+    <h1 id="two">You are not eleigible for voting</h1>
+    <script>
+      let age = +prompt("enter age");
+      if (age >= 18) {
+        document.getElementById("two").style.display = "none";
+      } else {
+        document.getElementById("one").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

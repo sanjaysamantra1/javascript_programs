@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script>
+      function updateClickCount() {
+        var counter = 0;
+        ++counter;
+        document.getElementById("spnCount").innerHTML = counter;
+      }
+    </script>
+  </head>
+
+  <body>
+    <button onclick="updateClickCount()">click me</button>
+    <h1>you've clicked <span id="spnCount"> 0 </span> times!</h1>
+  </body>
+</html>

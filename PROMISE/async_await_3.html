@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script>
+			function who() {
+			  return new Promise(resolve => {
+				setTimeout(() => {
+				  resolve('sanjay');
+				}, 1000);
+			  });
+			}
+
+			function what() {
+			  return new Promise(resolve => {
+				setTimeout(() => {
+				  resolve('teaches Javascript');
+				}, 2000);
+			  });
+			}
+
+			function where() {
+			  return new Promise(resolve => {
+				setTimeout(() => {
+				  resolve('in class');
+				}, 3000);
+			  });
+			} 
+			
+			
+			async function msg() {
+			  const [a, b, c] = await Promise.all([who(), what(), where()]);
+
+			  console.log(`${ a } ${ b } ${ c }`);
+			}
+
+			msg();
+			
+			/*Promise.all returns an array with the resolved 
+			values once all the passed-in promises have resolved.*/
+		</script>
+	</head>
+	<body>		
+	</body>
+</html>

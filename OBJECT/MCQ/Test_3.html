@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <script>
+      var obj1 = new Object({ x: 10, y: 20 });
+      var obj2 = new Object(obj1);
+
+      console.log("object2: " + obj2.x + " " + obj2.y);
+
+      obj2.x = 15;
+      console.log("object1: " + obj1.x + " " + obj1.y);
+      console.log("object2: " + obj2.x + " " + obj2.y);
+
+      obj1.y = 25;
+      console.log("object1: " + obj1.x + " " + obj1.y);
+      console.log("object2: " + obj2.x + " " + obj2.y);
+    </script>
+    <!-- obj1 changes affects obj2 and obj2 changes affect obj1-->
+  </body>
+</html>

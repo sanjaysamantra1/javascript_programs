@@ -1,0 +1,31 @@
+<html>
+	<body>
+		select All: <input type='checkbox' id='selectAll' /> <br></br>
+		
+		aaa: <input type='checkbox' class="selectOne" onchange='checkUncheck()'/>
+		bbb: <input type='checkbox' class="selectOne" onchange='checkUncheck()'/>
+		ccc: <input type='checkbox' class="selectOne" onchange='checkUncheck()'/>
+		ddd: <input type='checkbox' class="selectOne" onchange='checkUncheck()'/>
+		
+		<script>
+			selectAll = document.getElementById('selectAll');
+			allOtherCheckBoxes = document.querySelectorAll('.selectOne');
+		
+			document.getElementById('selectAll').addEventListener('change',function(e){	
+					allOtherCheckBoxes.forEach(ele=>ele.checked=e.target.checked)		
+			})
+			
+			function checkUncheck(){
+				selectAll.checked = true;
+				
+				for(i=0;i<allOtherCheckBoxes.length;i++){
+					if(!allOtherCheckBoxes[i].checked){
+						selectAll.checked = false;
+						break;
+					}
+				}
+			}
+		</script>
+
+	</body>
+</html>

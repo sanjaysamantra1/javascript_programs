@@ -1,0 +1,22 @@
+<html>
+	<body>
+		<script>
+			let user = {
+				 name : "Sachin",
+				 sayHi : function() {
+					console.log('Hello '+this.name);
+					console.log(this); 
+				}
+			};
+			user.sayHi();	//Hello Sachin
+
+			setTimeout( user.sayHi , 2000 ); 
+			// Hello 
+			// this = window
+			
+			setTimeout( ()=>{
+				user.sayHi.call(user)
+			} , 2000 );
+		</script>
+	</body>
+</html>

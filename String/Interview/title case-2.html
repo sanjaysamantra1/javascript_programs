@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function titleCase(str) {
+        let res = [];
+        let words = str.split(" ");
+		
+        for (word of words) {
+          let updatedWord = word[0].toUpperCase() + word.slice(1);
+          res.push(updatedWord);
+        }
+        return res.join(" ");
+      }
+
+      var str = prompt("enter a string", "this is javascript class");
+      result = titleCase(str);
+      alert(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<HTML>
+   <HEAD>
+      <TITLE> New Document </TITLE>
+   </HEAD>
+   <BODY>
+      <script>
+         function Account()
+         {
+         	var accNo=101;  //private
+         	var accBal=5000; //private
+         	this.accType="savings";
+         	
+         	var disp=function(){
+         		document.write(this.accNo+"  "+this.accBal+" "+this.accType)
+         	}
+         	this.disp2=function(){
+         		document.write(accNo+"  "+accBal+" "+this.accType)
+         	}
+         }
+         var ob1=new Account();
+         document.write(ob1.accNo+"  "+ob1.accBal+" "+ob1.accType);
+         
+         //ob1.disp();
+         
+         ob1.disp2();
+         
+      </script>
+   </BODY>
+</HTML>

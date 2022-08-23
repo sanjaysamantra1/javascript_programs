@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <script>
+      var inputArr = [1, 2, 3, [4, 5, 6, [7, 8, 9]]];
+
+      function myFlat(arr, depth = 1) {
+        const result = [];
+        for (ele of arr) {
+          if (Array.isArray(ele) && depth > 0) {
+            result.push(...myFlat(ele, depth - 1));
+          } else {
+            result.push(ele);
+          }
+        }
+        return result;
+      }
+      result = myFlat(inputArr, 2);
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+      addResult = add(2, 3);
+      document.write(addResult);
+
+      document.write("<br><hr>");
+      //async returns a promise object
+      async function sub(a, b) {
+        return a - b;
+      }
+      subResult = sub(5, 3);
+      document.write(subResult);
+      document.write("<br><hr>");
+
+      promiseObj = sub(5, 3);
+      promiseObj.then(
+        (res) => {
+          document.write(res);
+        },
+        (err) => {
+          document.write("error");
+        }
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

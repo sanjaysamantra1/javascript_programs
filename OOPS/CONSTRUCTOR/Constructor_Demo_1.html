@@ -1,0 +1,33 @@
+<HTML>
+   <HEAD>
+      <TITLE> New Document </TITLE>
+   </HEAD>
+   <BODY>
+      <script>
+		/*function f1(x,y){
+			//var this = {};
+			this.x = x;
+			this.y = y;
+			//return this;
+		}
+		var ob1 = f1(10,20);
+		console.log("ob1: "+ob1.x+" "+ob1.y);*/
+		
+         function Person(name, age){
+         	//var this={};
+         	this.name=name;
+         	this.age=age;
+         	this.info=function(){
+         		return this.name+" is "+this.age+" years old";
+         	}
+         	//return this;
+         }
+         var sachin = new Person("sachin",35);
+         var sehwag = new Person("Sehwag",32);
+         document.write(sachin.info());
+         document.write("<br>");
+         document.write(sehwag.info());
+         
+      </script>
+   </BODY>
+</HTML>

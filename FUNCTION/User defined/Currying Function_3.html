@@ -1,0 +1,24 @@
+<html>
+  <html>
+    <body>
+      <script>
+        function add(a) {
+          return function (b) {
+            if (b) {
+              return add(a + b);
+            }
+            return a;
+          };
+        }
+        res1 = add(1)(2)();
+        console.log(res1);
+
+        res2 = add(1)(2)(3)();
+        console.log(res2);
+
+        res2 = add(1)(2)(3)(4)(5)();
+        console.log(res2);
+      </script>
+    </body>
+  </html>
+</html>

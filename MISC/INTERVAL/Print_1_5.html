@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      let count = 1;
+      function f1() {
+        if (count <= 5) {
+          document.writeln(count);
+          count++;
+        } else {
+          clearInterval(timerId);
+        }
+      }
+      let timerId = setInterval(f1, 1000);
+      console.log(timerId);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<script>
+			let obj = {
+			   x : 10,
+			   getX : function(){
+					console.log(this.x);
+					
+					//const inner =()=>{
+					const inner = function(){
+						console.log(this.x);
+					}
+					inner();
+			   }
+			}
+			obj.getX();			
+			
+		</script>
+	</body>
+</html>

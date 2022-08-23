@@ -1,0 +1,24 @@
+<html>
+<body>
+
+	<script>
+	
+	    'use strict'
+		let age = prompt("What is your age?", 18)
+		// conditionally declare a function
+		var welcome;
+		if (age < 18) {
+			welcome = function () {
+				alert("Hello!");
+			}
+		} else {
+			welcome = function() {
+				alert("Greetings!");
+			}
+		}
+		welcome(); 
+	
+	</script>
+
+</body>
+</html>

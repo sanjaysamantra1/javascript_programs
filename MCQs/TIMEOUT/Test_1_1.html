@@ -1,0 +1,9 @@
+<html>
+  <body>
+    <script>
+      setTimeout(() => console.log("timeout"), 0);
+      Promise.resolve().then(() => console.log("promise"));
+      console.log("normal code");
+    </script>
+  </body>
+</html>

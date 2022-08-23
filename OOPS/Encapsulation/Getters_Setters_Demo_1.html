@@ -1,0 +1,27 @@
+<HTML>
+<BODY>
+<h1>
+	<script>
+var address = {
+	street: "no street",
+	city: "no City",
+	state: "no state",
+	
+	get getAddress(){
+		return this.street+" "+this.city+" "+this.state+"<br>";
+	},	
+	set setAddress(add){
+		var words = add.toString().split(',');
+        this.street = words[0] || '';
+        this.city = words[1] || '';
+		this.state = words[2] || '';
+	},
+}
+document.write(address.getAddress)
+address.setAddress = "Marathalli, bangalore, karnataka";
+document.write(address.getAddress)
+document.write(address.street+"  "+address.city+"  "+address.state)
+</script>
+</BODY>
+
+</HTML>

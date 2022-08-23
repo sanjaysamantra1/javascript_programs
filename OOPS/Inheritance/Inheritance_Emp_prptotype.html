@@ -1,0 +1,44 @@
+ <html>
+	<body>
+		<script>
+			function Person(){				
+			}
+			Person.prototype.name = "sachin";
+			Person.prototype.age = 35;
+			Person.prototype.add = "mumbai"
+			
+			function Employee(eId,sal){	
+				this.eId = 101;
+				this.sal = 5000;
+			}			
+			
+			function Student(roll,mark){
+				this.roll = 'r1111';
+				this.mark = 98;
+			}
+			
+			Employee.prototype = Person.prototype;
+			Student.prototype = Person.prototype;
+			
+			var emp1 = new Employee();
+			var std1 = new Student();
+			
+			console.log(emp1);
+			console.log(std1);
+			
+			console.log(emp1.name);
+			console.log(emp1.age);
+			console.log(emp1.add);
+			console.log(emp1.eId);
+			console.log(emp1.sal);	
+			
+			
+			console.log(std1.name);
+			console.log(std1.age);
+			console.log(std1.add);
+			console.log(std1.roll);
+			console.log(std1.mark);
+			
+		</script>
+	</body>
+</html>

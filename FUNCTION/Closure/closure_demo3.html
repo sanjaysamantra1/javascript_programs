@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script>
+      // normal function
+      function sum(a, b) {
+        console.log(a + b);
+      }
+      sum(2, 3);
+
+      // curring
+      function add(a) {
+        return function (b) {
+          console.log(a + b);
+        };
+      }
+      add(5)(3);
+
+	  let returnedFn = add(10);
+	  returnedFn(5);
+
+	  console.dir(returnedFn)
+    </script>
+  </head>
+
+  <body></body>
+</html>

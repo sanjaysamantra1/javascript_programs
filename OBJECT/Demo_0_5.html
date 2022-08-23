@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<h1>
+		<script>
+			var emp = {
+						 name : 'sachin',
+						 age : 35,
+						 add : 'mumbai'
+					  }			
+			document.writeln(emp.name); //sachin
+			document.writeln(emp.a); //undefined
+			
+			document.writeln("<hr>");
+			
+			var a = 'name';
+			document.writeln(emp['name']);  //sachin
+			document.writeln(emp[a]);  //sachin
+			
+			document.writeln("<hr>");
+			
+			var b = 'age'
+			document.writeln(emp['age']); //35
+			document.writeln(emp[b]); //35
+			
+		</script>
+	</body>
+</html>	

@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>this is title</title>	
+</head>
+
+<body>
+    <input id='one' />
+	<input id='two' />
+	<h2 id='three'>hiiiii</h2>
+	
+	<button onclick='f1()'>click me</button>
+	
+	<script>
+		function f1(){
+			var text = document.getElementById('one').value;
+			document.getElementById('two').value = text;
+			document.getElementById('three').innerHTML = text;	
+		}
+	</script>
+</body>
+
+</html>

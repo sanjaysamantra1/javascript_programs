@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <body>
+      <script>
+        employees = [
+          { eId: 101, name: "sanjay", hours: 3 },
+          { eId: 102, name: "deepak", hours: 2 },
+          { eId: 103, name: "ajay", hours: 4 }, // monday
+
+          { eId: 102, name: "deepak", hours: 3 },
+          { eId: 103, name: "ajay", hours: 3 }, // tuesday
+
+          { eId: 102, name: "deepak", hours: 4 }, //wednesday
+        ];
+
+        let result = [];
+        for (emp of employees) {
+          let foundEmp = result.find((ele) => ele.eId == emp.eId);
+
+          if (!foundEmp) {
+            result.push(emp);
+          } else {
+            foundEmp.hours = foundEmp.hours + emp.hours;
+          }
+        }
+        console.log(result);
+      </script>
+    </body>
+  </head>
+</html>

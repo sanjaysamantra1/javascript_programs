@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<script>
+			let employees = [
+				{eId:101,name:'sanjay',cars:['tata','honda']},
+				{eId:102,name:'deepak',cars:['maruti','toyota']},
+			]
+			employees.forEach(function(emp){
+				emp.cars.forEach(function(car){
+					console.log(car,emp);
+				})
+			})
+		</script>
+	</body>
+</html>

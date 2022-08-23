@@ -1,0 +1,14 @@
+<html>
+	<body><h1>
+		
+		<input onkeyup='myFun()'/>
+		Your name is: <span></span>
+		
+		<script>
+			function myFun(){
+				name = document.querySelector('input').value;
+				document.querySelector('span').innerHTML = name;
+			}
+		</script>
+	</body>
+</html>

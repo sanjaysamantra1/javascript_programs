@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <script>
+      // == compares only the value, performs implicit type conversion. (equality)
+      // === compares both value and datatype, no type conversion is performed.(Strict equality)
+
+      console.log(5 == "5"); // true
+      console.log(5 === "5"); // false
+
+      console.log(true == 1); // true
+      console.log(true === 1); // false
+
+      console.log(undefined == null); // true
+      console.log(undefined === null); // false
+
+      console.log([10, 20] == "10,20"); // true
+      console.log([10, 20] === "10,20"); // false
+
+      console.log([10, 20] == [10, 20]); //false(adress comparison)
+      console.log([10, 20] === [10, 20]); //false(adress comparison)
+
+      console.log({} == {}); //false-adress comparison
+      console.log({} === {}); //false-adress comparison
+
+      document.write([10, 20]); // array gets converted to string
+      alert([10, 20]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+<body>
+    <script>
+		//use preventDefault to stop opening context menu
+		function f1(){
+			alert("right click")
+			event.preventDefault();
+		}
+		document.body.addEventListener("contextmenu",f1);
+    </script>
+</body>
+</html>

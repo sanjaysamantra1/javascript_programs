@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+        window.onbeforeunload = function(evt) {
+            var message = 'Are you sure you want to leave?';
+            if (typeof evt == 'undefined') {
+                evt = window.event;
+            }       
+            if (evt) {
+                evt.returnValue = message;
+            }
+            return message;
+        } 
+    </script>
+</head>
+<body>
+  <a href="http://www.microsoft.com">Click here to navigate to 
+      www.microsoft.com</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script>
+      let urls = [
+        "https://api.github.com/users/iliakan", // 2
+        "https://api.github.com/users/remy", //1
+        "https://api.github.com/users/sanjaysamantra1", //3
+      ];
+
+      // map every url to the promise of the fetch
+      let requests = urls.map((url) => fetch(url));
+
+      // Promise.all waits until all jobs are resolved
+      Promise.all(requests).then(([res1,res2,res3]) => {
+        Promise.all([res1.json(),res2.json(),res3.json()]).then(([data1,data2,data3])=>{
+          console.log(data1,data2,data3);
+        })
+      }).catch(err=>{
+        console.log('something went wrong')
+      })
+    </script>
+  </head>
+  <body>
+</html>

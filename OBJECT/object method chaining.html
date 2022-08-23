@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <script>
+      let calc = {
+        total: 0,
+        add: function (val) {
+          this.total = this.total + val;
+          return this;
+        },
+        sub: function (val) {
+          this.total = this.total - val;
+          return this;
+        },
+        mul: function (val) {
+          this.total = this.total * val;
+          return this;
+        },
+      };
+      let result = calc.add(10).mul(2).sub(5);
+      console.log(result.total);
+    </script>
+  </body>
+</html>

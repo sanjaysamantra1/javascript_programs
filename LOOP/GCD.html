@@ -1,0 +1,18 @@
+<html>
+<body bgcolor=cyan>
+<h1>
+	<script>
+		n1 = prompt("enter 1st number");
+		n2 = prompt("enter 2nd number");
+		
+		small = n1<n2 ? n1 : n2;
+		
+		for(i=small;i>=1;i--){
+			if(n1%i==0 && n2%i==0){
+				document.write('GCD is '+i);
+				break;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <script>
+      "use strict";
+      function f1() {
+        console.log(this); // undefined / window
+      }
+      f1();
+      console.log(this); // window
+    </script>
+  </body>
+</html>

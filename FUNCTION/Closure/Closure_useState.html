@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+      function useState(defaultValue) {
+        let value = defaultValue;
+
+        function getValue() {
+          return value;
+        }
+        function setValue(newValue) {
+          value = newValue;
+        }
+
+        return [getValue, setValue];
+      }
+      const [color, setColor] = useState("red");
+      console.log(color());
+
+      setColor("Blue");
+      console.log(color());
+
+      console.dir( setColor);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <script>
+        var Account = {
+			data: {},
+
+		  create: function(obj) {
+			return this.data[obj.id] = obj
+		  },
+		  read: function(id) {
+			return this.data[id]
+		  },
+		  update: function(obj) {
+			return this.data[obj.id] = obj
+		  },
+		  delete: function(id) {
+				return this.data[id] = null
+			  }
+		}
+		
+		Account.create({id: 7, name: 'sanjay'});
+		Account.create({id: 9, name: 'rajesh'});
+
+		// We can READ
+		console.log('7: ' + Account.read(7).name);
+		  // 7: sanjay
+		console.log('9: ' + Account.read(9).name);
+		  // 9: rajesh
+
+		// We can UPDATE
+		Account.update({id: 7, name: 'Alexander'})
+		console.log('7: ' + Account.read(7).name);
+		  // 7: Alexander
+
+		// We can DELETE
+		Account.delete(7)
+		console.log('7: ' + Account.read(7));
+		  // 7: null
+		  
+		  
+		  // there is no encapsulation. We can get the data instance variable directly to read or change it.
+		  Account.data[7] = {name: 'I changed your name'}
+		console.log('7: ' + Account.read(7).name);
+    </script>
+</head>
+
+<body>
+    
+</body>
+
+</html>

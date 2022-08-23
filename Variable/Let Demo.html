@@ -1,0 +1,28 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			function varTest(){
+				var a = 5;   //function variable
+				if(true)
+				{
+					var a = 10; 	//if block variable
+					console.log(a); //10
+				}
+				console.log(a);  //10 function variables
+			}
+			
+			function letTest(){
+				let a = 5;   //function variable
+				if(true){
+					let a = 10;  // if block variable
+					console.log(a);  //10
+				}
+				console.log(a);  //5
+			}
+			varTest();
+			letTest();
+		</script>
+	</body>
+</html>

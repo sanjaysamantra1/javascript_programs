@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <script>
+      /*1. Generators are a special type of functions
+			that simplify the task of writing iterators.
+			2. produces a sequence of results instead of a single value.
+			3. a generator is a function which returns an object on which you can call next()
+			*/
+
+      function* generatorFunction() {
+        console.log("This will be executed first.");
+        yield "Hello, ";
+        console.log("I will be printed after the pause");
+        yield "World!";
+      }
+      const generatorObject = generatorFunction();
+      console.log(generatorObject);
+      console.log(generatorObject.next().value);
+      console.log(generatorObject.next().value);
+      console.log(generatorObject.next().value);
+    </script>
+  </body>
+</html>

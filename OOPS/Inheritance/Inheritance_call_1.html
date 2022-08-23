@@ -1,0 +1,25 @@
+<HTML>
+<BODY>
+<script>
+	//every function expression is a constructor
+	var parent = function(name,age){
+		this.disp1 = function(){
+			alert("this is parent disp function")
+		}
+	}
+	var p1 = new parent();
+	p1.disp1();
+	
+	var child = function(){
+		parent.call(this);
+		this.disp2 = function(){
+			alert("this is child disp-2 function")
+		}
+	}
+	var c1 = new child();
+	c1.disp2();
+	c1.disp();
+</script>
+</BODY>
+
+</HTML>

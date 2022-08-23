@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <script>
+     async function getData() {
+         let response = await fetch("https://jsonplaceholder.typicode.com/comments");
+         console.log(response)
+         let finalData = await response.json();
+         console.log(finalData);
+       }
+       getData();
+    </script>
+  </body>
+</html>

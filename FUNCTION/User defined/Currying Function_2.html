@@ -1,0 +1,22 @@
+<html>
+  <html>
+    <body>
+      <script>
+        function add(x) {
+          return function (y) {
+            if (typeof y !== "undefined") {
+              x = x + y;
+              return arguments.callee;
+            } else {
+              return x;
+            }
+          };
+        }
+        res1 = add(1)(2)(3)();
+        console.log(res1);
+        res2 = add(1)(1)(1)(1)();
+        console.log(res2);
+      </script>
+    </body>
+  </html>
+</html>

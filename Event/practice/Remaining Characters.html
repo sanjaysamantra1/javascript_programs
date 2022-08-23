@@ -1,0 +1,17 @@
+<html>
+<head>
+	<script>
+	function f1(){
+		var len = document.getElementById("test").value.length;
+		var remain =150-len;
+		document.getElementById("a").innerHTML = remain;
+	}
+	</script>
+</head>
+<body>
+<h1>
+	<textarea id ="test" onkeyup="f1()" rows=5" cols="30" maxlength= "150"></textarea><br>
+	<span> Remaining</span>
+	<span id ="a" > 150</span>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<HTML>
+<BODY>
+    <script>
+        var reg1 = new RegExp('\\Bjava\\B')
+
+        console.log(reg1.test("javascript"));
+		console.log(reg1.test("java"));
+		console.log(reg1.test("tjavascript"));
+		console.log(reg1.test("Tjava and javascript"));
+		
+		/*
+\\b to get \b inside the string literal.
+"\\bJava\\b"	"java"
+"\\bJava\\B"	"java*"
+"\\BJava\\b"	"*java"
+"\\BJava\\B"	"*java*"
+
+*/
+    </script>
+</BODY>
+
+</HTML>

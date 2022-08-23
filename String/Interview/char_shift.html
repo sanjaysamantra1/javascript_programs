@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function alphabet_char_Shift(str) {
+        const charsArr = str.split("");
+        for (let i in charsArr) {
+          let n = charsArr[i].charCodeAt() - "a".charCodeAt();
+          n = (n + 1) % 26;
+          charsArr[i] = String.fromCharCode(n + "a".charCodeAt());
+        }
+        return charsArr.join("");
+      }
+
+      console.log(alphabet_char_Shift("abcxyz"));
+      // bcdyza
+    </script>
+  </body>
+</html>

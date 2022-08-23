@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <ul id="parent">
+      <li class="child">One</li>
+      <li class="child">two</li>
+      <li class="child">three</li>
+      <li class="child">four</li>
+      <li class="child">five</li>
+    </ul>
+
+    <script>
+      let parent = document.getElementById("parent");
+      parent.addEventListener("click", f1);
+
+      function f1(event) {
+        if (event.target.className == "child") {
+          event.target.style.backgroundColor = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

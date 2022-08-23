@@ -1,0 +1,30 @@
+<html>
+	<body>
+		<script>
+			// 4 ways to create javascript object
+			
+			//1. Object Literal
+			var obj1 = {};
+			console.log(obj1);
+			
+			//2. Object class Create() method
+			var obj2 = Object.create(null);
+			console.log(obj2);
+			
+			//3. new keyword-Object class Constructor
+			var obj3 = new Object();
+			console.log(obj3);
+			
+			//4. Using Constructor/Class
+			function Employee(id,name,sal){
+				this.id = id;
+				this.name = name;
+				this.sal = sal;
+			}
+			var emp1 = new Employee(111,'dipak',5000);
+			var emp2 = new Employee(222,'Akash',6500);
+			var emp3 = new Employee(333,'Dillip',7000);
+			
+		</script>
+	</body>
+</html>

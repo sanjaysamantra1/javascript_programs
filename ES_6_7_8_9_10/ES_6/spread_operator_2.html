@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      let arr = [10, 15, 12, 20, 18];
+      result1 = Math.max(arr);
+
+      // Es-5
+      result2 = Math.max.apply(null, arr);
+
+      //ES-6
+      result2 = Math.max(...arr);
+
+      alert(result1);
+      alert(result2);
+      alert(result3);
+    </script>
+  </body>
+</html>

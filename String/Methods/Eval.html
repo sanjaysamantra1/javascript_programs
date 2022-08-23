@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script>
+      //eval() evaluates the expression in string format
+      var a = "2+3+4";
+      console.log(a);
+      console.log(eval(a));
+
+      // eval() doesn't work for string objects
+      var x = new String("2+3+4");
+      console.log(x);
+      console.log(eval(x));
+    </script>
+  </body>
+</html>

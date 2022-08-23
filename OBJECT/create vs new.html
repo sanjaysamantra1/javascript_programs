@@ -1,0 +1,15 @@
+<HTML>
+<BODY>
+<script>
+	var car = function(color){
+		this.color = color;
+	}
+	var car1 = new car('red');	
+	var car2 = Object.create(car.prototype);
+	
+	console.dir(car1);
+	console.dir(car2);
+</script>
+</BODY>
+
+</HTML>

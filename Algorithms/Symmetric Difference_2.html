@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //elements of two arrays except common elements , no duplicate
+
+      function sym(...args) {
+        if (args.length < 1) {
+          throw new Error("One or more paramerters required.");
+        }
+
+        if (args.some(arg => !Array.isArray(arg))) {
+          throw new Error("All parameters must be arrays");
+        }
+
+        const uniqueArgs = [];
+        let unique = [];
+
+        // Helper functions.
+        const removeDuplicates = items => {
+          const unique = new Set(items);
+          return [...unique].sort();
+        };
+
+        const basicCompare = (workingSet, newItems, itemsToCompareAgainst) => {
+          for (const item of itemsToCompareAgainst) {
+            if (newItems.indexOf(item) < 0) workingSet.add(item);
+          }
+        };
+
+        const compareAgainstCurrentSet = newSet => {
+          const currentUnique = new Set();
+
+          // Compare existing unique set against new set.
+          basicCompare(currentUnique, unique, newSet);
+
+          // Compare new set against existing unique set.
+          basicCompare(currentUnique, newSet, unique);
+
+          // Replace the unique list to reflect the latest compare.
+          unique = [...currentUnique].sort();
+        };
+
+        // Remove duplicates in each array.
+        args.forEach(arg => uniqueArgs.push(removeDuplicates(arg)));
+
+        // Return if there is only one argument.
+        if (uniqueArgs.length === 1) return uniqueArgs[0];
+
+        unique = uniqueArgs[0];
+
+        for (let i = 1; i < uniqueArgs.length; i++) {
+          compareAgainstCurrentSet(uniqueArgs[i]);
+        }
+
+        return unique;
+      }
+      res = sym([1, 2, 3], [5, 2, 1, 4]);
+      console.log(res);
+    </script>
+  </body>
+</html>

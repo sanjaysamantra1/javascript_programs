@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <script>
+      var d = new Date();
+      document.write(d);
+      document.write("<br><br>");
+      document.write(d.toDateString());
+      document.write("<br>");
+      document.write(d.toTimeString());
+      document.write("<br><br><br>");
+
+      document.write(d.toLocaleDateString());
+      document.write("<br>");
+      document.write(d.toLocaleTimeString());
+      document.write("<br>");
+
+      // for US
+      document.write(
+        d.toLocaleString("en-US", { timeZone: "America/New_York" })
+      );
+
+      document.write("<br>");
+      // for London Time (GB-UK English)
+      document.write(d.toLocaleString("en-GB", { timeZone: "Europe/London" }));
+    </script>
+  </body>
+</html>

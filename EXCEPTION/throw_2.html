@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function myFunc() {
+            var age = prompt("enter your age: ")
+			
+            try {
+                if (age < 0) {
+                    throw new Error("Invalid Age Error");
+                } else {
+                    alert("Hello!!! Your age is "+age);
+                }
+            } catch (obj) {
+                alert(obj);
+                console.log(obj);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>Click the following to see the result:</p>
+    <input type="button" value="Click Me" onclick="myFunc();" />
+</body>
+
+</html>

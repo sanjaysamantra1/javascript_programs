@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<script>			
+			//Given	  [4,3,2,7,8,2,3,1]
+			//Return  [5,6]
+			
+			function findNotPresentNumbers(arr) {
+				res = []
+				for (i in arr) {
+					var ind = Math.abs(arr[i]) - 1;
+					if (arr[ind] > 0) {
+						arr[ind] = -arr[ind];
+					}
+				}
+				for (i in arr) {
+					if (arr[i] > 0) {
+						res.push(parseInt(i) + 1);
+					}
+				}
+				return res;
+			}
+			result = findNotPresentNumbers([4,3,2,7,8,2,3,1]);
+			document.write(result);
+
+		</script>
+	</body>
+<!-- </html> -->

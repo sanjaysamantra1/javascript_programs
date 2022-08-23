@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      // promise Object created - Producer
+      let carsPromise = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          resolve(["tata", "honda", "maruti"]);
+          //   reject("something went wrong");
+        }, 3000);
+      });
+
+      //get data from promise - Consumer
+      async function f1() {
+        let cars = await carsPromise;
+        console.log(cars);
+      }
+      f1();
+    </script>
+  </body>
+</html>

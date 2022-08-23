@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<script>
+			class Hero {
+			  constructor(heroName) {
+				this.heroName = heroName;
+			  }
+
+			  logName() {
+				console.log(this.heroName);
+			  }
+			  printName = ()=>{
+				console.log(this.heroName);
+			  }
+			}
+			const batman = new Hero('Batman');	 
+			setTimeout(batman.logName , 1000 );
+			setTimeout(batman.logName.bind(batman) , 2000 );
+			
+			setTimeout(batman.printName, 3000 );
+		</script>
+	</body>
+</html>

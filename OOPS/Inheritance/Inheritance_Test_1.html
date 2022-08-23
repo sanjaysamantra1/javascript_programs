@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<script>
+			function A(){
+				
+			}
+			A.prototype.f1 = function(){
+				alert(" i am f1  ")
+			}
+			
+			var a1 = new A();
+			a1.f1();
+			
+			var a2 = new A();
+			a2.f1();
+			
+			function B()
+			{
+			}
+			B.prototype = A.prototype;
+			
+			var b1 = new B();
+			b1.f1();		
+			
+		</script>
+	</body>
+</html>

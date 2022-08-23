@@ -1,0 +1,52 @@
+<HTML>
+<BODY>
+	<h1>
+		<script>
+			function Person() {
+				//properties/fields
+				var name = "Sachin Tendulkar";
+				var height = 68;
+				var weight = 170;
+				var phoneNumber = "555 555 555";
+
+				return {
+					setHeight : function(newHeight) {
+						height = newHeight;
+					},
+					getHeight : function() {
+						return height;
+					},
+					setWeight : function(newWeight) {
+						weight = newWeight;
+					},
+					getWeight : function() {
+						return weight;
+					},
+					setName : function(newName) {
+						name = newName;
+					},
+					getName : function() {
+						return name;
+					},
+					setphoneNumber : function(newphoneNumber) {
+						phoneNumber = newphoneNumber;
+					}
+				};
+			}
+			//instantiate the Person class
+			var person1 = new Person();
+			document.write(person1.name);
+			document.write(person1.height);
+			document.write("<hr>");
+			
+			var myName = person1.getName();
+			document.write(myName); //prints "Sachin Tendulkar"
+			
+			person1.name="rahul"; document.write("<hr>");
+			
+			var myName = person1.getName();
+			document.write(myName); //prints "Sachin Tendulkar"
+			
+		</script>
+</BODY>
+</HTML>

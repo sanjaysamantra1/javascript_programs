@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script>
+        function green() {
+            var x = document.getElementById("div1");
+            var y = document.getElementById("div2");
+            x.style.color = 'green';
+            y.style.color = 'green';
+        }
+
+        function yellow() {
+            var x = document.getElementById("div1");
+            var y = document.getElementById("div2");
+            x.style.color = 'yellow';
+            y.style.color = 'yellow';
+        }
+    </script>
+</head>
+
+<body>
+<h1>
+    <span id="div1" style="color:black;" onmouseover="green()" onmouseout="yellow()">TEXT1</span>
+    <p />
+    <hr/>
+    <span id="div2" style="color:red;" onmouseover="yellow()" onmouseout="green()">Text2</span>
+</body>
+
+</html>

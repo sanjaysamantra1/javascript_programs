@@ -1,0 +1,20 @@
+<html>
+<body>
+    <h2 id="demo">Click on th below button</h2></div>
+    <button id="btn1">click here</button>
+    <script>
+		document.getElementById("btn1").addEventListener('click',fun1);
+		document.getElementById("btn1").addEventListener('click',fun2);
+	
+        function fun1() {
+			alert("This is Function-1")
+            document.getElementById("demo").style.backgroundColor = 'red';
+			
+        }
+		function fun2() {	
+			alert("This is Function-2")
+            document.getElementById("demo").style.color = 'yellow';            
+        }
+    </script>
+</body>
+</html>

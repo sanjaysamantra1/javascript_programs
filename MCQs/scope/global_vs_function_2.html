@@ -1,0 +1,19 @@
+<html>
+
+<body>
+    <script>
+        function test() {
+            var a = b = c = 10;  
+            // c=10; b=c; var a=b;
+            console.log('inside function a-  ', a);
+            console.log('inside function b-  ', b);
+            console.log('inside function c-  ', c);
+        }
+        test()
+        console.log('outside function c- ', c);
+        console.log('outside function b- ', b);
+        console.log('outside function a- ', a);
+    </script>
+</body>
+
+</html>

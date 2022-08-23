@@ -1,0 +1,12 @@
+<html>
+	<body>
+		<script>
+			var output = (function(x) {
+			  delete x;
+			  return x;
+			})(0);
+			// no delete with premitive
+			console.log(output);
+		</script>
+	</body>
+</html>

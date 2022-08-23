@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+</HEAD>
+
+<BODY>
+	<script>
+		function one() {
+			document.write("i am one");
+			two();
+		}
+		function two() {
+			document.write("i am two");
+			one();
+		}
+		one();
+	</script>
+</BODY>
+</HTML>

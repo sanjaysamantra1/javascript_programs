@@ -1,0 +1,22 @@
+<HTML>
+    <BODY>
+      <h1>
+      <script>
+         function Employee(name, age, salary) {
+			 this.name = name;
+			 this.age = age;
+			 this.salary = salary;
+         }
+                  
+         var employees=[];
+         employees.push(new Employee("George", 32, 5000));
+         employees.push(new Employee("Edward", 17, 6500));
+         employees.push(new Employee("Christine", 58, 7500));
+         employees.push(new Employee("Sarah", 62, 7000));
+         
+         for(i=0;i<employees.length;i++)
+			document.write(employees[i]+"<br>");
+         
+      </script>
+   </BODY>
+</HTML>

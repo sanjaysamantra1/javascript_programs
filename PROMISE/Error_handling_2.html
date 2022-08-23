@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      let promiseObj = new Promise((resolve, reject) => {
+        // setTimeout(resolve, 3000, "success data");
+        setTimeout(reject, 3000, "error data");
+      });
+      promiseObj
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>

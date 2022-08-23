@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+</HEAD>
+
+<BODY>
+<center>
+<script>
+ // delete cann't delete normal/local variables
+	function f1()
+	{
+	var x = 10;
+	alert("before delete: "+x);
+	delete x;
+	alert("After delete: "+x);
+	}
+	f1();
+</script>
+</center>
+</BODY>
+</HTML>

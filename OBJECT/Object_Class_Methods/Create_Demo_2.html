@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      var x = { a: 10, b: 20, c: { d: 30 } };
+      var y = Object.create(x);
+
+      console.log(x.a + " " + x.b + " " + x.c.d);
+      console.log(y.a + " " + y.b + " " + y.c.d);
+
+      y.a = 15;
+      y.b = 25;
+      y.c.d = 35;
+
+      console.log(x.a + " " + x.b + " " + x.c.d);
+      console.log(y.a + " " + y.b + " " + y.c.d);
+    </script>
+  </body>
+</html>

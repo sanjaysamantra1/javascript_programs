@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function mergeArrays(arr1,arr2){
+			let arr3 = [];
+			
+			let len1 = arr1.length;
+			let len2 = arr2.length;
+			
+		    let i = 0, j = 0, k = 0; 
+  
+			// Traverse both array 
+			while (i<len1 && j <len2) 
+			{ 
+				// Check if current element of first 
+				// array is smaller than current element 
+				// of second array. If yes, store first 
+				// array element and increment first array 
+				// index. Otherwise do same with second array 
+				if (arr1[i] < arr2[j]){ 
+						arr3[k] = arr1[i];
+						k++;
+						i++;
+					}
+				else{
+						arr3[k] = arr2[j];
+						k++;
+						j++;
+					}
+			} 
+		  
+			// Store remaining elements of first array 
+			while (i < len1) 
+				arr3[k++] = arr1[i++]; 
+		  
+			// Store remaining elements of second array 
+			while (j < len2) 
+				arr3[k++] = arr2[j++];
+					
+		return arr3;		
+	  }
+      res = mergeArrays([10,20,30],[-5,-2,5,6,9,15,25,35]);
+      console.log(res);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function charMap(str) {
+        let obj = {};
+        for (let char of str) {
+          obj[char] = obj[char] ? obj[char] + 1 : 1;
+        }
+        return obj;
+      }
+      function test(inputArr) {
+        //get the longest word to first index
+        inputArr.sort((a, b) => b.length - a.length);
+
+        let word1 = inputArr.shift();
+        let charMapWord1 = charMap(word1);
+
+        let charMapOtherWords = inputArr.map((word) => {
+          return charMap(word);
+        });
+
+        console.log(charMapWord1, charMapOtherWords);
+        let outputArr = [];
+        for (let [char, count] of Object.entries(charMapWord1)) {
+          for (const charMap of charMapOtherWords) {
+            if (Object.keys(charMap).includes(char)) {
+              count = Math.min(count, charMap[char]);
+            } else {
+              count = 0;
+              break;
+            }
+          }
+          while (count--) {
+            outputArr.push(char);
+          }
+        }
+
+        return outputArr;
+      }
+
+      let inputArr = ["code", "road", "load", "moon"];
+      let result = test(inputArr);
+      console.log(result);
+    </script>
+  </head>
+</html>

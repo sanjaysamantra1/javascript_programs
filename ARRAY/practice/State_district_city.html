@@ -1,0 +1,20 @@
+<html>
+   <head>
+       <body>
+		  <script>
+			 let data = [
+				{ state:'odisha', district:'ganjam', city:'berhampur' },
+				{ state:'odisha', district:'khurda', city:'bhubaneswar' },
+				{ state:'bihar', district:'patna', city:'patna' },
+				{ state:'karnataka', district:'banalore', city:'marathalli' }
+			 ]
+			 function getDistricts(state) {
+				 
+				return data.filter(obj=>obj.state == state).map(obj=>obj.district);
+ 			 }
+			 result = getDistricts('odisha')
+			 console.log(result);
+		  </script>		  
+	   </body>
+   </head>
+</html>

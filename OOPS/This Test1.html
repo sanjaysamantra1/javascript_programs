@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+</HEAD>
+
+<BODY>
+<script type="text/javascript">
+var myObj={
+	foo:"bar",
+	func:function(){
+		var self=this;
+		console.log(this.foo);
+		console.log(self.foo);
+		(function(){
+		 console.log(this.foo);
+		 console.log(self.foo);
+		}());
+	}
+};
+myObj.func();
+</script>
+</BODY>
+
+</HTML>

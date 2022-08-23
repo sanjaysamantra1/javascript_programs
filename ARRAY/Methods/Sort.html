@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+      let arr1 = [10, 20, 50, 30, 40];
+      arr1.sort();
+      document.write(arr1);
+      document.write("<hr>");
+
+      let arr2 = ["tata", "honda", "toyota", "maruti"];
+      arr2.sort();
+      document.write(arr2);
+      document.write("<hr>");
+
+      let arr3 = [10, 90, 91, 92, 9, 8, 102, 105];
+      arr3.sort(); // Not Numeric sort
+      document.write(arr3);
+      document.write("<hr>");
+
+      arr3.sort((a, b) => {
+        return a - b;
+      }); // Numeric sort , Ascending
+      document.write(arr3);
+    </script>
+  </body>
+</html>

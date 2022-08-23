@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script>
+      function Student(roll, name, add) {
+        this.roll = roll;
+        this.name = name;
+        this.add = add;
+        // this.clg = 'NareshIt';
+      }
+      Student.prototype.clg = "nareshIT";
+
+      let std1 = new Student(101, "pulkit", "bangalore");
+      let std2 = new Student(102, "Akhilesh", "Hyderabad");
+      let std3 = new Student(103, "Sarita", "Pune");
+
+      console.log(std1, std2, std3); // 1000 * 4 = 4000
+      console.log(std1.roll, std1.name, std1.add, std1.clg);
+      std1.clg = "NIT";
+      console.log(std1, std2, std3);
+
+      console.log(std1.clg, Student.prototype.clg);
+    </script>
+  </body>
+</html>

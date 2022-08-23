@@ -1,0 +1,23 @@
+
+<html>
+<head>
+<script>
+	function openMe()
+	{
+		alert("page is loaded")
+	}
+	function closeMe()
+	{
+		alert("page is going to be unloaded")
+	}
+	  //window.onload = openMe();
+      //window.onbeforeunload = closeMe();
+    </script>
+
+</head>
+<body onload="openMe()" onbeforeunload="closeMe()">
+<h1>Try to Refresh or close this page</h1>
+
+
+</body>
+</html>

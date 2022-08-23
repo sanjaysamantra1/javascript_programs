@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script>
+      const obj = {
+        x: 10,
+        getX: function () {
+          return this.x;
+        },
+      };
+      console.log(obj.getX());
+
+      const unboundGetX = obj.getX;
+      console.log(unboundGetX);
+      console.log(unboundGetX());
+      // The function gets invoked at the global scope
+      // 'this' is Window, x is not defined in Window
+
+      const obj2 = { x: 25 };
+      const boundGetX = unboundGetX.bind(obj2);
+
+      console.log(boundGetX());
+    </script>
+  </body>
+</html>

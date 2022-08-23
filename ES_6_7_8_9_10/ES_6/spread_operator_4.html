@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script>
+      employees1 = [
+        { id: 1, name: "aaa", sal: 5000 },
+        { id: 2, name: "bbb", sal: 6000 },
+      ];
+      // employees2 = employees1;
+      employees2 = [...employees1];
+
+      employees1[0].name = "ccc";
+      console.log(employees1[0].name, employees2[0].name);
+    </script>
+  </body>
+</html>

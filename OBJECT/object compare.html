@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <script>
+      function isEquivalent(obj1, obj2) {
+        var obj1keys = Object.keys(obj1);
+        var obj2keys = Object.keys(obj2);
+
+        if (obj1keys.length != obj2keys.length) {
+          return false;
+        }
+        for (key of obj1keys) {
+          if (obj1[key] !== obj2[key]) {
+            return false;
+          }
+        }
+        return true;
+      }
+      var obj1 = { name: "sachin", age: 35 };
+      var obj2 = { age: 35, name: "sachin" };
+      alert(isEquivalent(obj1, obj2));
+    </script>
+  </body>
+</html>

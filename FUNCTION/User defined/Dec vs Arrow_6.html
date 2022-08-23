@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script>
+      class Employee {
+        name = "sanjay";
+        greet1 = function () {
+          console.log("hello- " + this.name);
+        };
+        greet2 = () => {
+          console.log("hi- " + this.name);
+        };
+      }
+      let emp = new Employee();
+      // emp.greet1();
+      // emp.greet2();
+
+      function test(greet) {
+        greet();
+      }
+      test(emp.greet2); // passing arrow function as arg to another function test()
+      test(emp.greet1); // passing normal function as arg to another function test()
+    </script>
+  </body>
+</html>

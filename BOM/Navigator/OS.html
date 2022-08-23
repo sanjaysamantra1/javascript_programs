@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+			var testVersion = navigator.appVersion;
+			var OSName = "Unknown OS";
+			if (testVersion.indexOf("Win")!=-1) 
+				OSName="Windows";
+			if (testVersion.indexOf("Mac")!=-1) 
+				OSName="MacOS";
+			if (testVersion.indexOf("X11")!=-1) 
+				OSName="UNIX";
+			if (testVersion.indexOf("Linux")!=-1) 
+				OSName="Linux";
+			
+			alert('Your Os is '+OSName)
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+ <html>
+	<body>
+		<script>
+			function f1(){
+				var a = 10;
+				function f2(){
+					var b = 20;					
+					function f3(){
+						console.log(a,b)
+					}
+					f3();
+					console.dir(f3)
+				}
+				f2();
+				console.dir(f2)
+			}
+			f1();
+		</script>
+	</body>
+</html>

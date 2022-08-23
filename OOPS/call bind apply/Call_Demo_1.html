@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      // call is used to pass different objects as "this"
+      // function.call(object)
+
+      function sayHi() {
+        alert(this.name);
+      }
+      let user = { name: "John" };
+      let admin = { name: "Admin" };
+
+      sayHi.call(user); // John
+      sayHi.call(admin); // Admin
+    </script>
+  </body>
+</html>

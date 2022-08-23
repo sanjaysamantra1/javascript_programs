@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+</HEAD>
+
+<BODY><center>
+	
+	<p style="color:red" id="p1" class="class1">this is paragraph</p>
+	<div id="div1">This is a div</div>
+
+<script>
+	document.getElementById("div1").setAttribute("style","width: 500px; background-color: yellow;height:50px");
+	
+	document.getElementById("p1").removeAttribute('class');
+	
+	document.getElementById("p1").setAttribute('title','this is a title')
+</script>
+</BODY>
+</HTML>

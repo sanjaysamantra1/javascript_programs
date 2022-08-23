@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<script>
+			function readHugeList(){
+				return new Array(1000000).fill('hi');
+			}
+			let list = readHugeList();
+
+			let nextListItem = function() {
+				let item = list.pop();
+
+				if (item) {
+					// process the list item...
+					console.log(item);
+					setTimeout(nextListItem,0);
+				}
+			};
+			nextListItem();
+		</script>
+	</body>
+</html>

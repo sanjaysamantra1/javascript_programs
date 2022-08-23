@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [20,10,20,20,10,30,20,30]
+
+		var max1 = 0;
+		var max2 = 0;
+
+		for(ele of arr){
+		  if(ele > max1){
+			 max2 = max1;
+			 max1 = ele;
+		  }else if(ele>max2 && ele!=max1){
+			max2 = ele;
+		  }
+		}
+		console.log(max1 , max2)
+
+    </script>
+</body>
+
+</html>

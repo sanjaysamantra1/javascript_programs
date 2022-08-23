@@ -1,0 +1,23 @@
+<html>
+	<body>
+		Selecte a state name:
+		<select onchange="myFunction()">
+			<option>---Select---</option>
+			<option>AP</option>
+			<option>UP</option>
+			<option>Karnataka</option>
+			<option>Odisha</option>
+			<option>Punjab</option>
+			<option>Bihar</option>
+			<option>Tamilnadu</option>
+		</select>
+		<h1></h1>
+		
+		<script>
+			function myFunction(){
+				var stateName = document.querySelector('select').value;
+				document.querySelector('h1').innerHTML = stateName;
+			}			
+		</script>		
+	</body>
+</html>

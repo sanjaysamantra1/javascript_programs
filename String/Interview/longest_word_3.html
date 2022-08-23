@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<script>
+			function findLongestWord(str) {
+			  words = str.split(' ');
+			  
+			  words.sort((a,b)=>b.length-a.length)
+			  
+			  return words[0]
+			}
+		result = findLongestWord("The quick brown fox jumped over the lazy dog");
+		alert(result);
+		</script>
+	</body>
+</html>

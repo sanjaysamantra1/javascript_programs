@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script>
+      alert(Math.max(10, 18, 12, 15)); //18
+
+      let arr = [10, 18, 12, 15];
+      alert(Math.max(arr)); //NaN
+
+      alert(Math.max.apply({}, arr)); //18
+
+      alert(Math.min(...arr));  // spread operator
+    </script>
+  </body>
+</html>

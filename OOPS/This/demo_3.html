@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      var a = 15;
+
+      let obj = {
+        a: 10,
+        b: 20,
+        f1: function () {
+          console.log(this, this.a);
+        },
+        f2: () => {
+          console.log(this, this.a);
+        } 
+      };
+      obj.f1();
+      obj.f2();
+    </script>
+  </body>
+</html>

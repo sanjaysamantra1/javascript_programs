@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <script>
+      function cloneDeep(obj) {
+        let clone = {};
+        for (let key in obj) {
+          if (typeof obj[key] === "object" && !Array.isArray(obj[key])) {
+            clone[key] = cloneDeep(obj[key]);
+          } else if (typeof obj[key] === "object" && Array.isArray(obj[key])) {
+            clone[key] = [...obj[key]];
+          } else {
+            clone[key] = obj[key];
+          }
+        }
+        return clone;
+      }
+
+
+      let obj1 = {
+        a: 10,
+        b: [1, 2, 3],
+        c: {
+          d: 30,
+          e: {
+            f: 40,
+          },
+        },
+        g() {},
+      };
+      let obj2 = cloneDeep(obj1);
+      obj2.b.push(4);
+      console.log(obj1, obj2);
+    </script>
+  </body>
+</html>

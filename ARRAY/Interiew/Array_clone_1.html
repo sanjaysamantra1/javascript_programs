@@ -1,0 +1,23 @@
+<html>
+	<body><h1>
+		<script>
+			var a = [10,20,30];
+			b = a; //address copy
+			document.write(a+"<br>");
+			document.write(b+"<br>");
+			b.pop();
+			document.write(a+"<br>");
+			document.write(b+"<br>");
+			
+			document.write("<hr>")
+			
+			var x = [10,20,30]
+			y = x.slice(); // a new array is being created
+			document.write(x+"<br>");
+			document.write(y+"<br>");
+			y.pop();
+			document.write(x+"<br>");
+			document.write(y+"<br>");
+		</script>
+	</body>
+</html>

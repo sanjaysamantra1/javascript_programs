@@ -1,0 +1,42 @@
+<html>
+	<body>
+		<script>
+			//Given	  [4,3,2,7,8,2,3,1]
+			let k = 4
+			let arr = [7 ,69, 2 ,221 ,8974];
+			let n = arr.length;
+			
+		if (n < k) 
+        { 
+           alert("Invalid");
+        } 
+        // Compute sum of first window of size k 
+        let maxSum = 0, minSum=0, tempArr=[];
+        for (i=0; i<k; i++) {
+		   tempArr.push(arr[i]);
+           maxSum += arr[i];
+		   minSum += arr[i]	
+		}		   
+       
+        // Compute sums of remaining windows by 
+        // removing first element of previous 
+        // window and adding last element of  
+        // current window. 
+        let curr_sum1 = maxSum; 
+		let curr_sum2 = minSum; 
+		
+        for (i=k; i<n; i++) 
+        { 
+           curr_sum1 += arr[i] - Math.min(...tempArr);
+           maxSum = Math.max(maxSum, curr_sum1); 
+		   
+		   curr_sum2 += arr[i] - Math.max(...tempArr);
+           minSum = Math.min(minSum, curr_sum2);
+        } 
+       
+        alert('max sum '+maxSum);
+		alert('min sum '+minSum);
+
+		</script>
+	</body>
+</html>

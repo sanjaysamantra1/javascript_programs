@@ -1,0 +1,17 @@
+<html>
+<body>
+
+<script>
+    function test(){
+	  let a=b=0;  // b=0; var a=b;
+	  a++;
+	  return a;
+	}
+	res = test();
+	console.log(typeof a);  // console.log(a); Uncaught ReferenceError: a is not defined
+	console.log(typeof b , b)
+	console.log(res)
+ </script>
+
+</body>
+</html>

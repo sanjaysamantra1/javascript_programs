@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+			function myClass()
+			{
+				this.counter = 0;
+				that = this;
+				this.increment = function()
+				{
+					setTimeout(function(){
+						console.log(that.counter++);
+					},1000)
+				}
+			}
+			var obj = new myClass();
+			obj.increment();
+		</script>
+	</body>
+</html>

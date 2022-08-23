@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      //Hoisting happens for functionDeclaration , not for Function  Expression
+      add(3, 2);
+      function add(a, b) {
+        console.log(a + b);
+      }
+
+    //   sub(3,2);
+      var sub = function (a, b) {
+        console.log(a - b);
+      };
+      sub(3, 2);
+    </script>
+  </body>
+</html>

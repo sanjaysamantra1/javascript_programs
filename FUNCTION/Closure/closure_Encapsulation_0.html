@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <script>
+      account = {
+        accNo: 12345,
+        accBal: 5000,
+      };
+      console.log(account);
+      account.accBal = -50000;
+      console.log(account); //not encapsulated
+
+      //encapsulated
+      account = function () {
+        let accNo = 12345;
+        let accBal = 5000;
+
+        return {
+          disp: function () {
+            console.log(accNo, accBal);
+          },
+          deposit: function (amt) {
+            if (amt < 0) {
+              alert("boss!! i dont need ur money, plz keep it with you only");
+            } else {
+              accBal = accBal + amt;
+            }
+          },
+        };
+      }.call(this);
+
+      console.log(account);
+      console.log(account.accNo, account.accBal);
+
+      account.accNo = 1111111111;
+      account.accBal = -50000000;
+
+      account.disp();
+      account.deposit(-2000);
+      account.deposit(4000);
+      account.disp();
+
+      console.dir(account.disp);
+    </script>
+  </head>
+
+  <body></body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		function largestCommonString(arr){
+			let sortedArr = arr.sort();			
+			first = sortedArr[0];
+			last = sortedArr[sortedArr.length-1]
+			let i = 0;
+			while(i<first.length && first.charAt(i)==last.charAt(i) ){
+				i++;
+			}
+		  return first.substring(0,i)
+		}
+		let arr = ['me','men','mexico','media','meat'];
+		
+		result = largestCommonString(arr)
+		console.log(result	)
+	</script>
+</body>
+</html>

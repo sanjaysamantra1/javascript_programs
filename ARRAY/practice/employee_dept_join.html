@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <body>
+      <script>
+        employees = [
+          { eId: 101, name: "sanjay", sal: 5000, gender: "male" },
+          { eId: 104, name: "reena", sal: 8000, gender: "female" },
+          { eId: 103, name: "ranjan", sal: 7000, gender: "male" },
+          { eId: 102, name: "manoj", sal: 9000, gender: "male" },
+          { eId: 104, name: "geeta", sal: 8000, gender: "female" },
+        ];
+        departments = [
+          { eId: 101, dept: "sales" },
+          { eId: 104, dept: "manager" },
+          { eId: 103, dept: "developer" },
+          { eId: 102, dept: "marketing" },
+          { eId: 104, dept: "sales" },
+        ];
+
+        employees.map((emp) => {
+          let deptObj = departments.find((dep) => dep.eId === emp.eId);
+          emp.dept = deptObj.dept;
+          return emp;
+        });
+        console.log(employees);
+      </script>
+    </body>
+  </head>
+</html>

@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      var name = "sachin";
+      console.log(this, globalThis);
+
+      var obj1 = {
+        name: "rahul",
+        displayName: function () {
+          console.log(this, globalThis);
+          console.log(this.name, globalThis.name);
+        },
+      };
+      obj1.displayName();
+    </script>
+  </body>
+</html>

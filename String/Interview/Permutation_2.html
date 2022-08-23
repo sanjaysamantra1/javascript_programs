@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		function combinator(str) {
+		   combinations = [];
+		   
+		   for(i=0;i<str.length;i++) {
+			   for(j=i+1;j<str.length+1;j++) {
+				   combinations.push(str.slice(i, j));
+			   }
+		   }
+		   return combinations;
+		}
+		var input = prompt("enter a string",'dog'); 
+		var output = combinator(input)
+		document.writeln(output);
+	</script>
+</body>
+</html>

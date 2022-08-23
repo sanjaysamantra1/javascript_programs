@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<script>
+			// Blocking Function
+			// Callbacks to the rescue from this situation
+			function task(message) {
+				//time consuming task
+				let n = 10000000000;
+				while (n > 0){
+					n--;
+				}
+				console.log(message);
+			}
+
+			console.log('Start script...');
+			task('Download a file.');
+			console.log('Done!');
+		</script>
+	</body>
+</html>

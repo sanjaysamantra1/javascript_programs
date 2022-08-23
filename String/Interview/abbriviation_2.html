@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function myFun(inputStr) {
+        resultArr = [];
+
+        let words = inputStr.split(" ");
+        for (i in words) {
+          if (i == words.length - 1) {
+            resultArr[i] = words[i];
+			continue;
+          }
+          resultArr[i] = words[i].charAt(0);
+        }
+		console.log(resultArr)
+        return resultArr.join(".");
+      }
+      var input = prompt("enter a string", "rabindra nath tagore"); //r. n. tagore
+      result = myFun(input);
+      alert(result);
+    </script>
+  </body>
+</html>

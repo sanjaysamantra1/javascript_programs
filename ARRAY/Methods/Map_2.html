@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+			var employees = [
+				{eId:101,name:'aaaaa',sal:5000,add:'mumbai'},
+				{eId:103,name:'bbbbb',sal:6000,add:'chennai'},
+				{eId:102,name:'ddddd',sal:9000,add:'pune'},
+				{eId:105,name:'ccccc',sal:8000,add:'kolkata'},
+				{eId:104,name:'eeeee',sal:7000,add:'delhi'}
+			]
+			var test = employees.map(f1);
+			function f1(ele){
+				return {name:ele.name,salary:ele.sal}
+			}
+			
+			console.log(test)
+		</script>
+	</body>
+</html>

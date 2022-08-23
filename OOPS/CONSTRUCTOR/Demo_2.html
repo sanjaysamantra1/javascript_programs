@@ -1,0 +1,19 @@
+<HTML>
+   <BODY>
+   <h1>
+      <script>
+         function Person(name, age){
+         	this.name=name;
+         	this.age=age;
+         }
+         var sachin=new Person("sachin",35);
+         var sehwag=new Person("Sehwag",32);
+         document.write(typeof sachin);
+         document.write("<br>");
+         document.write(typeof sehwag);
+         
+		 sachin.constructor = Person;
+		 document.write(typeof sachin);
+      </script>
+   </BODY>
+</HTML>

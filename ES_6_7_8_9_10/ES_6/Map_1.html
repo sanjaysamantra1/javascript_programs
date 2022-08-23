@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <script>
+      const myMap = new Map();
+
+      // set data to map
+      myMap.set("name", "sanjay");
+      myMap.set("age", 30);
+      myMap.set("sal", 5000);
+
+      // get data from map
+      console.log(myMap.get("name"));
+
+      // size of map
+      console.log(myMap.size);
+
+      // Iterate Map object
+      for (const [key, value] of myMap) {
+        console.log(`${key} = ${value}`);
+      }
+
+      // check a key is there or not
+      console.log(myMap.has("name"));
+      console.log(myMap.has("address"));
+
+      // delete a prop from map
+      myMap.delete("sal");
+      console.log(myMap);
+
+      //clear a map
+      myMap.clear();
+      console.log(myMap);
+    </script>
+  </body>
+</html>

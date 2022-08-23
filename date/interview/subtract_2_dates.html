@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <script>
+      const date1 = new Date(prompt("enter date1", "2022/05/13"));
+      const date2 = new Date(prompt("enter date1", "2022/04/25"));
+      const diffTime = Math.abs(date2 - date1); // #milliseconds
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      console.log(diffTime + " milliseconds");
+      console.log(diffDays + " days");
+    </script>
+  </body>
+</html>

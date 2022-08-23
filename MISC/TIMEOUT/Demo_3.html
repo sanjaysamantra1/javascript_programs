@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script>
+      //clearTimeout
+      function f1() {
+        console.log("I am f1");
+      }
+      const id1 = setTimeout(f1, 3000);
+      const id2 = setTimeout(f1, 8000);
+
+      setTimeout(() => {
+        clearTimeout(id2);
+      }, 5000);
+    </script>
+  </body>
+</html>

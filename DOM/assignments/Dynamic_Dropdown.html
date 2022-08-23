@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<center>
+		<h2>Select a state:</h2><br>
+
+		<select>
+			
+		</select>
+		
+		<script>
+			var states = ['Ap','UP','Bihar','Karnataka','Odisha','punjab','hghagu'];
+			
+			for(state of states){				
+				//dropDown.options[dropDown.options.length] = new Option(state);
+				myOption = document.createElement('option');
+				myOption.innerHTML = state;
+				document.querySelector("select").appendChild(myOption);
+			}
+		</script>
+	</body>
+</html>

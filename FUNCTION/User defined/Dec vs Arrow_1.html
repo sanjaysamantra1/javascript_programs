@@ -1,0 +1,42 @@
+<html>
+<body>
+
+	<script>
+		var obj1 = {
+		  x : 10,
+		  counter: function() {
+			setTimeout(function() {
+			  alert(this.x + ' without bind');
+			  console.log(this , ' without bind');
+			}, 2000);
+		  }
+		};
+		obj1.counter();
+		
+		
+		var obj2 = {
+		  x : 10,
+		  counter: function() {
+			setTimeout(function() {
+			  alert(this.x + ' with bind');
+			  console.log(this, ' with bind');
+			}.bind(this), 2000);   //ES-5
+		  }
+		};
+		obj2.counter();
+		
+		
+		var obj2 = {
+		  x : 10,
+		  counter: function() {
+			setTimeout(()=> { 	// arrow function
+			  alert(this.x + ' with arrow function ');
+			  console.log(this, ' with arrow');
+			}, 2000);   	// bind(this) is not required
+		  }
+		};
+		obj2.counter();
+	</script>
+
+</body>
+</html

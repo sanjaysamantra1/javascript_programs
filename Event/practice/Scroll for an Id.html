@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<style>
+			div{
+				border:5px solid red;
+				margin:10px;
+				height:500px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='div1'>
+			div-1
+			<button onclick='myFunction()'>scroll to div-3</button>
+		</div>
+		<div id='div2'>div-2</div>
+		<div id='div3'>div-3</div>
+		<div id='div4'>div-4</div>
+		
+		<script>
+			function myFunction(){
+				var element = document.getElementById("div3");
+				element.scrollIntoView();
+			}			
+		</script>		
+	</body>
+</html>

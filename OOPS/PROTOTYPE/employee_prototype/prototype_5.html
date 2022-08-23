@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function Employee(name){
+		this.name = name;
+	}
+	Employee.prototype.getName = function(){
+		return this.name;
+	}
+	var emp1 = new Employee("sanjay");
+	var emp2 = new Employee("deepak");
+	console.log(emp1.getName());
+	console.log(emp2.getName());
+
+	function Manager(name,dept){
+		this.name = name;
+		this.dept = dept;
+	}
+	Manager.prototype.getDept = function(){
+		return this.dept;
+	}
+	var mgr = new Manager("ajay","sales");
+	console.log(mgr.getDept());
+	//console.log(mgr.getName());
+	//manager prototype does not have getName() neither Object prototype
+	console.log(mgr.__proto__.__proto__===Object.prototype);
+	mgr.__proto__.__proto__ = Employee.prototype;
+	//Manager.prototype = Employee.prototype;
+	console.log(mgr.__proto__.__proto__===Object.prototype);
+	console.log(mgr.__proto__.__proto__===Employee.prototype);
+	console.log(mgr.getName());
+	console.log(emp1);
+	console.log(mgr);
+</script>
+</BODY>
+
+</HTML>

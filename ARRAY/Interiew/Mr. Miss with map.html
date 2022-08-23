@@ -1,0 +1,25 @@
+<html>
+	<body>
+		<script>
+			let employees = [
+				{eId:101,name:'deepak',sal:5000,gender:'male'},
+				{eId:103,name:'anjali',sal:6000,gender:'female'},
+				{eId:102,name:'ranjan',sal:8000,gender:'male'},
+				{eId:104,name:'geeta',sal:7000,gender:'female'}
+			 ];
+			 
+			 employees.map((emp)=>{
+				if(emp.gender == 'male')
+					emp.name = 'mr. '+emp.name;
+				else
+					emp.name = 'miss. '+emp.name
+					
+				return emp;
+			 })
+			 
+			 console.log(employees);
+			 
+			 
+		</script>
+	</body>
+</html>

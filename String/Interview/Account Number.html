@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		function myFun(input){
+			//input='1234567898'
+			var output = '';			
+			output = input.slice(0,2)+" * * * * * * "+input.slice(7,9);			
+			return output;
+		}
+		var input = prompt("Enter 10 digit Account number");
+		result = myFun(input);
+		alert(result);
+	</script>
+</body>
+</html>

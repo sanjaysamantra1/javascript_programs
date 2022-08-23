@@ -1,0 +1,33 @@
+<html>
+<body>
+<h1>
+	<script>
+		function job() {
+			return new Promise(function(resolve, reject) {
+				reject('something went wrong');
+			});
+		}
+
+	let promise = job();
+
+	promise
+	.then(function() {
+		console.log('Success 1');
+	})
+	.then(function() {
+		console.log('Success 2');
+	})
+	.then(function() {
+		console.log('Success 3');
+	})
+	.catch(function(err) {
+		console.log('Error 1',err);
+	})
+	.then(function() {
+		console.log('Success 4');
+	});	
+	
+	// 'error 1' 'success 4'
+	</script>
+</body>
+</html>

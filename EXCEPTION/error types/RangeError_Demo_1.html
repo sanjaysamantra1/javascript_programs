@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>
+<p>A Rangeobjor is thrown if you use a number that is outside the range of legal values.</p>
+<p>You cannot set the number of significant digits of a number to 500:</p>
+
+<p id="demo"></p>
+</h2>
+    <script>
+        var num = 1;
+        try {
+            console.log(num.toPrecision(3));
+            console.log(num.toPrecision(500));
+        } catch (obj) {
+            document.getElementById("demo").innerHTML = obj.name;
+			console.log(obj)
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <button id="btn1">btn-1</button>
+    <button id="btn2">btn-2</button>
+
+    <script>
+      "use strict";
+      console.log(this);
+
+      function f1(that) {
+        console.log(this);
+      }
+      f1();
+
+      document.getElementById("btn1").addEventListener("click", f1);
+      document.getElementById("btn2").addEventListener("click", f1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<script>
+			let person = {
+				name: 'sachin',
+				age:35
+			};
+			
+			let { name:name1, age:age1, add:add1 } = person
+			alert(`I am ${name1},I am ${age1} and i am from ${add1}`);
+
+			//add2 will have 'mumbai' value if add=undefined
+			let { name:name2, age:age2, add:add2='mumbai' } = person
+			alert(`I am ${name2},I am ${age2} and i am from ${add2}`);
+		</script>
+	</body>
+</html>

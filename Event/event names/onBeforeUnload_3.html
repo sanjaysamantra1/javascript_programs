@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../../jquery/js/jquery-3.2.1.min.js"> </script>
+
+<script>
+  $(window).bind("beforeunload",function(event) {
+    return "You have some unsaved changes";
+});
+
+</script>
+</head>
+<body>
+  <a href="http://www.microsoft.com">Click here to navigate to 
+      www.microsoft.com</a>
+</body>
+</html>

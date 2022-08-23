@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1>
+	<script>
+		var p = new Promise((resolve, reject) => {
+			reject(Error('The Fails!'))
+		  })
+		  .catch(error => console.log(error)) 
+		  .then(error => console.log(error))
+		  
+		  // first catch doesn't return anything
+		  // then() prints undefined
+	</script>
+</body>
+</html>

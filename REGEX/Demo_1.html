@@ -1,0 +1,18 @@
+<HTML>
+<BODY>
+    <script>
+        var reg1 = new RegExp("abc");  // first approach
+        var reg2 = /..s/;   // second approach
+
+        console.log(reg1.test("dabcde")); //  true
+        console.log(reg1.test("sabhcj")); //  false
+
+        console.log(reg2.test("was")); //  true
+        console.log(reg2.test("is")); //  false
+		console.log(reg2.test("DVS")); //  false
+		console.log(reg2.test("DVs")); //  true
+		console.log(reg2.test("23s")); //  true
+    </script>
+</BODY>
+
+</HTML>

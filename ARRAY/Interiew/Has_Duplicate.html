@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<script>
+			let employees = [
+				{eId:101,name:'deepak',sal:5000},
+				{eId:103,name:'ajay',sal:6000},
+				{eId:102,name:'deepak',sal:8000},
+				{eId:104,name:'manoj',sal:7000}
+			 ];
+			 let mySet = new Set();
+			 
+			 hasDuplicate = employees.some((emp)=>{
+				return mySet.size === mySet.add(emp.name).size;
+			 })
+			 alert(hasDuplicate);
+		</script>
+	</body>
+</html>

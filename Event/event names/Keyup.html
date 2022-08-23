@@ -1,0 +1,15 @@
+<html>
+	<body><h1>
+		<textarea rows=5 cols=20 maxlength=50 onkeydown='myFun()'>
+		</textarea>
+		Remaining chars:
+		<span>50</span>		
+		<script>
+			function myFun(){
+				var textEntered = document.querySelector('textarea').value;
+				var remaining = 50 - textEntered.length;
+				document.querySelector('span').innerHTML = remaining;
+			}
+		</script>
+	</body>
+</html>

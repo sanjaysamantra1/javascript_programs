@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+      function Student(a, b, c) {
+        // std1 = {roll:101,name:'sachin',add:'mumbai'}
+        this.roll = a;
+        this.name = b;
+        this.add = c;
+        this.clgName = "NareshIT";
+      }
+      Student.prototype.clgName = "NareshIT";
+      Student.a = 10;
+
+      var std1 = new Student(101, "sachin", "mumbai");
+      console.log(std1);
+      console.log(std1.roll, std1.name, std1.add, std1.clgName, std1.a,Student.a);
+
+      Student.prototype.clgName = "newNaresh";
+
+      var std2 = new Student(102, "Rahul", "Bangalore");
+      console.log(std2);
+      console.log(std2.roll, std2.name, std2.add, std2.clgName,std2.a);
+    </script>
+  </body>
+</html>

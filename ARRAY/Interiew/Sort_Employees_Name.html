@@ -1,0 +1,31 @@
+<html>
+  <body>
+    <h1>
+      <script>
+        let employees = [
+          { eId: 101, name: "sanjay", sal: 5000 },
+          { eId: 104, name: "deepak", sal: 8000 },
+          { eId: 103, name: "ranjan", sal: 7000 },
+          { eId: 102, name: "manoj", sal: 9000 },
+          { eId: 106, name: "rajeev", sal: 9000 },
+        ];
+
+        employees.sort((emp1, emp2) => {
+          return emp1.name.localeCompare(emp2.name);
+        });
+
+        // employees.sort((emp1, emp2) => {
+        //   if (emp1.name > emp2.name) {
+        //     return 1;
+        //   } else if (emp2.name > emp1.name) {
+        //     return -1;
+        //   } else {
+        //     return 0;
+        //   }
+        // });
+
+        console.log(employees);
+      </script>
+    </h1>
+  </body>
+</html>

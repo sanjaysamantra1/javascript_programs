@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<script>
+			var arr = [10,20,30,10,40,20];
+			
+			var obj = {};
+			for(ele of arr){
+				obj[ele] = obj[ele] ? obj[ele]+1 : 1 ;
+			}
+			console.log(obj);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<HTML>
+
+<HEAD>
+    <TITLE> form</TITLE>
+</HEAD>
+
+<BODY>
+    <script>
+        function validateMyForm() {
+            var re1 = new RegExp('[a-z]{5,}');
+            var name = document.myForm.name.value;
+            if (re1.test(name)) {
+                document.getElementById("nameSpan").innerHTML = "correct format";
+				document.getElementById("nameSpan").style.color = "green"
+
+            } else {
+                document.getElementById("nameSpan").innerHTML = "wrong format"
+                document.getElementById("nameSpan").style.color = "red"
+            }
+        }
+    </script>
+
+    <center>
+        <form name="myForm" onsubmit="false">
+            1. name:
+            <input type="text" name="name">
+            <span id="nameSpan"></span>
+            <br>
+            <br> 2. phone:
+            <input type="text" name="phone">
+            <span id="phoneSpan"></span>
+            <br>
+            <br>
+            <button type="button" value="OK" onClick="validateMyForm()">OK</button>
+            <input type="reset" value="RESET">
+        </form>
+    </center>
+</BODY>
+
+</HTML>

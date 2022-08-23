@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1>
+	<script>
+		Promise.resolve('Success!')
+		  .then(data => {
+			console.log(data);
+			return data.toUpperCase()
+		  })
+		  .then(data => {
+			console.log(data)
+		  })
+	</script>
+</body>
+</html>

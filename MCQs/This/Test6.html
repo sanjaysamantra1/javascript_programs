@@ -1,0 +1,23 @@
+<html>
+
+<body>
+	<script>
+		var obj = {
+			a: 10,
+			f1() {
+				console.log(this.a)
+			}
+		}
+		setTimeout(obj.f1, 2000);
+
+		var obj = {
+			a: 10,
+			f1() {
+				console.log(this.a)
+			}
+		}
+		setTimeout(obj.f1.bind(obj), 2000);
+	</script>
+</body>
+
+</html>

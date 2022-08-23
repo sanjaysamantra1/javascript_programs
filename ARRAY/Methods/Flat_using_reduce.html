@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      var arr1 = [1, 2, 3, [5, 6, 7, [8, 9, 10]]];
+
+      function flattenDeep(arr1) {
+        return arr1.reduce(
+          (result, val) =>
+            Array.isArray(val)
+              ? result.concat(flattenDeep(val))
+              : result.concat(val),
+          []
+        );
+      }
+      result = flattenDeep(arr1);
+
+      console.log(result);
+    </script>
+  </body>
+</html>

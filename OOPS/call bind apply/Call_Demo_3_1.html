@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+</HEAD>
+
+<BODY>
+	<script>
+		var obj1 = {
+			a : 10,
+			add : function(b) {
+				return this.a + b;
+			}
+		};
+		var result1 = obj1.add(20);
+		alert(result1);
+
+		var obj2 = {
+			a : 5
+		};
+
+		//var result2=obj2.add();
+		//alert(result2);
+
+		var result2 = obj1.add.call(obj2, 10);
+		alert(result2);
+	</script>
+</BODY>
+
+</HTML>

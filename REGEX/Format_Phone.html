@@ -1,0 +1,15 @@
+<HTML>
+<HEAD>
+
+</HEAD>
+
+<BODY>
+	<script>
+		var text = prompt("Enter a 10 digit phone number: ")
+		//text = text.replace(/[^\w\s]/gi, '');
+		text = text.replace(/(\d{3})(\d{3})(\d{4})/, "($1)-$2-$3");
+		document.write(text)
+	</script>
+</BODY>
+<h1>
+</HTML>

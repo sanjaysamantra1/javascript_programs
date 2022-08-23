@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <script>
+      let obj = {
+        count: 0,
+        increment: function () {
+          console.log("increment " + this.count); // this = obj
+
+          function f1() {
+            console.log("f1 " + this.count + this); // this=window
+          }
+          f1();
+
+          let f2 = () => {
+            console.log("f2 " + this.count + this); // this = obj
+          };
+          f2();
+        },
+      };
+      obj.increment();
+    </script>
+  </body>
+</html>

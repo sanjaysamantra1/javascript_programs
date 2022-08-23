@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      function* squareNumbersGenerator(max) {
+        let n = 0;
+        while (n < max) {
+          n++;
+          yield n * n;
+        }
+      }
+      const squareNumbers = squareNumbersGenerator(10);
+      for (const square of squareNumbers) {
+        console.log(square);
+      }
+    </script>
+  </body>
+</html>

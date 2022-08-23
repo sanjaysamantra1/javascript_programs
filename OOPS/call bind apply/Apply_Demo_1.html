@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <script>
+      // call doesnot work with array as arguement
+      // apply can take an array as arguement and passes
+      // every element from that array as arguement to that function
+
+      function add(a, b) {
+        alert(this.num + a + b);
+      }
+      add(2, 3); //NaN
+
+      var x = { num: 4 };
+      add.call(x, 2, 3); // 9
+
+      add.call(x, [2, 3]); // 4 2,3 undefined
+
+      add.apply(x, [2, 3]); //9
+    </script>
+  </body>
+</html>

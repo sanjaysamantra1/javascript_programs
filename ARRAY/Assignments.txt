@@ -1,0 +1,50 @@
+1. Write a program to print all the even numbers from an array.
+
+2. write a program to count how many even numbers are there in an array.
+
+3. write a program to find the sum of all the digits of an array.
+
+4. write a program to find the 2nd largest number from an array.
+
+5. write a program to delete the duplicate elements from an array.
+
+6. write a program to print the first non-repeated number in an array.
+
+7. write a program to check if an array has duplicate elements or not.(return-yes/no)
+
+8. take 2 arrays and print only the common elements from the arrays.
+
+9. write a program find missingNumber in a series.
+   input:- [2, 5, 1, 4, 9, 6, 3, 7];  output:- 8
+   
+10. write a program to check if all the elements in an array are even.
+
+11. declare array of employees & sort them in ascending order (empId)
+
+12. declare array of employees & sort them in ascending order by name.
+
+13. declare array of employees & filter the employees whose sal>6000;
+
+14. declare array of employees & increase sal of every employee by 500;
+
+15. declare array of employees & add "comp:ibm" to every employee;
+
+16. convert array of letters to array of words
+		const inputArr = [ 
+				'b', 'a', 'k', 'e', '',
+				'c', 'a', 'k', 'e', '',
+				'e', 'a', 't'
+				];
+	   output = ['bake','cake','eat'];
+	   
+17. add Dept info for each employee
+    employees = [{eId: 101, name: "sanjay", sal: 5000, gender: "male" },
+				{ eId: 104, name: "reena", sal: 8000, gender: "female" }]
+	departments = [{ eId: 101, dept: "sales" },
+				{ eId: 104, dept: "manager" }]
+
+18. groupBy employees-eid,name,sal
+
+19. intersection of 2 number arrays
+
+20. 

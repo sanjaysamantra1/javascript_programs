@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1>
+compound interest: <span id="demo"></span>
+<script>
+function compoundInt(p,t,r) 
+{
+   ci=p*Math.pow((1+r/100),t)-p;
+   document.getElementById("demo").innerHTML = ci;
+}
+compoundInt(1000,5,8);
+</script>
+
+</body>
+</html>

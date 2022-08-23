@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>this is title</title>
+  </head>
+
+  <body>
+    <select onchange="f1()">
+      <option>odisha</option>
+      <option>andhra</option>
+      <option>bihar</option>
+      <option>kerla</option>
+      <option>tamilnadu</option>
+    </select>
+    <h1>odisha</h1>
+
+    <script>
+      function f1() {
+        var stateName = document.querySelector("select").value;
+        document.querySelector("h1").innerHTML = stateName;
+      }
+    </script>
+  </body>
+</html>

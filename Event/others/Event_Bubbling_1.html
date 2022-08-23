@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .myStyle {
+            display: table-cell;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body onclick="alert('body clicked')">
+    <h1><center>
+	<div class="myStyle" onclick="alert('div clicked')">
+		Div Element 
+		<span class="myStyle" onclick="alert('span clicked')">
+		span Element  <br></br>
+			<input type="button" value="click me"
+                   onclick="alert('button clicked')" />
+		</span>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+	<body>
+		<script>
+			//The WeakSet object lets you store weakly held objects in a collection. 
+			//Objects without a reference will be garbage collected.
+			
+			var item = { a:"Potato"}
+			var set = new WeakSet();
+			set.add({ a:"Potato"});
+			set.add(item);
+			set.add({ a:"Tomato"});
+			set.add({ a:"Tomato"});
+			console.log(set.size)
+			console.log(set.has({a:"Tomato"}))
+			console.log(set.has(item))
+			
+			console.log(set);
+
+			for(let item of set) {
+			   console.log(item)
+			}
+		</script>
+	</body>
+</html>

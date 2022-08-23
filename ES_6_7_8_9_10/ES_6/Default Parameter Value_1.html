@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      function add(a, b, c) {
+        sum = a + b + c;
+        alert(sum);
+      }
+      add(2, 3);
+
+      function add2(a, b, c) {
+        //ES-5
+        a = a || 0;
+        b = b || 0;
+        c = c || 0;
+
+        sum = a + b + c;
+        alert(sum);
+      }
+      add2(2, 3);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <script>
+      function* createUniqueRandomGenerator(arr) {
+        const available = arr;
+
+        while (available.length !== 0) {
+          const randomIndex = Math.floor(Math.random() * available.length);
+          const randomName = available[randomIndex];
+
+          available.splice(randomIndex, 1);
+          yield randomName;
+        }
+      }
+
+      const names = ["sanjay", "deepak", "ajay", "manoj"];
+      const uniqueNames = createUniqueRandomGenerator(names);
+      for (const name of uniqueNames) {
+        console.log(name);
+      }
+    </script>
+  </body>
+</html>

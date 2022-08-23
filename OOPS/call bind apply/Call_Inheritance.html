@@ -1,0 +1,26 @@
+<HTML>
+<BODY>
+	<script>
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		function Employee(name,age,empId,sal){
+			Person.call(this,name,age)
+			this.empId = empId;
+			this.sal = sal;
+		}
+		function Student(name,age,roll,mark){
+			Person.call(this,name,age);
+			this.roll = roll;
+			this.mark = mark;
+		}		
+		var emp1 = new Employee("sachin",35,101,5000);
+		console.log(emp1);
+		
+		var std1 = new Student("jaga",22,222,95)
+		console.log(std1)
+	</script>
+</BODY>
+
+</HTML>

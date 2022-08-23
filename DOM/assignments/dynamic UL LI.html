@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <ul></ul>
+    <script>
+      let cars = ["tata", "maruti", "honda", "audi", "toyota", "BMW"];
+      for (car of cars) {
+        let myLI = document.createElement("li"); //<li></li>
+        myLI.innerText = car; //<li>tata</li>
+        document.querySelector("ul").appendChild(myLI);
+      }
+    </script>
+  </body>
+</html>

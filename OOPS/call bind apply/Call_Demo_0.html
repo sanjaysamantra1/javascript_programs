@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <script>
+      // call is used to pass different objects as "this"
+      // function.call(object)
+
+      function sayHi() {
+        console.log(this, this.name);
+      }
+      sayHi();
+
+      obj1 = { name: "sachin" };
+      sayHi.call(obj1); // inside sayHi() this=obj1
+
+      obj2 = { name: "rahul" };
+      sayHi.call(obj2); // inside sayHi() this=obj2
+    </script>
+  </body>
+</html>

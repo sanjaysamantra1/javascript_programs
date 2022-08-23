@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      let emp = {
+        id: 101,
+        name: "sanjay",
+        sal: 5000,
+      };
+      sessionStorage.myEmp = emp; //sessionStorage expects string
+      let empStr = JSON.stringify(emp); // empStr is a string
+      sessionStorage.myEmp = empStr; // string can be easily stored
+
+      //somebody wants to read data from sessionstorage
+      let empData = sessionStorage.myEmp; // empData is string
+      console.log(empData);
+      console.log(empData.id, empData.name); // id,name cannt be picked from string
+
+      let empObj = JSON.parse(empData);
+      console.log(empObj.id, empObj.name, empObj.sal);
+    </script>
+  </body>
+</html>

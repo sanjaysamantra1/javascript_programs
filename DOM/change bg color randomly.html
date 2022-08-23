@@ -1,0 +1,12 @@
+<html>
+	<body>
+		<button onClick="f1()">click me</button>
+		
+		<script>
+			function f1(){
+				colorName = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+				document.body.style.backgroundColor = colorName;
+			}
+		</script>
+	</body>
+</html>

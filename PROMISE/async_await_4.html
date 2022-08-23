@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script>
+			function getData(){
+				let promiseObj = new Promise((resolve,reject)=>{
+					setTimeout(()=>{
+						resolve([10,20,30]);
+						//reject("error");
+					},3000)
+				})
+				
+				promiseObj.then(
+					(result)=>{
+					   console.log(result);
+					},
+					(error)=>{
+						console.log(error);
+					}
+				);
+			}
+			getData();
+			
+			async function getData2(){
+				let promiseObj = new Promise((resolve,reject)=>{
+					setTimeout(()=>{
+						resolve([10,20,30]);
+						//reject("error");
+					},3000)
+				})
+				
+				result = await promiseObj;
+				console.log(result +" from getdata2");
+			}
+			getData2();
+		</script>
+	</head>
+	<body>		
+	</body>
+</html>

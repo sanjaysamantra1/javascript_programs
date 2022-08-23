@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<script>
+			for(i=1;i<=20;i++)
+			{
+				btn = document.createElement('BUTTON');
+				btn.innerHTML = 'Button-'+i;
+				btn.id = i;
+				document.body.appendChild(btn);
+				btn.addEventListener('click',f1);
+			}
+			function f1(){			
+				alert(this.id);
+			}
+		</script>
+	</body>
+</html>

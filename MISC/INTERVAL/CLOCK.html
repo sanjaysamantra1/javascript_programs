@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <h1 id="test"></h1>
+
+    <script>
+      function f1() {
+        var d = new Date();
+        var t = d.toLocaleTimeString();
+        document.getElementById("test").innerText = t;
+      }
+      setInterval(f1, 1000);
+    </script>
+  </body>
+</html>

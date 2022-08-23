@@ -1,0 +1,22 @@
+<html>
+	<body>
+		<script>
+			function displayA(){console.log('aaaaaaaa')}
+			function displayB(){console.log('bbbbbbbbb')}
+
+			setTimeout(()=>{
+				console.log('i am settimeout')
+			},1000)
+            
+
+
+			displayA();
+
+			for(i=1;i<=1000000;i++){
+				console.log('hiiiii'); // 20
+			}
+
+			displayB();
+		</script>
+	</body>
+</html>

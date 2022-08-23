@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>
+<p>A ReferenceError is thrown if you use (reference) a variable that has not been declared:</p>
+<p>You cannot use the value of a non-existing variable:</p>
+
+<p id="demo"></p>
+</h2>
+    <script>
+        var x;
+        try {
+            x = y + 1;
+        } catch (err) {
+            document.getElementById("demo").innerHTML = err.name;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+
+<body>
+
+    <script>
+        // variable shadowing
+        function func() {
+            var a = 10;
+            let b = 20;
+
+            if (true) {
+                let a = 15; // Legal Shadowing
+                var b = 25; // Illegal Shadowing
+                console.log('block a: ',a); // 15
+                console.log('block b: ',b); // error
+            }
+            console.log('function a: ',a);
+            console.log('function b: ',b);
+
+        }
+        func();
+    </script>
+
+</body>
+
+</html>

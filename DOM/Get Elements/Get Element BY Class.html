@@ -1,0 +1,26 @@
+<HTML>
+
+<BODY>
+    <center>
+        <h1>this is a heading</h1>
+        <h2>
+			<div class="one">This is Div-1</div>
+			<div>This is Div-2</div>
+			
+			<p class="one">This is Paragraph-1</p>
+			<p>This is Paragraph-2</p>
+		</h2>
+    </center>
+    <script>
+		var divs = document.getElementsByClassName("one"); //[div,p]
+		alert("no of Elements with class One : "+divs.length);
+		
+		console.log(divs[0]);
+		console.log(divs[1]);
+		
+		divs[0].style.color="red";
+		divs[1].style.fontSize = "48px";
+    </script>
+</BODY>
+
+</HTML>

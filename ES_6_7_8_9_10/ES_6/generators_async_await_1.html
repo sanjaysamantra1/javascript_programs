@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+      const firstPromise = fetch("https://api.github.com/users/google");
+      const secondPromise = fetch("https://jsonplaceholder.typicode.com/photos");
+      const thirdPromise = fetch("https://api.github.com/users/linkedin");
+
+      async function* generatorFun() {
+        const firstPromiseResult = await firstPromise;
+        yield await firstPromiseResult.json();
+        const secondPromiseResult = await secondPromise;
+        yield await secondPromiseResult.json();
+        const thirdPromiseResult = await thirdPromise;
+        yield await thirdPromiseResult.json();
+      }
+      async function f1() {
+        var generatorObj = generatorFun();
+        for await (let value of generatorObj) {
+          console.log(value);
+        }
+      }
+      f1();
+    </script>
+  </body>
+</html>

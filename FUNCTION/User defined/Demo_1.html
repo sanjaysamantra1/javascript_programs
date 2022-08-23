@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <script>
+      // 1. Function Declaration
+      add(2, 3); // hoisted
+      function add(a, b) {
+        console.log(a + b);
+      }
+
+      //2. Function Expression
+      var sub = function (a, b) {
+        console.log(a - b);
+      };
+      sub(6, 4); // hoisting-no
+      sub(7, 4); // hoisting-no
+      sub(9, 4); // hoisting-no
+
+      // 3. Self Invoked
+      (function (a, b) {
+        console.log(a * b);
+      })(3, 5);
+
+      // 4. arrow function
+      var div = (a, b) => {
+        console.log(a / b);
+      };
+      div(10, 2); // arguments
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      var input = "1111222233334444";
+
+      result1 = input.match(/.{1,4}/g).join("-");
+      alert(result1);
+
+      let arr = [];
+      for (let i = 0; i < input.length; i = i + 4) {
+        let str = input.substr(i, 4);
+        arr.push(str);
+      }
+      alert(arr.join("-"));
+    </script>
+  </body>
+</html>

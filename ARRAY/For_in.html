@@ -1,0 +1,31 @@
+<html>
+  <body>
+    <script>
+      let cars = ["tata", "honda", "maruti", "hundai", "toyota"];
+
+      // for loop
+      for (let i = 0; i < cars.length; i++) {
+        console.log(cars[i]);
+      }
+
+      // for-in
+      for (i in cars) {
+        // easier in syntax
+        console.log(i, cars[i]);
+      }
+
+      // for-of
+      for (car of cars) {
+        // even simpler in syntax
+        console.log(car);
+      }
+
+      // cars.forEach(f1);
+      // function f1(a, b, c) {
+      //   console.log(a, b, c);
+      // }
+
+      cars.forEach((ele) => console.log(ele));
+    </script>
+  </body>
+</html>

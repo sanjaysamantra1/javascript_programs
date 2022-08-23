@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body onclick="alert('body clicked')">
+<center><br>
+    <button type="button" onclick="f1(event)">click me</button>
+	
+	<script>
+		function f1(event){
+		console.log(event)
+		alert("button clicked");
+				event = event || window.event;
+			
+				if(event.stopPropagation){
+					event.stopPropagation();
+				}
+				else {
+					event.cancelBubble = true;
+				}
+		}		
+	</script>
+</body>
+</html>

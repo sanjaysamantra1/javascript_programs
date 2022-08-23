@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<body>
+			<script>
+				
+				incrementCount = (function(){
+					var count = 0;
+					return function(){
+						count++;
+						console.log(count)
+					}
+				})();
+				incrementCount();
+				incrementCount();
+				incrementCount();
+				
+				function anotherFunction(){
+					count++;
+				}
+				anotherFunction();
+				
+			</script>
+		</body>
+	</head>
+</html>

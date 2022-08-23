@@ -1,0 +1,25 @@
+<HTML>
+   <HEAD>
+      <TITLE> New Document </TITLE>
+   </HEAD>
+   <BODY>
+      <script type="text/javascript">
+         var s = new String("text");
+         s.constructor === String;      // true
+         
+         "text".constructor === String; // true
+         
+         var o = new Object();
+         o.constructor === Object;      // true
+         
+         var o = {};
+         o.constructor === Object;      // true
+         
+         var a = new Array();
+         a.constructor === Array;       // true
+         
+         [].constructor === Array;      // true
+         
+      </script>
+   </BODY>
+</HTML>

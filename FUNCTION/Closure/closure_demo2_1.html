@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script>
+		//self invoked function gets executed only once
+        var updateClickCount = (function() 
+		{
+            var counter = 0;
+			alert("outer Function")
+
+            return function() {
+                ++counter;
+                document.getElementById("spnCount").innerHTML = counter;
+				alert("Inner Function")
+            }
+
+        })();
+		console.dir(updateClickCount);
+
+        var sayHello = function() {
+            console.log("hello!!!");
+            ++counter;
+        }
+		console.dir(sayHello);
+    </script>
+</head>
+
+<body>
+<h1>
+    <button onclick="updateClickCount()">click me</button>
+    <button onclick="sayHello()">say Hello</button>
+    <h1> you've clicked 
+    <span id="spnCount"> 0 </span> times!
+ </h1>
+</body>
+
+</html>

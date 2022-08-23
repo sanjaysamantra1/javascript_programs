@@ -1,0 +1,25 @@
+<html>
+	<body>
+		<p>this is paragraph</p>
+		<div class="test">this is div-1</div>
+		<div id="test2">this is div-2</div>
+		<div>this is div-3</div>
+		<div class="test">this is div-4</div>
+		<p id="test2">this is another paragraph</p>
+		
+		<input type='email' name='email' ></input>
+		<input type='password' name='pwd' ></input>
+		
+		<button onclick="myFun()">click</button>
+	</body>
+	
+	<script>
+	function myFun(){
+		name = document.querySelector('[name="email"]').value;
+		alert('your name '+name);
+		
+		pwd = document.querySelector('input[type="password"]').value;
+		alert('your password '+pwd);
+	}
+	</script>
+</html>	

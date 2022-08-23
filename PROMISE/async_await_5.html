@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script>
+      // error handling using async await
+
+      function f1() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve([10, 20, 30]);
+          }, 3000);
+        });
+      }
+      function f2() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            reject("rejected....");
+          }, 3000);
+        });
+      }
+
+      async function test() {
+        let res1 = await f1();
+        console.log(res1);
+        try {
+          let res2 = await f2();
+          console.log(res2);
+        } catch (err) {
+          console.log(err); // TypeError: failed to fetch
+        }
+      }
+      test();
+    </script>
+  </head>
+  <body></body>
+</html>

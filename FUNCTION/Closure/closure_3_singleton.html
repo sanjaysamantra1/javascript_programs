@@ -1,0 +1,27 @@
+<html>
+   <body>  
+      Demonstrating closure as singleton in javascript: </br>
+
+      	<script>    
+			var singleton = function () {
+			    var counter = 0;
+			    return {
+			        get: function () {
+			            return "Counter: " + counter;
+			        },
+			        increment: function() {
+			            counter++;
+			        }
+			    };
+			}();  // Attention Here - the singleton is the result of this function's call
+
+			document.write("Value of counter: " + singleton.get() + "</br>");
+			document.write("Value of counter: " + singleton.get() + "</br>");
+
+			singleton.increment();
+			document.write("Value of counter after increment: " + singleton.get() + "</br>");
+			singleton.increment();
+			document.write("Value of counter after another increment: " + singleton.get() + "</br>");
+	</script>	
+ 	</body>
+</html>

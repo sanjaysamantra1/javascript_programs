@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<style>
+			.myClass1{
+				color:white;
+				background:coral;
+				border:5px dashed yellow;
+				font-size:48px;
+				padding:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>this is a paragraph</p>
+		<button onclick="f1()">add a class</button>
+		<button onclick="f2()">Remove a class</button>
+		<button onclick="f3()">Toggle a class</button>	
+		<script>
+			function f1(){
+				document.querySelector('p').classList.add('myClass1')
+			}
+			function f2(){
+				document.querySelector('p').classList.remove('myClass1')
+			}
+			function f3(){
+				document.querySelector('p').classList.toggle('myClass1')
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+	<form onsubmit="f1(event)">
+		Name: <input />  <br></br>
+		Password: <input />  <br></br>
+		<input type='submit' value='login'></input>
+	</form>
+    <script>
+		//default action that belongs to the event will not occur
+		//use preventDefault to stop navigating to other page
+		function f1(e){
+			alert("onsubmit event got triggered but page didnt get reloaded");
+			e.preventDefault();
+		}
+		
+    </script>
+</body>
+</html>

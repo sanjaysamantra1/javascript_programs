@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script>
+      let user = {
+        firstName: "John",
+        sayHi() {
+          console.log("Hello " + this.firstName);
+        },
+      };
+      user.sayHi(); // Hello John
+      setTimeout(user.sayHi, 2000); // Hello undefined
+      setTimeout(user.sayHi.bind(user), 5000); // Hello John
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      // try in both normal/strict mode
+      var myObj = {
+        name: "sanjay",
+        func: function () {
+          var self = this;
+          console.log(this.name);
+          console.log(self.name);
+
+          function f1() {
+            console.log(this.name); // this = window
+            console.log(self.name); // self = myObj
+          }
+          f1();
+        },
+      };
+      myObj.func();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body bgcolor=cyan>
+<h1>
+	<script>
+		function isPrime(n)
+		{
+			// Corner case
+			if (n <= 1)
+				return false;
+		  
+			// Check from 2 to n-1
+			for (let i = 2; i < n; i++)
+				if (n % i == 0)
+					return false;
+		  
+			return true;
+		}
+		alert(isPrime(7));
+		alert(isPrime(8));
+	</script>
+</body>
+</html>

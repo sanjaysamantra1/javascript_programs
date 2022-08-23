@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script>
+      var add = function (a, b) {
+        let result;
+        result = a + b;
+        return result;
+      };
+      addResult = add(2, 3);
+      alert("Addition is: " + addResult);
+
+      var sub = function (a, b) {
+        let result;
+        setTimeout(() => {
+          result = a - b;
+        }, 3000);
+        return result;
+      };
+      subResult = sub(5, 3);
+      alert("subtraction is: " + subResult);
+
+      var mul = function (a, b) {
+        let promiseObj = new Promise(function (resolve, reject) {
+          setTimeout(() => {
+            resolve(a * b);
+          }, 3000);
+        });
+        return promiseObj;
+      };
+      promiseobj = mul(5, 3);
+
+      promiseobj.then(
+        function (result) {
+          alert(result);
+        },
+        function (error) {
+          alert(error);
+        }
+      );
+      res = mul(5, 3);
+      console.log(res);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<script>
+			// 'this' is undefined in a function invocation in strict mode.
+			function test1(){
+				console.log(this)
+			}
+			test1();
+			
+			function test2(){
+				'use strict'
+				console.log(this)
+			}
+			test2();
+		</script>
+	</body>
+</html>

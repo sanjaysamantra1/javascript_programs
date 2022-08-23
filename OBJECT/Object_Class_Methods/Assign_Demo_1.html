@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+      //Copies the values of all enumerable own properties from one or more source objects to a target object.
+      //Object.assign(dest,[src1, src2, src3...])
+
+      let user = {
+        name: "sanjay",
+        add: "bangalore",
+      };
+      console.log(user);
+
+      let permission1 = { canRead: true };
+      let permission2 = { canWrite: false };
+
+      Object.assign(user, permission1, permission2);
+      console.log(user);
+
+      document.write(user.name + "<br>");
+      document.write(user.add + "<br>");
+      document.write(user.canRead + "<br>");
+      document.write(user.canWrite + "<br>");
+    </script>
+  </body>
+</html>

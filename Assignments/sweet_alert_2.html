@@ -1,0 +1,23 @@
+<html>
+
+<head>
+</head>
+
+<body>
+	<button onclick="alert('hiiiii')">normal alert</button>
+	<button onclick='f1()'>sweet alert</button>
+
+	<script>
+		function f1() {
+			Swal.fire(
+				'Good job!',
+				'You clicked the button!',
+				'success'
+			)
+		}
+	</script>
+
+	<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js'></script>
+</body>
+
+</html>

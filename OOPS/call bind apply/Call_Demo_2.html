@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script>
+      // call is used to pass different objects as "this"
+      function say(msg) {
+        alert(msg + "-" + this.name);
+      }
+      let user = { name: "sachin" };
+      // user becomes this, and "Hello" becomes the first argument
+      say.call(user, "Hello");
+
+      let admin = { name: "rahul" };
+      say.call(admin, "Hiiii!!");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      var counter = 0;
+      function fibonacci(n, memo = {}) {
+        console.log("called ", ++counter);
+        //memo = memo || {}
+        if (memo[n]) {
+          return memo[n];
+        }
+        if (n <= 1) {
+          return n;
+        }
+        return (memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo));
+      }
+      console.time();
+      let res = fibonacci(8);
+      console.timeEnd();
+      console.log("result is ", res);
+    </script>
+  </body>
+</html>

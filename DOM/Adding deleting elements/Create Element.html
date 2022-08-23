@@ -1,0 +1,24 @@
+<HTML>
+
+<BODY>
+	<div id="outer">	
+		<p id='one'></p>
+		<p id='two'></p>
+		<p>This is 3 paragraph</p>
+	</div>
+
+	
+    <script>
+		//document.getElementById("outer").appendChild(document.createElement("p"));
+		var x = document.getElementsByTagName('p')
+
+		x[0].innerHTML = "this is paragraph one"
+		x[1].innerHTML = "this is paragraph Two"
+		
+		x[0].id='newOne';
+		x[2].setAttribute('id','three');
+		
+    </script>
+</BODY>
+
+</HTML>

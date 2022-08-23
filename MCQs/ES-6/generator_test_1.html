@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script>
+      function* f1() {
+        yield "one";
+        return "two";
+        yield "three";
+        yield "four";
+      }
+      const generatorObj = f1();
+      for (const data of generatorObj) {
+        console.log(data);
+      }
+    </script>
+  </body>
+</html>

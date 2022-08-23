@@ -1,0 +1,22 @@
+<html>
+<body>
+	<h1>
+	<script>
+		function startBlinking() {
+		  setInterval(function () { 
+			blink();
+		  }, 1000);
+		}
+		function blink() {
+		  // note no timeout for the hiding part
+		  document.getElementById('blink').style.display = "none";
+		  setTimeout(function () {
+			document.getElementById('blink').style.display = "inline";
+		  }, 500);
+		}
+		startBlinking();
+	</script>
+
+</body>		
+	<div id="blink">This content blinks</div>	
+</html>

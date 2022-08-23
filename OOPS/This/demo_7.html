@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <button id="btn1">btn-1</button>
+    <button id="btn2">btn-2</button>
+
+    <script>
+      var f1 = function () {
+        console.log(this, this.id);
+        this.style.backgroundColor = "red";
+      };
+      document.getElementById("btn1").addEventListener("click", f1);
+      document.getElementById("btn2").addEventListener("click", f1);
+    </script>
+  </body>
+</html>

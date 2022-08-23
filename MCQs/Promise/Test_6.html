@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1>
+	<script>
+		Promise.resolve('Success!')
+		  .then(data1 => {
+			console.log(data1)
+			return data1.toUpperCase()
+		  })
+		  .then(data2 => {
+			console.log(data2)
+			return data2+' hi'
+		  })
+		  .then(data2=>console.log(data2))
+	</script>
+</body>
+</html>

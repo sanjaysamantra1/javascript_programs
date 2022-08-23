@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <script>
+      let obj1 = {
+        a: 10,
+        b: [1, 2, 3],
+        c: {
+          d: 30,
+          e: {
+            f: 40,
+          },
+        },
+      };
+      let obj2 = structuredClone(obj1);
+      obj2.b.push(4);
+      console.log(obj1, obj2);
+    </script>
+  </body>
+</html>

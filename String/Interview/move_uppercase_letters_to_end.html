@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<script>
+		function move(s) 
+		{ 
+			// first take all lower case leter 
+			// and take all uppercase letter 
+			// and Finally concatenate both and return 
+		return s.replace(/[A-Z]/g,"") + s.replace(/[^A-Z]/g, ""); 
+		} 
+		res = move("hello Hi gooD Morning")
+		console.log(res);
+	</script>
+</body>
+</html>

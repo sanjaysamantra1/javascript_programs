@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+</HEAD>
+
+<BODY>
+	<script type="text/javascript">
+		function Car(model, price) {
+			this.model = model;
+			this.price = price;
+		}
+		function Bike(model, price) {
+			this.model = model;
+			this.price = price;
+		}
+		function Vehicle(model) {
+			this.model = model;
+		}
+		Vehicle.prototype.run = function() {
+			console.log(this.model + " is running");
+		}
+		var v1=new Vehicle();
+		console.log(v1);
+		
+		var car1 = new Car();
+		var Bike1 = new Bike();
+		console.log(car1);
+		console.log(Bike1);
+		
+		//car1.run();
+		//Bike1.run();
+		
+		Car.prototype = Vehicle.prototype;
+		Bike.prototype = Vehicle.prototype;
+
+		var indica = new Car("indica", 10000);
+		var splendor = new Bike("splendor", 15000);
+		console.log(indica.run());
+		console.log(splendor.run());
+		
+		console.log(indica)
+		console.log(splendor)
+	</script>
+</BODY>
+
+</HTML>

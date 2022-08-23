@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.myStyle {
+	display: table-cell;
+	padding: 20px;
+	border: 5px solid black;
+	text-align:center;
+}
+</style>
+
+</head>
+<body>
+<center>
+	<div id="div1" class="myStyle">
+		Div-1
+		<div id="div2" class="myStyle">
+			Div-2
+			<div id="div3" class="myStyle">
+				Div-3
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var divs=document.getElementsByTagName('div');
+		for(var i=0;i<divs.length;i++){
+			divs[i].onclick= function(){
+				this.style.borderColor='red';
+				alert(this.getAttribute('id')+"border color changed");
+			}
+		}
+	</script>
+</body>
+</html>

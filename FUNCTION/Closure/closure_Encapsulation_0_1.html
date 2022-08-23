@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script>
+      account = {
+        accNo: 12345,
+        accBal: 5000,
+      };
+      console.log(account);
+      account.accBal = -50000;
+      console.log(account); //not encapsulated
+
+      //encapsulated
+      account = function () {
+        accNo = 12345;
+        accBal = 5000;
+        return {
+          disp: function () {
+            console.log(accNo, accBal);
+          },
+          deposit: function (amt) {
+            accBal = accBal + amt;
+          },
+        };
+      }.call(this);
+
+      console.log(account);
+      console.log(account.accNo, account.accBal);
+
+      account.disp();
+      account.deposit(2000);
+      account.disp();
+    </script>
+  </head>
+
+  <body></body>
+</html>
