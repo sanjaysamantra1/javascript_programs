@@ -5,10 +5,10 @@
         setTimeout(() => resolve("result-promise-1"), 2000)
       );
       let promise2 = new Promise((resolve, reject) =>
-        setTimeout(() => resolve("result-promise-2"), 4000)
+        setTimeout(() => resolve("result-promise-2"), 8000)
       );
       let promise3 = new Promise((resolve, reject) =>
-        setTimeout(() => resolve("result-promise-3"), 3000)
+        setTimeout(() => reject("error"), 4000)
       );
 
       Promise.all([promise1, promise2, promise3]).then(

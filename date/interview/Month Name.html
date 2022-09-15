@@ -16,8 +16,9 @@
         "December",
       ];
       const d = new Date();
-      const monthNumber = d.getMonth();
-      document.write("The current month is: " + monthNames[monthNumber]);
+      const monthNumber = d.getMonth(); // 0-january
+      document.write("The current month Number is: " + (monthNumber + 1));
+      document.write("<br/> The current month Name is: " + monthNames[monthNumber]);
     </script>
   </body>
 </html>

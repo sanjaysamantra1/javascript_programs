@@ -1,12 +1,12 @@
 <html>
   <body>
     <script>
-      let a = 10;
+      let a = 10; // global
 
       function f1() {
-        let a = 20;
+        let a = 20; // function
         if (true) {
-          let a = 30;
+          let a = 30; // block
           console.log("inside block", a);
         }
         console.log("inside function", a);

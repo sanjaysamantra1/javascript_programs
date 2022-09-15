@@ -6,13 +6,13 @@
   <body>
     <p id="one">Hellooooooooooo</p>
     <p id="two">hii</p>
-    <button onclick="f1()">click me</button>
+
+    <button onclick="copyText()">Click me</button>
 
     <script>
-      function f1() {
-        var text = document.getElementById("one").innerText; //Read
-        document.getElementById("two").innerText = text; //Write
-        document.getElementById("two").style.color = "red";
+      function copyText() {
+        let myText = document.getElementById("one").innerText; // Read
+        document.getElementById("two").innerText = myText; // write
       }
     </script>
   </body>

@@ -1,11 +1,20 @@
 <html>
   <body>
+    <input type="date" name="" id="">
     <script>
       console.time("test1");
-      for (let i = 1; i <= 1000; i++) {
+      for (let i = 1; i <= 10000; i++) {
         document.writeln("hi");
       }
       console.timeEnd("test1");
+
+
+      function f1(){
+        console.log('i am f1')
+      }
+      console.time('f1')
+      f1();
+      console.timeEnd('f1')
     </script>
   </body>
 </html>

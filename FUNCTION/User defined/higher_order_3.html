@@ -3,11 +3,14 @@
     <script>
       let arr1 = [10, 20, 30, 40, 50];
 
-      function f1(ele) {
-        return ele + 5;
+      let arr2 = arr1.map((ele) => ele + 5);
+      console.log(arr2);
+
+      function f1(prev, cur) {
+        return prev + cur;
       }
-      let arr2 = arr1.map(f1);
-      console.log(arr1, arr2);
+      let sum = arr1.reduce(f1);
+      console.log(sum);
     </script>
   </body>
 </html>

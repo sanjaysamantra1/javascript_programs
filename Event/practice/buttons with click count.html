@@ -1,24 +1,22 @@
 <html>
-	<body>
-		
-		<script>
-			obj = {};
-			function myFunc() {
-			  var id = this.id;
-			  if (!obj[id]){
-				obj[id] = 0;
-				}
-			obj[id]++;
-			alert(`you have clicked this button for ${obj[id]} times`);
-			}
-			for(i=1;i<=5;i++){
-				myBtn = document.createElement('BUTTON');
-				myBtn.innerHTML = 'button- '+i;
-				myBtn.id = i;
-				myBtn.addEventListener('click',myFunc);
-				document.body.appendChild(myBtn);
-			}
-
-		</script>		
-	</body>
-</html>	
+  <body>
+    <script>
+      obj = {};
+      function myFunc() {
+        var id = this.id;
+        if (!obj[id]) {
+          obj[id] = 0;
+        }
+        obj[id]++;
+        alert(`you have clicked this button for ${obj[id]} times`);
+      }
+      for (let i = 1; i <= 5; i++) {
+        myBtn = document.createElement("BUTTON");
+        myBtn.innerHTML = "button- " + i;
+        myBtn.id = i;
+        myBtn.addEventListener("click", myFunc);
+        document.body.appendChild(myBtn);
+      }
+    </script>
+  </body>
+</html>

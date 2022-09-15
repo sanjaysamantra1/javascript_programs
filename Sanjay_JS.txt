@@ -54,6 +54,8 @@ Eliminate Render-Blocking JavaScript
  defer is useful when a script depends on another script.
  https://flaviocopes.com/javascript-async-defer/
  
+ 
+ 
 
 Javascript - is a programming language, follows ECMASCRIPT Standards.
 ECMA - European Computer Manufacturers Association.
@@ -208,7 +210,7 @@ console.log()   -  console(object), log(function)
 
 window - alert(),confirm(),prompt(),setTimeout(),setInterval(),print(),open()
 document - write(),writeln(),getElementById(),querySelector()
-console - log(),error(),warn(),table(),dir(),trace(),count(),time()
+console - log(),error(),warn(),table(),dir(),trace(),count(),time(), timeEnd()
 
  
 N.p - while calling window object functions it is not necessary to call with object name;	
@@ -405,7 +407,7 @@ No of operands
 2. binary (2 operands)    ex: a+b , x-y  
 3. ternary (3 operands)   ex: a>b ? a : b;
     
-res = condition ? true : false;   
+res = condition ? trueValue : falseValue;   
 
 
 == compares only the value, performs implicit type conversion. (equality)
@@ -425,7 +427,7 @@ Q. using ternary operator find the greatest number amongst 3 numbers
 
 
 dialog boxes/popup boxes
-==========================
+========================
 the below functions are from 'window' object
 1.  alert() - display Message  
 			 (message + ok)
@@ -559,7 +561,9 @@ Higher-order Function
 =====================
 -Higher-order function is a function that may receive a function as an argument and/or 
  can even return a function. 
--Higher-order functions are just like regular functions with an added ability of receiving and returning other functions as arguments and output.
+-a function can be called as a Higher-order if that function has either of the below 2 abilities:
+	1. a function has ability to return another function
+	2. a function has ability to take another function as argument
 -Array filter(),map(),reduce(),sort() are some of the Higher-Order functions.
 
 
@@ -1032,7 +1036,7 @@ Find Elements from DOM
 6. document.querySelectorAll();//Array of elements
 
 
-get value from inputBOx
+get value from inputBox
 --var x = document.getElementById('name').value
 
 set value to an input box
@@ -1357,7 +1361,7 @@ Promise
 =======
 -A promise is an object that holds the future value of an asynchronous operation.
  ex:-if we request some data from a server, promise promises us to get that data 
- that we can use  in the future.
+ that we can use in the future.
 -A Promise object represents a value that may not be available yet, 
  but will be resolved at some point in the future.
 -Promise object can have different states:- pending, resolved/fulfilled, rejected 

@@ -3,17 +3,18 @@
     <script>
       let is_weekend = function (date1) {
         let dt = new Date(date1);
+        let dayNumber = dt.getDay();
 
-        if (dt.getDay() == 6 || dt.getDay() == 0) {
+        if (dayNumber == 6 || dayNumber == 0) {
           return "weekend";
         } else {
           return "Not weekend";
         }
       };
-      console.log(is_weekend("May 28, 2022"));
-      console.log(is_weekend("May 29, 2022"));
-      console.log(is_weekend("May 30, 2022"));
-      console.log(is_weekend("May 31, 2022"));
+      console.log(is_weekend("August 27, 2022"));
+      console.log(is_weekend("August 28, 2022"));
+      console.log(is_weekend("August 29, 2022"));
+      console.log(is_weekend("August 31, 2022"));
     </script>
   </body>
 </html>

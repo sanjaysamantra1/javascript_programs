@@ -1,11 +1,15 @@
 <html>
 	<head>
 		<body>
+			<button onclick="f1()">Click me</button>
 			<script>
 				(function(){
-					console.log('I am self invoked');
-					console.log('I will be called only once')
+					console.log('I am self invoked, I will be called only once');
 				})();
+
+				function f1(){
+					console.log('I am f1... I can be called N times');
+				}
 			</script>
 		</body>
 	</body>

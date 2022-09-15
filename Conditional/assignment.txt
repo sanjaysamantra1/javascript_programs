@@ -12,6 +12,7 @@
    1-100   	2rs/unit
    100-200  3rs/unit    
    >200     5rs/unit
+
    
 5. you are shopping from flipkart, below are the discount rates applicable.
    ask user to enter gross-amt and calculate net-amt.

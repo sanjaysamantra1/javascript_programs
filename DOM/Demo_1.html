@@ -1,14 +1,26 @@
 <html>
-<head>
-	<title>this is title</title>	
-</head>
+  <head>
+    <title>this is title</title>
+    <style>
+      h1 {
+        background-color: red;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
     <h1>this is a heading</h1>
     <div id="div1">this is a div</div>
     <p class="test">this is a paragraph</p>
     <div name="div2">this is div-2</div>
     <div name="div3" class="test">this is div-3</div>
-</body>
+    <button onclick="changeMycolor()">Click me</button>
 
+    <script>
+      function changeMycolor() {
+        console.log("button clicked");
+        document.getElementsByTagName("h1")[0].innerHTML = 'this is a updated heading'
+      }
+    </script>
+  </body>
 </html>

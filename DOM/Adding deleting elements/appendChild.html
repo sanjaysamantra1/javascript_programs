@@ -1,18 +1,16 @@
 <html>
-	<head>
-	</head>
-	<body>
-		<ul>
-			
-		</ul>		
-		<script>
-			let cars = ['tata','maruti','honda','audi','toyota','BMW']
-			
-			for(car of cars){
-				myLI = document.createElement('li'); //<li></li>
-				myLI.innerHTML = car; //<li>tata</li>
-				document.querySelector('ul').appendChild(myLI)
-			}
-		</script>
-	</body>
-</html> 
+  <body>
+    <ul>
+		
+	</ul>
+    <script>
+      let cars = ["tata", "maruti", "honda", "audi", "toyota", "BMW"];
+
+      for (let car of cars) {
+        let myLI = document.createElement("li"); // <li></li>
+        myLI.innerHTML = car; // <li>Tata</li>
+        document.querySelector("ul").appendChild(myLI);
+      }
+    </script>
+  </body>
+</html>

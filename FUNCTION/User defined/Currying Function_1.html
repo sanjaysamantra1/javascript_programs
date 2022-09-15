@@ -12,12 +12,12 @@
       add(2, 3, 4);
 
       //function curring
-      function sum(a) {
-        return function (b) {
-          return function (c) {
-            console.log(a + b + c);
-          };
-        };
+      function sum(a){
+        return function(b){
+          return function(c){
+            console.log(a+b+c);
+          }
+        }
       }
       sum(2)(3)(4);
     </script>

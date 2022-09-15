@@ -1,30 +1,29 @@
 <html>
   <body>
     <script>
-      // 1. Function Declaration
-      add(2, 3); // hoisted
+      // function declaration (named function)
       function add(a, b) {
         console.log(a + b);
       }
+      add(2, 3);
+      add(3, 4);
 
-      //2. Function Expression
-      var sub = function (a, b) {
+      // function expression(anonymous)
+      let sub = function (a, b) {
         console.log(a - b);
       };
-      sub(6, 4); // hoisting-no
-      sub(7, 4); // hoisting-no
-      sub(9, 4); // hoisting-no
+      sub(5, 3);
 
-      // 3. Self Invoked
+      // self invoked ( IIFE- Immediately Invoked Function Expression)
       (function (a, b) {
         console.log(a * b);
-      })(3, 5);
+      })(3, 4); // only once
 
-      // 4. arrow function
-      var div = (a, b) => {
+      // arrow function (ES - 6)
+      let div = (a, b) => {
         console.log(a / b);
       };
-      div(10, 2); // arguments
+      div(5, 3);
     </script>
   </body>
 </html>

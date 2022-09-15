@@ -3,12 +3,12 @@
     <script>
       function f1() {
         if (true) {
-          (function () {
+          (function(){
             var name = "sachin";
-            console.log("block ", name);
+            console.log("block ", name); // sachin
           })();
         }
-        console.log("function ", name);
+        console.log("function ", name); // sachin
       }
       f1();
     </script>

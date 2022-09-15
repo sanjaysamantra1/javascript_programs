@@ -24,7 +24,8 @@
           }, 3000);
         });
       }
-      who().then((res1) => {
+      
+      who().then((res1) => { // promise hell
         console.log("promise-1 resolved", res1);
 
         what().then((res2) => {
@@ -34,8 +35,14 @@
             console.log("promise-3 resolved", res3);
 
             console.log(res1, res2, res3);
+          },function(err3){
+            console.log(err3)
           });
+        },function(err2){
+          console.log(err2)
         });
+      },function(err1){
+        console.log(err1)
       });
     </script>
   </head>

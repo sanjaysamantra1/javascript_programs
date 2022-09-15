@@ -1,15 +1,31 @@
-<HTML>
-<BODY>
-<script>
-	function add(a,b)
-	{
-		return a+b;
-	}
-	var result=add(2,3);
-	
-	alert(result);
-</script>
+<html>
+  <body>
+    <script>
+      // declaration
+      //   function si(p, t, r) {
+      //     let res = (p * t * r) / 100;
+      //     console.log("simple interest is " + res);
+      //   }
 
+      // expression
+      //   let si = function (p, t, r) {
+      //     let res = (p * t * r) / 100;
+      //     console.log("simple interest is " + res);
+      //   };
+      //   si(1000, 2, 10);
 
-</BODY>
-</HTML>
+      //self invoked
+      //   (function (p, t, r) {
+      //     let res = (p * t * r) / 100;
+      //     console.log("simple interest is " + res);
+      //   })(1000, 2, 8);
+
+      //arrow
+      let si = (p, t, r) => {
+        let res = (p * t * r) / 100;
+        console.log("simple interest is " + res);
+      };
+      si(1000, 2, 10);
+    </script>
+  </body>
+</html>

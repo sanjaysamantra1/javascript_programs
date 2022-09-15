@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script>
+        let promise1 = fetch('https://api.github.com/users/PulkitAgrawal08');
+        let promise2 = fetch('https://api.github.com/users/sanjaysamantra1');
+        let promise3 = fetch('https://api.github.com/users/iliakan');
+
+        Promise.all([promise1,promise2,promise3]).then(([response1,response2,response3])=>{
+            // console.log(response1,response2,response3);
+            Promise.all([response1.json(),response2.json(),response3.json()]).then(([data1,data2,data3])=>{
+               console.log(data1,data2,data3) 
+            });
+        })
+    </script>
+  </head>
+  <body></body>
+</html>

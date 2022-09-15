@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script>
+      function f1() {
+        console.log("I am f1");
+      } // Regular
+
+      function f2() {
+        // f2 has ability to return another function, hence it is HO
+        function f3() {
+          console.log("i am inner function");
+        };
+        return f3;
+      }
+
+
+      function add(a,b){
+        console.log(a+b)
+      }
+      add(3,4);
+
+    </script>
+  </body>
+</html>

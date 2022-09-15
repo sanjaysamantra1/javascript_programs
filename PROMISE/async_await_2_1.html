@@ -28,11 +28,11 @@
       //async function, when there are multiple steps involved
       async function msg() {
         let a = await who();
-        console.log("first promise resolved");
+        console.log("first promise resolved ",a);
         let b = await what();
-        console.log("second promise resolved");
+        console.log("second promise resolved ",b);
         let c = await where();
-        console.log("third promise resolved");
+        console.log("third promise resolved ",c);
 
         console.log(`${a} ${b} ${c}`);
       }

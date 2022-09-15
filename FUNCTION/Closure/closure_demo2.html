@@ -3,18 +3,17 @@
 <head>
     <script>
 		//self invoked function gets executed only once
-        var updateClickCount = (function(){ // outer function
-            var counter = 0; // once
-            console.log('outer called......')
-            
-            function inner(){ // inner function - N Times
-				++counter;
-                document.getElementById("spnCount").innerHTML = counter;
-                console.log('inner called......')
-			}
-            return inner;
+        function myOuter(){
+            var counter = 0;
+            console.log('outer')
 
-        })();
+            return function(){
+                console.log('inner')
+                ++counter;
+                document.getElementById("spnCount").innerHTML = counter;
+            }
+        }
+        let updateClickCount = myOuter();
 
 		console.dir(updateClickCount);
 

@@ -1,38 +1,31 @@
 <html>
   <head>
     <script>
-      //await is a new operator used to wait for a promise to resolve or reject.
-      //It can only be used inside an async function.
-
-      function add(a, b) {
-        return new Promise((resolve) => {
-          setTimeout(() => {
-            resolve(a + b);
-          }, 2000);
+      // promise.then(f1,f2)
+      let usersPromise = fetch('https://jsonplaceholder.typicode.com/users');
+      usersPromise.then(function(response){
+        let anotherPromise = response.json();
+        anotherPromise.then(function(finalData){
+          console.log(finalData)
+        },function(err){
+          console.log(err);
         });
-      }
-      add(2, 3).then(
-        (res) => {
-          document.write(res);
-        },
-        (err) => {
-          document.write(err);
+      },function(error){
+        console.log(error);
+      });
+
+      // using async await 
+      async function getComments(){
+        try{
+          let commentsResponse = await fetch('https://jsonplaceholder.typicode.com/comments');
+          let finalComments = await commentsResponse.json();
+          console.log(finalComments);
+        }catch(err){
+          console.log(err);
         }
-      );
-
-      function sub(a, b) {
-        return new Promise((resolve) => {
-          setTimeout(() => {
-            resolve(a - b);
-          }, 3000);
-        });
       }
-      async function test() {
-        res = await sub(5, 3);
-        document.write(res);
-      }
+      getComments();
 
-      test();
     </script>
   </head>
   <body></body>

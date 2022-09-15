@@ -10,7 +10,7 @@
       console.log(account); //not encapsulated
 
       //encapsulated
-      account = function () {
+      function openAccount() {
         let accNo = 12345;
         let accBal = 5000;
 
@@ -26,7 +26,8 @@
             }
           },
         };
-      }.call(this);
+      }
+      var account = openAccount();
 
       console.log(account);
       console.log(account.accNo, account.accBal);

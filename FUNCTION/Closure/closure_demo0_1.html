@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      function f1() {
+        let a = 10;
+        let b = 20; // lexical scope/env for f2
+
+        function f2() {
+          let c = 30;
+          console.log(a, b, c);
+        }
+        f2();
+        console.dir(f2);
+      }
+
+      f1();
+      console.dir(f1);
+    </script>
+  </body>
+</html>

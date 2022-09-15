@@ -8,6 +8,7 @@
         <th>Sal</th>
       </tr>
     </table>
+
     <script>
       var employees = [
         { eId: 111, name: "AAA", sal: 5000 },
@@ -17,6 +18,7 @@
         { eId: 555, name: "EEE", sal: 9000 },
       ];
       var table = document.getElementById("myTable");
+      
       for (emp of employees) {
         var row = table.insertRow(table.rows.length);
 

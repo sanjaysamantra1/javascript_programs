@@ -5,14 +5,14 @@
 
 <body>
 	
-	<textarea onkeyup="f1()" maxlength=150 rows=5 cols=20>
+<textarea onkeyup="f1()" maxlength=150 rows=5 cols=20>
 	</textarea>
 	<h1>150</h1>
 	
 	<script>
 		function f1(){
 			var text = document.querySelector('textarea').value;
-			var len = text.length
+			var len = text.length;
 			document.querySelector('h1').innerHTML = 150-len;
 		}
 	</script>

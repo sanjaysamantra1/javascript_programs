@@ -10,9 +10,9 @@
       console.log(account); //not encapsulated
 
       //encapsulated
-      account = function () {
-        accNo = 12345;
-        accBal = 5000;
+      function f1() {
+        let accNo = 12345;
+        let accBal = 5000;
         return {
           disp: function () {
             console.log(accNo, accBal);
@@ -21,7 +21,8 @@
             accBal = accBal + amt;
           },
         };
-      }.call(this);
+      }
+      account = f1();
 
       console.log(account);
       console.log(account.accNo, account.accBal);
@@ -29,6 +30,8 @@
       account.disp();
       account.deposit(2000);
       account.disp();
+
+      console.dir(account.disp)
     </script>
   </head>
 
