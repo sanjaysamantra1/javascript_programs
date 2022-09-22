@@ -3,12 +3,13 @@
 <html>
   <body>
     <script>
-      var a = "s@ach#i$n";
-      var b = a.replace(/[^\w]/g, "");
-      var c = a.replace(/[\w]/g, "");
+      let input = "s@ach#i$n";
+      let only_alphabets = input.replace(/[^\w]/g, "");
+      console.log(only_alphabets);
+      let only_special = input.replace(/[\w]/g, "");
+      console.log(only_special);
 
-      console.log(a);
-      console.log(b+c);
+      console.log(only_alphabets + only_special);
     </script>
   </body>
 </html>

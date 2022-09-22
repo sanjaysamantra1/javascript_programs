@@ -18,16 +18,15 @@
         const charMapA = getCharMap(stringA);
         const charMapB = getCharMap(stringB);
 
-        if (Object.keys(charMapA).length !== Object.keys(charMapA).length) {
+        if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
           return false;
-        } else {
-          for (let char in charMapA) {
-            if (charMapA[char] !== charMapB[char]) {
-              return false;
-            }
-          }
-          return true;
         }
+        for (let char in charMapA) {
+          if (charMapA[char] !== charMapB[char]) {
+            return false;
+          }
+        }
+        return true;
       }
       console.log(isAnagram("listen", "silent"));
       console.log(isAnagram("triangle", "integral"));

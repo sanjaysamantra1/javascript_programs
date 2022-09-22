@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <script>
+      function alphabet_char_Shift(str) {
+        let charArr = str.split('');
+
+        for(char of charArr){
+            char = char+1
+        }
+        
+        return charArr.join("");
+      }
+      console.log(alphabet_char_Shift("abcxyz"));
+    </script>
+  </body>
+</html>

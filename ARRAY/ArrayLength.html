@@ -1,8 +1,15 @@
 <html>
   <body>
     <script>
-      var x = ["apple", "orange", "mango"];
-      document.write(x.length);
+      let cars = ["tata", "honda", "maruti", "hundai", "toyota"];
+      console.log("length is " + cars.length);
+
+      delete cars[2];
+      console.log(cars.length); // 5
+      console.log(cars);
+
+      cars[2] = "new maruti";
+      console.log(cars);
     </script>
   </body>
 </html>

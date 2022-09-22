@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      let employees = [
+        { eId: 101, name: "deepak", sal: 5000, doj: "16 March 2017" },
+        { eId: 103, name: "ajay", sal: 6000, doj: "01/22/2021" },
+        { eId: 102, name: "ranjan", sal: 8000, doj: "2000-12-31" },
+        { eId: 104, name: "manoj", sal: 7000, doj: "March 12, 2014" },
+      ];
+      employees.sort(function (e1, e2) {
+        date1 = new Date(e1.doj);
+        date2 = new Date(e2.doj);
+        return date1 - date2;
+      });
+      console.log(employees);
+    </script>
+  </body>
+</html>
