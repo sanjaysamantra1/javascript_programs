@@ -35,24 +35,25 @@
         fetch("https://dummyjson.com/products")
           .then((response) => response.json())
           .then((finalResponse) => {
-            console.log(finalResponse.products)
+            console.log(finalResponse.products);
             document.querySelector(".container").style.display = "block";
             document.querySelector(".loading").style.display = "none";
 
             let str = "";
             finalResponse.products.forEach((product) => {
-              str += `<div class="col">`;
-              str += `<div class="card" style="width:300px">`;
-              str += `<img class="card-img-top" src=${product.images[0]} alt="Card image" height='200px'>`;
-              str += `<div class="card-body">`;
-              str += `<div class="card-title">title : ${product.title}</div>`;
-              str += `<p class="card-text">category : ${product.category}</p>`;
-              str += `<p class="card-text">price : ${product.price}</p>`;
-              str += `<p class="card-text">Rating : ${product.rating}</p>`;
-              str += `</div>
-              </div>
-              </div>`;
-
+              str = str +
+                `<div class="col-sm-3">
+                  <div class="card">
+                    <img src="${product.images[0]}" class="card-img-top" alt="..." height='200px'>
+                    <div class="card-body">
+                      <h5 class="card-title">${product.title}</h5>
+                      <p class="card-text">category : ${product.category}</p>
+                      <p class="card-text">price : ${product.price}</p>
+                      <p class="card-text">Rating : ${product.rating}</p>
+                    </div>
+                  </div>
+                </div>
+              `;
               document.querySelector(".row").innerHTML = str;
             });
           });

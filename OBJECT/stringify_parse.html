@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script>
+      let user = {
+        name: "sachin",
+        age: 35,
+        add: "mumbai",
+      };
+      document.write(user); // [object Object] - object cann't be printed
+
+      // convert object to string format
+      let userStr = JSON.stringify(user);
+      document.write(userStr);
+
+      console.log(userStr.name); //undefined - userStr is not an object
+      console.log(typeof userStr);
+
+      // convert the string to object format
+      let userObj = JSON.parse(userStr);
+      console.log(userObj.name);
+      console.log(typeof userObj);
+    </script>
+  </body>
+</html>

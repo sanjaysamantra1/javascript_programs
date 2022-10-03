@@ -5,15 +5,14 @@
 			var arr2 = [ 30 , 40 ];
 
 			arr1.push.apply(arr1, arr2);
-			alert(arr1)
-			alert(arr2)
+			console.log(arr1)
+			console.log(arr2)
 			
-			var arr3 = [ 50 , 60 ];
-			var arr4 = [ 70 , 80 ];
+			var arr3 = [ 50 , 60 ]; //2
+			var arr4 = [ 70 , 80 , 90 ];
 
-			arr3.push(...arr4);
-			alert(arr3)
-			alert(arr4)
+			arr3.push(...arr4); 
+			console.log(arr3)
 		</script>
 	</body>
 </html>

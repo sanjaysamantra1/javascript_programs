@@ -1,0 +1,26 @@
+<html>
+	<body><h1>
+		<script>
+			class Student{
+                fName;lName;sal;   // declaration
+                constructor(fName,lName,sal){
+                    this.fName = fName; // updation
+                    this.lName = lName;
+                    this.sal = sal;
+                    // this.classVariable = LocalVariable;
+                }  
+                fullName(){
+                    return this.fName +"  "+this.lName
+                }
+                printSal(){
+                    console.log(this.sal);
+                }            
+            }
+            let std1 = new Student('Asutosh','Kumar',5000);
+            let fullname = std1.fullName();
+            console.log(fullname);
+
+            std1.printSal();
+		</script>
+	</body>
+</html>

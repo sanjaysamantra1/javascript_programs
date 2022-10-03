@@ -41,10 +41,12 @@
     employees = [{eId: 101, name: "sanjay", sal: 5000, gender: "male" },
 				{ eId: 104, name: "reena", sal: 8000, gender: "female" }]
 	departments = [{ eId: 101, dept: "sales" },
-				{ eId: 104, dept: "manager" }]
+				{ eId: 104, dept: "marketing" }]
 
 18. groupBy employees-eid,name,sal
 
 19. intersection of 2 number arrays
 
-20. 
+20. WAP to print the occurance of each elements 
+    input = [10,20,30,40,50,10,30,50]
+	output = {10:2, 20:1, 30:2 , 40:1, 50:2}

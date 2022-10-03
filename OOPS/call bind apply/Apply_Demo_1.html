@@ -6,16 +6,19 @@
       // every element from that array as arguement to that function
 
       function add(a, b) {
-        alert(this.num + a + b);
+        console.log(this.num + a + b);
       }
       add(2, 3); //NaN
 
-      var x = { num: 4 };
-      add.call(x, 2, 3); // 9
+      let obj1 = { num: 4 };
+      add.call(obj1, 2, 3);
 
-      add.call(x, [2, 3]); // 4 2,3 undefined
+      let arr = [2, 3];
+      add.call(obj1, arr);
 
-      add.apply(x, [2, 3]); //9
+      add.apply(obj1, arr);
+
+      add.call(obj1, ...arr);
     </script>
   </body>
 </html>

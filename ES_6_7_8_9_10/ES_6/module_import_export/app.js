@@ -1,4 +1,4 @@
-import mul, { add, sub } from "./math";
+import { add, sub, mul } from "./math";
 
 let num1 = +prompt("enter number 1");
 let num2 = +prompt("enter number 2");

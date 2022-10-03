@@ -1,29 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<body>
-	<script>
-		// var promiseObj = fetch('https://jsonplaceholder.typicode.com/users');
-		// promiseObj.then(f1, f2);
-		// function f1(response) {
-		// 	console.log(response);
-		// 	response.json().then(data=>{
-		// 		console.log(data)
-		// 	})
-		// }
-		// function f2(error) {
-		// 	console.log(error)
-		// }
-
-		// easier syntax
-		fetch('https://jsonplaceholder.typicode.com/users')
-			.then(response => response.json())
-			.then(data => console.log(data))
-			.catch(err => {console.log(err);
-			 console.log('this is catch block')
-			 })
-
-	</script>
-</body>
-
-</html>
+<script>
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => response.json())
+    .then((finalResponse) => console.log(finalResponse))
+    .catch((error) => console.log(error));
+</script>

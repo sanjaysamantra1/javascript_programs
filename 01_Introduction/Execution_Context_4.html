@@ -1,18 +1,18 @@
 <html>
 	<body>
 		<script>
+			// other - 3
 			function displayA(){console.log('aaaaaaaa')}
-			function displayB(){console.log('bbbbbbbbb')}
+			function displayB(){console.log('bbbbbbbb')}
+			function displayC(){console.log('cccccccc')}
 
-			setTimeout(()=>{
-				console.log('i am settimeout')
-			},1000)
-            
+
+			setTimeout(displayC,1000);           
 
 
 			displayA();
 
-			for(i=1;i<=1000000;i++){
+			for(i=1;i<=10000;i++){
 				console.log('hiiiii'); // 20
 			}
 

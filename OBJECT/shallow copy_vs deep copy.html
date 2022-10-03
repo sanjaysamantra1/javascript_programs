@@ -1,6 +1,9 @@
 <html>
   <body>
     <script>
+      let obj1 = { x: 10, y: 20 };
+      let obj2 = obj1; // reference copy
+
       let person = {
         firstName: "sachin",
         lastName: "tendulkar",
@@ -11,8 +14,8 @@
           country: "india",
         },
       };
-      // let copiedPerson = Object.assign({}, person);
-      let copiedPerson = structuredClone(person);
+      // let copiedPerson = Object.assign({}, person); // value copy - shallow
+      let copiedPerson = structuredClone(person); // value copy - deep
 
       console.log(copiedPerson, person);
       copiedPerson.firstName = "rahul"; // disconnected

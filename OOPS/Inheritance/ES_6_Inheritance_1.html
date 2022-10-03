@@ -2,9 +2,7 @@
   <body>
     <script>
       class Person {
-        name;
-        age;
-        add;
+        name; age; add;
         constructor(name, age, add) {
           this.name = name;
           this.age = age;
@@ -16,8 +14,7 @@
       }
 
       class Student extends Person {
-        roll;
-        mark;
+        roll;mark;
         constructor(name, age, add, roll, mark) {
           super(name, age, add); // parent's constructor
           this.roll = roll;
@@ -29,14 +26,15 @@
       Person.prototype.abc = 10;
       Student.prototype = Person.prototype;
 
-      console.log(std1.hasOwnProperty("name"));
-      console.log(std1.hasOwnProperty("abc"));
-      console.log("name" in std1);
-      console.log("abc" in std1);
+      console.log(std1)
+      console.log(std1.hasOwnProperty("name")); // true
+      console.log(std1.hasOwnProperty("abc")); // false
+      console.log("name" in std1); // true
+      console.log("abc" in std1);  // true
+      console.log("xyz" in std1);  // false
 
       class Employee extends Person {
-        eId;
-        sal;
+        eId; sal;
         constructor(name, age, add, eId, sal) {
           super(name, age, add); // Persons's constructor
           this.eId = eId;

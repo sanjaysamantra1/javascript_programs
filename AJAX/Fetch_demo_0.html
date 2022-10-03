@@ -1,0 +1,22 @@
+<script>
+  let url = "https://fakestoreapi.com/products";
+  let productsPromise = fetch(url);
+
+  productsPromise.then(f1, f2);
+
+  function f1(respone) {
+    console.log(respone);
+    let finalPromise = respone.json();
+    finalPromise.then(f3, f4);
+  }
+  function f2(error) {
+    console.log(error);
+  }
+  function f3(finaldata) {
+    console.log(finaldata);
+  }
+  function f4(error) {
+    console.log(error);
+  }
+  
+</script>

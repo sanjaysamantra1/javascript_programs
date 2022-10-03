@@ -177,15 +177,11 @@ Symbol
  
 Type coercion/Type casting
 ==========================
--Type coercion is the automatic or implicit conversion of values from one data type to another 
- (such as strings to numbers). 
--Type conversion is similar to type coercion because they both convert values from one data type to 
- another with one key difference 
+-Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers). 
+-Type conversion is similar to type coercion because they both convert values from one data type to another with one key difference 
 -type coercion is implicit whereas type conversion can be either implicit or explicit.
 
 Rules:
--Primitives are coerced to boolean when using logical operators.
-	123 && "hello"    hello
 -Primitives are coerced to string when using the binary + operator — 
   if any operand is a string
 -Primitives are coerced to number when using comparison operators.
@@ -210,7 +206,7 @@ console.log()   -  console(object), log(function)
 
 window - alert(),confirm(),prompt(),setTimeout(),setInterval(),print(),open()
 document - write(),writeln(),getElementById(),querySelector()
-console - log(),error(),warn(),table(),dir(),trace(),count(),time(), timeEnd()
+console - log(),error(),warn(),table(),dir(),trace(),count(),time(), timeEnd(),group()
 
  
 N.p - while calling window object functions it is not necessary to call with object name;	
@@ -378,9 +374,9 @@ Comments
 ========
 -it improves readability/understandability of a file.
 -single line comment  
-// single line comment
+// single line comment   (ctrl + /)
 
--multi line comment 
+-multi line comment    ( Alt + Shift + a)
 /*
 line-1
 line-2
@@ -807,7 +803,7 @@ var y = Array.from(x)
 console.log(y)
 
 
- 
+
 OOP
 ----
 class - structure/blueprint/template for creating Object 
@@ -855,7 +851,7 @@ Object class
 ============
 -Objects are variables that can contain many values inside it.
 -The values are written as 'key:value' pairs. 
-	ex: user = {name:'sachin' , age:35}
+	ex: let user = {name:'sachin' , age:35}
 -we can access object properties in two ways:
 	objectName.propertyName;       user.name;
 	objectName["propertyName"];    user['age'];
@@ -895,6 +891,7 @@ Object class
 				 obj2 = structuredClone(obj1)
 
 -A shallow copy of an object is a copy whose nested properties share the same references.
+ (Nested objects will not be copied by value)
 -A deep copy of an object is a copy whose nested properties do not share the same references.
 
 
@@ -1336,7 +1333,7 @@ CallBack
 -A Callback is a function that is passed into another function as an argument to be executed later 
 -callback function is run inside of the function it was passed into.
 -A callback is passed as a value to another function, and will only be executed when the event happens. 
--A function that accepts other functions as arguments is called a higher-order function, 
+-A function that accepts other functions as arguments is called a higher-order function,
  which contains the logic for when the callback function gets executed.
 -Most of the time we are creating programs and applications that operate in a synchronous manner. 
 In other words, some of our operations are started only after the preceding ones have completed. 
@@ -1364,7 +1361,7 @@ Promise
  that we can use in the future.
 -A Promise object represents a value that may not be available yet, 
  but will be resolved at some point in the future.
--Promise object can have different states:- pending, resolved/fulfilled, rejected 
+-Promise object can have different states:- pending, resolved/fulfilled, rejected. 
 
 
 methods of Promise class:

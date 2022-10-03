@@ -1,19 +1,22 @@
 <html>
 	<body><h1>
 		<script>
-			// ES - 5
-			//class/construcor function
-			function Student(roll,name,add)
-			{
-				this.roll = roll;
-				this.name = name;
-				this.add = add;
+			// function
+			function add(a,b){
+				console.log(a+b);
 			}
-			var std1 = new Student(101 , "Ajay" , "Marathalli");
-			var std2 = new Student(102 , "Deepak" , "BTM");
-			
-			console.log(std1);
-			console.log(std2);
+		   add(2,3);
+
+			// ES-5 Constructor Function / class
+			function Student(a, b, c){
+				this.roll = a;
+				this.name = b;
+				this.add = c;
+			}
+			let std1 = new Student(1 , 'asutosh','kolkata')
+			let std2 = new Student(2 , 'bishnu','Hyderabad')
+			let std3 = new Student(3 , 'subash','bangalore')
+			console.log(std1,std2,std3);
 		</script>
 	</body>
 </html>

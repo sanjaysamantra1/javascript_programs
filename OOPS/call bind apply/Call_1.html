@@ -5,15 +5,15 @@
       function add(a, b) {
         console.log(this.num + a + b);
         console.log(this);
-        //this = window; this = x;  this = y;
+        //this = window; this = obj1;  this = obj2;
       }
       add(2, 3);
 
-      x = { num: 4 };
-      add.call(x, 2, 3);
+      obj1 = { num: 4 };
+      add.call(obj1, 2, 3);
 
-      y = { num: 6 };
-      add.call(y, 2, 3);
+      obj2 = { num: 6 };
+      add.call(obj2, 2, 3);
     </script>
   </body>
 </html>

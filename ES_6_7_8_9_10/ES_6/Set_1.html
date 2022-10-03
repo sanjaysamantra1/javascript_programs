@@ -2,23 +2,25 @@
   <body>
     <script>
       // create Set Object
-      var set = new Set();
+      var cars = new Set();
 
-      // add data to set
-      set.add("Potato");
-      set.add("Tomato");
-      set.add("Tomato");
-      set.add("Potato");
+      // add data to Set
+      cars.add("tata");
+      cars.add("honda");
+      cars.add("honda");
+      cars.add("Tata");
+      cars.add("hundai");
 
-      //size of set
-      console.log(set.size);
+      //size of Set
+      console.log(cars.size);
 
-      //check if element is there in set
-      console.log(set.has("Tomato"));
+      //check if element is there in Set
+      console.log(cars.has("audi"));
+      console.log(cars.has("tata"));
 
-      // Iterate set items
-      for (var item of set) {
-        console.log(item);
+      // Iterate Set items
+      for (var car of cars) {
+        console.log(car);
       }
     </script>
   </body>

@@ -5,9 +5,9 @@
       // function.call(object)
 
       function sayHi() {
-        console.log(this, this.name);
+        console.log(this, this.name); // this = how the function is called
       }
-      sayHi();
+      sayHi(); 
 
       obj1 = { name: "sachin" };
       sayHi.call(obj1); // inside sayHi() this=obj1

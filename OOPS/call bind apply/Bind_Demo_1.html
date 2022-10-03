@@ -7,12 +7,12 @@
           console.log(this.name, this);
         },
       };
-      obj1.displayName();
+      obj1.displayName(); // inside displayName() this = obj1
 
       let f1 = obj1.displayName;
-      f1();
+      f1(); // inside displayName() this = window
 
-      let f2 = obj1.displayName.bind(obj1);
+      let f2 = obj1.displayName.bind(obj1); // inside displayName() this = obj1
       f2();
 
       let f3 = f2;

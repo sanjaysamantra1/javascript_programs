@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      let user = {
+        fName: "Sanjay",
+        lName: " Samantra",
+        age: 30,
+        sal: 5000,
+        fullName: function () { // ES-5
+          console.log(this.fName + this.lName);
+        },
+        anualSalary() { //ES-6
+          console.log(this.sal * 12);
+        },
+      };
+      user.fullName();
+      user.anualSalary();
+    </script>
+  </body>
+</html>

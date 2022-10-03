@@ -5,7 +5,7 @@
         x: 10,
         y: 20,
         add: function () {
-          alert(this.x + this.y);
+          console.log(this.x + this.y);
         },
       };
       obj1.add();
@@ -14,14 +14,15 @@
         x: 15,
         y: 25,
       };
+      // obj2.add();  // obj2.add is not a function
+      obj1.add.call(obj2); // inside add() this=obj2
+
       var obj3 = {
-        x: 35,
-        y: 25,
+        x: 25,
+        y: 35,
       };
-      // obj2.add();
-      // obj3.add()
-      obj1.add.call(obj2); // inside add() , this = obj2
-      obj1.add.call(obj3); // inside add() , this = obj3
+      // obj3.add();  // obj3.add is not a function
+      obj1.add.call(obj3);
     </script>
   </body>
 </html>

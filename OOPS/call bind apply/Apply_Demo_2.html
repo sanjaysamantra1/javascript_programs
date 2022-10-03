@@ -1,14 +1,19 @@
 <html>
   <body>
     <script>
-      alert(Math.max(10, 18, 12, 15)); //18
+      let res1 = Math.max(10, 20, 30);
+      console.log(res1);
 
-      let arr = [10, 18, 12, 15];
-      alert(Math.max(arr)); //NaN
+      let arr = [10, 20, 30];
 
-      alert(Math.max.apply({}, arr)); //18
+      let res2 = Math.max(arr); // max() is expecting individual arguments
+      console.log(res2);
 
-      alert(Math.min(...arr));  // spread operator
+      let res3 = Math.max.apply({}, arr);
+      console.log(res3);
+
+      let res4 = Math.max(...arr);
+      console.log(res4);
     </script>
   </body>
 </html>

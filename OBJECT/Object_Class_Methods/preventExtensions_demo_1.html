@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script>
+      // new properties cann't be added
+      var emp = {
+        name: "sachin",
+        age: 35,
+      };
+      console.log(emp);
+      console.log(Object.isExtensible(emp)); // true
+      Object.preventExtensions(emp);
+      console.log(Object.isExtensible(emp)); // false
+
+      emp.add = "mumbai"; // not allowed
+      console.log(emp);
+
+      emp.age = 40;
+      console.log(emp);
+
+      delete emp.age;
+      console.log(emp);
+    </script>
+  </body>
+</html>
