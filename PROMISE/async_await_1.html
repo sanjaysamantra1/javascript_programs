@@ -1,32 +1,36 @@
 <html>
-  <head>
+  <body>
     <script>
-      // promise.then(f1,f2)
-      let usersPromise = fetch('https://jsonplaceholder.typicode.com/users');
-      usersPromise.then(function(response){
-        let anotherPromise = response.json();
-        anotherPromise.then(function(finalData){
-          console.log(finalData)
-        },function(err){
-          console.log(err);
-        });
-      },function(error){
-        console.log(error);
-      });
+      function getUsers() {
+        let userPromise = fetch("https://jsonplaceholder.typicode.com/users");
 
-      // using async await 
+        userPromise.then(
+          (response) => {
+            let finalPromise = response.json();
+            finalPromise.then(
+              (finaldata) => {
+                console.log(finaldata);
+              },
+              (err) => {
+                console.log(err);
+              }
+            );
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
+      }
+      getUsers();
+
+
       async function getComments(){
-        try{
-          let commentsResponse = await fetch('https://jsonplaceholder.typicode.com/comments');
-          let finalComments = await commentsResponse.json();
-          console.log(finalComments);
-        }catch(err){
-          console.log(err);
-        }
+        let comments =  await fetch("https://jsonplaceholder.typicode.com/comments");
+        let finalData = await comments.json();
+        console.log(finalData)
       }
       getComments();
 
     </script>
-  </head>
-  <body></body>
+  </body>
 </html>

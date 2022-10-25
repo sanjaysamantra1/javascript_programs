@@ -1,0 +1,52 @@
+<script>
+  class MyClass {
+    // Static class field (class-wide, not instance-specific)
+    static myVariable1;
+
+    // Instance class field (property) (instance-specific)
+    myVariable2 = 0;
+
+    // Private class field (instance-specific)
+    #privateInstanceInfo;
+
+    // Private static class field (class-wide, not instance-specific)
+    static #privateStaticInfo;
+
+    // Constructor for the class
+    constructor(arg) {
+      this.#privateInstanceInfo = arg;
+    }
+
+    // Public instance method returning static member
+    myMethod1() {
+      // Note that `MyClass.myVariable1` is shared across all instances
+      return MyClass.myVariable1;
+    }
+
+    // Public instance method return instance field (property) value
+    myMethod2() {
+      return this.myVariable2;
+    }
+
+    // Public instance method accessing the private field; all methods declared
+    // for the class can access it, not just this one
+    accessThePrivateInstanceInfo() {
+      return this.#privateInstanceInfo * 42;
+    }
+
+    // Private instance method
+    #myMethod3() {
+      return 0;
+    }
+
+    // Static method
+    static myStaticMethod() {
+      return this.#getPrivateStaticInfo(); // Or `MyClass.#getPrivateStaticInfo();`
+    }
+
+    // Private static method
+    static #getPrivateStaticInfo() {
+      return this.#privateStaticInfo; // Or `MyClass.#privateStaticInfo`
+    }
+  }
+</script>

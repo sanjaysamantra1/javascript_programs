@@ -6,24 +6,23 @@
         console.log(a + b);
       }
       add(2, 3);
-      add(3, 4);
 
-      // function expression(anonymous)
-      let sub = function (a, b) {
+      // function Expression (Anonymous)
+      var sub = function (a, b) {
         console.log(a - b);
       };
-      sub(5, 3);
+      sub(8, 5);
 
-      // self invoked ( IIFE- Immediately Invoked Function Expression)
-      (function (a, b) {
+      // Self-Invoked (IIFE)
+      (function mul(a, b) {
         console.log(a * b);
-      })(3, 4); // only once
+      })(3, 5);
 
-      // arrow function (ES - 6)
-      let div = (a, b) => {
+      // arrow function - ES-6
+      var div = (a, b) => {
         console.log(a / b);
       };
-      div(5, 3);
+      div(8, 4);
     </script>
   </body>
 </html>

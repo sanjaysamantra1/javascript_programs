@@ -12,15 +12,16 @@
       console.log(result1);
 
       let usersPromise = fetch("https://jsonplaceholder.typicode.com/users");
-      console.log(usersPromise);
-	  usersPromise.then(f1 , f2);
+      console.log(usersPromise, typeof usersPromise);
 
-	  function f1(response){
-			console.log('f1....',response)
-	  }
-	  function f2(error){
-		console.log('f2....',error)
-	  }
+      usersPromise.then(f1, f2);
+
+      function f1(res) {
+        console.log(res);
+      }
+      function f2(err) {
+        console.log(err);
+      }
     </script>
   </head>
   <body></body>

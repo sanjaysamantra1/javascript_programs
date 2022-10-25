@@ -766,10 +766,8 @@ To transform the array:
 	sort(func) – sorts the array in-place, then returns it.
 	reverse	() – reverses the array in-place, then returns it.
 	split/join – convert a string to array and back.
-	reduce(func, initial) – calculate a single value over the array by calling func for each element and 
-	                        passing an intermediate result between the calls.
-	flat()   - creates a new array with the elements of the subarrays concatenated into it.flat(Infinity)
-				flat() also removes holes in array
+	reduce(func, initial) – calculate a single value over the array by calling func for 	each element and passing an intermediate result between the calls.
+	flat()   - creates a new array with the elements of the subarrays concatenated into it.flat(Infinity) , flat() also removes holes in array
 	flatMap() - maps each element in an array using a mapping function and then flattens the results into a new array
 	
 To iterate over elements:

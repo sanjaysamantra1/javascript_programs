@@ -1,19 +1,12 @@
-<HTML>
-<BODY>
-<h1>
 <script>
-	var arr = [10,15,22,25,18,24,32,13];
-	document.write("Array Before Filter: ", arr )
-	
-	var evenArr = arr.filter(f1);
-	
-	function f1(index,value){
-		if(value%2 == 0)
-		 return value;
-	}
-	
-	document.write("<hr> Array After Filter: ", evenArr )
-</script>
-</BODY>
+  var arr = [10, 15, 22, 25, 18, 24, 32, 13];
+  document.write("Array Before Filter: ", arr);
 
-</HTML>
+  var evenArr = arr.filter(f1); // filter-HO  f1-callback
+
+  function f1(ele) {
+    return ele % 2 == 0;
+  }
+
+  document.write("<br/> Array After Filter: ", evenArr);
+</script>

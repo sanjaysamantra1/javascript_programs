@@ -1,0 +1,13 @@
+<script>
+  var str = "entertainment";
+  var obj = {};
+
+  for (char of str) {
+    if (char in obj) {
+      obj[char] = obj[char] + 1;
+    } else {
+      obj[char] = 1;
+    }
+  }
+  console.log(obj)
+</script>

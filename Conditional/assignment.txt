@@ -6,7 +6,7 @@
    if avg > 60  first
    if avg > 50  second
    if avg > 30  pass
-   avg<30		fail
+   avg<30		 fail
    
 4. ask user to enter the electricity units consumed. find the total bill amount.
    1-100   	2rs/unit

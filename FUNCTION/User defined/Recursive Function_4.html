@@ -23,12 +23,12 @@
       let doesntHaveIt = contains(nestedObject, "hiii"); // false
       console.log(hasIt, doesntHaveIt);
 
-      function contains(obj, value) {
+      function contains(obj, searchValue) {
         for (var key in obj) {
           if (typeof obj[key] === "object") {
             return contains(obj[key], value);
           }
-          if (obj[key] === value) {
+          if (obj[key] === searchValue) {
             return true;
           }
         }

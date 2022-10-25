@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <script>
+      let user = {
+        name: "sanjay",
+        age: 20,
+        add: {
+          city: "bangalore",
+          pin: 560037,
+        },
+      };
+      Object.freeze(user);
+      user.add.pin = 1234567;
+      console.log(user);
+
+      const deepFreeze = (obj) => {
+        if (obj && typeof obj === "object" && !Object.isFrozen(obj)) {
+          Object.freeze(obj);
+          Object.getOwnPropertyNames(obj).forEach((prop) =>
+            deepFreeze(obj[prop])
+          );
+        }
+        return obj;
+      };
+      frozenUser = deepFreeze(user);
+      frozenUser.add.pin = 9876543;
+      console.log(frozenUser);
+    </script>
+  </body>
+</html>

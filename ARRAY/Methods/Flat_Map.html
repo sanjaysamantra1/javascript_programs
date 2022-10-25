@@ -6,10 +6,10 @@
 			// Adding and removing items during map()
 			// list of words from a list of sentences			
 			let arr1 = ["js is single threaded", "js is synchronous", "js is object oriented"];
-			res1 = arr1.map(x => x.split(" "));
+			res1 = arr1.map(sentence => sentence.split(" "));
 			console.log(res1);
 			
-			res2 = arr1.flatMap(x => x.split(" "));
+			res2 = arr1.flatMap(sentence => sentence.split(" "));
 			console.log(res2);
 		</script>
 	</body>

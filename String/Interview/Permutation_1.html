@@ -2,17 +2,18 @@
 <html>
   <body>
     <script>
-      function getAllPermutations(string) {
+      function getAllPermutations(str) {
         var results = [];
 
-        if (string.length === 1) {
-          results.push(string);
+        if (str.length === 1) {
+          results.push(str);
           return results;
         }
 
-        for (var i = 0; i < string.length; i++) {
-          var firstChar = string[i];
-          var charsLeft = string.substring(0, i) + string.substring(i + 1);
+        // str = 'abc'
+        for (var i = 0; i < str.length; i++) {
+          var firstChar = str[i];
+          var charsLeft = str.substr(0, i) + str.substr(i + 1);
           var innerPermutations = getAllPermutations(charsLeft);
           for (var j = 0; j < innerPermutations.length; j++) {
             results.push(firstChar + innerPermutations[j]);
@@ -20,9 +21,9 @@
         }
         return results;
       }
-      var input = prompt("enter a string", "god");
+      var input = prompt("enter a str", "god");
       allPermutations = getAllPermutations(input);
       document.writeln(allPermutations);
     </script>
   </body>
-</html> 
+</html>

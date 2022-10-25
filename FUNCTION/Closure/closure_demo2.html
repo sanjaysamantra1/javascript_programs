@@ -5,10 +5,8 @@
 		//self invoked function gets executed only once
         function myOuter(){
             var counter = 0;
-            console.log('outer')
 
             return function(){
-                console.log('inner')
                 ++counter;
                 document.getElementById("spnCount").innerHTML = counter;
             }

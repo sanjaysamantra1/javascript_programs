@@ -1,0 +1,22 @@
+<script>
+  function add(a, b) {
+    let promiseObj = new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        // resolve(a + b);
+        reject('failed......')
+      }, 3000);
+    });
+    return promiseObj;
+  }
+  let addPromise = add(2, 3);
+  document.write(addPromise);
+
+  addPromise.then(
+    (response) => {
+      document.write(response);
+    },
+    (err) => {
+      document.write(err);
+    }
+  );
+</script>

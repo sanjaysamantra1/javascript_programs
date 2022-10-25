@@ -6,7 +6,7 @@
         accBal: 5000,
       };
       console.log(account);
-      account.accBal = -50000;
+      account.accBal = -5000;
       console.log(account); //not encapsulated
 
       //encapsulated
@@ -18,20 +18,25 @@
             console.log(accNo, accBal);
           },
           deposit: function (amt) {
-            accBal = accBal + amt;
+            if (amt < 0) {
+              alert("Boss, I dont need ur monet, plz keep it with you");
+            }else{
+              accBal = accBal + amt;
+            }
           },
         };
       }
-      account = f1();
+      account = f1(); // { disp:(),deposit:()}
 
       console.log(account);
       console.log(account.accNo, account.accBal);
 
       account.disp();
-      account.deposit(2000);
+      account.deposit(-2000);
+      account.deposit(3000);
       account.disp();
 
-      console.dir(account.disp)
+      console.dir(account.disp);
     </script>
   </head>
 
