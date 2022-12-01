@@ -1,28 +1,19 @@
-<html>
-  <body>
-    <script>
-      var obj1 = {
-        x: 10,
-        y: 20,
-        add: function () {
-          console.log(this.x + this.y);
-        },
-      };
-      obj1.add();
+<script>
+  let obj1 = {
+    a: 10,
+    b: 20,
+    add: function () { // this = obj1 / obj2
+      console.log(this.a + this.b); // 30
+    }
+  }
+  obj1.add();
 
-      var obj2 = {
-        x: 15,
-        y: 25,
-      };
-      // obj2.add();  // obj2.add is not a function
-      obj1.add.call(obj2); // inside add() this=obj2
+  let obj2 = { a: 15, b: 25 }
+  // obj2.add();   // add() is not present in obj2
 
-      var obj3 = {
-        x: 25,
-        y: 35,
-      };
-      // obj3.add();  // obj3.add is not a function
-      obj1.add.call(obj3);
-    </script>
-  </body>
-</html>
+  let obj3 = { a: 25, b: 35 }
+  // obj3.add();
+
+  obj1.add.call(obj2); // this inside add() should be obj2
+  obj1.add.call(obj3); // this inside add() should be obj2
+</script>

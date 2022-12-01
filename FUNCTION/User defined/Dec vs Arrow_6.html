@@ -1,24 +1,26 @@
 <html>
-  <body>
-    <script>
-      class Employee {
-        name = "sanjay";
-        greet1 = function () {
-          console.log("hello- " + this); // this = Employee / Window
-        };
-        greet2 = () => {
-          console.log("hi- " + this.name); // this = Employee
-        };
-      }
-      let emp = new Employee();
-      // emp.greet1();
-      // emp.greet2();
 
-      let b = emp.greet2;
-      b();
+<body>
+  <script>
+    class Employee {
+      name = "sanjay";
+      greet1 = function () {
+        console.log("hello- " + this); // this = Employee / Window
+      };
+      greet2 = () => {
+        console.log("hi- " + this.name); // this = Employee
+      };
+    }
+    let emp = new Employee();
+    // emp.greet1();
+    // emp.greet2();
 
-      let a = emp.greet1;
-      a();
-    </script>
-  </body>
+    let b = emp.greet2;
+    b();
+
+    let a = emp.greet1;
+    a();
+  </script>
+</body>
+
 </html>

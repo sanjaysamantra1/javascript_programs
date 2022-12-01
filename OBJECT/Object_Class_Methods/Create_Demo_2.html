@@ -1,18 +1,16 @@
-<html>
-  <body>
-    <script>
-      var x = { a: 10, b: 20, c: { d: 30 } };
-      var y = Object.create(x);
+<script>
+  var obj1 = { a: 10, b: 20, c: { d: 30 } };
 
-      console.log(x.a + " " + x.b + " " + x.c.d);
-      console.log(y.a + " " + y.b + " " + y.c.d);
+  var obj2 = Object.create(obj1);
+  console.log(obj1, obj2);
 
-      y.a = 15;
-      y.b = 25;
-      y.c.d = 35;
+  console.log(obj1.a, obj1.b, obj1.c.d);
+  console.log(obj2.a, obj2.b, obj2.c.d);
 
-      console.log(x.a + " " + x.b + " " + x.c.d);
-      console.log(y.a + " " + y.b + " " + y.c.d);
-    </script>
-  </body>
-</html>
+  obj2.a = 15;
+  obj2.b = 25;
+  obj2.c.d = 35;
+
+  console.log(obj1.a, obj1.b, obj1.c.d);
+  console.log(obj2.a, obj2.b, obj2.c.d);
+</script>

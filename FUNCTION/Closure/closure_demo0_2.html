@@ -1,0 +1,24 @@
+<script>
+  let myGlobal = 'akldfjlkasjdf';
+
+  function f1() {
+    let a = 10
+    function f2() {
+      let b = 20
+      function f3() {
+        function f4() {
+          let name = 'sachin';
+          console.log(a, b, name)
+        }
+        f4();
+        console.dir(f4);
+      }
+      f3();
+      console.dir(f3);
+    }
+    f2();
+    console.dir(f2)
+  }
+  f1();
+  console.dir(f1)
+</script>

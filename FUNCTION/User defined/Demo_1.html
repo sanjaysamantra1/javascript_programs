@@ -1,28 +1,31 @@
 <html>
-  <body>
-    <script>
-      // function declaration (named function)
-      function add(a, b) {
-        console.log(a + b);
-      }
-      add(2, 3);
 
-      // function Expression (Anonymous)
-      var sub = function (a, b) {
-        console.log(a - b);
-      };
-      sub(8, 5);
+<body>
+  <script>
+    // 1. Function Declaration / named Function
+    add(2, 3);
+    function add(a, b) {
+      console.log(a + b)
+    }
 
-      // Self-Invoked (IIFE)
-      (function mul(a, b) {
-        console.log(a * b);
-      })(3, 5);
+    // 2. function Expression / Anonymous
+    let sub = function (a, b) {
+      console.log(a - b)
+    }
+    sub(5, 2);
+    sub(15, 10);
 
-      // arrow function - ES-6
-      var div = (a, b) => {
-        console.log(a / b);
-      };
-      div(8, 4);
-    </script>
-  </body>
+    // 3. Self Invoked
+    (function (a, b) {
+      console.log(a * b)
+    })(5, 3);
+
+    // 4. Arrow Function
+    let div = (a, b) => {
+      console.log(a / b);
+    }
+    div(20, 4);
+  </script>
+</body>
+
 </html>

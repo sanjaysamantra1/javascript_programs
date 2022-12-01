@@ -1,6 +1,6 @@
 <script>
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
-    .then((finalResponse) => console.log(finalResponse))
-    .catch((error) => console.log(error));
+    .then(finalResponse => console.log(finalResponse))
+    .catch(err => console.log(err))
 </script>

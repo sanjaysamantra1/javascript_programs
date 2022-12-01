@@ -1,6 +1,5 @@
 <html>
   <body>
-    <input type="date" name="" id="">
     <script>
       console.time("test1");
       for (let i = 1; i <= 10000; i++) {
@@ -8,13 +7,12 @@
       }
       console.timeEnd("test1");
 
-
-      function f1(){
-        console.log('i am f1')
+      function f1() {
+        console.log("i am f1");
       }
-      console.time('f1')
+      console.time("timeTakenToExecuteF1");
       f1();
-      console.timeEnd('f1')
+      console.timeEnd("timeTakenToExecuteF1");
     </script>
   </body>
 </html>

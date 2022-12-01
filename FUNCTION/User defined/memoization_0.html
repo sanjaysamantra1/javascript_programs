@@ -1,21 +1,23 @@
 <html>
-  <body>
-    <script>
-      var counter = 0;
-      function fibonacci(n) {
-        console.log("called ", ++counter);
-        if (n <= 1) {
-          return n;
-        }
-        return fibonacci(n - 1) + fibonacci(n - 2);
+
+<body>
+  <script>
+    var counter = 0;
+    function fibonacci(n) {
+      console.log("called ", ++counter);
+      if (n <= 1) {
+        return n;
       }
-      console.time();
-      let res = fibonacci(8);
-      console.timeEnd();
-      console.log("result is ", res);
+      return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+    console.time();
+    let res = fibonacci(10);
+    console.timeEnd();
+    console.log("result is ", res);
 
       // recursive way to find fibonacci
       //0  1 1 2 3 5 8 13 21 34 55 89
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>

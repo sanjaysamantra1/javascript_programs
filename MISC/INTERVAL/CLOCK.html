@@ -1,11 +1,12 @@
 <html>
   <body>
-    <h1 id="test"></h1>
+    <h1></h1>
+
     <script>
       function f1() {
-        var d = new Date();
-        var t = d.toLocaleTimeString();
-        document.getElementById("test").innerText = t;
+        let date = new Date();
+        let timeNow = date.toLocaleTimeString();
+        document.querySelector("h1").innerText = timeNow;
       }
       setInterval(f1, 1000);
     </script>

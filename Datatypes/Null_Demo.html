@@ -1,18 +1,19 @@
-<html>
-  <head>
-    <title>New Document</title>
-  </head>
-  <body>
-    <script>
-      //null means “nothing”, “empty” or “value unknown”
-      var x = null;
-      alert(x);
-      alert(typeof x);
+<script>
+  var a; //value-undefined  datatype-undefined
+  console.log(a, typeof a);
 
-      //undefined means “value is not assigned”.
-      var y;
-      alert(y);
-      alert(typeof y);
-    </script>
-  </body>
-</html>
+  var b = undefined;
+  console.log(b, typeof b);
+
+  var c = null;  // null - valid value 
+  console.log(c, typeof c);
+
+  if (undefined) { // false
+    console.log('helloooo')
+  } else {
+    console.log('Hiiiiiii')
+  }
+
+  // falsy - 0  '' undefined null NaN
+  // Truthy - 5  -5 'sachin' {} [] {a:10}
+</script>

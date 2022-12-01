@@ -1,32 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      let user = {};
-      user["name"] = "sanjay";
-      user["role"] = "trainer";
+<script>
+  // object should have either 'string' or 'symbol' type keys
+  let user = {};
+  user["name"] = "sanjay";
+  user["role"] = "trainer";
 
-      let address = Symbol("address");
-      user[address] = "bangalore";
+  let address = Symbol("address");
+  user[address] = "bangalore";
 
-      let salary = Symbol("salary");
-      user[salary] = 5000;
+  let salary = Symbol("salary");
+  user[salary] = 5000;
 
-      console.log(user);
-      console.log(user[address]);
+  console.log(user);
+  console.log(user[address]);
 
-      for (key in user) {
-        console.log(key, user[key]);
-      }
+  for (key in user) {
+    console.log(key, user[key]);
+  }
 
-      console.log(Object.keys(user));
-      console.log(Object.getOwnPropertySymbols(user));
-    </script>
-  </body>
-</html>
+  console.log(Object.keys(user));
+  console.log(Object.getOwnPropertyNames(user));
+
+
+  console.log(Object.getOwnPropertySymbols(user));
+</script>

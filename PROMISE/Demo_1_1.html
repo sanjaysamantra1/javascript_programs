@@ -1,40 +1,48 @@
 <html>
-	<head>
-		<script>
-			var add = function (a,b){
-				let result;
-				result = a+b;
-				return result;
-			}
-			addResult = add(2,3);
-			alert("Addition is: "+ addResult);
-			
-			
-			var sub = function(a, b) {
-			  let result; 
-			  setTimeout(()=>{result = a-b},3000);
-			  return result;
-			}
-			subResult = sub(5,3);
-			alert("subtraction is: "+ subResult);
 
-            // producer - creating the promise
-            var mul = function(a,b){
-                let promiseObj = new Promise(function(resolve,reject){
-                    setTimeout(reject('error occured....'),3000);
-                    // setTimeout(resolve(a*b),3000);
-                });
-                return promiseObj;
-            }
-            let promiseOb = mul(5,3);
-            // consumer - consuming the promise
-            promiseOb.then(function(response){
-                alert(`multiplication is ${response}`)
-            },function(err){
-                alert(`error is ${err}`)
-            })
-		</script>
-	</head>
-	<body>		
-	</body>
+<head>
+	<script>
+		var add = function (a, b) {
+			let result;
+			result = a + b;
+			return result;
+		}
+		addResult = add(2, 3);
+		console.log("Addition is: " + addResult);
+
+
+		var sub = function (a, b) {
+			let result;
+			setTimeout(() => { result = a - b }, 3000);
+			return result;
+		}
+		subResult = sub(5, 3);
+		console.log("subtraction is: " + subResult);
+
+		var mul = function (a, b) {
+			let promiseObj = new Promise(function (resolve, reject) {
+				setTimeout(() => {
+					if (typeof a == 'number' && typeof b == 'number')
+						resolve(a * b)
+					else
+						reject('wrong inputs')
+				}, 3000);
+			});
+			return promiseObj;
+		}
+		// mul(3, 5).then(
+		// 	res => console.log('multiplication is ' + res),
+		// 	err => console.log('Error.......')
+		// );
+		async function PrintMulres(){
+			let mulRes = await mul(3, 5);
+			console.log(mulRes)
+		}
+		PrintMulres();
+	</script>
+</head>
+
+<body>
+</body>
+
 </html>

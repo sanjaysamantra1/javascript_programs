@@ -1,23 +1,25 @@
 <html>
-  <body>
-    <script>
-      let user = {
-        fName: "sachin",
-        lName: "tendulkar",
-        fullName: function () {
-          console.log(this.fName + " " + this.lName); //this=user
-        },
-      };
-      user.fullName();
 
-      let employee = {
-        fName: "sanjay",
-        lName: "samantra",
-        fullName: () => {
-          console.log(this.fName + " " + this.lName); //this=window
-        },
-      };
-      employee.fullName();
-    </script>
-  </body>
+<body>
+  <script>
+    let user = {
+      fName: "sachin",
+      lName: "tendulkar",
+      fullName: function () {
+        console.log(this.fName + " " + this.lName); //this=user
+      },
+    };
+    user.fullName();
+
+    let employee = {
+      fName: "sanjay",
+      lName: "samantra",
+      fullName: () => {
+        console.log(this.fName + " " + this.lName); //this=window
+      },
+    };
+    employee.fullName();
+  </script>
+</body>
+
 </html>

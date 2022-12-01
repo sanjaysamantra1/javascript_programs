@@ -1,0 +1,19 @@
+<script>
+    let str = 'Javascript'; // immutable
+    console.log(str[0], str[1], str[2]);
+    str[0] = 'H';
+    str[1] = 'b';
+    console.log(str)
+
+    let arr = [10, 20, 30, 40, 50] // mutable
+    arr[1] = 25;
+    arr[2] = 35;
+    console.log(arr);
+
+
+    console.log(5 == 5); // true  - values are being compared
+    console.log('sachin' == 'sachin'); // true  - values are being compared
+    
+    console.log({} == {}); // false - references are compared
+    console.log([10,20] == [10,20]); // false - references are compared
+</script>

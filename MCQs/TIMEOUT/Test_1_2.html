@@ -1,19 +1,23 @@
 <html>
   <body>
     <script>
-      console.log(1);
+      function f1() {
+        console.log("I am F1...");
+      }
+      function f2() {
+        console.log("I am F2...");
+      }
+      function f3() {
+        console.log("I am F3...");
+      }
+      function f4() {
+        console.log("I am F4...");
+      }
 
-      setTimeout(() => console.log(2));
-
-      Promise.resolve().then(() => console.log(3));
-
-      Promise.resolve().then(() => setTimeout(() => console.log(4)));
-
-      Promise.resolve().then(() => console.log(5));
-
-      setTimeout(() => console.log(6));
-
-      console.log(7);
+      setTimeout(f1);
+      setTimeout(f2, 2000);
+      Promise.resolve().then(f3);
+      f4();
     </script>
   </body>
 </html>

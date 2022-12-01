@@ -1,22 +1,19 @@
 <html>
-	<body>
-		<script>
-			// other - 3
-			function displayA(){console.log('aaaaaaaa')}
-			function displayB(){console.log('bbbbbbbb')}
-			function displayC(){console.log('cccccccc')}
 
+<body>
+	<script>
+		// Contexts - 
+		console.log('GEC Started')
+		function displayA() { console.log('aaaaaaaa') }
+		function displayB() { console.log('bbbbbbbb') }
+		function displayC() { console.log('cccccccc') }
+		function displayD() { console.log('ddddddd') }
+		setTimeout(displayC, 1000);
+		displayA();
+		Promise.resolve().then(displayD);
+		displayB();
+		console.log('GEC closed')
+	</script>
+</body>
 
-			setTimeout(displayC,1000);           
-
-
-			displayA();
-
-			for(i=1;i<=10000;i++){
-				console.log('hiiiii'); // 20
-			}
-
-			displayB();
-		</script>
-	</body>
 </html>

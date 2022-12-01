@@ -6,7 +6,7 @@ Javascript - behaviour of a webpage
 
 Javascript
 ==========
--dynamically typed , Synchronous & single-threaded Language.
+-dynamically typed , Synchronous & single-threaded Programming Language.
 -dynamically typed means the types are checked, and datatype mismatches are spotted only at the runtime.
 -JavaScript engine executes code from top to bottom, line by line.In other words, it is synchronous.
 -JavaScript engine has only one 'call-stack' so that it only can do one thing at a time.
@@ -26,14 +26,14 @@ javascript Engines:
 Types
 ------
 1. internal
-	a. head or body
-	b. <script></script>
+	a. <script></script>	
+	b. head or body
 	c. page level javascript
 	
 2. external
-	a. head or body
-	b. separate js file(needs to be included to html)
-		<script src='abc.js'></script>
+	a. separate js file(needs to be included to html)
+		<script src='abc.js'></script>	
+	b. head or body
 	c. Application level/project level
 
 	
@@ -55,7 +55,7 @@ Eliminate Render-Blocking JavaScript
  https://flaviocopes.com/javascript-async-defer/
  
  
- 
+
 
 Javascript - is a programming language, follows ECMASCRIPT Standards.
 ECMA - European Computer Manufacturers Association.
@@ -165,7 +165,7 @@ Symbol
 -Symbols allow us to create “hidden” properties of an object, 
  that no other part of code can accidentally access or overwrite.
 -If we want to use a symbol in an object literal,we need square brackets around it.
- let id = Symbol("id");
+ let id = Symbol();
  let user = {name:'sanjay',[id]:123}
 -Symbols are not enumerated,Symbols are skipped by for…in while we iterate object properties.
 -Symbols are not part of the Object.keys() or Object.getOwnPropertyNames()
@@ -299,8 +299,7 @@ What’s the difference between context and scope?
 
 variable scope: 
 ==============
--Scope is a certain section/region of the program where a defined variable can have its existence 
- and can be recognized, beyond that it can’t be accessed.
+-Scope is a certain section/region of the program where a defined variable can have its existence and can be recognized, beyond that it can’t be accessed.
 -Scope determines the visibility and accessibility of a variable.
 -Every variable will have either 1 of the below 3 scopes.
 	1. global
@@ -558,8 +557,8 @@ Higher-order Function
 -Higher-order function is a function that may receive a function as an argument and/or 
  can even return a function. 
 -a function can be called as a Higher-order if that function has either of the below 2 abilities:
-	1. a function has ability to return another function
-	2. a function has ability to take another function as argument
+	1. a function has ability to return another function.
+	2. a function has ability to take another function as argument.
 -Array filter(),map(),reduce(),sort() are some of the Higher-Order functions.
 
 
@@ -599,6 +598,8 @@ function closure
 -a closure gives access to an outer function’s scope from an inner function.
 -closures are mainly used for - encapsulation , iterators  
 -closure = function + lexical-scope
+
+
 
 
 
@@ -729,7 +730,7 @@ Array
 array creation:
 ---------------
 var marks = [10,20,30,40,50];
-var arr1 = new Array(5);
+var arr1 = new Array(5); 
 var arr2 = new Array(10,20,30,40,50);
 
 -iterating over an array: 1.loop   2.for-in   3.for-of	 4.forEach()
@@ -808,7 +809,8 @@ class - structure/blueprint/template for creating Object
 		class has only logical existance
 		class doesn't have physical existance
 		
-object - every instance of a class
+object - Real Entity
+		 every instance of a class
 		 Object has physical existance
 
 -a class in javascript is created using constructor function(ES-5).
@@ -1364,8 +1366,7 @@ Promise
 
 methods of Promise class:
 ------------------------
-Promise.all(promises) – waits for all promises to resolve and returns an array of their results. 
-	If any of the given promises rejects, it becomes the error of Promise.all, and all other results are ignored.
+Promise.all(promises) – waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, it becomes the error of Promise.all, and all other results are ignored.
 Promise.allSettled(promises) – when all of the given promises have either fulfilled or rejected
 	status: "fulfilled" or "rejected"
 	value (if fulfilled) or reason (if rejected).
@@ -1518,10 +1519,10 @@ Create REST API with json-server
 ---------------------------------
 https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server-36da8680136d
 
-1.  Install json-server (not necessarily in a project)
+1.  Install json-server (not necessarily in a particular folder)
 	npm install -g json-server
-2. create a json file (inside any folder)
-    users.json (filename can be anything.json)
+2. create a json file (anywhere) & paste some data
+   users.json (filename can be anything.json)
 3. start json server
    json-server --watch users.json
    

@@ -1,0 +1,11 @@
+<script>
+    /* Regular: 'this' is dynamic, it changes (from where it is called)
+    Arrow : 'this' is not dynamic, where it is declared */
+
+    function f1() {
+        console.log('I am f1....');
+        console.log(this); 
+        // this = where it is called
+    }
+    f1();
+</script>

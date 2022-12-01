@@ -1,0 +1,11 @@
+<script>
+    function add(a, b, c) {
+        console.log(a + b + c)
+    }
+    add(10, 20, 30); // 60
+
+    let arr = [20, 30, 40];
+    add(arr);
+    add.apply({}, arr);
+    add(...arr);
+</script>

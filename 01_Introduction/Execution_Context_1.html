@@ -1,21 +1,15 @@
-<html>
-  <body>
-    <script>
-      // GEC , add , sub = 3
-      var name = "sachin";
-      console.log(name);
+<script>
+  // Global-1 , function calls-2
+  var n = 2;
 
-      function add(a, b) {
-        return a + b;
-      }
-      function sub(a, b) {
-        return a - b;
-      }
-      var res1 = add(2, 3);
-      console.log(res1);
+  function square(num) {
+    let res;
+    res = num * num;
+    return res;
+  }
+  var res1 = square(n);
+  console.log(res1);
 
-      var res2 = sub(5, 3);
-      console.log(res2);
-    </script>
-  </body>
-</html>
+  var res2 = square(4)
+  console.log(res2);
+</script>

@@ -1,14 +1,16 @@
 <html>
-  <body>
-    <script>
-      function f1() {
-        let x;
-        for (i = 1; i <= 1000000000; i++) {
-          x = i;
-        }
-        document.writeln("I am f1 ");
+
+<body>
+  <script>
+    function f1() {
+      let x;
+      for (i = 1; i <= 1000000000; i++) {
+        x = i;
       }
-      setInterval(f1, 100);
-    </script>
-  </body>
+      document.writeln("I am f1 ");
+    }
+    setInterval(f1, 100); // f1 - 10 times in a sec
+  </script>
+</body>
+
 </html>

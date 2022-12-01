@@ -1,25 +1,25 @@
-<html>
-  <body>
-    <script>
-      let cars = ["tata", "honda", "maruti", "hundai", "toyota"];
+<script>
+  let cars = ["tata", "honda", "maruti", "hundai", "toyota"];
 
-      // for loop
-      for (i = 0; i < cars.length; i++) {
-        console.log(cars[i]);
-      }
+  // For Loop
+  for (let i = 0; i < cars.length; i++) {
+    console.log(cars[i])
+  }
 
-      // for-in
-      for (i in cars) {
-        console.log(cars[i]);
-      }
+  // For-in
+  for (let i in cars) {
+    console.log(cars[i], i)
+  }
 
-      // for-of
-      for (car of cars) {
-        console.log(car);
-      }
+  // for-of
+  for (let car of cars) {
+    console.log(car)
+  }
 
-      // forEach()
-      cars.forEach((a) => console.log(a));
-    </script>
-  </body>
-</html>
+  //foreach
+  cars.forEach((ele, ind) => console.log(ele, ind));
+
+  // function f1(a,b,c,d){ //a=val,b=ind,c=arr,d=undefined
+  //   console.log(a,b,c,d)
+  // }
+</script>

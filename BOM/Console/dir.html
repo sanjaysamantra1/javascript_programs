@@ -1,10 +1,13 @@
-<html>
-  <body>
-    <script>
-      function add(a, b) {
-        return a + b;
-      }
-      console.dir(add);
-    </script>
-  </body>
-</html>
+<script>
+  var a = 10; // Window
+  b = 20; // window
+  let c = 30; // Script
+
+  function f1() {
+    let d = 40;
+    console.log(a, b, c, d);
+  }
+  f1();
+
+  console.dir(f1);
+</script>

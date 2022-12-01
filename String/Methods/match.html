@@ -1,9 +1,16 @@
 <html>
-  <body>
-    <script>
-      var str = "The rain in SPAIN stays mainly in the plain";
-      var res = str.match(/ain/gi);
-      document.write(res);
-    </script>
-  </body>
+
+<body>
+  <script>
+    var str = "The rain in SPAIN stays mainly in the plain";
+    var res = str.match(/ain/gi);
+    document.write(res);
+    document.write('<hr/>');
+
+    var str2 = 'ram & gopal are 2 friends, ram is 15 yrs & gopal is 16 yrs';
+    var res2 = str2.match(/[0-9]{1,2}/g);
+    document.write(res2);
+  </script>
+</body>
+
 </html>
