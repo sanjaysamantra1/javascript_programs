@@ -1,35 +1,37 @@
 <html>
-  <body>
-    <script>
-      /*
-				-Pure functions are functions that accept an input and returns a value without 
-				modifying any data outside its scope(Side Effects). 
-				-Its output or return value must depend on the input/arguments 
-				-pure functions must return a value.
-			*/
-      let finalRes = 10;
-      function f1(arg) {
-        finalRes = 90;
-        return arg * finalRes;
-      }
-      //modified a state outside the scope
 
-      function f2(arg) {
-        let f = finalRes * arg;
-      }
-      //No return value
+<body>
+  <script>
+    /*
+      -Pure functions are functions that accept an input and returns a value without 
+      modifying any data outside its scope(Side Effects). 
+      -Its output or return value must depend on the input/arguments 
+      -pure functions must return a value.
+    */
+    let finalRes = 10;
+    function f1(arg) {
+      finalRes = 90;
+      return arg * finalRes;
+    }
+    //modified a state outside the scope
 
-      function f3(arg) {
-        return finalRes * 3;
-      }
-      //return is not dependent on input arg
+    function f2(arg) {
+      let f = finalRes * arg;
+    }
+    //No return value
 
-      function f4(arg) {
-        return arg * 4;
-      }
-      function f5(a, b) {
-        return a + b;
-      }
-    </script>
-  </body>
+    function f3(arg) {
+      return 2 * 3;
+    }
+    //return is not dependent on input arg
+
+    function f4(arg) {
+      return arg * 4;
+    }
+    function f5(a, b) {
+      return a + b;
+    }
+  </script>
+</body>
+
 </html>

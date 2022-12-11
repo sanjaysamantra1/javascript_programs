@@ -206,7 +206,7 @@ console.log()   -  console(object), log(function)
 
 window - alert(),confirm(),prompt(),setTimeout(),setInterval(),print(),open()
 document - write(),writeln(),getElementById(),querySelector()
-console - log(),error(),warn(),table(),dir(),trace(),count(),time(), timeEnd(),group()
+console - log(),error(),warn(),table(),dir(),trace(),time(),timeEnd(),group()
 
  
 N.p - while calling window object functions it is not necessary to call with object name;	
@@ -246,9 +246,8 @@ Variables
  Variable is a name of memory location.
 -Variables in Javascript can be declared by using either one of the below 3 keywords:
  1. var   
- 2. const
- 3. let
-
+ 2. let
+ 3. const
 
 	var						let						 const
 ======================================================================
@@ -257,8 +256,8 @@ Variables
 3.initialization is		 3.initialization is		3.mandatory
 	not mandatory           not mandatory	
 4.can be redeclared		 4.cann't be redeclared		4.cann't be redeclared
-5.hoisting-yes			 5.hoisting-no(TDZ)			5.hoisting-no(TDZ)
-6.function scope		 6.block scope				6.block scope
+5.TDZ - No			 	 5.TDZ - Yes				5.TDZ - Yes
+6.function/global		 6.block/function/global	6.block/function/global
 
 N:p - All variables (var,let,const) are hoisted but only 'var' variables are usable/reachable before declaration.
 -let/const variables are not reachable/usable before declaration (Temporal Dead Zone)
@@ -270,12 +269,6 @@ Hoisting:
  the creation phase is called Hoisting.
 -In hoisting, the variable and function declarations are put into memory during the 
 	compile/creation phase before code execution phase.
--variables can be initialized and used before they are declared.
--JavaScript only hoists declarations, not initializations.
--variable hoisting works for var, not for let/const. (Temporal Dead Zone)
--function declareations are hoisted, Function expressions and arrow functions aren’t hoisted.
-
-https://www.idontknowjavascript.com/2019/05/javascript-hoisting-interview-question.html
 
 
 
@@ -283,7 +276,7 @@ Temporal Dead Zone
 ==================
 -The period between entering scope and being declared where they cannot be accessed. 
  This period is the temporal dead zone (TDZ).
--the state where variables are un-reachable. They are in scope, but they aren't declared.
+-the state where variables are un-reachable. They are in scope, but they aren't usable.
 -The let and const variables exist in the TDZ from the start of their enclosing scope until they are declared.
 -if a let/const variable is accessed before its declaration, it would throw a ReferenceError. Because of the TDZ.
 
@@ -437,7 +430,7 @@ the below functions are from 'window' object
 conditional statements
 ======================
 1. if
-2. if-else
+2. if-else  (nested if-else)
 3. switch
 
 
@@ -470,7 +463,7 @@ Functions
    a. function declaration (named function)
    b. function expression(anonymous)
    c. self invoked ( IIFE- Immediately Invoked Function Expression)
-   d. arrow function (ES - 6)
+   d. arrow function (ES - 6)(2015)
   
 
 Note:
@@ -499,7 +492,6 @@ Arrow Function
 -'this' value inside a regular function is dynamic and depends on the context in which it is called.
 -'this' inside the arrow function is bound lexically and equals to 'this' where the function is declared.
 -lexical context means that arrow function uses 'this' from the code that contains the arrow function.
--arrow function doesn’t define its own execution context.
 -Regular function ( this = how the function is invoked/who invoked )
 -Arrow function( this = where the function is declared )
 
@@ -554,8 +546,7 @@ Pure Function
 
 Higher-order Function
 =====================
--Higher-order function is a function that may receive a function as an argument and/or 
- can even return a function. 
+-Higher-order function is a function that may receive a function as an argument and/or can even return a function. 
 -a function can be called as a Higher-order if that function has either of the below 2 abilities:
 	1. a function has ability to return another function.
 	2. a function has ability to take another function as argument.
@@ -590,11 +581,9 @@ Memoization
 
 
 function closure
-****************
--A closure is an inner function that has access to its outer function's variables 
- even after the outer function's execution is completed.
--A closure is the combination of a function bundled with the lexical environment within 
- which that function is declared.
+================
+-A closure is an inner function that has access to its outer function's variables even after the outer function's execution is completed.
+-A closure is the combination of a function bundled with the lexical environment within  which that function is declared.
 -a closure gives access to an outer function’s scope from an inner function.
 -closures are mainly used for - encapsulation , iterators  
 -closure = function + lexical-scope

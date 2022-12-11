@@ -1,18 +1,24 @@
 <html>
 
 <head>
-  <script>
-    function updateClickCount() {
-      var counter = 0;
-      ++counter;
-      document.getElementById("spnCount").innerHTML = counter;
-    }
-  </script>
+    <script>
+        function updateClickCount() {
+            var counter = 0;
+            ++counter;
+            document.getElementById("spnCount").innerHTML = counter;
+        }
+        function sayHello() {
+            console.log('Hellooooo');
+        }
+    </script>
 </head>
 
 <body>
-  <button onclick="updateClickCount()">click me</button>
-  <h1>you've clicked <span id="spnCount"> 0 </span> times!</h1>
+    <button onclick="updateClickCount()">increment count</button>
+    <button onclick="sayHello()">sayHello</button>
+    <h1> you've clicked
+        <span id="spnCount"> 0 </span> times!
+    </h1>
 </body>
 
 </html>

@@ -1,0 +1,21 @@
+<script>
+    let a = 10; // global
+    console.log(a); // yes
+
+    function f1() {
+        let b = 20; // function
+        console.log(a);// yes
+        console.log(b);// yes
+
+        if (true) {
+            let c = 30; // block
+            console.log(a);// yes
+            console.log(b);// yes
+            console.log(c);// yes
+        }
+        console.log(c); // No
+    }
+    f1();
+    console.log(b);// No
+    console.log(c); // No
+</script>

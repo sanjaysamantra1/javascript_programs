@@ -2,27 +2,30 @@
 
 <body>
   <script>
-    // 1. Function Declaration / named Function
+    // 1. Function Declaration / Named Function
     add(2, 3);
     function add(a, b) {
-      console.log(a + b)
+      console.log(a + b);
     }
+    add(3, 4);
 
-    // 2. function Expression / Anonymous
+
+    // 2. Function Expression / Anonymous
     let sub = function (a, b) {
-      console.log(a - b)
+      console.log(a - b);
     }
     sub(5, 2);
-    sub(15, 10);
 
-    // 3. Self Invoked
+
+    // 3. Self Invoked - Immediately Invoked Function Expression
     (function (a, b) {
-      console.log(a * b)
-    })(5, 3);
+      console.log(a * b);
+    })(3, 5);
 
-    // 4. Arrow Function
+
+    // 4. Arrow  - ES6  - 2015
     let div = (a, b) => {
-      console.log(a / b);
+      console.log(a - b);
     }
     div(20, 4);
   </script>

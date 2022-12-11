@@ -1,19 +1,13 @@
-<html>
+<script>
+  console.log(a); // und
+  var a = 10;
+  console.log(a); // 10
 
-<body>
-  <script>
-    console.log(a); //undefined
-    var a = 10;
-    console.log(a); // 10
-
-    function f1() {
-      console.log(a); // undefined
-      var a = 20;
-      console.log(a); // 20
-    }
-    f1();
-    console.log(a); // 10
-  </script>
-</body>
-
-</html>
+  function f1(){
+    console.log(a); // undefined
+    var a = 20;
+    console.log(a); // 20
+  }
+  f1();
+  console.log(a); // 10
+</script>

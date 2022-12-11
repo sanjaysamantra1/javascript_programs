@@ -1,0 +1,16 @@
+<script>
+    'use strict';
+    function f1(obj) {
+        delete obj.b;
+        return obj;
+    }
+    let res1 = f1({ a: 10, b: 20 });
+    console.log(res1);
+    
+    function f2(num) {
+        delete num;
+        return num;
+    }
+    let res2 = f2(5);
+    console.log(res2);
+</script>

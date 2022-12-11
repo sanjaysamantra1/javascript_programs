@@ -1,44 +1,21 @@
 <html>
 
 <body>
-
 	<script>
-		var obj1 = {
-			x: 10,
-			counter: function () {
-				setTimeout(function () {
-					alert(this.x + ' without bind');
-					console.log(this, ' without bind');
-				}, 2000);
+		// Global , Function
+		let obj1 = {
+			a: 10,
+			b: 20,
+			add: function () { // this = how it is called
+				console.log(this.a + this.b); // this = obj1
+			},
+			mul: () => {  // this = where it is declared
+				console.log(this.a * this.b); // this = window
 			}
-		};
-		obj1.counter();
-
-
-		var obj2 = {
-			x: 10,
-			counter: function () {
-				setTimeout(function () {
-					alert(this.x + ' with bind');
-					console.log(this, ' with bind');
-				}.bind(this), 2000);   //ES-5
-			}
-		};
-		obj2.counter();
-
-
-		var obj2 = {
-			x: 10,
-			counter: function () {
-				setTimeout(() => { 	// arrow function
-					alert(this.x + ' with arrow function ');
-					console.log(this, ' with arrow');
-				}, 2000);   	// bind(this) is not required
-			}
-		};
-		obj2.counter();
+		}
+		obj1.add(); 
+		obj1.mul(); 
 	</script>
-
 </body>
 
-</html
+</html>

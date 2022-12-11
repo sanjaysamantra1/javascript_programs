@@ -2,16 +2,16 @@
 
 <body>
   <script>
-    const recursiveSearch = (obj, results = []) => {
+    function recursiveSearch(obj, results = []) {
       const finalArr = results;
-      Object.keys(obj).forEach((key) => {
-        const value = obj[key];
-        if (Array.isArray(value) && value.length === 0) {
-          finalArr.push(key);
-        } else if (typeof value === "object") {
+      for (key in obj) {
+        let value = obj[key];
+        if (Array.isArray(value) && value.length == 0) {
+          finalArr.push(key)
+        } else if (typeof value === 'object') {
           recursiveSearch(value, finalArr);
         }
-      });
+      }
       return finalArr;
     };
 

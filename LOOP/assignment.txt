@@ -1,11 +1,12 @@
-1. Write a program to display the first 10 natural numbers
-   Expected Output : 1 2 3 4 5 6 7 8 9 10
+1. Write a program to display the square of first 10 natural numbers
+   Expected Output : 1 4 9 16 25 36 49 64 81 100
    
 2. Write a program to find the sum of first 10 natural numbers.
    Expected Output : 55
 
 3. Write a program to display the multiplication table of a given integer.
     15 X 1 = 15
+    15 X 2 = 30
 	...
 	...
 	15 X 10 = 150   
@@ -16,8 +17,9 @@
    if n%3 && n%5 - fizz buzz
    otherwise - n
    
- output:  1  2  fizz  4  buzz fizz 7 8 fizz
-   
+ output:  1  2  fizz  4  buzz fizz 7 8 fizz 10 11 fizz
+
+
  
 5. Ask user to enter a number. find the sum of digits of that number.
    input : 125

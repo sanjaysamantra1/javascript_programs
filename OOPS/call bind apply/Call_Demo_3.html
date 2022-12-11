@@ -2,18 +2,17 @@
   let obj1 = {
     a: 10,
     b: 20,
-    add: function () { // this = obj1 / obj2
-      console.log(this.a + this.b); // 30
+    add: function () {
+      console.log(this.a + this.b);
     }
   }
   obj1.add();
 
-  let obj2 = { a: 15, b: 25 }
-  // obj2.add();   // add() is not present in obj2
+  let obj2 = { a: 15, b: 25 };
+  // obj2.add();
+  obj1.add.call(obj2);
 
-  let obj3 = { a: 25, b: 35 }
+  let obj3 = { a: 25, b: 35 };
   // obj3.add();
-
-  obj1.add.call(obj2); // this inside add() should be obj2
-  obj1.add.call(obj3); // this inside add() should be obj2
+  obj1.add.call(obj3);
 </script>

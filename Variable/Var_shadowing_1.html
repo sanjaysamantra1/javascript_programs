@@ -1,18 +1,14 @@
-<html>
-  <body>
-    <script>
-      function func() {
-        var a = 10; //function
-        let b = 20; //function
-        
-        if (true) {
-          let a = 15; //block  // Legal Shadowing
-          var b = 25; //function // Illegal Shadowing
-          console.log(a); // It will print 15
-          console.log(b); // It will print error
-        }
-      }
-      func();
-    </script>
-  </body>
-</html>
+<script>
+  function func() {
+    var a = 10; //function
+    let b = 20; //function
+
+    if (true) {
+      let a = 15; //block  // Legal Shadowing
+      var b = 25; //function // Illegal Shadowing
+      console.log(a); // It will print 15
+      console.log(b); // It will print error
+    }
+  }
+  func();
+</script>

@@ -1,16 +1,20 @@
 <html>
-  <body>
-    <script>
-      let arr1 = [10, 20, 30, 40, 50];
 
-      let arr2 = arr1.map((ele) => ele + 5);
-      console.log(arr2);
+<body>
+  <script>
+    let arr1 = [10, 20, 30, 40, 50];
 
-      function f1(prev, cur) {
-        return prev + cur;
-      }
-      let sum = arr1.reduce(f1);
-      console.log(sum);
-    </script>
-  </body>
+    let arr2 = arr1.map(function (ele) {
+      return ele + 5;
+    });
+    console.log(arr2);
+
+    function f1(prev, cur) {
+      return prev + cur;
+    }
+    let sum = arr1.reduce(f1);
+    console.log(sum);
+  </script>
+</body>
+
 </html>

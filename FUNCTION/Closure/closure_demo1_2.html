@@ -2,15 +2,21 @@
 
 <head>
     <script>
-        
-        function updateClickCount() {
-            var counter = 0;
+        function outer() { 
+            var counter = 0; // variable scope function
+
+            function inner() {
+                ++counter;
+                document.getElementById("spnCount").innerHTML = counter;
+            }
+            return inner;
+        }
+        let updateClickCount = outer();
+
+        function sayHello() {
+            console.log('Hellooooo');
             ++counter;
             document.getElementById("spnCount").innerHTML = counter;
-        }
-        function sayHello() {            
-            ++counter;
-			document.getElementById("spnCount").innerHTML = counter;
         }
     </script>
 </head>
@@ -18,9 +24,9 @@
 <body>
     <button onclick="updateClickCount()">increment count</button>
     <button onclick="sayHello()">sayHello</button>
-    <h1> you've clicked 
-    <span id="spnCount"> 0 </span> times!
- </h1>
+    <h1> you've clicked
+        <span id="spnCount"> 0 </span> times!
+    </h1>
 </body>
 
 </html>

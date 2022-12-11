@@ -1,13 +1,17 @@
 <script>
-  // Deleting a variable (or object) is not allowed.
-  "use strict";
-  var a = 5;
-  console.log(a);
-  delete a;
-  console.log(a);
+  // Delete of an unqualified identifier in strict mode
+  'use strict'
+  let obj = { a: 10, b: 20 }
+  delete obj.b;
+  console.log(obj);
 
-  var b = { x: 10, y: 20 };
-  console.log(b);
-  delete b.y;
-  console.log(b);
+  let arr = [10, 20, 30, 40]
+  delete arr[1];
+  console.log(arr[1]);
+
+  let name = 'sanjay';
+  let age = 30;
+  delete name;
+  delete age;
+  console.log(name, age)
 </script>

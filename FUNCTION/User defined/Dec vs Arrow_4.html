@@ -1,24 +1,20 @@
-<html>
-  <body>
-    <script>
-      let obj = {
-        count: 0,
-        increment: function () { // this = who is calling
-          console.log("increment " + this.count); // this = obj
+<script>
+  let obj1 = {
+    a: 10,
+    b: 20,
+    add: function () { // this = obj1
+      console.log(this.a + this.b);
 
-          function f1() {
-            console.log("f1 " + this.count + this); // this = window
-          }
-          f1();
-          
-          // Lexical scope for f2, this = obj
-          let f2 = () => {
-            console.log("f2 " + this.count + this); // this = obj
-          };
-          f2();
-        },
-      };
-      obj.increment();
-    </script>
-  </body>
-</html>
+      function sub() { // How it is called
+        console.log(this.a - this.b, this); // this = window
+      }
+      sub();
+
+      let mul = () => { // Where it is declared, add() is lexical scope for mul()
+        console.log(this.a * this.b); // this = obj1
+      }
+      mul();
+    }
+  }
+  obj1.add();
+</script>

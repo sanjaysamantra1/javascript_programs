@@ -1,17 +1,15 @@
 <script>
-  let xyz = 'sachin';
-
-  let f1 = function () {
+  let name = 'sanjay';
+  var age = 32;
+  
+  function f1() {
     let a = 10;
-    let b = 20; // Lexical scope for f2
 
-    let f2 = function () {
-      let age = 45;
-      console.log(' i am f2');
-      console.log(a, b, xyz, window.xyz);
+    function f2() {
+      let b = 20;
+      console.log(a + b); // b is Local , a is Closure 
     }
-    console.dir(f2);
+    f2();
   }
-  console.dir(f1);
   f1();
 </script>

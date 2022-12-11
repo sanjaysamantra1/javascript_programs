@@ -1,19 +1,17 @@
-<html>
-  <body>
-    <button id="btn1">btn-1</button>
-    <button id="btn2">btn-2</button>
+<script>
+  var a = 10;
+  function f1() {
+    console.log(a);
+    console.log(window.a);
+    console.log(this.a);
+  }
+  f1();
 
-    <script>
-      "use strict";
-      console.log(this);
-
-      function f1(that) {
-        console.log(this); // this = window / undefined
-      }
-      f1();
-
-      document.getElementById("btn1").addEventListener("click", f1);
-      document.getElementById("btn2").addEventListener("click", f1);
-    </script>
-  </body>
-</html>
+  function f2() {
+    'use strict';
+    console.log(a);
+    console.log(window.a);
+    // console.log(this.a);
+  }
+  f2();
+</script>

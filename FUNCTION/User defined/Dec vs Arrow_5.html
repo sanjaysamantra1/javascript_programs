@@ -1,26 +1,24 @@
 <html>
-  <body>
-    <script>
-      class Employee {
-        name = "sanjay";
-        greet1 = function () {
-          console.log("hello- " + this.name);
-          console.log(this); // this = dynamic ( Employee / Window)
-          // where it is called / how it is called
-        };
-        greet2 = () => {
-          console.log("hi- " + this.name);
-          console.log(this); // this = static = Employee
-          // where the arrow is declared(bring value of 'this' from the place where it is declared)
-          // no matter where it is called
-        };
-      }
-      let emp = new Employee();
-      emp.greet1(); // this = Employee
-      emp.greet2(); // this = Employee
 
-      setTimeout(emp.greet1, 3000); // this = window
-      setTimeout(emp.greet2, 6000); // this = Employee
-    </script>
-  </body>
+<body>
+  <script>
+    class Employee {
+      name = "sanjay";
+      greet1 = function () {
+        console.log('Hello ' + this.name + this);
+      }
+      greet2 = () => {
+        console.log('Hello ' + this.name + this);
+      }
+    }
+    let emp1 = new Employee();
+    emp1.greet1();
+    emp1.greet2();
+
+    setTimeout(emp1.greet1, 2000)
+    setTimeout(emp1.greet2, 4000)
+
+  </script>
+</body>
+
 </html>

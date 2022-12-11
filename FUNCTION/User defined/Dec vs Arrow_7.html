@@ -1,19 +1,21 @@
 <html>
-  <body>
-    <script>
-      let user = {
-        firstName: "Sachin",
-        lastName: " Tendulkar",
-        printFirstName: function () {
-          console.log(this.firstName); //this=user , this.firstname='sachin'
-        },
-        printLastName: () => {
-          console.log(this.lastName); // this=window , this.lastName = undefined
-          console.log(user.lastName); // this=user , this.lastName = tendulkar
-        },
-      };
-      user.printFirstName();
-      user.printLastName();
-    </script>
-  </body>
+
+<body>
+  <script>
+    let user = {
+      firstName: "Sachin",
+      lastName: " Tendulkar",
+      printFirstName: function () {
+        console.log(this.firstName); //this=user , this.firstname='sachin'
+      },
+      printLastName: () => {
+        console.log(this.lastName); // this=window , this.lastName = undefined
+        console.log(user.lastName); // this=user , this.lastName = tendulkar
+      },
+    };
+    user.printFirstName();
+    user.printLastName();
+  </script>
+</body>
+
 </html>

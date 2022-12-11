@@ -1,25 +1,27 @@
 <html>
-  <body>
-    <script>
-      /*Curring is partial invocation of a function. 
-			Currying means first few arguments of a function is pre-processed and a function is returned. 
-			The returning function can add more arguments to the curried function*/
 
-      // normal function
-      function add(a, b, c) {
-        console.log(a + b + c);
-      }
-      add(2, 3, 4);
+<body>
+  <script>
+    /*Curring is partial invocation of a function. 
+    Currying means first few arguments of a function is pre-processed and a function is returned. 
+    The returning function can add more arguments to the curried function*/
 
-      //function curring
-      function sum(a){
-        return function(b){
-          return function(c){
-            console.log(a+b+c);
-          }
+    // normal function
+    function add(a, b, c) {
+      console.log(a + b + c);
+    }
+    add(2, 3, 4);
+
+    //function curring
+    function sum(a) {
+      return function (b) {
+        return function (c) {
+          console.log(a + b + c);
         }
       }
-      sum(2)(3)(4);
-    </script>
-  </body>
+    }
+    sum(2)(3)(4);
+  </script>
+</body>
+
 </html>

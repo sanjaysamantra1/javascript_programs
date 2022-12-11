@@ -2,8 +2,18 @@
 
 <body>
     <script>
+        function normalFibonacci(n) {
+            if (n <= 1) {
+                return n;
+            }
+            return normalFibonacci(n - 1) + normalFibonacci(n - 2);
+        };
+        console.log(normalFibonacci(6))
+
+
+
         let cache = [];
-        const MemoizedFibonacci = function (n) {
+        function MemoizedFibonacci(n) {
             if (n <= 1) {
                 return n;
             }
@@ -12,8 +22,7 @@
             }
             return cache[n];
         };
-        let res = MemoizedFibonacci(8)
-        console.log(res)
+        console.log(MemoizedFibonacci(6))
     </script>
 </body>
 

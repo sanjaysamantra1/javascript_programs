@@ -1,0 +1,18 @@
+<script>
+    var a = 10;  // global
+    let b = 20; // global
+    const c = 30; //global
+    console.log(a, b, c);
+    console.log(window.a, window.b, window.c);
+    // Var variables are part of window object but let,const are not 
+    
+    function f1() {
+        console.log(a, b, c);
+
+        var d = 40;
+        console.log(d); // function
+    }
+    f1();
+
+    console.log(d);
+</script>

@@ -1,39 +1,42 @@
 <html>
-  <body>
-    <script>
-      var nestedObject = {
-        data: {
-          info: {
-            stuff: {
-              thing: {
-                moreStuff: {
-                  magicNumber: 22,
-                  something: "hello",
-                  manyMoreStuff: {
-                    number: 44,
-                  },
+
+<body>
+  <script>
+    var nestedObject = {
+      data: {
+        info: {
+          stuff: {
+            thing: {
+              moreStuff: {
+                magicNumber: 22,
+                something: "hello",
+                manyMoreStuff: {
+                  number: 44,
                 },
               },
             },
           },
         },
-      };
+      },
+    };
 
-      let hasIt = contains(nestedObject, 44); // true
-      let doesntHaveIt = contains(nestedObject, "hiii"); // false
-      console.log(hasIt, doesntHaveIt);
+    let hasIt = contains(nestedObject, 44); // true
+    let doesntHaveIt = contains(nestedObject, "hiii"); // false
+    console.log(hasIt, doesntHaveIt);
 
-      function contains(obj, searchValue) {
-        for (var key in obj) {
-          if (typeof obj[key] === "object") {
-            return contains(obj[key], value);
-          }
-          if (obj[key] === searchValue) {
-            return true;
-          }
+    function contains(obj, searchValue) {
+      for (var key in obj) {
+        let value = obj[key];
+        if (typeof value === "object") {
+          return contains(obj[key], searchValue);
         }
-        return false;
+        if (value === searchValue) {
+          return true;
+        }
       }
-    </script>
-  </body>
+      return false;
+    }
+  </script>
+</body>
+
 </html>

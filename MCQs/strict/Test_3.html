@@ -1,14 +1,19 @@
-<html>
+<script>
+	var name = 'sanjay';
 
-<body>
-	<script>
-		// 'use strict'
-		var a = 10;
-		function f1() {
-			console.log(this.a);
-		}
-		f1();
-	</script>
-</body>
+	function f1() {
+		console.log(name);
+		console.log(window.name);
+		console.log(this.name); // this = window
+	}
+	f1();
 
-</html>
+	function f2() {
+		'use strict'
+		console.log(name);
+		console.log(window.name);
+		console.log(this.name); // this = undefined
+	}
+	f2();
+
+</script>

@@ -1,19 +1,13 @@
-<html>
+<script>
+	// 'this' is undefined in a function invocation in strict mode.
+	function test1() {
+		console.log(this); // this = window
+	}
+	test1();
 
-<body>
-	<script>
-		// 'this' is undefined in a function invocation in strict mode.
-		function test1() {
-			console.log(this);
-		}
-		test1();
-
-		function test2() {
-			'use strict'
-			console.log(this);
-		}
-		test2();
-	</script>
-</body>
-
-</html>
+	function test2() {
+		'use strict'
+		console.log(this); // this = undefined
+	}
+	test2();
+</script>

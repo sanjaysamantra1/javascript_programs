@@ -1,16 +1,10 @@
-<html>
-
-<body>
-  <script>
-    function f1() {
-      for (let i = 1; i <= 5; i++) {
-        console.log(i);
-      }
-      console.log("inside function", i);
+<script>
+  function f1() {
+    for (let i = 1; i <= 5; i++) { // block
+      console.log('block ', i);
     }
-    f1();
-    console.log("outside function", i);
-  </script>
-</body>
-
-</html>
+    console.log("function", i);
+  }
+  f1();
+  console.log("function", i);
+</script>
