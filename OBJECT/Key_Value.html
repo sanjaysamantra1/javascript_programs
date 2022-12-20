@@ -1,22 +1,25 @@
 <html>
-	<body><h1>
+
+<body>
+	<h1>
 		<script>
 			var emp = {
-				empId : 101,
-				name : "sachin",
-				age : 35,
-				address : "mumbai"
+				empId: 101,
+				name: "sachin",
+				age: 35,
+				address: "mumbai",
 			}
-			for(x in emp){ //x=empId,x=name,x=age,x=address
-				document.write(x+"------"+emp[x])
+			for (x in emp) { //x=empId,x=name,x=age,x=address
+				document.write(x + "------" + emp[x])
 				document.write('<br>');
 			}
 			document.write('<hr>');
-			
-			for(x in emp){ 
-				document.write(x+"------"+emp.x)
+
+			for (x in emp) {
+				document.write(x + "------" + emp.x)
 				document.write('<br>');
 			}
 		</script>
-	</body>
+</body>
+
 </html>

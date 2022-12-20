@@ -1,0 +1,24 @@
+<html>
+
+<body>
+  <script>
+    let dt = new Date();
+    console.log(dt.getDay());
+    // console.log(dt.getDayName());
+
+    Date.prototype.getDayName = function () {
+      const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const dayNumber = this.getDay();
+      return dayNames[dayNumber];
+    }
+
+    let date = new Date();
+    console.log(date.getDay());
+    console.log(date.getDayName());
+    // getDay is a pre-defined method
+    // there is no method to print day Name
+
+  </script>
+</body>
+
+</html>

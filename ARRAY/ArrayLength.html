@@ -1,15 +1,19 @@
 <html>
-  <body>
-    <script>
-      let cars = ["tata", "honda", "maruti", "hundai", "toyota"];
-      console.log("length is " + cars.length);
 
-      delete cars[2];
-      console.log(cars.length); // 5
-      console.log(cars);
+<body>
+  <script>
+    let cars = ["tata", "honda", "maruti", "hundai", "toyota"];
+    console.log("length is " + cars.length); // 5
 
-      cars[2] = "new maruti";
-      console.log(cars);
-    </script>
-  </body>
+    delete cars[2];
+    console.log(cars.length);
+    console.log(cars);
+    console.log(cars[2]); // undefined
+
+    cars[2] = "mahindra";
+    console.log(cars);
+    console.log(cars[2]);
+  </script>
+</body>
+
 </html>

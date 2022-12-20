@@ -1,19 +1,21 @@
 <html>
-  <body>
-    <script>
-      let res1 = Math.max(10, 20, 30);
-      console.log(res1);
 
-      let arr = [10, 20, 30];
+<body>
+  <script>
+    let res1 = Math.max(10, 20, 30);
+    console.log(res1);
 
-      let res2 = Math.max(arr); // max() is expecting individual arguments
-      console.log(res2);
+    let arr = [10, 20, 30]
 
-      let res3 = Math.max.apply({}, arr);
-      console.log(res3);
+    let res2 = Math.max(arr);
+    console.log(res2);
 
-      let res4 = Math.max(...arr);
-      console.log(res4);
-    </script>
-  </body>
+    let res3 = Math.max.apply({}, arr);
+    console.log(res3);
+
+    let res4 = Math.max(...arr); //Spread
+    console.log(res3);
+  </script>
+</body>
+
 </html>

@@ -1,18 +1,21 @@
 <html>
-	<body>
-		<script>
-			function doHomework(subject, started , finished) {
-			  started();
-			  alert(`Doing my ${subject} homework.`);
-			  finished();
-			}
-			function alertStarted(){
-			  alert('Started my homework');
-			}
-			function alertFinished(){
-			  alert('Finished my homework');
-			}
-			doHomework('math', alertStarted, alertFinished);
-		</script>
-	</body>
+
+<body>
+	<script>
+		function delay(seconds, callback) {
+			setTimeout(callback, seconds * 1000);
+		}
+		console.log('Starting Delay...');
+		delay(2, () => {
+			console.log('2 seconds completed');
+			delay(1, () => {
+				console.log('3 seconds completed');
+				delay(2, () => {
+					console.log('5 seconds completed');
+				});
+			});
+		});
+	</script>
+</body>
+
 </html>

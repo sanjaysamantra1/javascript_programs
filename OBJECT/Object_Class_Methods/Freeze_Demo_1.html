@@ -1,39 +1,41 @@
 <html>
-  <body>
-    <script>
-      //Nothing can be added to or removed from the properties set of a frozen object
-      //read-yes,update-no,delete-no
-      var Student = {
-        name: "Deepak",
-        age: 35,
-      };
-      console.log(Student);
-      delete Student.age;
-      console.log(Student);
 
-      var Employee = {
-        id: 101,
-        sal: 5000,
-      };
-      console.log(Employee);
-      Object.freeze(Employee);
+<body>
+  <script>
+    //Nothing can be added to or removed from the properties set of a frozen object
+    //read-yes,update-no,delete-no
+    var Student = {
+      name: "Deepak",
+      age: 35,
+    };
+    console.log(Student);
+    delete Student.age;
+    console.log(Student);
 
-      delete Employee.sal;
-      console.log(Employee);
+    var Employee = {
+      id: 101,
+      sal: 5000,
+    };
+    console.log(Employee);
+    Object.freeze(Employee);
 
-      Employee.sal = 6000;
-      console.log(Employee);
+    delete Employee.sal;
+    console.log(Employee);
 
-      Employee.add = "mumbai";
-      console.log(Employee);
+    Employee.sal = 6000;
+    console.log(Employee);
 
-      console.log(Object.isFrozen(Student), Object.isFrozen(Employee));
+    Employee.add = "mumbai";
+    console.log(Employee);
 
-      let Employee2 = Employee;
-      console.log(Object.isFrozen(Employee), Object.isFrozen(Employee2));
+    console.log(Object.isFrozen(Student), Object.isFrozen(Employee));
 
-      let Employee3 = Object.assign({}, Employee);
-      console.log(Object.isFrozen(Employee), Object.isFrozen(Employee3));
-    </script>
-  </body>
+    let Employee2 = Employee;
+    console.log(Object.isFrozen(Employee), Object.isFrozen(Employee2));
+
+    let Employee3 = Object.assign({}, Employee);
+    console.log(Object.isFrozen(Employee), Object.isFrozen(Employee3));
+  </script>
+</body>
+
 </html>

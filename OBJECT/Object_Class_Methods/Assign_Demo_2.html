@@ -1,15 +1,19 @@
 <html>
-  <body>
-    <script>
-      let person = { name: "sanjay", age: 30, add: "bangalore" };
 
-      let employee = { id: 101, sal: 5000 };
-      Object.assign(employee, person);
-      console.log(employee);
+<body>
+  <script>
+    let person = { name: "sanjay", age: 30, add: "bangalore" };
 
-      let student = { roll: 1, mark: 95 };
-      Object.assign(student, person);
-      console.log(student);
-    </script>
-  </body>
+    let employee = { id: 101, sal: 5000 };
+    Object.assign(employee, person);
+    console.log(employee);
+
+    let student = { roll: 1, mark: 95 };
+    Object.assign(student, person);
+    console.log(student);
+
+    console.log(person); // person will still have 3 fields
+  </script>
+</body>
+
 </html>

@@ -1,25 +1,21 @@
-<html>
-  <body>
-    <script>
-      class Employee {
-        constructor(id, name, sal) {
-          this.id = id;
-          this.name = name;
-          this.sal = sal;
-        }
-      }
-      Employee.prototype.company = "IBM";
-      Employee.prototype.displayInfo = function () {
-        console.log(this.id, this.name, this.sal, this.company);
-      };
+<script>
+  class Employee {
+    constructor(id, name, sal) {
+      this.id = id;
+      this.name = name;
+      this.sal = sal;
+    }
+    displayInfo() { // prototype method
+      console.log(this.id, this.name, this.sal, this.CEO)
+    }
+    f1 = function () {   // class method
+      console.log('f1...')
+    }
+  }
+  Employee.prototype.compName = 'Microsoft';
+  Employee.prototype.CEO = 'satya nadella';
 
-      let emp1 = new Employee(101, "sachin", 5000);
-      emp1.displayInfo();
+  let emp1 = new Employee(101, 'sanjay', 5000);
+  console.log(emp1)
 
-      let emp2 = new Employee(102, "Rahul", 650);
-      emp2.displayInfo();
-
-      console.log(emp1, emp2);
-    </script>
-  </body>
-</html>
+</script>

@@ -1,12 +1,23 @@
 <html>
-  <body>
-    <script>
-      var str = "SACHIN";
-      var rev = "";
-      for (i = str.length - 1; i >= 0; i--)
-	   rev = rev + str[i];
 
-      console.log(rev);
-    </script>
-  </body>
+<body>
+  <script>
+    let str = 'hello';
+    // one way
+    let rev = '';
+    for (i = str.length - 1; i >= 0; i--) {
+      rev = rev + str[i];
+    }
+    console.log(rev)
+
+
+    // Another way
+    let res = ''
+    for (char of str) {
+      res = char + res;
+    }
+    console.log(res)
+  </script>
+</body>
+
 </html>

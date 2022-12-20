@@ -1,18 +1,21 @@
 <html>
-  <body>
-    <script>
-      //eval() evaluates the expression in string format
-      var a = "2+3+4";
-      console.log(a);
-      console.log(eval(a));
 
-      // eval() doesn't work for string objects
-      var x = new String("2+3+4");
-      console.log(x);
-      console.log(eval(x));
+<body>
+  <script>
+    //eval() evaluates the expression in string format
+    var a = "2+3+4";
+    console.log(a);
+    console.log(eval(a));
 
-      var y = x.valueOf(); // y is string literal
-      console.log(eval(y));
-    </script>
-  </body>
+    // eval() doesn't work for string objects
+    var x = new String("2+3+4");
+    console.log(x);
+    console.log(eval(x));
+
+    // convert string object to string literal
+    var y = x.valueOf(); // y is string literal
+    console.log(eval(y));
+  </script>
+</body>
+
 </html>

@@ -1,21 +1,20 @@
 <html>
-  <body>
-    <script>
-      let user = {
-        name: "Sachin",
-        sayHi: function () {
-          console.log("Hello " + this.name);
-        },
-      };
-      user.sayHi(); //Hello Sachin
 
-      setTimeout(user.sayHi, 2000);
-      // Hello
-      // this = window
+<body>
+  <script>
+    let user = {
+      name: "Sachin",
+      sayHi: function () {
+        console.log("Hiiii " + this.name); // this = user
+      }
+    };
+    user.sayHi(); // inside sayHi() this = user
+    setTimeout(user.sayHi, 2000); // inside sayHi() this = window
 
-      setTimeout(() => {
-        user.sayHi.call(user);
-      }, 4000);
-    </script>
-  </body>
+    setTimeout(() => {
+      user.sayHi.call(user);
+    }, 5000);
+  </script>
+</body>
+
 </html>

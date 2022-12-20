@@ -1,13 +1,13 @@
 <script>
   let user1 = { name: "sachin", age: 45, add: "mumbai" };
   // a new object is not being created, Reference Copy
-  let user2 = user1;
+  let user2 = user1; // value copy - No
 
   user2.age = 46;
   console.log(user1, user2);
 
-  // Value Copy - Shallow Copy
-  let user3 = Object.assign({}, user1);
+  // Value Copy - yes - Shallow Copy
+  let user3 = Object.assign({}, user1); // a new object gets created
   user3.name = "sachin123";
   user3.add = "mumbai123";
   console.log(user1, user3);

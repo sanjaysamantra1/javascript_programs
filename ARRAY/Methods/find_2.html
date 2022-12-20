@@ -1,15 +1,27 @@
 <html>
-  <body>
-    <script>
-      let employees = [
-        { eId: 101, name: "sanjay", sal: 5000 },
-        { eId: 104, name: "deepak", sal: 8000 },
-        { eId: 103, name: "ranjan", sal: 7000 },
-        { eId: 102, name: "manoj", sal: 7000 },
-      ];
 
-      let emp = employees.find((e) => e.sal === 7000);
-	  console.log(emp)
-    </script>
-  </body>
+<body>
+  <script>
+    let employees = [
+      { eId: 101, name: "sanjay", sal: 5000 },
+      { eId: 104, name: "deepak", sal: 7000 },
+      { eId: 103, name: "ranjan", sal: 8000 },
+      { eId: 102, name: "manoj", sal: 7000 },
+    ];
+    let res1 = employees.findIndex((emp) => emp.sal === 7000)
+    console.log(res1);
+
+    let res2 = employees.find((emp) => emp.sal === 7000)
+    console.log(res2);
+
+    let res3 = employees.findLast((emp) => emp.sal === 7000)
+    console.log(res3);
+
+    let res4 = employees.filter(function (emp) {
+      return emp.sal === 7000;
+    })
+    console.log(res4);
+  </script>
+</body>
+
 </html>

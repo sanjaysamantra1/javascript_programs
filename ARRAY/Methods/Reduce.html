@@ -2,13 +2,13 @@
   var arr = [10, 20, 30, 40, 50];
 
   // let sum = 0;
-  // for (let ele of arr) {
+  // for (ele of arr) {
   //   sum = sum + ele;
   // }
   // console.log(sum);
 
-  let sum = arr.reduce((prev, cur) => {
-    return prev + cur;
-  });
+  let sum = arr.reduce((acc, cur) => {
+    return acc + cur;
+  }, 0);
   console.log(sum);
 </script>

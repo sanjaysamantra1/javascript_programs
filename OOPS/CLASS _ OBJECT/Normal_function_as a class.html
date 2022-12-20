@@ -1,16 +1,26 @@
 <html>
-	<body><h1>
+
+<body>
+	<h1>
 		<script>
-			function Student(roll,name,add)
-			{
+			function Student(roll, name, add) {
 				that = {};
 				that.roll = roll;
 				that.name = name;
 				that.add = add;
-				return that;
+				return that;  // explicit return
 			}
-			var std1 = Student(101,"Sachin","Mumbai");
+			var std1 = Student(101, "Sachin", "Mumbai"); // function-Directly called
 			console.log(std1);
+
+			function Employee(id, name, sal) {
+				this.id = id;
+				this.name = name;
+				this.sal = sal;  // no explicit return
+			}
+			let emp1 = new Employee('e00001', 'Aloke', 5000); // constructor - called with new 
+			console.log(emp1)
 		</script>
-	</body>
+</body>
+
 </html>

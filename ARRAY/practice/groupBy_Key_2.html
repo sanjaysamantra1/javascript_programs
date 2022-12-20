@@ -1,0 +1,29 @@
+<html>
+
+<head>
+
+<body>
+    <script>
+        let employees = [
+            { eId: 101, name: "sanjay", sal: 5000 },
+            { eId: 104, name: "deepak", sal: 8000 },
+            { eId: 103, name: "ranjan", sal: 7000 },
+            { eId: 102, name: "manoj", sal: 9000 },
+            { eId: 101, name: "sanjay", sal: 5000 },
+            { eId: 108, name: "deepak", sal: 5000 },
+        ];
+        let result = {};
+        for (emp of employees) {
+            let empName = emp['name']; // sanjay / deepak
+            if (result[empName]) {
+                result[empName].push(emp);
+            } else {
+                result[empName] = [emp];
+            }
+        }
+        console.log(result)
+    </script>
+</body>
+</head>
+
+</html>

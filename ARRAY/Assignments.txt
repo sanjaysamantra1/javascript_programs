@@ -43,7 +43,11 @@
 	departments = [{ eId: 101, dept: "sales" },
 				{ eId: 104, dept: "marketing" }]
 
-18. groupBy employees-eid,name,sal
+18. declare array of employees & groupBy employees-name
+    sample output: {
+		'sanjay' : [{},{}],
+		'alok' : [{}]
+	}
 
 19. intersection of 2 number arrays
 

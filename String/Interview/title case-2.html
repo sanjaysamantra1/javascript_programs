@@ -2,12 +2,12 @@
 <html>
   <body>
     <script>
-      function titleCase(str) {
-        let res = [];
-        let words = str.split(" ");
+      function titleCase(str) { // this is javascript class
+        let res = ['This','Is','Javascript'];
+        let words = str.split(" "); //['this','is','javascript','class']
 		
-        for (word of words) {
-          let updatedWord = word[0].toUpperCase() + word.slice(1);
+        for (word of words) { //word = 'this'
+          let updatedWord = word[0].toUpperCase() + word.slice(1); // This
           res.push(updatedWord);
         }
         return res.join(" ");

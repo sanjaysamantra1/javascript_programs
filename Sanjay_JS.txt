@@ -812,8 +812,7 @@ Prototype
 ---------
 -A prototype is an object used to implement structure, state, and behaviour inheritance in ECMAScript
 -Prototype is the mechanism by which JavaScript objects inherit features from one another
--Prototype is an object, where we can attach methods and properties
- ,which enables all the other objects to inherit these methods and properties
+-Prototype is an object, where we can attach methods and properties,which enables all the other objects to inherit these methods and properties.
 -Prototype is a base class for all the objects, and it helps us to achieve inheritance.
 -All JavaScript objects inherit properties and methods from a prototype.
 -properties added to the prototype of a class gets available to 
@@ -839,6 +838,7 @@ Inheritance
 Object class
 ============
 -Objects are variables that can contain many values inside it.
+-Collection of properties & values.
 -The values are written as 'key:value' pairs. 
 	ex: let user = {name:'sachin' , age:35}
 -we can access object properties in two ways:

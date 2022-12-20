@@ -5,12 +5,12 @@
     let obj1 = {
       name: "sachin",
       displayName: function () {
-        console.log(this.name, this); 
+        console.log(this.name, this);
       },
     };
     obj1.displayName(); // this = Obj1
 
-    let f1 =  obj1.displayName;
+    let f1 = obj1.displayName;
     f1();
 
     let f2 = obj1.displayName.bind(obj1);

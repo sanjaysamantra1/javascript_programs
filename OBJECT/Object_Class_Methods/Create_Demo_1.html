@@ -1,15 +1,24 @@
 <html>
-  <body>
-    <script>
-      //Creates a new object with the specified prototype object and properties
-      var obj1 = { x: 10, y: 20 }; 
-      var obj2 = Object.create(obj1);
-      // obj2 is a new object and obj2's prototype is obj1
-      console.log(obj1, obj2);
-      console.log("object2: " + obj2.x + " " + obj2.y);
 
-      
-    </script>
-    <!-- obj1 changes affects obj2 but obj2 changes doesnt affect obj1-->
-  </body>
+<body>
+  <script>
+    //Creates a new object with the specified prototype object and properties
+    var obj1 = { x: 10, y: 20 };
+    var obj2 = Object.create(obj1);
+    // obj2 is a new object and obj2's prototype is obj1
+    // obj2 has 0 direct properties but 2 prototype properties
+    console.log(obj1, obj2);
+    console.log("object2: " + obj2.x + " " + obj2.y);
+
+    obj2.x = 15; // x is a direct property on obj2 with value 15
+    console.log("object1: " + obj1.x + " " + obj1.y); // 10 20
+    console.log("object2: " + obj2.x + " " + obj2.y); // 15 20
+
+
+    obj1.y = 25;
+    console.log("object1: " + obj1.x + " " + obj1.y); // 10 25
+    console.log("object2: " + obj2.x + " " + obj2.y); // 15 25
+  </script>
+</body>
+
 </html>

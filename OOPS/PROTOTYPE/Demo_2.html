@@ -1,22 +1,27 @@
-<HTML>
-   <BODY>
-   <h1>
-      <script>
-	     //Every Object Wont have getInfo()
-         function Employee(newAccNo, newAccBal) {
-			this.accNo = newAccNo;
-			this.accBal = newAccBal;			
-         }
-		 Employee.prototype.getInfo = function() {
-				document.write("<hr> Acc No: "+this.accNo);
-				document.write("<br> Acc Bal: "+this.accBal);
-			};
-		 var emp1 = new Employee(11111, 5000);
-		 var emp2 = new Employee(22222, 7000);
-		 emp1.getInfo();
-		 emp2.getInfo();
-		 console.log(emp1);
-		 console.log(emp2);
-      </script>
-   </BODY>
-</HTML>
+<html>
+
+<body>
+	<script>
+		class Employee {
+			constructor(id, name, sal) {
+				this.id = id;
+				this.name = name;
+				this.sal = sal;
+			}
+		}
+		Employee.prototype.company = "IBM";
+		Employee.prototype.displayInfo = function () {
+			console.log(this.id, this.name, this.sal, this.company);
+		};
+
+		let emp1 = new Employee(101, "sachin", 5000);
+		emp1.displayInfo();
+
+		let emp2 = new Employee(102, "Rahul", 650);
+		emp2.displayInfo();
+
+		console.log(emp1, emp2);
+	</script>
+</body>
+
+</html>

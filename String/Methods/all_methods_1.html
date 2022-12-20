@@ -15,12 +15,13 @@
 
     console.log(str1.concat(" hello"));
 
-    console.log(str1.indexOf("t"));
-    console.log(str1.indexOf("q"));
-    console.log(str1.lastIndexOf("t"));
+    console.log(str1.indexOf("t"));   //2 
+    console.log(str1.indexOf("t", 3)); //5
+    console.log(str1.indexOf("q"));    //-1
+    console.log(str1.lastIndexOf("t")); //12
 
-    console.log(str1.includes("men"));
-    console.log(str1.includes("man"));
+    console.log(str1.includes("men"));  // true
+    console.log(str1.includes("man"));  // false
   </script>
 </body>
 

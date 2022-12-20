@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <script>
+        let arr1 = [10, 9, 8, 101, 105, 91, 92];
+        arr1.sort();
+        console.log(arr1);
+
+        Array.prototype.numericSort = function () {
+            this.sort((a, b) => a - b);
+        }
+        let arr2 = [10, 9, 8, 101, 105, 91, 92];
+        arr2.numericSort();
+        console.log(arr2);
+
+        let arr3 = [10, 9, 101, 105, 96, 92];
+        arr3.numericSort();
+        console.log(arr3);
+    </script>
+</body>
+
+</html>

@@ -1,26 +1,28 @@
 <html>
-  <body>
-    <script>
-      let arr = [10, 20, 30, 40, 50];
 
-      let keys = arr.keys(); // indexes
-      for (key of keys) {
-        console.log(key);
-      }
+<body>
+  <script>
+    let arr = [10, 20, 30, 40, 50];
 
-      let myvalues = arr.values();
-      for (val of myvalues) {
-        console.log(val);
-      }
+    let keys = arr.keys(); // indexes
+    for (key of keys) {
+      console.log(key);
+    }
 
-      let myentries = arr.entries();
-      for (entry of myentries) {
-        console.log(entry);
-      }
+    let myvalues = arr.values();
+    for (val of myvalues) {
+      console.log(val);
+    }
 
-      for (let ind in arr) {
-        console.log(ind + " " + arr[ind]);
-      }
-    </script>
-  </body>
+    let myentries = arr.entries(); //[[0,10],[1,20],[2,30]]
+    for (entry of myentries) {
+      console.log(entry);
+    }
+
+    for (let ind in arr) {
+      console.log(ind + " " + arr[ind]);
+    }
+  </script>
+</body>
+
 </html>
