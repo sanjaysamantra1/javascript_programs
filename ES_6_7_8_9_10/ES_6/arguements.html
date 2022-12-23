@@ -1,18 +1,28 @@
 <html>
-  <body>
-    <script>
-      //Es-5
-      function add() {
-        console.log(arguments);
 
-        let sum = 0;
-        for (let ele of arguments) {
-          sum = sum + ele;
-        }
-        console.log(sum);
+<body>
+  <script>
+    function sum(a, b) {
+      console.log(a + b)
+    }
+    sum(2, 3);    // 5
+    sum(2, 3, 4); // 5
+    sum(2, 3, 4, 5); // 5
+
+    // Write a function which can add N arguements
+    function add() {
+      console.log(Array.isArray(arguments), arguments.length, arguments);
+      // we cannot use map(), filter(), reduce() with arguments
+      let sum = 0;
+      for (ele of arguments) {
+        sum = sum + ele;
       }
-      add(2, 3, 4, 5);
-      add(2, 3);
-    </script>
-  </body>
+      console.log(sum);
+    }
+    add(2, 3);    // 5
+    add(2, 3, 4); // 9
+    add(2, 3, 4, 5); // 14
+  </script>
+</body>
+
 </html>

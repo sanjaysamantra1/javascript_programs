@@ -1,17 +1,20 @@
 <html>
-  <body>
-    <script>
-      //Rest parameter. arr is an array
-      function add(...arr) {
-        sum = 0;
-        for (ele of arr) {
-          sum = sum + ele;
-        }
-        alert(sum);
+
+<body>
+  <script>
+    //Rest parameter. arr is an array 
+    function add(...arr) {
+      console.log(Array.isArray(arr))
+      let sum = 0;
+      for (ele of arr) {
+        sum = sum + ele;
       }
-      add(2, 3);
-      add(2, 3, 4);
-      add(2, 3, 4, 5, 6);
-    </script>
-  </body>
+      alert(sum);
+    }
+    add(2, 3); // [2,3]
+    add(2, 3, 4); // [2,3,4]
+    add(2, 3, 4, 5, 6);
+  </script>
+</body>
+
 </html>

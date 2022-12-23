@@ -1,18 +1,22 @@
 <html>
-	<body>
-		<script>
-			var arr1 = [ 10 , 20 ];
-			var arr2 = [ 30 , 40 ];
 
-			arr1.push.apply(arr1, arr2);
-			console.log(arr1)
-			console.log(arr2)
-			
-			var arr3 = [ 50 , 60 ]; //2
-			var arr4 = [ 70 , 80 , 90 ];
+<body>
+	<script>
+		var arr1 = [10, 20];
+		var arr2 = [30, 40];
 
-			arr3.push(...arr4); 
-			console.log(arr3)
-		</script>
-	</body>
+		// console.log(arr1.push(arr2)); // [10, 20,[30, 40]]
+
+		arr1.push.apply(arr1, arr2);
+		console.log(arr1)
+		console.log(arr2)
+
+		var arr3 = [50, 60]; //2
+		var arr4 = [70, 80, 90];
+
+		arr3.push(...arr4);
+		console.log(arr3)
+	</script>
+</body>
+
 </html>

@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <script>
+        let str = 'entertainemnt';
+
+        /* let res1 = {};
+        for (let char of str) {
+            res1[char] = res1[char] ? res1[char] + 1 : 1;
+        }
+        console.log(res1); */
+
+        let res2 = new Map();
+        for (let char of str) {
+            if (res2.has(char)) {
+                res2.set(char, res2.get(char) + 1)
+            } else {
+                res2.set(char, 1)
+            }
+        }
+        console.log(res2);
+    </script>
+</body>
+
+</html>

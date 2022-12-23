@@ -838,9 +838,10 @@ Inheritance
 Object class
 ============
 -Objects are variables that can contain many values inside it.
--Collection of properties & values.
+-Collection of properties & values. 
+   ex: {prop1:val1,prop2:val2}
 -The values are written as 'key:value' pairs. 
-	ex: let user = {name:'sachin' , age:35}
+  ex: let user = {name:'sachin' , age:35}
 -we can access object properties in two ways:
 	objectName.propertyName;       user.name;
 	objectName["propertyName"];    user['age'];
@@ -863,7 +864,7 @@ Object class
 	isFrozen() - Determines if an object was frozen
 	seal()  - structure of the object cann't be modified, value of the properties can be changed.
 	isSealed() - Determines if an object is sealed.
-	preventExtensions() -new properties cann't be added to an object, properties can be deleted
+	preventExtensions() -new properties cann't be added to an object, properties can be deleted, value of the properties can be changed
     isExtensible() - Determines if extending of an object is allowed
 	keys()	- Returns an array of keys
 	values() - Returns an array of values
@@ -876,8 +877,9 @@ Object class
 
 -shallow copy : Object.assign()
                 obj2 = {...obj1}
--deep cloning :  JSON.parse(JSON.stringify(obj))
+-deep cloning :  JSON.parse(JSON.stringify(obj))  
 				 obj2 = structuredClone(obj1)
+Note: structuredClone() cann't copy the functions from original object to copied object.
 
 -A shallow copy of an object is a copy whose nested properties share the same references.
  (Nested objects will not be copied by value)
@@ -910,17 +912,16 @@ Call() & apply() & bind()
 ========================
 -call(),apply(),bind() are methods from 'Object' class.
 -used to change the context while calling a function.
+-while calling a function, if we want to pass this explicitely.
 
 call() - call() is used to pass differenet object as a value to 'this'.
 	   call() method calls a function with a given 'this' value and arguments provided individually.
-       used to change the context while calling a function.
        using call() one object can invoke another object's function.    
 
 apply() - apply() takes 2 arguments.1st arguement is an object(this), 2nd arguement is an array of items.
       -it takes the values from that array and passes as individual arguements to a method.
 
--bind() creates a new function and when that(new function) is called will have its 
-	'this' set to the provided value with a given sequence of arguements.
+-bind() creates a new function and when that(new function) is called will have its 'this' set to the provided value with a given sequence of arguements.
 -it is most useful for binding the value of 'this' in methods of classes 
   that you want to pass into other functions.
  
@@ -934,7 +935,7 @@ ES-6 Features (ES-2015)
 3. concatenating strings to template literals
 4. Multi-line strings
 6. default parameter values
-7. from arguments to rest parameters
+7. from arguments to rest parameters(...)
 8. exponent operator (**)
 9.  Desturcturing (array/object)
 10. for-loop to for-in and for-of
@@ -944,12 +945,18 @@ ES-6 Features (ES-2015)
 14. From constructors to classes
 15. inheritance - class,extends
 16. Modules
-17. collection-Map,weakmap,set,weakset
+17. collection-Map,weakmap,Set,weakset
 18. promise and async-await
 19. generators
 20. Tail Calls
 
 
+
+Modules
+=======
+-2 Module Systems   
+	a. CommonJS Module System      (module.export , require())
+	b. ECMASCRIPT Module System    (export , import)
 
 
 Event Handling

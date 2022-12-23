@@ -1,9 +1,12 @@
 <html>
-  <body>
-    <script>
-      var arr1 = [10, 20, 30, 40, 10, 30];
-      var arr2 = [...new Set(arr1)];
-      console.log(arr2);
-    </script>
-  </body>
+
+<body>
+  <script>
+    var arr1 = [10, 20, 30, 40, 10, 30];
+    var mySet = new Set(arr1); // removes duplicate
+    var arr2 = [...mySet];  // converts set to array
+    console.log(arr2);
+  </script>
+</body>
+
 </html>

@@ -1,22 +1,25 @@
 <html>
-	<body>
-		<script>
-			var employee = {
-				eId : 101,
-				name : 'sachin',
-				add : {
-					city : 'mumbai',
-					state: 'maharastra',
-					pin : '111111'
-				}
+
+<body>
+	<script>
+		var emp = {
+			id: 101,
+			name: 'sachin',
+			sal: 5000,
+			add: {
+				city: 'mumbai',
+				state: 'maharastra',
+				pin: '111111'
 			}
-			console.log(employee.add.city);
-			console.log(employee.add.state);
-			console.log(employee.add.pin);
-						
-			
-			var {city,state,pin} = employee.add;
-			console.log(city, state,pin)
-		</script>
-	</body>
+		}
+		console.log(emp.id, emp.name, emp.sal, emp.add.city, emp.add.state);
+
+		// Destructuring
+		let { id, name, sal, add: { city, state, pin } } = emp;
+		console.log(id, name, sal, city, state, pin);
+
+
+	</script>
+</body>
+
 </html>

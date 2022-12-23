@@ -3,10 +3,11 @@
     <script>
       var a = "6/23/2018, 4:29:21 PM"; 
       //console.log(a.getDate());
-
+      
+      //creates a date object out of a string
       var b = new Date(a);
       console.log(b.getDate());
-      console.log(b.getMonth());
+      console.log(b.getMonth()+1); 
       console.log(b.getFullYear());
 
       console.log(b.getHours());

@@ -1,8 +1,11 @@
-import { add, sub, myName } from "./math.js";
+import add, { sub, myName } from "./math.js";
 
-let num1 = +prompt("enter number 1");
-let num2 = +prompt("enter number 2");
+let num1 = +prompt("enter number 1", 10);
+let num2 = +prompt("enter number 2", 5);
 
-console.log(`addition of ${num1} & ${num2} is ${add(num1, num2)}`);
-console.log(`subtraction of ${num1} & ${num2} is ${sub(num1, num2)}`);
+let addResult = add(num1, num2);
+let subResult = sub(num1, num2);
+
+console.log(`addition of ${num1} & ${num2} is ${addResult}`);
+console.log(`subtraction of ${num1} & ${num2} is ${subResult}`);
 console.log(myName);

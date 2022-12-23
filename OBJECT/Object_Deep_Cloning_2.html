@@ -25,11 +25,14 @@
             f: 40,
           },
         },
-        g() {},
+        g() {
+          console.log('I am G function')
+        },
       };
       let obj2 = cloneDeep(obj1);
       obj2.b.push(4);
       console.log(obj1, obj2);
+      obj2.g()
     </script>
   </body>
 </html>

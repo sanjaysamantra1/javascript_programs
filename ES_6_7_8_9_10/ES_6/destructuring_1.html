@@ -1,16 +1,40 @@
 <html>
-	<body>
-		<script>
-			let obj1 = {name:'sachin',age:35,add:'mumbai'};
-			
-			let {name,age,add} = obj1;
-			alert(`${name} ${age} ${add}`);
-			
-			let {a,b,c} = obj1;
-			alert(`${a} ${b} ${c}`);
-			
-			let {age:q,add:r,name:p} = obj1;
-			alert(`${r} ${q} ${p}`);
-		</script>
-	</body>
+
+<body>
+	<script>
+		let user = {
+			id: 1,
+			name: 'Leanne Graham',
+			username: 'Bret',
+			email: 'Sincere@april.biz',
+			address: {
+				street: 'Kulas Light',
+				suite: 'Apt. 556',
+				city: 'Gwenborough',
+				zipcode: '92998-3874',
+				geo: {
+					lat: '-37.3159',
+					lng: '81.1496',
+				},
+			},
+			phone: '1-770-736-8031 x56442',
+			website: 'hildegard.org',
+			company: {
+				name: 'Romaguera-Crona',
+				catchPhrase: 'Multi-layered client-server neural-net',
+				bs: 'harness real-time e-markets',
+			},
+		}
+		//ES-5
+		let a = user.name;
+		let b = user.email;
+		let c = user.phone;
+		console.log(a, b, c);
+
+		//es-6
+		let { name, email, phone } = user;
+		console.log(name, email, phone)
+	</script>
+</body>
+
 </html>

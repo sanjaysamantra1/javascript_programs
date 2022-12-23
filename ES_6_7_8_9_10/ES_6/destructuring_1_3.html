@@ -1,15 +1,22 @@
 <html>
-  <body>
-    <script>
-      // function fullName(user) {
-      //   return user.firstName + " " + user.lastName;
-      // }
-      function fullName({ firstName, lastName }) {
-        return firstName + " " + lastName;
-      }
-      let user = { firstName: "sachin", lastName: "tendulkar" };
-      let res1 = fullName(user);
-      console.log(res1);
-    </script>
-  </body>
+
+<body>
+  <script>
+    /* function printUserDetails(user) {
+      document.write(`Hello ${user.fName} ${user.lName} you are ${user.age} years old
+      You are from ${user.add} your DOB is ${user.dob}`)
+    } */
+
+    function printUserDetails({ fName, lName, age, add, dob }) {
+      document.write(`Hello ${fName} ${lName} you are ${age} years old
+      You are from ${add} your DOB is ${dob}`)
+    }
+    let user = {
+      fName: 'sachin', lName: 'Tendulkar',
+      age: 35, add: 'mumbai', dob: '21-03-1980'
+    }
+    printUserDetails(user);
+  </script>
+</body>
+
 </html>

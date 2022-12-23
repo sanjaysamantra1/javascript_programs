@@ -1,20 +1,22 @@
 <html>
-  <body>
-    <script>
-      let is_weekend = function (date1) {
-        let dt = new Date(date1);
-        let dayNumber = dt.getDay();
 
-        if (dayNumber == 6 || dayNumber == 0) {
-          return "weekend";
-        } else {
-          return "Not weekend";
-        }
-      };
-      console.log(is_weekend("October 1, 2022"));
-      console.log(is_weekend("October 2, 2022"));
-      console.log(is_weekend("October 3, 2022"));
-      console.log(is_weekend("October 4, 2022"));
-    </script>
-  </body>
+<body>
+  <script>
+    let is_weekend = function (dateObj) {
+      let dt = new Date(dateObj);
+      let dayNumber = dt.getDay(); // 0-6
+
+      if (dayNumber == 6 || dayNumber == 0) {
+        return "weekend";
+      } else {
+        return "Not weekend";
+      }
+    };
+    console.log(is_weekend("October 1, 2022"));
+    console.log(is_weekend("October 2, 2022"));
+    console.log(is_weekend("October 3, 2022"));
+    console.log(is_weekend("October 4, 2022"));
+  </script>
+</body>
+
 </html>
