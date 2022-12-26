@@ -1,11 +1,15 @@
 <html>
-  <body>
-    <script>
-      for (let i = 1; i <= 5; i++) {
-        setTimeout(() => {
-          document.writeln(i + "<br>");
-        }, 1000 * i);
-      }
-    </script>
-  </body>
+
+<body>
+  <script>
+    // let i;
+    for (let i = 1; i <= 5; i++) { // block
+      setTimeout(() => {
+        document.writeln(i);
+      }, 1000 * i);
+    }
+    // console.log('out side', i)
+  </script>
+</body>
+
 </html>

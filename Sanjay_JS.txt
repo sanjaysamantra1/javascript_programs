@@ -1107,7 +1107,7 @@ WeakMap & Weakset
 
 
 Date
-======
+=====
 var ob = new Date();
 ob.getDate();
 ob.getMonth();
@@ -1135,7 +1135,7 @@ setTimeout/setInterval (Window)
 	setTimeout( f1 , 3000);  // correct
 	setTimeout( f1() , 3000);  // wrong
 -For setInterval the function stays in memory until clearInterval is called.
--use recursive setTimeout() insteadof setInterval() if execution duration is longer than 
+-use recursive setTimeout() insteadof setInterval() if execution duration is longer than
  interval time.
 -Recursive setTimeout guarantees a delay between the executions, setInterval – does not.
 -While this pattern does not guarantee execution on a fixed interval, it does guarantee that 
@@ -1326,16 +1326,11 @@ REGEX - Regular Expression
 
 CallBack
 --------
--A Callback is a function that is passed into another function as an argument to be executed later 
+-A Callback is a function that is passed into another function as an argument to be executed later.
 -callback function is run inside of the function it was passed into.
--A callback is passed as a value to another function, and will only be executed when the event happens. 
 -A function that accepts other functions as arguments is called a higher-order function,
- which contains the logic for when the callback function gets executed.
--Most of the time we are creating programs and applications that operate in a synchronous manner. 
-In other words, some of our operations are started only after the preceding ones have completed. 
-Often when we request data from other sources, such as an external API,we don’t always know when our data will be served back. 
-In these instances we want to wait for the response,but we don’t always want our entire application grinding to a halt while our data is being fetched.
- These situations are where callback functions come in handy.
+ which contains the logic for when the callback function should be executed.
+
 
 
 
@@ -1353,11 +1348,11 @@ Callback hell
 Promise
 =======
 -A promise is an object that holds the future value of an asynchronous operation.
- ex:-if we request some data from a server, promise promises us to get that data 
- that we can use in the future.
--A Promise object represents a value that may not be available yet, 
- but will be resolved at some point in the future.
--Promise object can have different states:- pending, resolved/fulfilled, rejected. 
+-A Promise object represents a value that may not be available yet, but will be resolved/available at some point in the future.
+-Promise object can have different states:- pending, resolved/fulfilled, rejected.
+ex:-if we request some data from a server, promise promises us to get that data 
+ that we can use in the future. 
+
 
 
 methods of Promise class:

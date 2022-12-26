@@ -2,12 +2,19 @@
 
 <body>
   <script>
-    let ob = new Date();
-
-    let a = ob.getDate();
-    let b = ob.getMonth() + 1;
-    let c = ob.getFullYear();
-    document.write(`${a}-${b}-${c}`);
+    const date = new Date();
+    const [month, day, year] = [
+      date.getMonth(),
+      date.getDate(),
+      date.getFullYear(),
+    ];
+    const [hour, minutes, seconds] = [
+      date.getHours(),
+      date.getMinutes(),
+      date.getSeconds(),
+    ];
+    console.log(month, day, year);
+    console.log(hour, minutes, seconds);
   </script>
 </body>
 

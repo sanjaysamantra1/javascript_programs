@@ -1,8 +1,15 @@
 <html>
-  <body>
-    <script>
-      var ob = new Date();
-      document.write(ob);
-    </script>
-  </body>
+
+<body>
+  <script>
+    var ob = new Date();
+    document.write(ob);
+
+    let a = ob.getDate();
+    let b = ob.getMonth() + 1;
+    let c = ob.getFullYear();
+    document.write(`${a}-${b}-${c}`);
+  </script>
+</body>
+
 </html>

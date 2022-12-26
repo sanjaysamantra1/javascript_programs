@@ -1,14 +1,15 @@
 <html>
-  <body>
-    <h1></h1>
 
-    <script>
-      function f1() {
-        let date = new Date();
-        let timeNow = date.toLocaleTimeString();
-        document.querySelector("h1").innerText = timeNow;
-      }
-      setInterval(f1, 1000);
-    </script>
-  </body>
+<body>
+  <h1></h1>
+  <script>
+    function printTime() {
+      let date = new Date();
+      let time = date.toLocaleTimeString();
+      document.querySelector('h1').innerText = time;
+    }
+    setInterval( printTime , 1000 );
+  </script>
+</body>
+
 </html>

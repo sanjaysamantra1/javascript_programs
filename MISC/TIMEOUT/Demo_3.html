@@ -1,17 +1,19 @@
 <html>
-  <body>
-    <script>
-      //clearTimeout
-      function f1() {
-        console.log("I am f1");
-      }
-      const id1 = setTimeout(f1, 3000);
-      const id2 = setTimeout(f1, 8000);
 
-      setTimeout(() => {
-        clearTimeout(id2);
-        console.log('i am clearing the timer that was supposed to be executed after 8sec')
-      }, 5000);
-    </script>
-  </body>
+<body>
+  <script>
+    //clearTimeout
+    function f1() {
+      console.log("I am f1");
+    }
+    const id1 = setTimeout(f1, 3000);// id1 is scheduled to be called after 3s
+    const id2 = setTimeout(f1, 8000);// id2 is scheduled to be called after 8s
+
+    setTimeout(() => {
+      clearTimeout(id2);
+      console.log('i am clearing the timer that was supposed to be executed after 8sec')
+    }, 5000);//id2 is being cleared after 5s
+  </script>
+</body>
+
 </html>

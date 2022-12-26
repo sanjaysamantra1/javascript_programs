@@ -1,63 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<html>
 
-    <style>
-      .loading,
-      .container {
-        display: none;
-      }
-    </style>
-  </head>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
 
-  <body>
-    <h1 class="text-center bg-primary text-white">Product List</h1>
-    <button onclick="fetchProducts()">fetch products</button>
+<body>
+  <button onclick="fetchProducts()">Fetch Products</button>
 
-    <img src="./loading.gif" alt="" class="loading" />
-
-    <div class="container">
-      <div class="row"></div>
+  <div class="container">
+    <div class="row">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Ratings</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
     </div>
+  </div>
 
-    <script>
-      function fetchProducts() {
-        document.querySelector(".loading").style.display = "block";
+  <script>
+    function fetchProducts() {
+      fetch('https://dummyjson.com/products')
+        .then((response) => response.json())
+        .then(finalResponse => {
+          console.log(finalResponse.products);
+          let products = finalResponse.products;
 
-        fetch("https://dummyjson.com/products")
-          .then((response) => response.json())
-          .then((finalResponse) => {
-            console.log(finalResponse.products);
-            document.querySelector(".container").style.display = "block";
-            document.querySelector(".loading").style.display = "none";
+          let str = '';
 
-            let str = "";
-            finalResponse.products.forEach((product) => {
-              str = str +
-                `<div class="col-sm-3">
-                  <div class="card">
-                    <img src="${product.images[0]}" class="card-img-top" alt="..." height='200px'>
-                    <div class="card-body">
-                      <h5 class="card-title">${product.title}</h5>
-                      <p class="card-text">category : ${product.category}</p>
-                      <p class="card-text">price : ${product.price}</p>
-                      <p class="card-text">Rating : ${product.rating}</p>
-                    </div>
-                  </div>
-                </div>
-              `;
-              document.querySelector(".row").innerHTML = str;
-            });
-          });
-      }
-    </script>
-  </body>
+          products.forEach((product) => {
+            str += `<tr>
+                <td>${product.title}</td>
+                <td>${product.description}</td>
+                <td>${product.price}</td>
+                <td>${product.rating}</td>
+                <td><img src=${product.images[0]} width=100 height=100/></td>
+              </tr>`
+          })
+          document.querySelector('tbody').innerHTML = str;
+        })
+    }
+  </script>
+</body>
+
 </html>

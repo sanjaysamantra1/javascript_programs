@@ -1,11 +1,6 @@
-<html>
-<body>
-<h1>
-	<script>
-		function f1(a,b) {
-			document.write(a+" "+b+"<br>")
-		};
-		setInterval(f1, 1000, 'hello!!!' , 'Sachin');
-	</script>
-</body>
-</html>
+<script>
+	function printMsg(name, msg) {
+		document.writeln(`Hello ${name}, ${msg} <br>`);
+	}
+	setInterval(printMsg, 1000, 'sanjay', 'Good morning');
+</script>
