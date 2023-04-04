@@ -265,10 +265,8 @@ N:p - All variables (var,let,const) are hoisted but only 'var' variables are usa
 	
 Hoisting:
 =========
--The process of assigning variable declarations a default value of 'undefined' during 
- the creation phase is called Hoisting.
--In hoisting, the variable and function declarations are put into memory during the 
-	compile/creation phase before code execution phase.
+-The process of assigning variable declarations a default value of 'undefined' during the creation phase is called Hoisting.
+-In hoisting, the variable and function declarations are put into memory during the	compile/creation phase before code execution phase.
 
 
 
@@ -1433,8 +1431,7 @@ Stackoverflow Error
 
 Debouncing & Throttling
 ------------------------
--technique of limiting the number of times the user can call a function attached to an 
- event listener is debouncing and throttling. 
+-technique of limiting the number of times the user can call a function attached to an event listener is debouncing and throttling. 
  
 -debouncing executes the function only after some cooling period.
 -throttling executes the function at a regular interval,

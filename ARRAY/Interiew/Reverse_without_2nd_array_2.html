@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<script>
+		  let arr = [10,20,30,40,50];
+		  
+		  let start = 0;
+          let end = arr.length - 1;
+      
+         //Run a loop while start is less than end
+          while(start < end) {  
+              arr[start] ^= arr[end];
+			  arr[end] ^= arr[start];
+			  arr[start] ^= arr[end];
+              start++;
+              end--;
+           }
+		 console.log(arr)
+		</script>
+	</body>
+</html>

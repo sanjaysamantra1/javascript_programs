@@ -8,7 +8,7 @@
         setTimeout(() => resolve("result-promise-2"), 8000)
       );
       let promise3 = new Promise((resolve, reject) =>
-        setTimeout(() => reject("error"), 4000)
+        setTimeout(() => reject("error"), 1000)
       );
 
       Promise.all([promise1, promise2, promise3]).then(
