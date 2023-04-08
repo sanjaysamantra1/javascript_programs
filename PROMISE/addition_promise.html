@@ -1,0 +1,32 @@
+<script>
+    function add(a, b) {
+        return a + b;
+    }
+    let addResult = add(2, 3);
+    console.log(addResult);
+
+    function addition(a, b) {
+        let promiseObj = new Promise((resolve, reject) => { // Promise is created
+            setTimeout(() => {
+                if (a && b) {
+                    resolve(a + b);
+                } else {
+                    reject('Wrong Input');
+                }
+            }, 2000)
+        })
+        return promiseObj;
+    }
+    let addPromise = addition(3, 4); // Promise is consumed
+
+    /*  addPromise.then(
+         (response) => { console.log(response) },
+         (err) => { console.log(err) }
+     ) */
+
+    async function getData() {
+        let addResult = await addPromise;
+        console.log(addResult);
+    }
+    getData();
+</script>

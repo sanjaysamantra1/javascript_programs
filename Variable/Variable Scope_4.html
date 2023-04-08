@@ -1,10 +1,10 @@
 <script>
   function f1() {
-    for (let i = 1; i <= 5; i++) { // block
-      console.log('block ', i);
+    for (var i = 1; i <= 5; i++) { // block
+      console.log('block-', i);
     }
-    console.log("function", i);
+    console.log("function-", i);
   }
   f1();
-  console.log("function", i);
+  console.log("global-", i);
 </script>

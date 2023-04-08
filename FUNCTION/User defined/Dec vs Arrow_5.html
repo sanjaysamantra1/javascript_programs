@@ -1,24 +1,17 @@
-<html>
-
-<body>
-  <script>
-    class Employee {
-      name = "sanjay";
-      greet1 = function () {
-        console.log('Hello ' + this.name + this);
-      }
-      greet2 = () => {
-        console.log('Hello ' + this.name + this);
-      }
+<script>
+  class Employee {
+    name = "sanjay";
+    greet1 = function () {
+      console.log('Hello ' + this.name + this);
     }
-    let emp1 = new Employee();
-    emp1.greet1();
-    emp1.greet2();
+    greet2 = () => {
+      console.log('Hello ' + this.name + this);
+    }
+  }
+  let emp1 = new Employee();
+  emp1.greet1();
+  emp1.greet2();
 
-    setTimeout(emp1.greet1, 2000)
-    setTimeout(emp1.greet2, 4000)
-
-  </script>
-</body>
-
-</html>
+  setTimeout( emp1.greet1 , 2000 )  
+  setTimeout( emp1.greet2 , 2000 )  
+</script>

@@ -1,15 +1,9 @@
-<html>
+<script>
+  'use strict';
 
-<body>
-  <script>
-    "use strict";
-    function f1() {
-      // this = window/undefined(strict mode)
-      console.log(this);
-      this.alert("hiiiiiiiii");
-    }
-    f1();
-  </script>
-</body>
+  function f1() {
+    this.alert('Hiiiiiii');
+  }
+  f1();
 
-</html>
+</script>

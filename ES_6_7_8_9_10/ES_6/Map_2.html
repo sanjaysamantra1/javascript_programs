@@ -1,25 +1,19 @@
-<html>
+<script>
+    let str = 'entertainemnt';
 
-<body>
-    <script>
-        let str = 'entertainemnt';
+    /* let obj = {}
+    for (char of str) {
+        obj[char] = obj[char] ? obj[char] + 1 : 1;
+    }
+    console.log(obj) */
 
-        /* let res1 = {};
-        for (let char of str) {
-            res1[char] = res1[char] ? res1[char] + 1 : 1;
+    let myMap = new Map();
+    for (char of str) {
+        if (myMap.has(char)) {
+            myMap.set(char, myMap.get(char) + 1);
+        } else {
+            myMap.set(char, 1);
         }
-        console.log(res1); */
-
-        let res2 = new Map();
-        for (let char of str) {
-            if (res2.has(char)) {
-                res2.set(char, res2.get(char) + 1)
-            } else {
-                res2.set(char, 1)
-            }
-        }
-        console.log(res2);
-    </script>
-</body>
-
-</html>
+    }
+    console.log(myMap);
+</script>

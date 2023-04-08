@@ -1,18 +1,21 @@
 <html>
-	<body>
-		<script>
-			function createQuote(quote, callback){ 
-			  var myQuote = "People say," + quote;
-			  callback(myQuote); // 2
-			}
 
-			function logQuote(quote){
-			  console.log(quote);
-			}
+<body>
+	<script>
+		function delay(seconds, callback) {
+			setTimeout(callback, seconds * 1000);
+		}
+		console.log('Starting Delay...');
+		delay(2, () => {
+			console.log('2 seconds completed');
+			delay(1, () => {
+				console.log('3 seconds completed');
+				delay(2, () => {
+					console.log('5 seconds completed');
+				});
+			});
+		});
+	</script>
+</body>
 
-			createQuote("Health is wealth", logQuote); // 1
-			
-			// createQuote is the higher-order function
-		</script>
-	</body>
 </html>

@@ -11,7 +11,7 @@
     obj1.displayName(); // this = Obj1
 
     let f1 = obj1.displayName;
-    f1();
+    f1();  // this = window
 
     let f2 = obj1.displayName.bind(obj1);
     f2();

@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <script>
+        // Without CallBack
+        function hideString(str) {
+            return str.replace(/[a-zA-Z]/g, 'x')
+        }
+        let hiddenStr = hideString('Hello World');
+        console.log(hiddenStr);
+        console.log('Masking Completed...');
+
+
+        // callBack
+        function maskString(str, fn) {
+            let result = str.replace(/[a-zA-Z]/g, 'x');
+            fn(result);
+        }
+        maskString('Hello World', (result) => {
+            console.log(result);
+            console.log('Masking Completed...');
+        })
+    </script>
+</body>
+
+</html>

@@ -337,8 +337,8 @@ Variable Shadowing
  
 
 
-UseStrict
-=========
+Use Strict
+==========
 -provides better coding standard and stronger error checking.
 -'use strict' is only recognized at the beginning of a script or a function.
 -The purpose of "use strict" is to execute the javascript in "strict mode".
@@ -496,8 +496,8 @@ Arrow Function
 
 Arrow Function Limitations
 --------------------------
--Arrow functions don't have their own bindings to this, arguments or super, and should not be used as methods.
--Arrow functions don't have access to the new.target keyword.
+-Arrow functions don't have their own bindings to this, arguments or super cann't be used inside arrow function.
+-Arrow functions don't have access to the new,target keyword.
 -Arrow functions aren't suitable for call, apply and bind methods, which generally rely on establishing a scope.
 -Arrow functions cannot be used as constructors.
 -Arrow functions cannot use yield, within its body.

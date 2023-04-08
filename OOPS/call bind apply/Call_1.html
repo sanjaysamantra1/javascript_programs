@@ -1,19 +1,18 @@
 <html>
-  <body>
-    <script>
-      // call is used to pass different objects as a value to "this";
-      function add(a, b) {
-        console.log(this.num + a + b);
-        console.log(this);
-        //this = window; this = obj1;  this = obj2;
-      }
-      add(2, 3);
 
-      obj1 = { num: 4 };
-      add.call(obj1, 2, 3);
+<body>
+  <script>
+    // call is used to pass different objects as a value to "this";
+    function add(a, b) {
+      console.log(this.num + a + b);
+      console.log(this);
+      //this = window; this = obj1;  this = obj2;
+    }
+    add(2, 3);
 
-      obj2 = { num: 6 };
-      add.call(obj2, 2, 3);
-    </script>
-  </body>
+    let obj1 = { num: 4 };
+    add.call(obj1,2,3);
+  </script>
+</body>
+
 </html>

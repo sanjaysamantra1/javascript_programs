@@ -1,26 +1,32 @@
-<html>
+<script>
+    function hideString(str) {
+        let hiddenString = str.replace(/[a-zA-Z]/g, 'x');
+        return hiddenString;
+    }
+    let resultString = hideString('Hello World');
+    console.log(resultString);
+    console.log('Hidding is done...');
 
-<body>
-    <script>
-        // Without CallBack
-        function hideString(str) {
-            return str.replace(/[a-zA-Z]/g, 'x')
-        }
-        let hiddenStr = hideString('Hello World');
-        console.log(hiddenStr);
-        console.log('Masking Completed...');
+    function maskString(str) {
+        setTimeout(function () {
+            let hiddenString = str.replace(/[a-zA-Z]/g, 'x');
+            return hiddenString;
+        }, 2000);
+    }
+    let resultString2 = maskString('Hello World');
+    console.log(resultString2);
+    console.log('Masking is done...');
 
 
-        // callBack
-        function maskString(str, fn) {
-            let result = str.replace(/[a-zA-Z]/g, 'x');
-            fn(result);
-        }
-        maskString('Hello World', (result) => {
-            console.log(result);
-            console.log('Masking Completed...');
-        })
-    </script>
-</body>
-
-</html>
+    // CallBack
+    function maskMyString(str, fn) {
+        setTimeout(function () {
+            let hiddenString = str.replace(/[a-zA-Z]/g, 'x');
+            console.log(hiddenString);
+            fn();
+        }, 1000);
+    }
+    maskMyString('Good Morning', () => {
+        console.log('Hey,Masking is done...');
+    })
+</script>

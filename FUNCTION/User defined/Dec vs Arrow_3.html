@@ -6,11 +6,10 @@
   <button id="myBtn3">Btn-3</button>
 
   <script>
-    function f1() {
-      console.log(this); // this = window / Btn1 / Btn2 / Btn3
+    function f1() { //  this = where it is being invoked
       this.style.backgroundColor = 'red';
+      console.log(this)
     }
-    // f1();
 
     document.getElementById("myBtn1").addEventListener("click", f1);
     document.getElementById("myBtn2").addEventListener("click", f1);

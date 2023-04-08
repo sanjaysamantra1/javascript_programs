@@ -2,7 +2,7 @@
   <body>
     <script>
       // stack LIFO
-      function Stack() {
+      function createStack() {
         let list = [];
 
         function push(value) {
@@ -20,7 +20,7 @@
           peek,
         });
       }
-      let stackObj = Stack();
+      let stackObj = createStack();
       console.log(stackObj);
       console.dir(stackObj.push);
 

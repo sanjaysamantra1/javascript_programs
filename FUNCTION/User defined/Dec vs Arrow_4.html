@@ -5,10 +5,10 @@
     add: function () { // this = obj1
       console.log(this.a + this.b);
 
-      function sub() { // How it is called
+      function sub() { // this = How it is called
         console.log(this.a - this.b, this); // this = window
       }
-      sub();
+      sub(); 
 
       let mul = () => { // Where it is declared, add() is lexical scope for mul()
         console.log(this.a * this.b); // this = obj1
