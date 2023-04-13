@@ -9,10 +9,11 @@
     });
     console.log(arr2);
 
-    function f1(prev, cur) {
+    function add(prev, cur) {
+      console.log(prev,cur);
       return prev + cur;
     }
-    let sum = arr1.reduce(f1);
+    let sum = arr1.reduce(add);
     console.log(sum);
   </script>
 </body>

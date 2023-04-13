@@ -1,11 +1,17 @@
 <html>
-  <body>
-    <script>
-      var s1 = "sachin"; //string literal
-      var s2 = new String("Sachin"); //string object
 
-      console.log(typeof s1); //string
-      console.log(typeof s2); //object
-    </script>
-  </body>
+<body>
+  <script>
+    var s1 = "sachin"; //string literal
+    var s2 = new String("Sachin"); //string object
+
+    console.log(typeof s1); //string
+    console.log(typeof s2); //object
+
+
+    console.log(s1 instanceof String); //false
+    console.log(s2 instanceof String); //true
+  </script>
+</body>
+
 </html>

@@ -6,15 +6,7 @@
       let url3 = "https://api.github.com/users/nichatre";
 
       async function fetchData() {
-        const [res1, res2, res3] = await Promise.all([
-          fetch(url1),
-          fetch(url2),
-          fetch(url3),
-        ]);
-        const [data1, data2, data3] = await Promise.all([
-          res1.json(),
-          res2.json(),
-          res3.json(),
+        const [res1, res2, res3] 
         ]);
         console.log(data1, data2, data3);
       }
