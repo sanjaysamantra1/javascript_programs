@@ -3,9 +3,9 @@
 <body>
   <script>
     const date = new Date();
-    const [month, day, year] = [
-      date.getMonth(),
+    const [day, month, year] = [
       date.getDate(),
+      date.getMonth() + 1,
       date.getFullYear(),
     ];
     const [hour, minutes, seconds] = [

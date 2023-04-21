@@ -1,27 +1,18 @@
-<html>
+<script>
+  let obj1 = {
+    name: "sachin",
+    displayName: function () {
+      console.log(this.name);
+    }
+  };
+  obj1.displayName();
 
-<body>
-  <script>
-    let obj1 = {
-      name: "sachin",
-      displayName: function () {
-        console.log(this.name, this);
-      },
-    };
-    obj1.displayName(); // this = Obj1
+  let f1 = obj1.displayName;
+  f1();
 
-    let f1 = obj1.displayName;
-    f1();  // this = window
+  let f2 = obj1.displayName.bind(obj1);
+  f2();
 
-    let f2 = obj1.displayName.bind(obj1);
-    f2();
-
-    let f3 = f2;
-    f3();
-
-    let f4 = f3;
-    f4();
-  </script>
-</body>
-
-</html>
+  let f3 = f2;
+  f3();
+</script>

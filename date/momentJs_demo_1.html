@@ -1,0 +1,16 @@
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+
+    <script>
+        let date = new Date();
+
+        let dateFormat1 = moment(date).format('MMMM Do YYYY, h:mm:ss a');
+        document.write(dateFormat1 + '<br>');
+
+        let currentMonth = moment(date).format('MMMM');
+        document.write(currentMonth+ '<br>');
+
+        let today = moment(date).format('dddd');
+        document.write(today);
+    </script>
+</body>

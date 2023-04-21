@@ -1,0 +1,20 @@
+<script>
+    class Employee {
+        constructor(id, name, sal) {
+            this.id = id;
+            this.name = name;
+            this.sal = sal;
+        }
+    }
+    Employee.prototype.compName = 'Microsoft';
+
+    let emp1 = new Employee(101, 'sanjay', 5000);
+    console.log(emp1.id, emp1.name, emp1.sal, emp1.compName);
+    console.log(emp1)
+
+    console.log('name' in emp1);
+    console.log(emp1.hasOwnProperty('name'))
+
+    console.log('compName' in emp1);
+    console.log(emp1.hasOwnProperty('compName'))
+</script>

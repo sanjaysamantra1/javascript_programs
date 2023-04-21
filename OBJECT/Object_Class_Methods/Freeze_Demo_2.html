@@ -10,9 +10,10 @@
         pin: 560037,
       },
     };
-    // Object.freeze(user); 
-    // user.add.pin = 1234567;
-    // console.log(user);
+    /* Object.freeze(user);
+    user.name = "sanjay-123";
+    user.add.pin = 123456;
+    console.log(user); */
 
     const deepFreeze = (obj) => {
       if (obj && typeof obj === "object" && !Object.isFrozen(obj)) {

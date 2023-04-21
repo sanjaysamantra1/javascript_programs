@@ -1,14 +1,17 @@
 <html>
-  <body>
-    <script>
-      let arr1 = [10, 20, 30];
-      let arr2 = arr1; // address copy
-      let arr3 = arr1.slice(); // value copy
-      let arr4 = [...arr1]; // shallow copy
 
-      arr1.push(40);
+<body>
+  <script>
+    let arr1 = [10, 20, 30];
+    let arr2 = arr1; // address copy
+    let arr3 = arr1.slice(); // value copy
+    let arr4 = [...arr1]; // shallow copy
+    let arr5 = new Array(...arr1) // shallow copy
 
-      console.log(arr1, arr2, arr3, arr4);
-    </script>
-  </body>
+    arr1.push(40);
+
+    console.log(arr1, arr2, arr3, arr4);
+  </script>
+</body>
+
 </html>

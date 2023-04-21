@@ -7,13 +7,16 @@
       You are from ${user.add} your DOB is ${user.dob}`)
     } */
 
-    function printUserDetails({ fName, lName, age, add, dob }) {
+    function printUserDetails({ fName, age, add, dob, lName }) {
       document.write(`Hello ${fName} ${lName} you are ${age} years old
       You are from ${add} your DOB is ${dob}`)
     }
     let user = {
-      fName: 'sachin', lName: 'Tendulkar',
-      age: 35, add: 'mumbai', dob: '21-03-1980'
+      fName: 'sachin',
+      lName: 'Tendulkar',
+      age: 35,
+      add: 'mumbai',
+      dob: '21-03-1980'
     }
     printUserDetails(user);
   </script>

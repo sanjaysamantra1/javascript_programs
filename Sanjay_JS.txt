@@ -104,8 +104,8 @@ datatypes:
 
   Primitive							Non-primitive/Complex
   --------------					-------------------------
-  1. number								1. function
-  2. string								2. Object ( {} ,[] )
+  1. number							1. Object (Object & Array)
+  2. string								
   3. boolean(true,false)
   4. undefined(undefined)
   5. null
@@ -274,7 +274,7 @@ Temporal Dead Zone
 ==================
 -The period between entering scope and being declared where they cannot be accessed. 
  This period is the temporal dead zone (TDZ).
--the state where variables are un-reachable. They are in scope, but they aren't usable.
+-the state where variables are un-reachable. They are in memory, but they aren't usable.
 -The let and const variables exist in the TDZ from the start of their enclosing scope until they are declared.
 -if a let/const variable is accessed before its declaration, it would throw a ReferenceError. Because of the TDZ.
 
@@ -833,8 +833,8 @@ Inheritance
 
 
 
-Object class
-============
+'Object' class
+==============
 -Objects are variables that can contain many values inside it.
 -Collection of properties & values. 
    ex: {prop1:val1,prop2:val2}
@@ -910,7 +910,7 @@ Call() & apply() & bind()
 ========================
 -call(),apply(),bind() are methods from 'Object' class.
 -used to change the context while calling a function.
--while calling a function, if we want to pass this explicitely.
+-while calling a function, if we want to pass 'this' explicitely.
 
 call() - call() is used to pass differenet object as a value to 'this'.
 	   call() method calls a function with a given 'this' value and arguments provided individually.
@@ -1060,9 +1060,9 @@ object vs map
 Map
 ===
 -Maps are collections of keys and values of any type
--const map = new Map(); // Create a new Map
- map.set('name', 'sanjay'); // Sets a key value pair
- map.set('hobby', 'cycling'); // Sets a key value pair
+-const myMap = new Map(); // Create a new Map
+ myMap.set('name', 'sanjay'); // Sets a key value pair
+ myMap.set('hobby', 'cycling'); // Sets a key value pair
 -get data from map
  console.log(myMap.get('name'));
 -size of map
@@ -1084,11 +1084,10 @@ Set
 
 Garbage Collections
 -------------------
--JavaScript Garbage Collection is a form of memory management whereby objects that are no longer 
- referenced are automatically deleted and their resources are reclaimed.
+-JavaScript Garbage Collection is a form of memory management whereby objects that are no longer referenced are automatically deleted and their resources are reclaimed.
 -Map and Set's references to objects are strongly held and will not allow for garbage collection. 
- This can get expensive if maps/sets reference large objects that are no longer needed, such as 
- DOM elements that have already been removed from the DOM.
+This can get expensive if maps/sets reference large objects that are no longer needed, such as DOM elements that have already been removed from the DOM.
+
 
 WeakMap & Weakset
 ----------------
