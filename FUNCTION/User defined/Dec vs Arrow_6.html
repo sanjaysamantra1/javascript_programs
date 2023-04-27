@@ -2,21 +2,21 @@
   class Employee {
     name = 'sanjay';
     sal = 5000;
-
     displayInfo1() {
       console.log('displayInfo-1')
       console.log(this.name, this.sal)
     }
     displayInfo2 = () => {
-      console.log('displayInfo-2', this.name, this.sal)
+      console.log('displayInfo-2')
+      console.log(this.name, this.sal)
     }
   }
   let emp1 = new Employee();
-  // emp1.displayInfo1();
-  // emp1.displayInfo2();
+  emp1.displayInfo1();
+  emp1.displayInfo2();
 
   let a = emp1.displayInfo1;
-  a();
+  // a();
 
   let b = emp1.displayInfo2;
   b();

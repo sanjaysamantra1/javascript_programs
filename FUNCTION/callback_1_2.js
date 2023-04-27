@@ -1,11 +1,11 @@
 var fs = require("fs");
 
-// Asynchronous read
-fs.readFile("input.txt", (err, data) => {
+fs.readFile("./file1.txt", function (err, data) {
   if (err) {
-    return console.error(err);
+    console.error(err);
+    return;
   }
   console.log(data.toString());
 });
 
-console.log("I am presentt at line-11");
+console.log("I am statement from line-11")

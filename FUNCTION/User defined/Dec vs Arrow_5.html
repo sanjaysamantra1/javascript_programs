@@ -1,6 +1,6 @@
 <script>
   class Employee {
-    name = "sanjay";
+    name = "Sachin";
     greet1 = function () {
       console.log('Hello ' + this.name + this);
     }
@@ -8,10 +8,10 @@
       console.log('Hello ' + this.name + this);
     }
   }
-  let emp1 = new Employee();
-  emp1.greet1();
-  emp1.greet2();
+  let emp = new Employee();
+  emp.greet1(); 
+  emp.greet2();
 
-  setTimeout( emp1.greet1 , 2000 )  
-  setTimeout( emp1.greet2 , 2000 )  
+  setTimeout( emp.greet1 , 2000 );
+  setTimeout( emp.greet2 , 3000 );
 </script>

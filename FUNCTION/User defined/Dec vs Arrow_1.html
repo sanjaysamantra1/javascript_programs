@@ -1,21 +1,14 @@
-<html>
-
-<body>
-	<script>
-		// Global , Function
-		let obj1 = {
-			a: 10,
-			b: 20,
-			add: function () { // this = how it is called
-				console.log(this.a + this.b); // this = obj1
-			},
-			mul: () => {  // this = where it is declared
-				console.log(this.a * this.b); // this = window
-			}
+<script>
+	let obj = {
+		a: 10,
+		b: 20,
+		add: function () { //  this = from where it is called
+			console.log(this.a + this.b);
+		},
+		mul: () => {
+			console.log(this.a * this.b);
 		}
-		obj1.add(); 
-		obj1.mul(); 
-	</script>
-</body>
-
-</html>
+	}
+	obj.add();
+	obj.mul();
+</script>

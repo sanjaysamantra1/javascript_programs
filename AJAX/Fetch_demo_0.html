@@ -2,17 +2,21 @@
   let url = "https://jsonplaceholder.typicode.com/users";
   let usersPromise = fetch(url);
 
-  usersPromise.then(function (response) {
-    console.log(response);
-    let convertToJSONPromise = response.json();
-    convertToJSONPromise.then(function (finaldata) {
-      console.log(finaldata)
-    }, function (err) {
+  usersPromise.then(
+    function (response) {
+      console.log(response);
+      let convertToJSONPromise = response.json();
+      convertToJSONPromise.then(
+        function (finalResponse) {
+          console.log(finalResponse)
+        },
+        function (err) {
+          console.log(err)
+        }
+      )
+    },
+    function (err) {
       console.log(err)
-    })
-  }, function (err) {
-    console.log(err)
-  });
-
-
+    }
+  );
 </script>
