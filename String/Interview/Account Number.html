@@ -1,16 +1,20 @@
-<!DOCTYPE html>
-<html>
-<body>
-	<script>
-		function myFun(input){
-			//input='1234567898'
-			var output = '';			
-			output = input.slice(0,2)+" * * * * * * "+input.slice(7,9);			
-			return output;
+<script>
+	function maskAccountNumber(input) {
+		if (input.length == 10) {
+			let result = '';
+			for (let i = 0; i < input.length; i++) {
+				if (i < 2 || i > 7) {
+					result += input[i]
+				} else {
+					result += '*'
+				}
+			}
+			return result;
+		} else {
+			alert("Invalid Input")
 		}
-		var input = prompt("Enter 10 digit Account number");
-		result = myFun(input);
-		alert(result);
-	</script>
-</body>
-</html>
+	}
+	var input = prompt("Enter 10 digit Account number", 1234567891);
+	result = maskAccountNumber(input);
+	alert(result);
+</script>

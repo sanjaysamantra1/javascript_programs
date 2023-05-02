@@ -4,18 +4,17 @@
     <script>
         function outer() {
             var counter = 0;
-
             return function () {
                 ++counter;
                 document.getElementById("spnCount").innerHTML = counter;
             }
         }
         let updateClickCount = outer();
-        console.dir(updateClickCount)
-        // call outer() 1 time and collect the returned function to the variable updateclickcount 
 
         function sayHello() {
             console.log('Hellooooo');
+            ++counter;
+            document.getElementById("spnCount").innerHTML = counter;
         }
     </script>
 </head>

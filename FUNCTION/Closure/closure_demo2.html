@@ -1,0 +1,18 @@
+<script>
+    function init() {
+        let color = 'red';
+
+        return {
+            getColor: function () {
+               console.log(color)
+            },
+            setColor: function (newColor) {
+                color = newColor;
+            }
+        }
+    }
+    let obj = init();
+    obj.getColor();
+    obj.setColor('blue');
+    obj.getColor();
+</script>

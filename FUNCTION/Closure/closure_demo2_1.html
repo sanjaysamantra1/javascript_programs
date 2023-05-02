@@ -1,0 +1,24 @@
+<script>
+    function init() {
+        let counter = 0;
+
+        return {
+            increment: function () {
+                counter++;
+            },
+            decrement: function () {
+                counter--;
+            },
+            printCounter: function () {
+                console.log(counter)
+            }
+        }
+    }
+    let obj = init();
+    obj.increment();
+    obj.increment();
+    obj.increment();
+    obj.printCounter()
+    obj.decrement();
+    obj.printCounter();
+</script>
