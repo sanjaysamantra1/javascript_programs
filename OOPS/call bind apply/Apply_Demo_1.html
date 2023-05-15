@@ -1,24 +1,24 @@
 <html>
-  <body>
-    <script>
-      // call doesnot work with array as arguement
-      // apply can take an array as arguement and passes
-      // every element from that array as arguement to that function
 
-      function add(a, b) {
-        console.log(this.num + a + b); 
-      }
-      add(2, 3); //NaN
+<body>
+  <script>
+    // call doesnot work with array as arguement
+    // apply can take an array as arguement and passes
+    // every element from that array as arguement to that function
 
-      let obj1 = { num: 4 };
-      add.call(obj1, 2, 3);  // 9
+    function add(a, b) {
+      console.log(this.num + a + b);
+    }
+    add(2, 3); //NaN
 
-      let arr = [2, 3];
-      add.call(obj1, arr);  
+    let obj1 = { num: 4 };
+    add.call(obj1, 2, 3);
 
-      add.apply(obj1, arr);
+    let arr = [2, 3];
+    add.call(obj1, arr);
 
-      add.call(obj1, ...arr);
-    </script>
-  </body>
+    add.apply(obj1, arr);
+  </script>
+</body>
+
 </html>

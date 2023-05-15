@@ -1,19 +1,33 @@
-<html>
-	<body>
-		<script>
-			var Person = function(name){
-				this.name = name;
-			}
-			Person.prototype.add = 'Bangalore';
-			
-			var Employee = function(age){
-				this.age=age;
-			}
-			Employee.prototype = Person.prototype;
-			
-			var emp1 = new Employee(25);
-			console.log(emp1.add);
-			
-		</script>
-	</body>
-</html>
+<script>
+	class Person {
+		name; age; add;
+		constructor(name, age, add) {
+			this.name = name;
+			this.age = age;
+			this.add = add;
+		}
+	}
+	class Employee extends Person {
+		empId;
+		sal;
+		constructor(name, age, add, empId, sal) {
+			super(name, age, add); // call parent's constructor
+			this.empId = empId;
+			this.sal = sal;
+		}
+	}
+	let emp1 = new Employee('sachin', 45, 'mumbai', 101, 5000);
+	console.log(emp1);
+
+	class Student extends Person {
+		roll;
+		mark;
+		constructor(name, age, add, roll, mark) {
+			super(name, age, add);
+			this.roll = roll;
+			this.mark = mark;
+		}
+	}
+	let std1 = new Student('ajay', 15, 'bangalore', 'A15', 95);
+	console.log(std1);
+</script>

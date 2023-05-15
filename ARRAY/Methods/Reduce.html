@@ -1,14 +1,14 @@
 <script>
   var arr = [10, 20, 30, 40, 50];
 
-  // let sum = 0;
-  // for (ele of arr) {
-  //   sum = sum + ele;
-  // }
-  // console.log(sum);
+  /* let sum = 0;
+  for (ele of arr) {
+    sum = sum + ele;
+  }
+  console.log(sum); */
 
-  let sum = arr.reduce((acc, cur) => {
-    return acc + cur;
+  let sum = arr.reduce(function (sum, ele) {
+    console.log(sum, ele)
+    return sum + ele;
   }, 0);
-  console.log(sum);
 </script>

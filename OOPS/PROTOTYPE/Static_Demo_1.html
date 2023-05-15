@@ -1,0 +1,18 @@
+<script>
+    // Static members should be accessed using Classname, 
+    // Prototype properties should be accessed using object name
+    class Student {
+        roll;
+        name;
+        static clgName = "nareshIT";
+
+        constructor(roll, name) {
+            this.roll = roll;
+            this.name = name;
+        }
+    }
+    Student.prototype.clgAdd = 'Hyderabad';
+    let std1 = new Student(1, 'sanjay');
+    console.log(std1);
+    console.log(std1.roll, std1.name, Student.clgName, std1.clgAdd)
+</script>

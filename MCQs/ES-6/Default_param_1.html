@@ -1,12 +1,11 @@
-<html>
-	<body>
-		<script>
-			function f1(x='hi'){
-				alert(x);
-			}
-			f1('hello');
-			f1(undefined);
-			f1(null);
-		</script>
-	</body>
-</html>
+<script>
+	function f1(x = 'hi') {
+		alert(x);
+	}
+	f1('hello');
+	f1(undefined);
+	f1();
+	f1(null);
+	f1(0)
+	f1(false)
+</script>

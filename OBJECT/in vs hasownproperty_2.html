@@ -1,0 +1,22 @@
+<script>
+    class Person {
+        name;
+        age;
+    }
+    Person.prototype.color = 'black';
+    class Employee extends Person {
+        eid;
+        sal;
+    }
+    let emp1 = new Employee();
+    console.log(emp1);
+
+    console.log('eid' in emp1); // true
+    console.log('name' in emp1); // true
+
+    console.log(emp1.hasOwnProperty('eid')); // true
+    console.log(emp1.hasOwnProperty('name')); // true
+
+    console.log(emp1.hasOwnProperty('color')); // false
+    console.log('color' in emp1); // true
+</script>

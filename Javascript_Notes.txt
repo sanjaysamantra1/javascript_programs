@@ -706,8 +706,7 @@ Array
 =====
 -Arrays are used to store multiple values in a single variable.
 	ex: var arr = [10,20,30,40,50]
--An array can hold many values under a single name, 
- and we can access the values by referring to an index number.
+-An array can hold many values under a single name, and we can access the values by referring to an index number.
 	ex: console.log(arr[1]);
 -Usually in other programming languages array stores similar type of elements,but in 
  JavaScript array can have heterogeneous elements.
@@ -808,13 +807,12 @@ object - Real Entity
 
 Prototype
 ---------
--A prototype is an object used to implement structure, state, and behaviour inheritance in ECMAScript
+-A prototype is an object used to implement structure, state, and behaviour inheritance.
 -Prototype is the mechanism by which JavaScript objects inherit features from one another
 -Prototype is an object, where we can attach methods and properties,which enables all the other objects to inherit these methods and properties.
 -Prototype is a base class for all the objects, and it helps us to achieve inheritance.
 -All JavaScript objects inherit properties and methods from a prototype.
--properties added to the prototype of a class gets available to 
-  all the objects of that class.
+-properties added to the prototype of a class gets available to all the objects of that class.
 -prototype should be used When we have to add new properties like variables and methods 
 at a later point of time,and these properties needs to be shared across all the instances, 
 -a property should be added to the constructor of a class if value of the property changes per object
@@ -838,8 +836,8 @@ Inheritance
 -Objects are variables that can contain many values inside it.
 -Collection of properties & values. 
    ex: {prop1:val1,prop2:val2}
--The values are written as 'key:value' pairs. 
-  ex: let user = {name:'sachin' , age:35}
+-Object properties are written in 'key:value' pairs. 
+  ex: let user = {name:'sachin' , age:35, add:'mumbai'}
 -we can access object properties in two ways:
 	objectName.propertyName;       user.name;
 	objectName["propertyName"];    user['age'];
@@ -909,7 +907,7 @@ note:- You can always get the global object(window) using 'globalThis' property,
 Call() & apply() & bind()
 ========================
 -call(),apply(),bind() are methods from 'Object' class.
--used to change the context while calling a function.
+-used to change the context(this value) while calling a function.
 -while calling a function, if we want to pass 'this' explicitely.
 
 call() - call() is used to pass differenet object as a value to 'this'.
@@ -939,7 +937,7 @@ ES-6 Features (ES-2015)
 10. for-loop to for-in and for-of
 11. arrow functions
 12. From apply() to the spread operator (...)
-13. From function expressions in object literals to method definitions
+13. Enhanced Object Literals
 14. From constructors to classes
 15. inheritance - class,extends
 16. Modules
@@ -955,6 +953,7 @@ Modules
 -2 Module Systems   
 	a. CommonJS Module System      (module.export , require())
 	b. ECMASCRIPT Module System    (export , import)
+
 
 
 Event Handling

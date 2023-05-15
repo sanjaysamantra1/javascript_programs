@@ -1,0 +1,21 @@
+<script>
+    // Need Of Constructor
+    class Employee {
+        id;
+        name;
+        sal;
+        /* Default constructor
+        constructor() {
+        } */
+        constructor(id, name, sal) {
+            this.id = id;
+            this.name = name;
+            this.sal = sal;
+        }
+    }
+    let emp1 = new Employee(1, 'ajay', 5000);
+    console.log(emp1);
+
+    let emp2 = new Employee(2, 'deepak', 4500);
+    console.log(emp2);    
+</script>

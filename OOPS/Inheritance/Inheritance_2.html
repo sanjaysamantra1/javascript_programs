@@ -1,0 +1,35 @@
+<script>
+    class Person {
+        name; age; add;
+        constructor(name, age, add) {
+            this.name = name;
+            this.age = age;
+            this.add = add;
+        }
+        f1 = function () {
+            console.log('I am f1 from Person')
+        }
+        f2() {
+            console.log('I am f2 from Person')
+        }
+    }
+    Person.prototype.color = 'fair';
+    Person.prototype.f3 = function () {
+        console.log('I am f3 from Person')
+    }
+
+
+    class Employee extends Person {
+        empId;
+        sal;
+        constructor(name, age, add, empId, sal) {
+            super(name, age, add); // call parent's constructor
+            this.empId = empId;
+            this.sal = sal;
+        }
+    }
+    let emp1 = new Employee('sachin', 45, 'mumbai', 101, 5000);
+    console.log(emp1);
+    emp1.f1();
+    console.log(emp1.color);
+</script>

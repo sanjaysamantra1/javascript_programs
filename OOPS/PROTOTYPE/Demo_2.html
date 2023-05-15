@@ -1,27 +1,24 @@
-<html>
-
-<body>
-	<script>
-		class Employee {
-			constructor(id, name, sal) {
-				this.id = id;
-				this.name = name;
-				this.sal = sal;
-			}
+<script>
+	class Student {
+		roll; name; add;
+		constructor(roll, name, add) {
+			this.roll = roll;
+			this.name = name;
+			this.add = add;
 		}
-		Employee.prototype.company = "IBM";
-		Employee.prototype.displayInfo = function () {
-			console.log(this.id, this.name, this.sal, this.company);
-		};
+		f2 = function () {
+			console.log('I am f2...')
+		}
+		f3() {
+			console.log('I am f3...f')
+		}
+	}
+	Student.prototype.clgName = "nareshIT";
+	Student.prototype.f1 = function () {
+		console.log('I am f1...')
+	}
 
-		let emp1 = new Employee(101, "sachin", 5000);
-		emp1.displayInfo();
-
-		let emp2 = new Employee(102, "Rahul", 650);
-		emp2.displayInfo();
-
-		console.log(emp1, emp2);
-	</script>
-</body>
-
-</html>
+	let std1 = new Student(1, 'ajay', 'bang');
+	let std2 = new Student(2, 'deepak', 'pune');
+	console.log(std1, std2)
+</script>

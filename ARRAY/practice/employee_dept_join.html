@@ -18,7 +18,6 @@
       { eId: 102, dept: "marketing" },
       { eId: 104, dept: "sales" },
     ];
-
     employees.map((emp) => {
       let deptObj = departments.find((dep) => dep.eId === emp.eId);
       emp.dept = deptObj.dept;

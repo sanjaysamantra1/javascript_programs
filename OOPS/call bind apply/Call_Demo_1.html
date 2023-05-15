@@ -1,0 +1,9 @@
+<script>
+  function add(a, b) {
+    console.log(this.num + a + b)
+  }
+  add(2, 3); // NaN
+
+  obj1 = { num: 4 };
+  add.call(obj1, 2, 3); // 9
+</script>

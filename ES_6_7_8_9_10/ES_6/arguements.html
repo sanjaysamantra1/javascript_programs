@@ -1,28 +1,19 @@
-<html>
+<script>
+  function add(a, b) {
+    console.log(a + b)
+  }
+  add(2, 3);
+  add(2, 3, 4);
 
-<body>
-  <script>
-    function sum(a, b) {
-      console.log(a + b)
+  function sum() {
+    let res = 0;
+    // console.log(Array.isArray(arguments));
+    for (ele of arguments) {
+      res = res + ele;
     }
-    sum(2, 3);    // 5
-    sum(2, 3, 4); // 5
-    sum(2, 3, 4, 5); // 5
-
-    // Write a function which can add N arguements
-    function add() {
-      console.log(Array.isArray(arguments), arguments.length, arguments);
-      // we cannot use map(), filter(), reduce() with arguments
-      let sum = 0;
-      for (ele of arguments) {
-        sum = sum + ele;
-      }
-      console.log(sum);
-    }
-    add(2, 3);    // 5
-    add(2, 3, 4); // 9
-    add(2, 3, 4, 5); // 14
-  </script>
-</body>
-
-</html>
+    console.log(res)
+  }
+  sum(2, 3)
+  sum(2, 3, 4)
+  sum(2, 3, 4, 5)
+</script>

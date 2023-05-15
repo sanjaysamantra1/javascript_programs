@@ -3,8 +3,8 @@
     // reverse the string using reduce()
     let arr = str.split('');
 
-    let revStr = arr.reduce((acc, char) => {
-        return char + acc;
+    let revStr = arr.reduce((prev, current) => {
+        return current + prev;
     }, '');
     console.log(revStr)
 </script>

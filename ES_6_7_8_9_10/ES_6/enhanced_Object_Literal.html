@@ -1,0 +1,16 @@
+<script>
+    function getLaptop(make, model, year) {
+        return { // ES-5
+            make: make,
+            model: model,
+            year: year
+        }
+    }
+    let obj1 = getLaptop("Apple", "MacBook", "2015");
+
+    function getEmployee(id, name, sal) {
+        return { id, name, sal }
+    }
+    let obj2 = getEmployee(101, 'ajay', 5000);
+    console.log(obj1,obj2)
+</script>
