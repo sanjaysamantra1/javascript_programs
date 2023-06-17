@@ -1344,7 +1344,7 @@ Callback hell
 Promise
 =======
 -A promise is an object that holds the future value of an asynchronous operation.
--A Promise object represents a value that may not be available yet, but will be resolved/available at some point in the future.
+-A Promise object represents a value that is not available now, but will be resolved/available at some point in the future.
 -Promise object can have different states:- pending, resolved/fulfilled, rejected.
 ex:-if we request some data from a server, promise promises us to get that data 
  that we can use in the future. 
@@ -1453,6 +1453,8 @@ Use of Debouncing and Throttling in Real Life
 
 generators 
 ==========
+-Generators are a special type of functions that simplify the task of writing iterators.
+-produces a sequence of results instead of a single value.
 -Generators are functions which can be exited and later re-entered. 
 -Their context (variable bindings) will be saved across re-entrances.
 -When called initially, generator functions do not execute any of their code, 

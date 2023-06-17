@@ -1,25 +1,29 @@
-<html>
-  <body>
-    <script>
-      const firstPromise = fetch("https://api.github.com/users/google");
-      const secondPromise = fetch("https://jsonplaceholder.typicode.com/photos");
-      const thirdPromise = fetch("https://api.github.com/users/linkedin");
+<script>
+  let promise1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 3000, 'Response-1');
+  });
+  let promise2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 2000, 'Response-2');
+  });
+  let promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 4000, 'Response-3');
+  });
 
-      async function* generatorFun() {
-        const firstPromiseResult = await firstPromise;
-        yield await firstPromiseResult.json();
-        const secondPromiseResult = await secondPromise;
-        yield await secondPromiseResult.json();
-        const thirdPromiseResult = await thirdPromise;
-        yield await thirdPromiseResult.json();
-      }
-      async function f1() {
-        var generatorObj = generatorFun();
-        for await (let value of generatorObj) {
-          console.log(value);
-        }
-      }
-      f1();
-    </script>
-  </body>
-</html>
+  async function* generatorFun() {
+    yield await promise1;
+    yield await promise2;
+    yield await promise3;
+  }
+  async function getData() {
+    let generatorObj = generatorFun();
+    /*  console.log(await generatorObj.next());
+     console.log(await generatorObj.next());
+     console.log(await generatorObj.next()); */
+
+    console.log(generatorObj);
+    for await (let response of generatorObj) {
+      console.log(response);
+    }
+  }
+  getData();
+</script>
