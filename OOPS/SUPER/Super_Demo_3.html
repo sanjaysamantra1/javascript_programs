@@ -1,0 +1,24 @@
+<script>
+    class Parent {
+        a = 10;
+        b = 20;
+        f1() {
+            console.log('I am f1 from Parent')
+        }
+    }
+    class Child extends Parent {
+        b = 25;
+        c = 30;
+        d = 40;
+        f1() {
+            console.log('I am f1 from Child')
+        }
+        displayData() {
+            console.log(this.a, this.b, this.c, this.d);
+            this.f1();
+            super.f1();
+        }
+    }
+    let child1 = new Child();
+    child1.displayData();
+</script>

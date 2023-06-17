@@ -1,6 +1,19 @@
 <script>
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then((response) => response.json())
-    .then(finalResponse => console.log(finalResponse))
-    .catch(err => console.log(err))
+  let usersPromise = fetch("https://jsonplaceholder.typicode.com/users");
+
+  usersPromise.then(successHandler, errorHandler);
+  function successHandler(response) {
+    let jsonPromise = response.json();
+    jsonPromise.then(successHandler2, errorHandler2);
+  }
+  function errorHandler(err) {
+    console.log(err)
+  }
+
+  function successHandler2(finalResponse) {
+    console.log(finalResponse)
+  }
+  function errorHandler2(finalErr) {
+    console.log(finalErr)
+  }
 </script>

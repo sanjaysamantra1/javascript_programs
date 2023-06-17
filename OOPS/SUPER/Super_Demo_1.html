@@ -1,0 +1,23 @@
+<script>
+    class Parent {
+        constructor() {
+            console.log("I am Parent constructor");
+        }
+    }
+    class Child extends Parent {
+        a = 10;
+
+        /* constructor() {
+           super();
+        } */
+
+        constructor() {
+            super(); // parent's constructor
+            console.log("I am Child constructor");
+        }
+    }
+    let child1 = new Child();
+    console.log(child1.a);
+
+    // When the child class contains a user-defined constructor, then we need to call super() to invoke parent's constructorF
+</script>

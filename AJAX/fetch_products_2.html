@@ -22,7 +22,7 @@
     <h1 class="text-center bg-primary text-white">Product List</h1>
     <button onclick="fetchProducts()">fetch products</button>
 
-    <img src="./loading.gif" alt="" class="loading" />
+    <img src="./loading.gif" alt="" class="loading text-center" />
 
     <div class="container">
       <div class="row">
@@ -45,7 +45,7 @@
             finalResponse.products.forEach((product) => {
               str = str +
                 `<div class="col-sm-3">
-                  <div class="card">
+                  <div class="card text-center">
                     <img src="${product.images[0]}" class="card-img-top" alt="..." height='200px'>
                     <div class="card-body">
                       <h5 class="card-title">${product.title}</h5>

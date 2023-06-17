@@ -1,0 +1,33 @@
+<script>
+    let arr = [
+        { id: 101, fName: 'Arghya', lName: 'pal', sal: 5000, gender: 'male' },
+        { id: 102, fName: 'Ankit', lName: 'Pratya', sal: 6000, gender: 'male' }
+    ]
+    console.log(arr); // Array of Objects
+
+    class Employee {
+        id; fName; lName; sal; gender;
+        constructor(id, fName, lName, sal, gender) {
+            this.id = id;
+            this.fName = fName;
+            this.lName = lName;
+            this.sal = sal;
+            this.gender = gender;
+        }
+        getFullName() {
+            return this.fName + ' ' + this.lName;
+        }
+        getAnnualSalary() {
+            return this.sal * 12;
+        }
+    }
+    let employees = []
+    for (let ele of arr) {
+        let empObj = new Employee(ele.id, ele.fName, ele.lName, ele.sal, ele.gender);
+        employees.push(empObj);
+    }
+    console.log(employees); // Array of Employee
+
+    console.log(employees[0].getFullName());
+    console.log(employees[0].getAnnualSalary());
+</script>

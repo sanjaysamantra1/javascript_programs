@@ -1,0 +1,22 @@
+<script>
+    class Person {
+        name;
+        add;
+        constructor(name, add) {
+            this.name = name;
+            this.add = add;
+        }
+    }
+    class Student extends Person {
+        constructor(name, add, roll, clgName) {
+            super(name, add)
+            this.roll = roll;
+            this.clgName = clgName;
+        }
+    }
+    let std1 = new Student('ankit', 'Delhi', 101, 'DPS');
+    console.log(std1);
+
+    let person1 = new Person('arghya', 'kolkata');
+    console.log(person1);
+</script>

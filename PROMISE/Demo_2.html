@@ -1,23 +1,15 @@
-<html>
-  <body>
-    <script>
-      // promise Object created - Producer
-      let carsPromise = new Promise(function (resolve, reject) {
-        setTimeout(() => {
-          //   resolve(["tata", "honda", "maruti"]);
-          reject("something went wrong");
-        }, 3000);
-      });
+<script>
+  // Create a Promise Object
+  let carsPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(['Tata', 'Honda', 'Maruti'])
+      // reject('Something Went wrong!!!')
+    }, 3000);
+  });
 
-      //get data from promise - Consumer
-      carsPromise.then(
-        (res) => {
-          console.log(res);
-        },
-        (err) => {
-          console.log(err);
-        }
-      );
-    </script>
-  </body>
-</html>
+  // get the data from the promise object
+  carsPromise.then(
+    (response) => { console.log(response) },
+    (error) => { console.log(error) }
+  )
+</script>

@@ -1,0 +1,25 @@
+<html>
+
+<body>
+  <script>
+    let url1 = "https://fakestoreapi.com/products"; // 
+    let url2 = "https://dummyjson.com/products";
+
+    async function fetchData() {
+      try {
+        let response1 = await fetch(url1);
+        let data1 = await response1.json();
+
+        let response2 = await fetch(url2);
+        let data2 = await response2.json();
+
+        console.log(data1, data2);
+      } catch {
+        console.log("something went wrong!!!");
+      }
+    }
+    fetchData();
+  </script>
+</body>
+
+</html>

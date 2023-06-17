@@ -1,25 +1,38 @@
 <html>
 
-<body>
+<head>
   <script>
-    let url1 = "https://fakestoreapi.com/products"; // 
-    let url2 = "https://dummyjson.com/products";
-
-    async function fetchData() {
-      try {
-        let response1 = await fetch(url1);
-        let data1 = await response1.json();
-
-        let response2 = await fetch(url2);
-        let data2 = await response2.json();
-
-        console.log(data1, data2);
-      } catch {
-        console.log("something went wrong!!!");
-      }
+    function who() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("sanjay");
+        }, 1000);
+      });
     }
-    fetchData();
+    //who().then(f1,f2)
+
+    function what() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("teaches Javascript");
+        }, 2000);
+      });
+    }
+
+    function where() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("in class");
+        }, 3000);
+      });
+    }
+
+    Promise.all([who(), what(), where()]).then(([res1, res2, res3]) => {
+      console.log(res1, res2, res3);
+    })
   </script>
-</body>
+</head>
+
+<body></body>
 
 </html>

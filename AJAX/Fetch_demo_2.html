@@ -1,13 +1,6 @@
 <script>
-    async function getData() {
-        try {
-            let response = await fetch('https://jsonplaceholder.typicode.com/users');
-            let finalResponse = await response.json();
-            console.log(finalResponse);
-        }
-        catch (error) {
-            alert('something went wrong')
-        }
-    }
-    getData()
+    fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then(finalResponse => console.log(finalResponse))
+        .catch(err => console.log(err))
 </script>
