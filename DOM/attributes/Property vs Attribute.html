@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <!-- HTML Attribute VS DOM Property -->
+    <!-- 1.The Attributes are defined by HTML whereas the properties are defined by the DOM.
+    2.The attribute’s main role is to initializes the DOM properties. So, once the DOM initialization complete, the
+    attributes job is done.
+    3.Property values can change, whereas the attribute values can never be changed. -->
+
+    <input id="inputBox1" type="text" value="Sanjay">
+
+    <script>
+        var value1 = document.getElementById('inputBox1').getAttribute('value');
+        var value2 = document.getElementById('inputBox1').value;
+        console.log(value1, value2);
+
+        // make changes in the input box 'sanjay123' and run the above stmnts again;
+    </script>
+</body>
+
+</html>
