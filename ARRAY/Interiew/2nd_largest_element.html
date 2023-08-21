@@ -1,0 +1,18 @@
+<script>
+    function findSecondLargestElem(arr) {
+        let first = -1, second = -1;
+
+        for (let ele of arr) {
+            if (ele > first) {
+                second = first;
+                first = ele;
+            }
+            else if (ele > second && ele != first) {
+                second = ele;
+            }
+        }
+        console.log(second);
+    }
+    let arr = [12, 35, 1, 10, 34, 1];
+    findSecondLargestElem(arr);
+</script>

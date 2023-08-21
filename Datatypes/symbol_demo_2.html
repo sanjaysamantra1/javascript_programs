@@ -1,0 +1,26 @@
+<script>
+    // object should have either 'string' or 'symbol' type keys
+    let user = {};
+    user["name"] = "sanjay";
+    user["role"] = "trainer";
+
+    let address = Symbol("address");
+    user[address] = "bangalore";
+
+    let salary = Symbol("salary");
+    user[salary] = 5000;
+
+    // only string keys
+    for (key in user) {
+        console.log(key + "------" + user[key]);
+    }
+
+    // to print all the keys
+    let allKeys = Reflect.ownKeys(user);
+    // let allKeys = Object.getOwnPropertySymbols(user)
+    console.log(allKeys);
+    for (key of allKeys) {
+        console.log(user[key]);
+    }
+
+</script>
