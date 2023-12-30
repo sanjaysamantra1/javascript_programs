@@ -1,0 +1,30 @@
+<body>
+    <h1>Current Value: <span id="ValueSpan">0</span></h1>
+    <hr />
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        const createCounter = function (init) {
+            let currentValue = init;
+
+            const increment = () => {
+                ++currentValue;
+                document.getElementById("ValueSpan").innerHTML = currentValue;
+            }
+            const decrement = () => {
+                --currentValue;
+                document.getElementById("ValueSpan").innerHTML = currentValue;
+            }
+            const reset = () => {
+                currentValue = init;
+                document.getElementById("ValueSpan").innerHTML = currentValue;
+            }
+
+            return { increment, decrement, reset };
+        }
+        let { increment, decrement, reset } = createCounter(0);
+        console.dir(increment)
+    </script>
+</body>

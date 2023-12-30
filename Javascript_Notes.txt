@@ -165,7 +165,7 @@ Symbol
 -Symbols allow us to create “hidden” properties of an object, 
  that no other part of code can accidentally access or overwrite.
 -If we want to use a symbol in an object literal,we need square brackets around it.
- let id = Symbol();
+ let id = Symbol('User Id');
  let user = {name:'sanjay',[id]:123}
 -Symbols are not enumerated,Symbols are skipped by for…in while we iterate object properties.
 -Symbols are not part of the Object.keys() or Object.getOwnPropertyNames()
@@ -228,7 +228,7 @@ Note:- all window Object functions can be directly called.
 How Javascript Works
 ====================
 -When JavaScript engine executes a script, it creates N execution contexts.
--execution context is the environment within which the current code is being executed.
+-Execution context is the environment within which the current code is being executed.
 -Each execution context has two phases: 
 	1. creation phase. (Allocates memory - variables & functions and assign 'undefined' to variables)
 	2. execution phase. (Code gets Executed - assign values to variables & method invocation)
@@ -259,8 +259,8 @@ Variables
 5.TDZ - No			 	 5.TDZ - Yes				5.TDZ - Yes
 6.function/global		 6.block/function/global	6.block/function/global
 
-N:p - All variables (var,let,const) are hoisted but only 'var' variables are usable/reachable before declaration.
--let/const variables are not reachable/usable before declaration (Temporal Dead Zone)
+N:p - All variables (var,let,const) are hoisted but only 'var' variables are usable/reachable before initialization.
+-let/const variables are not reachable/usable before initialization (Temporal Dead Zone)
 
 	
 Hoisting:
@@ -274,8 +274,8 @@ Temporal Dead Zone
 ==================
 -The period between entering scope and being declared where they cannot be accessed. 
  This period is the temporal dead zone (TDZ).
--the state where variables are un-reachable. They are in memory, but they aren't usable.
--The let and const variables exist in the TDZ from the start of their enclosing scope until they are declared.
+-The state where variables are un-reachable. They are in memory, but they aren't usable.
+-The let and const variables exist in the TDZ from the start of their enclosing scope until they are initialized.
 -if a let/const variable is accessed before its declaration, it would throw a ReferenceError. Because of the TDZ.
 
 
@@ -1531,3 +1531,4 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript
 https://github.com/sudheerj/javascript-interview-questions
 http://es6-features.org/#Constants
 https://www.jsv9000.app/
+https://www.javascripttutorial.net/
