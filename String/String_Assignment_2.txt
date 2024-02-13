@@ -1,0 +1,27 @@
+1. Print the character which is repeated max no of times
+   input: 'hello world'
+   output : 'L'
+
+2. Ask user to enter a 3 letter word, print all the permutations using those 3 letters.
+    input: 'ABC'
+    output: ABC , ACB , BCA, BAC ...
+
+3. Swap The case for Each Character in a string 
+   input: 'Hello World'
+   output: 'hELLO wORLD'
+
+4. Print the Abbreviation for a string
+   input: 'Rabindra Nath Tagore'
+   output: 'R. N. tagore'
+
+5. Shift the characters by the next character
+   input:  'abcxyz'
+   output: 'bcdyza'
+
+6. Print the occurence of each character in a string
+   input: 'entertainment'
+   output: { e:3 , n:2 , t: 3 ....}
+
+7. Ask user to enter a sequence of parantheses and validate 
+   input: '([{ }])'
+   output : true

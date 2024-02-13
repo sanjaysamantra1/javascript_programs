@@ -580,9 +580,8 @@ Memoization
 
 function closure
 ================
--A closure is an inner function that has access to its outer function's variables even after the outer function's execution is completed.
--A closure is the combination of a function bundled with the lexical environment within  which that function is declared.
--a closure gives access to an outer function’s scope from an inner function.
+-A closure is an inner function that has access to its outer function's variables even after the outer function's execution is Completed/Closed.
+-The inner function retains access to the outer function’s scope, because of a saved reference to the lexical environment it was initially defined in.
 -closures are mainly used for - encapsulation , iterators  
 -closure = function + lexical-scope
 
@@ -749,7 +748,7 @@ To search among elements:
 	findIndex(func)  - it is like find(), but returns the index instead of a value.
 	
 To transform the array:
-	map(func) – creates a new array from results of calling func for every element.
+	map(func) – creates a new array from original array by calling func for every element.
 	sort(func) – sorts the array in-place, then returns it.
 	reverse	() – reverses the array in-place, then returns it.
 	split/join – convert a string to array and back.

@@ -1,0 +1,21 @@
+<script>
+    let arr = [10, 20, 30, 40, 50];
+    // output = [30,40,50,10,20];
+
+    function rotate(arr, rotate = 'left', shiftVal) {
+        for (let i = 1; i <= shiftVal; i++) {
+            if (rotate === 'left') {
+                let ele = arr.pop();
+                arr.unshift(ele)
+            } else {
+                let ele = arr.shift();
+                arr.push(ele)
+            }
+        }
+        return arr;
+    }
+    let result1 = rotate(arr, 'left', 2);
+    console.log(result1)
+    let result2 = rotate(arr, 'right', 2);
+    console.log(result2)
+</script>
