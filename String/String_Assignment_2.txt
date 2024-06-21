@@ -6,22 +6,22 @@
    input: 'hello world'
    output : 'L'
 
-3. Ask user to enter a 3 letter word, print all the permutations using those 3 letters.
-    input: 'ABC'
-    output: ABC , ACB , BCA, BAC ...
-
-4. Swap The case for Each Character in a string 
+3. Swap The case for Each Character in a string 
    input: 'Hello World'
    output: 'hELLO wORLD'
 
-5. Print the Abbreviation for a string
+4. Print the Abbreviation for a string
    input: 'Rabindra Nath Tagore'
    output: 'R. N. tagore'
 
-6. Shift the characters by the next character
+5. Shift the characters by the next character
    input:  'abcxyz'
    output: 'bcdyza'
 
-7. Ask user to enter a sequence of parantheses and validate 
+6. Ask user to enter a sequence of parantheses and validate 
    input: '([{ }])'
    output : true
+
+7. Ask user to enter a 3 letter word, print all the permutations using those 3 letters.
+    input: 'ABC'
+    output: ABC , ACB , BCA, BAC ...
