@@ -1,19 +1,18 @@
 <html>
 	<body>
 		<script>
-			var firstArray = [2, 2, 4, 1];
-			var secondArray = [1, 2, 0, 2];
+			let firstArray = [2, 2, 4, 1];
+			let secondArray = [1, 2, 0, 2];
 
-			result = intersection(firstArray, secondArray); // [2, 1]
+			let result = intersection(firstArray, secondArray); // [2, 1]
 			console.log(result);
 
 			function intersection(firstArray, secondArray) {
-				var intersectionArray = [];
+				let intersectionArray = [];
 				for(ele of firstArray){
-					if(secondArray.indexOf(ele)!=-1 && intersectionArray.indexOf(ele)==-1 )
+					if(secondArray.includes(ele) && !intersectionArray.includes(ele) )
 					intersectionArray.push(ele)
 				}
-
 			  return intersectionArray;			  
 			}
 		</script>
