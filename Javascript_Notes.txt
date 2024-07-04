@@ -47,7 +47,8 @@ Eliminate Render-Blocking JavaScript
  ex:- <script src='demo.js' async/defer></script>
 -async/defer attribute should only be used on external scripts, not with internal scripts.
 -These attributes only make sense while using the script in the head portion of the page.
--A good strategy is to use async when possible, and then defer when async isn’t an option.
+-async attribute ensures that the JavaScript file is loaded asynchronously in the background and does not block rendering.
+-defer attribute tells the browser to run the script after the document has been parsed
 -With async, the file gets downloaded asynchronously and then executed as soon as it’s downloaded.
 -With defer, the file gets downloaded asynchronously, but executed only when the document parsing is completed.
 -With defer, scripts will execute in the same order as they are called. 
@@ -227,13 +228,14 @@ Note:- all window Object functions can be directly called.
 
 How Javascript Works
 ====================
--When JavaScript engine executes a script, it creates N execution contexts.
+-When a javascript code is executed, N # of execution contexts are created.
+-1 Global Execution context is created for every javascript program.
+-For Each Function call 1 execution context is created.
 -Execution context is the environment within which the current code is being executed.
 -Each execution context has two phases: 
 	1. creation phase. (Allocates memory - variables & functions and assign 'undefined' to variables)
 	2. execution phase. (Code gets Executed - assign values to variables & method invocation)
--When a script executes for the first time,JavaScript engine creates a 'Global Execution Context' and pushes to callstack.
--For every function call,JavaScript engine creates a new Function Execution Context and that gets added to callstack.
+
 
 https://www.youtube.com/watch?v=iLWTnMzWtj4&t=1044s
 https://www.jsv9000.app/
@@ -341,6 +343,7 @@ Use Strict
 ==========
 -provides better coding standard and stronger error checking.
 -'use strict' is only recognized at the beginning of a script or a function.
+-JavaScript modules are automatically in strict mode, with no statement needed to initiate it.(import/export)
 -The purpose of "use strict" is to execute the javascript in "strict mode".
 -when 'use strict' is not written, browser runs the JS in normal mode.
 -when 'use strict' is  written, browser runs the JS in strict mode.
@@ -351,7 +354,7 @@ Use Strict
    makes it impossible to accidentally create global variables.
 2. function with duplicate arguements are not allowed.
 3. NaN/undefined/Infinity cann't be used as a variable name.
-4. undeletable properties cann't be deleted. 
+4. Delete of an unqualified identifier in strict mode. 
     ex:delete Object.prototype; 
 	var x = 5; delete x;
 5. Multiple assignments not allowed.
@@ -581,11 +584,10 @@ Memoization
 function closure
 ================
 -A closure is an inner function that has access to its outer function's variables even after the outer function's execution is Completed/Closed.
--The inner function retains access to the outer function’s scope, because of a saved reference to the lexical environment it was initially defined in.
--closures are mainly used for - encapsulation , iterators  
--closure = function + lexical-scope
 
+-When the outer function execution completes, you’d expect all its variables to be no longer accessible. However, if the inner function uses variables from the outer function, those variables remain accessible.
 
+-The inner function retains access to the outer function’s scope, because the inner function ‘remembers’ the environment in which it was created.
 
 
 
@@ -681,6 +683,7 @@ length;
 toUpperCase();
 toLowerCase();
 charAt();
+at()
 charCodeAt();
 concat();
 indexOf();
@@ -785,6 +788,25 @@ var x = arr.values();
 console.log(x)
 var y = Array.from(x)
 console.log(y)
+
+
+Array Copy
+==========
+let arr1 = [10, 20];
+let arr2 = arr1;  // address/reference copy ( Not value copy)
+-A new array is not being created, rather same address is being assigned to arr2
+-Both arr1 & arr2 are holding the same address
+
+let arr1 = [10, 20, [30, 31]];
+let arr2 = [...arr1]; // value copy - shallow copy
+
+let arr3 = [10, 20, [30, 31]];
+let arr4 = structuredClone(arr3); // value copy - Deep Copy
+
+-A shallow copy of an array is a copy whose nested elements share the same references.
+ (Nested arrays will not be copied by value)
+-A deep copy of an array is a copy whose nested elements do not share the same references.
+
 
 
 
@@ -908,6 +930,7 @@ Call() & apply() & bind()
 -call(),apply(),bind() are methods from 'Object' class.
 -used to change the context(this value) while calling a function.
 -while calling a function, if we want to pass 'this' explicitely.
+-Calls a method of an object, substituting another object for the current object.
 
 call() - call() is used to pass differenet object as a value to 'this'.
 	   call() method calls a function with a given 'this' value and arguments provided individually.
@@ -1330,7 +1353,7 @@ CallBack
 
 
 Callback hell
--------------
+=============
 -Callback hell will have multiple callbacks nested after each other. 
 -It can happen when you do an asynchronous activity that’s dependent 
  on a previous asynchronous activity.
