@@ -37,7 +37,8 @@ Types
 	c. Application level/project level
 
 	
-Q. What is the best place to include js files? head/body?
+Q. What is the best place to include js files? 
+   head/body?
    
 
 
@@ -725,7 +726,7 @@ var arr3 = new Array(10,20,30,40,50);
 
 properties: length , delete
 
-instance functions:    	at(),concat(),entries(),every(),fill(),filter(),find(),findLast(),findIndex(),flat(),
+instance functions: at(),concat(),entries(),every(),fill(),filter(),find(),findLast(),findIndex(),flat(),
 flatMap(),forEach(),includes(),indexOf(),join(),keys(),lastIndexOf(),map(),pop(),push()
 reduce(), reverse(), shift(),slice(),sort(),some(), splice(),unshift(),values()
 
@@ -1485,6 +1486,12 @@ generators
  the Generator function executes until it encounters the yield keyword.
  
  
+Javascript Proxy Object
+======================== 
+https://melkornemesis.medium.com/javascript-proxy-objects-and-why-you-should-care-with-examples-f9773662e779
+ 
+
+
 
 Polyfills
 =========

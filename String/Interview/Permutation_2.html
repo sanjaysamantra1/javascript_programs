@@ -1,24 +1,13 @@
 
     <script>
-        function permut(string) {
-            if (string.length < 2) return string; // This is our break condition
-
-            var permutations = []; // This array will hold our permutations
-            for (var i = 0; i < string.length; i++) {
-                var char = string[i];
-
-                // Cause we don't want any duplicates:
-                if (string.indexOf(char) != i) // if char was used already
-                    continue; // skip it this time
-
-                var remainingString = string.slice(0, i) + string.slice(i + 1, string.length); //Note: you can concat Strings via '+' in JS
-
-                for (var subPermutation of permut(remainingString))
-                    permutations.push(char + subPermutation)
-            }
-            return permutations;
-        }
-        var myString = "xyz";
-        permutations = permut(myString);
-        console.log(permutations)
+        function printPermutations(str, res = '') {
+			if (!str.length) {
+				console.log(res);
+			}
+			for (let i = 0; i < str.length; i++) {
+				let remStr = str.substr(0, i) + str.substr(i + 1);
+				printPermutations(remStr, res + str.substr(i, 1));
+			}
+		}
+		printPermutations("abc")
     </script>
