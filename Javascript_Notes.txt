@@ -691,6 +691,7 @@ indexOf();
 lastIndexOf();
 includes();
 match();
+matchAll()   // returns iterator
 replace();
 replaceAll();
 slice(start, end)
@@ -700,6 +701,7 @@ split()
 search(regex)
 trim()
 eval(); (eval() is from Window Object)
+localeCompare()
 
 N.p:- substring() cannot accept negative indexes. slice() does.
 
@@ -739,8 +741,10 @@ To add/remove elements:
 	shift() – extracts an item from the beginning,
 	unshift(...items) – adds items to the beginning.
 	splice(pos, deleteCount, ...items) – at index pos delete deleteCount elements and insert items.
+	toSpliced()   - doesn't change the original array
 	slice(start, end) – creates a new array, copies elements from position start till end (not inclusive) into it.
 	concat(...items) – returns a new array: copies all members of the current one and adds items to it. If any of items is an array, then its elements are taken.
+	with(ind,newValue) - Create a new array with a single element changed
 	
 To search among elements:
 	at(index) - takes an integer and returns the item at that index.allows negative index aswell.
@@ -754,7 +758,9 @@ To search among elements:
 To transform the array:
 	map(func) – creates a new array from original array by calling func for every element.
 	sort(func) – sorts the array in-place, then returns it.
+	toSorted() - creates a new array and sorts
 	reverse	() – reverses the array in-place, then returns it.
+	toReversed() - creates a new array and reverses
 	split/join – convert a string to array and back.
 	reduce(func, initial) – calculate a single value over the array by calling func for 	each element and passing an intermediate result between the calls.
 	flat()   - creates a new array with the elements of the subarrays concatenated into it.flat(Infinity) , flat() also removes holes in array
@@ -888,6 +894,7 @@ Inheritance
 	values() - Returns an array of values
 	entries() - returns an array of [key, value] pairs
 	fromEntries() - transforms an array/Map into an Object
+	groupBy() - groups the data
 	
 -JSON.stringify()  converts object to string.
 -JSON.parse()      converts string to object.
@@ -1101,7 +1108,10 @@ Set
 -const planetsOrderFromSun = new Set();
  planetsOrderFromSun.add('Mercury');
  planetsOrderFromSun.add('Venus').add('Earth').add('Mars'); // Chainable Method
+ console.log(planetsOrderFromSun.size);
  console.log(planetsOrderFromSun.has('Earth')); // True
+ planetsOrderFromSun.delete('Earth'); // deletes 1 item
+ planetsOrderFromSun.clear(); // deletes all the items
  
 
 Garbage Collections

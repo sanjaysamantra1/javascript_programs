@@ -46,7 +46,26 @@ ES-10 Features
 2. Array.flatmap()
 3. object.fromEntries()
 4. Optional param in catch()
-5. 
+
+
+ES-11  ES-2020
+==============
+1. nullish coalescing operator 
+   undefined ?? "string"
+
+
+Es-14 ES-2023
+=============
+toSorted
+toReversed
+toSpliced
+
+
+ES-15 ES-2024
+=============
+Object.groupBy(arr, (el) => el.year);
+// ES 2024
+const { resolve, reject, promise } = Promise.withResolvers();
 
 
 
