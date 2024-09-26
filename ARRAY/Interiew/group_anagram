@@ -11,7 +11,6 @@ function groupAnagrams(strs) {
 
     return Array.from(map.values());
 }
-
-// Example usage:
 const input = ["eat", "tea", "tan", "ate", "nat", "bat"];
 console.log(groupAnagrams(input));
+// Output: [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
