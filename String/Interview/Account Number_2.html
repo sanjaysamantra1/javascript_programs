@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html>
+<script>
+  function myFun(input) {
+    let first_sec = input.substring(0, 2);
+    let second_sec = input.substring(2, input.length - 2);
+    second_sec = second_sec.split("").fill("*").join("");
+    let third_sec = input.substring(input.length - 2, input.length);
 
-<body>
-  <script>
-    function myFun(input) {
-      let first_sec = input.substring(0, 2);
-      let second_sec = input.substring(2, input.length - 2);
-      second_sec = second_sec.split("").fill("*").join("");
-      let third_sec = input.substring(input.length - 2, input.length);
-
-      return first_sec + second_sec + third_sec;
-    }
-    var input = prompt("Enter 10 digit Account number", "1234567891");
-    result = myFun(input);
-    alert(result);
-  </script>
-</body>
-
-</html>
+    return first_sec + second_sec + third_sec;
+  }
+  var input = prompt("Enter 10 digit Account number", "1234567891");
+  result = myFun(input);
+  alert(result);
+</script>

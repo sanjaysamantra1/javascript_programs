@@ -1,0 +1,29 @@
+<script>
+  function f1() {
+    console.log("I am F1...");
+  }
+  function f2() {
+    console.log("I am F2...");
+  }
+  function f3() {
+    console.log("I am F3...");
+  }
+  function f4() {
+    console.log("I am F4...");
+  }
+  function f5() {
+    console.log("I am F5...");
+  }
+  function f6() {
+    console.log("I am F6...");
+  }
+
+  setTimeout(f1, 500)
+  fetch('https://fakestoreapi.com/products').then(f2);
+  Promise.resolve().then(f3);
+  Promise.reject().catch(f4);
+  f5();
+  setTimeout(f6);
+
+  // f5  f3  f4  f6 (f1 , f2)
+</script>

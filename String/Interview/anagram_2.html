@@ -1,39 +1,32 @@
-<!DOCTYPE html>
-<html>
-
-<body>
-  <script>
-    function getCharMap(string) {
-      let charMap = {};
-      for (let char of string) {
-        charMap[char] = charMap[char] + 1 || 1;
-      }
-      return charMap;
+<script>
+  function getCharMap(string) {
+    let charMap = {};
+    for (let char of string) {
+      charMap[char] = charMap[char] + 1 || 1;
     }
+    return charMap;
+  }
 
-    function isAnagram(stringA, stringB) {
-      stringA = stringA.replace(/[^\w]/g, "").toLowerCase();
-      stringB = stringB.replace(/[^\w]/g, "").toLowerCase();
+  function isAnagram(stringA, stringB) {
+    stringA = stringA.replace(/[^\w]/g, "").toLowerCase();
+    stringB = stringB.replace(/[^\w]/g, "").toLowerCase();
 
-      //Get the character map of both strings
-      const charMapA = getCharMap(stringA);
-      const charMapB = getCharMap(stringB);
+    //Get the character map of both strings
+    const charMapA = getCharMap(stringA);
+    const charMapB = getCharMap(stringB);
 
-      if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
+    if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
+      return false;
+    }
+    for (let char in charMapA) {
+      if (charMapA[char] !== charMapB[char]) {
         return false;
       }
-      for (let char in charMapA) {
-        if (charMapA[char] !== charMapB[char]) {
-          return false;
-        }
-      }
-      return true;
     }
-    console.log(isAnagram("listen", "silent"));
-    console.log(isAnagram("triangle", "integral"));
-    console.log(isAnagram("listen", "listeN"));
-    console.log(isAnagram("listen", "asfd"));
-  </script>
-</body>
-
-</html>
+    return true;
+  }
+  console.log(isAnagram("listen", "silent"));
+  console.log(isAnagram("triangle", "integral"));
+  console.log(isAnagram("listen", "listeN"));
+  console.log(isAnagram("listen", "asfd"));
+</script>

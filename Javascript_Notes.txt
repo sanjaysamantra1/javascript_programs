@@ -348,7 +348,7 @@ Use Strict
 -The purpose of "use strict" is to execute the javascript in "strict mode".
 -when 'use strict' is not written, browser runs the JS in normal mode.
 -when 'use strict' is  written, browser runs the JS in strict mode.
--Strict mode changes some previously-accepted mistakes into errors.
+-in Normal mode few mistakes are ignored, in strict mode mistakes are not ignored
 
 
 1. variable declaration without var/let/const is not allowed.
@@ -507,6 +507,17 @@ Arrow Function Limitations
 -Arrow functions cannot use yield, within its body.
 
 
+Arrow Function Benefits
+-----------------------
+-Concise syntax
+-Implicit return
+-Lexical 'this' Binding
+-no arguments object(pre-defined keyword)
+-ideal for callbacks
+-good for small functions
+-static 'this' (this doesn't change)
+
+
 
 
 IIFE
@@ -584,6 +595,9 @@ Memoization
 
 function closure
 ================
+-When an inner function accesses any data from the outer function, a 'closure' scope gets attached to the inner function.
+ hence inner function can access outer function data.
+
 -A closure is an inner function that has access to its outer function's variables even after the outer function's execution is Completed/Closed.
 
 -When the outer function execution completes, you’d expect all its variables to be no longer accessible. However, if the inner function uses variables from the outer function, those variables remain accessible.
@@ -894,7 +908,7 @@ Inheritance
 	values() - Returns an array of values
 	entries() - returns an array of [key, value] pairs
 	fromEntries() - transforms an array/Map into an Object
-	groupBy() - groups the data
+	groupBy(items, callbackFn) - groups the data
 	
 -JSON.stringify()  converts object to string.
 -JSON.parse()      converts string to object.
