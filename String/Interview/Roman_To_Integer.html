@@ -6,7 +6,6 @@
         };
 
         let total = 0;
-
         for (let i = 0; i < s.length; i++) {
             let current = romanMap[s[i]];
             let next = romanMap[s[i + 1]];
@@ -17,7 +16,6 @@
                 total += current;
             }
         }
-
         return total;
     }
     // Example:

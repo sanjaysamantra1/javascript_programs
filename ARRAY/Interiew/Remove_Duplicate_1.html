@@ -1,15 +1,11 @@
-<html>
-	<body>
-		<script>
-			var arr = [10,20,30,20,40,10];
-			
-			var uniqueArr = arr.filter(myFunction);
-			
-			function myFunction(val,ind){
-				return arr.indexOf(val) === ind
-			}
-			
-			console.log(uniqueArr);
-		</script>
-	</body>
-</html>
+<script>
+	var arr = [10, 20, 30, 20, 40, 10];
+	var uniqueArr = arr.filter(myFunction);
+	function myFunction(val, ind) {
+		return arr.indexOf(val) === ind
+	}
+	console.log(uniqueArr);
+
+	// var mySet = new Set(arr1); // removes duplicate
+    // var arr2 = [...mySet];
+</script>

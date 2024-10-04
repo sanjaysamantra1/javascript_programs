@@ -1,5 +1,5 @@
 <script>
-    function isIsomorphic(s, t) {
+    function isIsomorphic(s, t) {  // O(N)
         if (s.length !== t.length) return false;
 
         const mapS = new Map();
@@ -25,4 +25,16 @@
     // Example:
     console.log(isIsomorphic("egg", "add")); // true
     console.log(isIsomorphic("foo", "bar")); // false
+
+    const isIsomorphic2 = (s, t) => { // O(n2)
+        if (s.length !== t.length) return false;
+        for (let i = 0; i < s.length; i++) {
+            if (s.indexOf(s[i]) !== t.indexOf(t[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+    console.log(isIsomorphic2("egg", "add")); // true
+    console.log(isIsomorphic2("foo", "bar")); // false
 </script>

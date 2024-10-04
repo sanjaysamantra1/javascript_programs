@@ -1,9 +1,0 @@
-<script>
-  let arr1 = [10, 20, [30, 31]];
-  let arr2 = arr1; // Address Copy
-  let arr3 = [...arr1]; // Value Copy (Shallow Copy)
-  let arr4 = structuredClone(arr1); //Value Copy (Deep Copy)
-  arr1.push(40);
-  arr1[2].push(32);
-  console.log(arr1, arr2, arr3, arr4);
-</script>
