@@ -1,31 +1,22 @@
-<html>
+<script>
+  function groupBy(arr, key) {
+    let finalResult = arr.reduce((result, currentObject) => {
+      const val = currentObject[key]; // 'name' val='sanjay'
+      result[val] = result[val] || []; // {sanjay:[]}
+      result[val].push(currentObject);
+      return result;
+    }, {});
 
-<head>
+    return finalResult;
+  }
 
-<body>
-  <script>
-    function groupBy(arr, key) {
-      let finalResult = arr.reduce((result, currentObject) => {
-        const val = currentObject[key]; // 'name' val='sanjay'
-        result[val] = result[val] || []; // {sanjay:[]}
-        result[val].push(currentObject);
-        return result;
-      }, {});
-
-      return finalResult;
-    }
-
-    let employees = [
-      { eId: 101, name: "sanjay", sal: 5000 },
-      { eId: 104, name: "deepak", sal: 8000 },
-      { eId: 103, name: "ranjan", sal: 7000 },
-      { eId: 102, name: "manoj", sal: 9000 },
-      { eId: 101, name: "sanjay", sal: 5000 },
-      { eId: 108, name: "deepak", sal: 5000 },
-    ];
-    console.log(groupBy(employees, "name"));
-  </script>
-</body>
-</head>
-
-</html>
+  let employees = [
+    { eId: 101, name: "sanjay", sal: 5000 },
+    { eId: 104, name: "deepak", sal: 8000 },
+    { eId: 103, name: "ranjan", sal: 7000 },
+    { eId: 102, name: "manoj", sal: 9000 },
+    { eId: 101, name: "sanjay", sal: 5000 },
+    { eId: 108, name: "deepak", sal: 5000 },
+  ];
+  console.log(groupBy(employees, "name"));
+</script>
