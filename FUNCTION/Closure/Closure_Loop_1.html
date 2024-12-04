@@ -1,0 +1,29 @@
+<body>
+    <form action="">
+        <p id="help">Helpful notes will appear here</p>
+        <p>Email: <input type="text" id="email" name="email" /></p>
+        <p>Name: <input type="text" id="name" name="name" /></p>
+        <p>Age: <input type="text" id="age" name="age" /></p>
+    </form>
+
+    <script>
+        function showHelp(helpText) {
+            document.getElementById("help").textContent = helpText;
+        }
+        function setupHelp() {
+            var helpTextArr = [
+                { id: "email", helpText: "Your email address" },
+                { id: "name", helpText: "Your full name" },
+                { id: "age", helpText: "Your age (you must be over 16)" },
+            ];
+            for (let helpObj of helpTextArr) {
+                function f1() {
+                    showHelp(helpObj.helpText);
+                };
+                document.getElementById(helpObj.id).onfocus = f1;
+                console.dir(f1)
+            }
+        }
+        setupHelp();
+    </script>
+</body>

@@ -275,11 +275,11 @@ Hoisting:
 
 Temporal Dead Zone
 ==================
--The period between entering scope and being declared where they cannot be accessed. 
+-The period between entering scope and being initialized where they cannot be accessed. 
  This period is the temporal dead zone (TDZ).
 -The state where variables are un-reachable. They are in memory, but they aren't usable.
 -The let and const variables exist in the TDZ from the start of their enclosing scope until they are initialized.
--if a let/const variable is accessed before its declaration, it would throw a ReferenceError. Because of the TDZ.
+-if a let/const variable is accessed before its initialization, it would throw a ReferenceError. Because of the TDZ.
 
 
 
@@ -595,10 +595,12 @@ Memoization
 
 function closure
 ================
--When an inner function accesses any data from the outer function, a 'closure' scope gets attached to the inner function.
- hence inner function can access outer function data.
+-A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives a function access to its outer scope. 
 
 -A closure is an inner function that has access to its outer function's variables even after the outer function's execution is Completed/Closed.
+
+-When an inner function accesses any data from the outer function, a 'closure' scope gets attached to the inner function.
+ hence inner function can access outer function data.
 
 -When the outer function execution completes, you’d expect all its variables to be no longer accessible. However, if the inner function uses variables from the outer function, those variables remain accessible.
 
@@ -908,7 +910,8 @@ Inheritance
 	values() - Returns an array of values
 	entries() - returns an array of [key, value] pairs
 	fromEntries() - transforms an array/Map into an Object
-	groupBy(items, callbackFn) - groups the data
+	groupBy(items, callbackFn) - groups the data, the callbackFn should return a groupName
+
 	
 -JSON.stringify()  converts object to string.
 -JSON.parse()      converts string to object.
@@ -1247,8 +1250,7 @@ Cookie vs Offlinestorage
 ---with every server request cookie data is sent to server 
 ---cookie data gets appended to the url and it will be sent
 
-advantage-cookie data can be used @clientside(browser) and 
-			@serverside(server)
+advantage-cookie data can be used @clientside(browser) and  @serverside(server)
 
 get Cookie
 -----------
@@ -1396,6 +1398,16 @@ Promise
 ex:-if we request some data from a server, promise promises us to get that data 
  that we can use in the future. 
 
+
+ex: 
+// fetch() returns a promise Object
+let usersPromise= fetch('https://jsonplaceholder.typicode.com/users');
+console.log(usersPromise);
+
+How to read data from a promise
+-------------------------------
+1. then()
+2. async-await
 
 
 methods of Promise class:

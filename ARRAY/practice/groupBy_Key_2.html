@@ -10,12 +10,10 @@
     let obj = {};
     for (emp of employees) {
         let empName = emp['name']; // sanjay / deepak
-        if (obj[empName]) {
-            obj[empName].push(emp);
-        } else {
+        if (!obj[empName]) {
             obj[empName] = [];
-            obj[empName].push(emp);
         }
+        obj[empName].push(emp);
     }
     console.log(obj)
 </script>

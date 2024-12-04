@@ -1,0 +1,23 @@
+<script>
+    function createFunctionArray() {
+        let functions = [];
+        // i is not a block scoped variable, i is a function variable of createFunctionArray()
+        // when i is accessed inside fn() ,createFunctionArray() is outer function for fn() 
+        // hence i is accessed inside fn() as a closure variable
+        for (var i = 0; i < 3; i++) {
+            function fn() {
+                console.log(`i value is ${i}`);
+            }
+            functions.push(fn);
+        }
+        return functions;
+    }
+
+    const functionArr = createFunctionArray();
+    functionArr[0](); // 3
+    functionArr[1](); // 3
+    functionArr[2](); // 3
+    console.dir(functionArr[0])
+    console.dir(functionArr[1])
+    console.dir(functionArr[2])
+</script>
