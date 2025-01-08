@@ -1,0 +1,23 @@
+<script>
+    async function fetchWithAutoRetry(url, options = {}, retries = 3, delay = 1000) {
+        for (let attempt = 0; attempt < retries; attempt++) {
+            try {
+                const response = await fetch(url, options);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response;
+            } catch (error) {
+                console.error(`Attempt ${attempt + 1} failed: ${error.message}`);
+                // If we've used all retries, rethrow the error
+                if (attempt === retries - 1) { 
+                    throw error;
+                }
+                // Wait for a delay before retrying
+                await new Promise((resolve) => setTimeout(resolve, delay));
+            }
+        }
+    }
+    const url = 'https://jsonplaceholder.typicode.co/users'
+    fetchWithAutoRetry(url)
+</script>

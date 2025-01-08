@@ -813,6 +813,31 @@ var y = Array.from(x)
 console.log(y)
 
 
+Array Mutability/Immutability
+============================
+1. Even when declared as const, the elements of an array can be changed, added, or removed. However, the reference to the array cannot be reassigned.
+	const arr = [1, 2, 3];
+	arr[0] = 42;
+	arr.push(4); // Mutating the array (allowed)
+	console.log(arr); // [42, 2, 3, 4]
+	// Reassigning the array (not allowed with `const`)
+	arr = [5, 6, 7]; // TypeError: Assignment to constant variable.
+
+2. Immutability (Freezing an Array) (Object.freeze() is shallow, meaning nested objects or arrays are still mutable)
+	const arr = Object.freeze([1, 2, 3]);
+	arr[0] = 42; // Attempting to mutate the array
+	arr.push(4); // TypeError: Cannot add property 3, object is not extensible
+	console.log(arr); // [1, 2, 3]
+	
+3. create new arrays instead of modifying existing ones. (map(), filter() , spread operator)
+    const arr = [1, 2, 3];
+	const newArr = [...arr, 4]; // Adds 4 without modifying the original
+	console.log(newArr); // [1, 2, 3, 4]
+	console.log(arr);    // [1, 2, 3] (unchanged)
+
+
+
+
 Array Copy
 ==========
 let arr1 = [10, 20];
