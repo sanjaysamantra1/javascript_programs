@@ -492,7 +492,8 @@ Function Declaration			Function Expression
 Arrow Function
 --------------
 -'this' value inside a regular function is dynamic and depends on the context in which it is called.
--'this' inside the arrow function is bound lexically and equals to 'this' where the function is declared.
+-Arrow function doesn't have its own 'this' binding
+'this' inside the arrow function is bound lexically and equals to 'this' where the function is declared.
 -lexical context means that arrow function uses 'this' from the code that contains the arrow function.
 -Regular function ( this = how the function is invoked/who invoked )
 -Arrow function( this = where the function is declared )
@@ -597,7 +598,7 @@ function closure
 ================
 -A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives a function access to its outer scope. 
 
--A closure is an inner function that has access to its outer function's variables even after the outer function's execution is Completed/Closed.
+-A closure is a concept where an inner function has access to its outer function's variables even after the outer function's execution is Completed/Closed.
 
 -When an inner function accesses any data from the outer function, a 'closure' scope gets attached to the inner function.
  hence inner function can access outer function data.
@@ -710,6 +711,7 @@ match();
 matchAll()   // returns iterator
 replace();
 replaceAll();
+repeat();
 slice(start, end)
 substring(start, end)
 substr(start, length)

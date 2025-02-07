@@ -1,0 +1,15 @@
+<script>
+  function maxSubArraySum(nums) {
+    let maxSoFar = nums[0];
+    let maxEndingHere = nums[0];
+    for (ele of nums) {
+      maxEndingHere = Math.max(ele, maxEndingHere + ele);
+      maxSoFar = Math.max(maxSoFar, maxEndingHere);
+    }
+    return maxSoFar;
+  }
+  // Example usage:
+  const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+  console.log(maxSubArraySum(nums)); // Output: 6 (subarray: [4, -1, 2, 1])
+
+</script>
