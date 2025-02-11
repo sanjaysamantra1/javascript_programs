@@ -648,6 +648,7 @@ Strings
 =======
 -strings are used to represent and manipulate a sequence of characters.
 -JavaScript string is zero or more characters written inside quotes.
+     let str1 = '';
 -We can use single or double quotes for string. 
 	  var a='hello'; 
 	  var b="hello";
@@ -927,7 +928,7 @@ Inheritance
 -Object class static functions : 
 	assign() - Copies properties from one or more source objects to a target object.
 	create() -  creates a new object, using an existing object as the prototype of the newly created object
-	freeze() - Freezes an object. neither the structure nor values can be changed
+	freeze() - Freezes an object. neither the structure nor values can be changed. (shallow)
 	isFrozen() - Determines if an object was frozen
 	seal()  - structure of the object cann't be modified, value of the properties can be changed.
 	isSealed() - Determines if an object is sealed.

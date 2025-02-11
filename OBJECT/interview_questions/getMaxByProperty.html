@@ -1,0 +1,18 @@
+<script>
+	function getMaxByProperty(arr, key) {
+		return arr.reduce((result, obj) => {
+			if (obj[key] > result[key]) {
+				return obj
+			} else {
+				return result;
+			}
+		});
+	}
+
+	const arr = [
+		{ name: "Alice", score: 85 },
+		{ name: "Bob", score: 92 },
+		{ name: "Charlie", score: 88 }
+	];
+	console.log(getMaxByProperty(arr, "score")); 
+</script>

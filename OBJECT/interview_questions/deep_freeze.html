@@ -1,0 +1,15 @@
+<script>
+    function deepFreeze(obj) {
+        Object.freeze(obj);
+        for (const key in obj) {
+            if (typeof obj[key] === "object" && obj[key] !== null) {
+                deepFreeze(obj[key]);
+            }
+        }
+        return obj;
+    }
+    const obj = { a: 1, b: { c: 2 } };
+    deepFreeze(obj);
+    obj.b.c = 3; // No effect
+    console.log(obj); // Output: { a: 1, b: { c: 2 } }
+</script>
