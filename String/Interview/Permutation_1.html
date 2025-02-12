@@ -1,29 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <script>
-      function getAllPermutations(str) {
-        var results = [];
+<script>
+  function getAllPermutations(str) {
+    let results = [];
 
-        if (str.length === 1) {
-          results.push(str);
-          return results;
-        }
+    if (str.length === 1) {
+      results.push(str);
+      return results;
+    }
 
-        // str = 'abc'
-        for (var i = 0; i < str.length; i++) {
-          var firstChar = str[i];
-          var charsLeft = str.substr(0, i) + str.substr(i + 1);
-          var innerPermutations = getAllPermutations(charsLeft);
-          for (var j = 0; j < innerPermutations.length; j++) {
-            results.push(firstChar + innerPermutations[j]);
-          }
-        }
-        return results;
+    // str = 'GOD'
+    for (let i = 0; i < str.length; i++) {
+      let firstChar = str[i];
+      let charsLeft = str.substr(0, i) + str.substr(i + 1);
+      let innerPermutations = getAllPermutations(charsLeft);
+      for (let j = 0; j < innerPermutations.length; j++) {
+        results.push(firstChar + innerPermutations[j]);
       }
-      var input = prompt("enter a str", "god");
-      allPermutations = getAllPermutations(input);
-      document.writeln(allPermutations);
-    </script>
-  </body>
-</html>
+    }
+    return results;
+  }
+  let input = prompt("enter a string:", "GOD");
+  let allPermutations = getAllPermutations(input);
+  document.writeln(allPermutations);
+</script>
