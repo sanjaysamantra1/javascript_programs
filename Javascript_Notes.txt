@@ -64,6 +64,19 @@ ECMA - European Computer Manufacturers Association.
 ECMASCRIPT -  is a standard for the scripting languages.
 
 
+ES_5    <= june 2015
+ES_6    2015   ( const , let , class , extends , module , .......)
+ES_7    2016   
+ES_8    2017   
+ES_9    2018   
+ES_10    2019   
+ES_11    2020   
+ES_12    2021   
+ES_13    2022   
+ES_14    2023   
+ES_15    2024  
+
+
 
 	Javascript					 TypeScript
 ---------------------------------------------------------
@@ -268,8 +281,18 @@ N:p - All variables (var,let,const) are hoisted but only 'var' variables are usa
 	
 Hoisting:
 =========
--The process of assigning variable declarations a default value of 'undefined' during the creation phase is called Hoisting.
--In hoisting, the variable and function declarations are put into memory during the	compile/creation phase before code execution phase.
+-hoisting is a mechanism where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed.
+-Variables declared with var are hoisted, but their values are not initialized. They are given an initial value of undefined.
+-Variables declared with let and const are also hoisted but are not initialized. Accessing them before declaration results in a ReferenceError because they are in the "temporal dead zone."
+-Function declarations are hoisted, meaning you can call them before they appear in the code.
+
+Type			   Hoisted?			   Initialized?			  Usable before declaration?
+=========================================================================================
+var					✅ Yes				❌ Undefined			⚠️ Allowed but undefined
+let					✅ Yes				❌ No					❌ ReferenceError
+const				✅ Yes				❌ No					❌ ReferenceError
+Func Declaration	✅ Yes				✅ Yes					✅ Allowed
+Func Expression 	✅ Yes				❌ Undefined			❌ TypeError
 
 
 
@@ -973,6 +996,16 @@ this keyword
 -Inside a setTimeout function, the value of this is the window object.
 -For dom event handler, value of this would be the element that fired the event.
 
+
+The value of this depends on how a function is called:
+
+Invocation Type	this Value
+Global Scope	window (browser) or global (Node.js)
+Object Method	The object itself
+Constructor (new)	The new instance
+Arrow Function	Lexically inherited from parent scope
+Explicit (call, apply, bind)	Manually set
+
 note:- You can always get the global object(window) using 'globalThis' property,
  regardless of the current context in which your code is running.
 
@@ -1014,7 +1047,7 @@ ES-6 Features (ES-2015)
 12. From apply() to the spread operator (...)
 13. Enhanced Object Literals
 14. From constructors to classes
-15. inheritance - class,extends
+15. inheritance - Object.create() , class & extends
 16. Modules
 17. collection-Map,weakmap,Set,weakset
 18. promise and async-await

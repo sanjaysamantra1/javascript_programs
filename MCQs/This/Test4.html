@@ -1,26 +1,19 @@
-<html>
+<script>
+	// var who = 'rahul';
+	const obj = {
+		who: 'Sachin',
 
-<body>
-	<script>
-		// var who = 'rahul';
-		
-		const obj = {
-			who: 'Sachin',
+		greet() {
+			console.log(this, 'inside greet')
+			return `Hello, ${this.who}!`;  // this = obj
+		},
 
-			greet() {
-				console.log(this , 'inside greet')
-				return `Hello, ${this.who}!`;  // this = obj
-			},
+		farewell: () => {
+			console.log(this, 'inside farewell')
+			return `Goodbye, ${this.who}!`;  //this = window
+		}
+	};
 
-			farewell: () => {
-				console.log(this , 'inside farewell')
-				return `Goodbye, ${this.who}!`;  //this = window
-			}
-		};
-
-		console.log(obj.greet());    // What is logged?
-		console.log(obj.farewell()); // What is logged?
-	</script>
-</body>
-
-</html>
+	console.log(obj.greet());    // What is logged?
+	console.log(obj.farewell()); // What is logged?
+</script>
