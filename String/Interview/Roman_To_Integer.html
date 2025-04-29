@@ -6,8 +6,8 @@
         };
         let total = 0;
         for (let i = 0; i < romanStr.length; i++) {
-            let current = romanMap[romanStr[i]];
-            let next = romanMap[romanStr[i + 1]];
+            let current = romanMap[romanStr[i]]; // 1
+            let next = romanMap[romanStr[i + 1]]; // 1
             if (current < next) {
                 total = total - current;
             } else {

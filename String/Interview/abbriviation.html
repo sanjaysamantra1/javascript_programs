@@ -1,8 +1,9 @@
 <script>
   function myFun(input) {
     var output = "";
-    arr = input.split(" ").map((word, ind) => {
-      if (ind <= 1) {
+    let wordsArr = input.split(" ");
+    arr = wordsArr.map((word, ind) => {
+      if (ind <= wordsArr.length - 2) {
         return word[0] + ".";
       } else {
         return word;

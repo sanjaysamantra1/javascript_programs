@@ -9,10 +9,10 @@
         };
 
         for (key in romanObj) {
-            let val = romanObj[key];
-            while (num >= val) {
+            let valueFromRomanMap = romanObj[key];
+            while (num >= valueFromRomanMap) {
                 romanStr = romanStr + key;
-                num = num - val;
+                num = num - valueFromRomanMap;
             }
         }
         return romanStr;

@@ -1,0 +1,19 @@
+<script>
+    async function foo() {
+        console.log(1);
+        await Promise.resolve();
+        console.log(2);
+    }
+
+    async function bar() {
+        console.log(3);
+        await foo();
+        console.log(4);
+    }
+
+    console.log(5);
+    bar();
+    console.log(6);
+
+    // Rule: await pauses execution but allows the main thread to continue.
+</script>
