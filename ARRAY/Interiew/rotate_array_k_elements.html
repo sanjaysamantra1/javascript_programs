@@ -1,6 +1,6 @@
 <script>
     function rotateArray(arr, k) {
-        k = k % arr.length;
+        k = k % arr.length; // to handle k>arr.length
         return arr.slice(-k).concat(arr.slice(0, -k));
     }
     const arr5 = [1, 2, 3, 4, 5, 6, 7];

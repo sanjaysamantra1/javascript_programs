@@ -33,3 +33,7 @@
 9. Ask user to enter a roman string and convert that to integer value
    input:   IX    XII
    output : 9     12
+
+10. Ask user to enter a  string , and display in below format
+    input: aaabbc
+    output : a3b2c1

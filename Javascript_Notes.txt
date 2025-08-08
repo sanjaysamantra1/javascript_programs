@@ -272,8 +272,8 @@ Variables
 3.initialization is		 3.initialization is		3.mandatory
 	not mandatory           not mandatory	
 4.can be redeclared		 4.cann't be redeclared		4.cann't be redeclared
-5.TDZ - No			 	 5.TDZ - Yes				5.TDZ - Yes
-6.function/global		 6.block/function/global	6.block/function/global
+5.function/global		 6.block/function/global	6.block/function/global
+6.TDZ - No			 	 5.TDZ - Yes				5.TDZ - Yes
 
 N:p - All variables (var,let,const) are hoisted but only 'var' variables are usable/reachable before initialization.
 -let/const variables are not reachable/usable before initialization (Temporal Dead Zone)
@@ -631,6 +631,10 @@ function closure
 -The inner function retains access to the outer function’s scope, because the inner function ‘remembers’ the environment in which it was created.
 
 
+Note:
+-Today’s JavaScript supports real encapsulation with classes and #private fields.
+-Closures are no longer the only way to achieve encapsulation, but they still have valid use-cases, especially in functional programming or factory functions.
+
 
 Closure Disadvantages
 =====================
@@ -936,6 +940,10 @@ Inheritance
 -we can access object properties in two ways:
 	objectName.propertyName;       user.name;
 	objectName["propertyName"];    user['age'];
+-object properties are case sensitive
+	let obj = {a:10,b:20};
+	console.log(obj.a); // 10 
+	console.log(obj.A); // undefined
 -4 ways to create javascript object
    1. Object Literal    ex: var obj1 = {};
    2. Object create()   ex: var obj2 = Object.create({});
@@ -962,6 +970,13 @@ Inheritance
 	entries() - returns an array of [key, value] pairs
 	fromEntries() - transforms an array/Map into an Object
 	groupBy(items, callbackFn) - groups the data, the callbackFn should return a groupName
+	
+	
+Method						Add Props		Delete Props		Modify Props
+================================================================================
+Object.freeze()				❌				❌					❌
+Object.seal()				❌				❌					✅
+Object.preventExtensions()	❌				✅					✅
 
 	
 -JSON.stringify()  converts object to string.
@@ -1568,6 +1583,16 @@ Use of Debouncing and Throttling in Real Life
 -We can throttle a button click event, if we do not want the user to spam by clicking the button frequently.
 -In the case of window resize event, if we want to redraw the UI only when the user has fixed the size of the window, we can use debouncing.
 -With Mouse move event, if we are displaying the location coordinates of the mouse pointer, it is much better to show the coordinates once the user reached the desired location. Here, we can use debouncing
+
+function debounce(func, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
 
 
 
