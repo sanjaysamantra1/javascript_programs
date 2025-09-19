@@ -1,0 +1,25 @@
+<script>
+  const team = {
+  members: ["Alex", "Sanjay", "Kiran"],
+  teamName: "Warriors",
+
+  // Using regular function
+  listMembersRegular: function() {
+    return this.members.map(function(member) {
+      return `${member} is in ${this.teamName}`;
+    });
+  },
+
+  // Using arrow function
+  listMembersArrow: function() {
+    return this.members.map(member => `${member} is in ${this.teamName}`);
+  }
+};
+
+console.log(team.listMembersRegular()); 
+// ❌ ["Alex is in undefined", "Sanjay is in undefined", "Kiran is in undefined"]
+
+console.log(team.listMembersArrow());   
+// ✅ ["Alex is in Warriors", "Sanjay is in Warriors", "Kiran is in Warriors"]
+
+</script>
