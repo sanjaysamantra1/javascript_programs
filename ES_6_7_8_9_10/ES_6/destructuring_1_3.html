@@ -1,25 +1,16 @@
-<html>
+<script>
+  // Function with object destructuring and default values
+  function showUserProfile({ name, email, role = "User", age, isActive = true }) {
+    console.log(`👤 Name: ${name} (${role})`);
+    console.log(`📧 Email: ${email}`);
+    console.log(`🎂 Age: ${age}`);
+    console.log(`✅ Active: ${isActive}`);
+  }
+  const user1 = { name: "Sanjay", email: "sanjay@mail.com", role: "Admin", age: 22 };
+  const user2 = { name: "Dillip", email: "dillip@mail.com" }; // defaults used
+  showUserProfile(user1);
+  console.log("---");
+  showUserProfile(user2);
 
-<body>
-  <script>
-    /* function printUserDetails(user) {
-      document.write(`Hello ${user.fName} ${user.lName} you are ${user.age} years old
-      You are from ${user.add} your DOB is ${user.dob}`)
-    } */
-
-    function printUserDetails({ fName, age, add, dob, lName }) {
-      document.write(`Hello ${fName} ${lName} you are ${age} years old
-      You are from ${add} your DOB is ${dob}`)
-    }
-    let user = {
-      fName: 'sachin',
-      lName: 'Tendulkar',
-      age: 35,
-      add: 'mumbai',
-      dob: '21-03-1980'
-    }
-    printUserDetails(user);
-  </script>
-</body>
-
-</html>
+  // any #of params, no order, cleaner
+</script>
