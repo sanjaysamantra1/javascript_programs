@@ -1,22 +1,39 @@
 <html>
-	<body><h1>
+
+<body>
+	<h1>
 		<script>
 			var a = 'Then took the other, as just as fair,\t'
-					+ 'And having perhaps the better claim\t'
-					+ 'Because it was grassy and wanted wear,\t'
-					+ 'Though as for that the passing there\t'
-					+ 'Had worn them really about the same,\t';
-			
+				+ 'And having perhaps the better claim\t'
+				+ 'Because it was grassy and wanted wear,\t'
+				+ 'Though as for that the passing there\t'
+				+ 'Had worn them really about the same,\t';
+
 			var b = `Then took the other, as just as fair,
 					And having perhaps the better claim
 					Because it was grassy and wanted wear,
 					Though as for that the passing there
 					Had worn them really about the same,`
-					
-			
+
+
 			document.write(a)
 			document.write("<br><hr>");
 			document.write(b)
+
+
+			const name = "Sanjay";
+			const items = ["Laptop", "Mouse", "Keyboard"];
+			const emailTemplate = `
+			<h1>Hello, ${name}!</h1>
+			<p>Thanks for your order. Here’s what you bought:</p>
+			<ul>
+				${items.map(item => `<li>${item}</li>`).join("")}
+			</ul>
+			<p>Total items: ${items.length}</p>
+			`;
+			console.log(emailTemplate);
+
 		</script>
-	</body>
+</body>
+
 </html>

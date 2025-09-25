@@ -1,20 +1,8 @@
-<html>
-
-<body>
-  <script>
-    function add(a, b, c) {
-      sum = a + b + c;
-      alert(sum);
-    }
-    add(2, 3);
-
-    function add2(a = 0, b = 0, c = 0) {
-      //ES-6
-      sum = a + b + c;
-      alert(sum);
-    }
-    add2(2, 3);
-  </script>
-</body>
-
-</html>
+<script>
+  function logMessage(message, level = 'info') {
+    console.log(`[${level.toUpperCase()}] ${message}`);
+  }
+  logMessage('Server started');           // [INFO] Server started
+  logMessage('User not found', 'warn');   // [WARN] User not found
+  logMessage('DB crashed!', 'error');     // [ERROR] DB crashed!
+</script>

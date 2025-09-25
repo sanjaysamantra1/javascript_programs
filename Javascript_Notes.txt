@@ -242,13 +242,12 @@ Note:- all window Object functions can be directly called.
 
 How Javascript Works
 ====================
--When a javascript code is executed, N # of execution contexts are created.
--1 Global Execution context is created for every javascript program.
--For Each Function call 1 execution context is created.
--Execution context is the environment within which the current code is being executed.
+-When a JavaScript program runs, 1 Global Execution Context (GEC) is created.
+-For every function call, a new Function Execution Context (FEC) is created.
+-Execution Context = the environment in which code executes.
 -Each execution context has two phases: 
-	1. creation phase. (Allocates memory - variables & functions and assign 'undefined' to variables)
-	2. execution phase. (Code gets Executed - assign values to variables & method invocation)
+	1. creation phase. (Memory is allocated for variables and functions; 'var' variables are initialized with undefined)
+	2. execution phase. (Code is executed line by line; variables receive their assigned values and functions are invoked)
 
 
 https://www.youtube.com/watch?v=iLWTnMzWtj4&t=1044s
@@ -626,7 +625,7 @@ function closure
 -When an inner function accesses any data from the outer function, a 'closure' scope gets attached to the inner function.
  hence inner function can access outer function data.
 
--When the outer function execution completes, you’d expect all its variables to be no longer accessible. However, if the inner function uses variables from the outer function, those variables remain accessible.
+-When the outer function execution completes, we would expect all its variables to be no longer accessible. However, if the inner function uses variables from the outer function, those variables remain accessible.
 
 -The inner function retains access to the outer function’s scope, because the inner function ‘remembers’ the environment in which it was created.
 
@@ -735,6 +734,8 @@ concat();
 indexOf();
 lastIndexOf();
 includes();
+startsWith()
+endsWith()
 match();
 matchAll()   // returns iterator
 replace();
@@ -1074,7 +1075,7 @@ ES-6 Features (ES-2015)
 Modules
 =======
 -2 Module Systems   
-	a. CommonJS Module System      (module.export , require())
+	a. CommonJS Module System      (module.exports , require())
 	b. ECMASCRIPT Module System    (export , import)
 
 

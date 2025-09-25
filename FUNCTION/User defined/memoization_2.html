@@ -8,21 +8,21 @@
             }
             return normalFibonacci(n - 1) + normalFibonacci(n - 2);
         };
-        console.log(normalFibonacci(6))
+        console.log(normalFibonacci(8))
 
 
 
-        let cache = [];
-        function MemoizedFibonacci(n) {
-            if (n <= 1) {
-                return n;
+        function fibonacciMemo() {
+            const cache = {}; // store results
+            return function fib(n) {
+                if (n in cache) return cache[n];
+                if (n <= 1) return n;
+                cache[n] = fib(n - 1) + fib(n - 2);
+                return cache[n];
             }
-            if (cache[n] === undefined) {
-                cache[n] = MemoizedFibonacci(n - 1) + MemoizedFibonacci(n - 2);
-            }
-            return cache[n];
-        };
-        console.log(MemoizedFibonacci(6))
+        }
+        const fib = fibonacciMemo();
+        console.log(fib(8));
     </script>
 </body>
 

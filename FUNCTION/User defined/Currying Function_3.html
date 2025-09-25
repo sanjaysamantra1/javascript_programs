@@ -1,25 +1,24 @@
-<html>
-  <html>
-    <body>
-      <script>
-        // nth level curring
-        function add(a) {
-          return function (b) {
-            if (b) {
-              return add(a + b);
-            }
-            return a;
-          };
-        }
-        res1 = add(1)(2)();
-        console.log(res1);
+<script>
+  // fix base URLs or headers once and then reuse them
+  
+  function apiClient(baseUrl) {
+    return function (endpoint) {
+      return function (options = {}) {
+        return fetch(`${baseUrl}${endpoint}`, options)
+          .then(res => res.json());
+      };
+    };
+  }
 
-        res2 = add(1)(2)(3)();
-        console.log(res2);
+  // Usage
+  const api = apiClient("https://jsonplaceholder.typicode.com");
 
-        res2 = add(1)(2)(3)(4)(5)();
-        console.log(res2);
-      </script>
-    </body>
-  </html>
-</html>
+  // Now we can reuse with endpoints
+  const getUsers = api("/users");
+  const getPosts = api("/posts");
+
+  // Calls
+  getUsers().then(console.log);
+  getPosts().then(console.log);
+
+</script>

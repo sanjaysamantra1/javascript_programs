@@ -1,0 +1,28 @@
+<script>
+    function apiClientWithHeaders(baseUrl) {
+        return function (headers) {
+            return function (endpoint) {
+                return function (options = {}) {
+                    return fetch(`${baseUrl}${endpoint}`, {
+                        ...options,
+                        headers: { ...headers, ...options.headers }
+                    }).then(res => res.json());
+                };
+            };
+        };
+    }
+
+    // Usage
+    const api = apiClientWithHeaders("https://jsonplaceholder.typicode.com");
+
+    // Pre-set headers (e.g., auth token)
+    const authApi = api({ Authorization: "Bearer 12345" });
+
+    // Reuse for different endpoints
+    const getUsers = authApi("/users");
+    const getTodos = authApi("/todos");
+
+    getUsers().then(console.log);
+    getTodos().then(console.log);
+
+</script>

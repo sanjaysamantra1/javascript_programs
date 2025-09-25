@@ -33,7 +33,7 @@ const orders = [
 // Assume today = 2025-08-08   // Output: ["Alice", "Bob"]
 
 
-5. Create leaderboard from game scores (highest score wins)
+5. Create leaderboard from game scores (each player’s highest score counts)
 const games = [
   { player: "Alice", score: 40 },
   { player: "Bob", score: 60 },
@@ -65,4 +65,16 @@ const bookings = [
   { id: 3, start: "2025-08-10", end: "2025-08-12" }
 ];
 // Output: [[1,2]]  // booking 1 and 2 overlap
+
+
+const products = [
+  { id: 1, name: "Laptop", price: 50000, quantity: 2 },
+  { id: 2, name: "Mobile", price: 20000, quantity: 5 },
+  { id: 3, name: "Headphones", price: 2000, quantity: 10 },
+  { id: 4, name: "Keyboard", price: 1500, quantity: 4 },
+  { id: 5, name: "Monitor", price: 12000, quantity: 3 }
+];
+
+// 8. Group products by price range: Low (≤ 5000) , Medium (> 5000 and ≤ 20000) , High (> 20000)
+	 // output = {low:[] , medium:[],high:[]}
 

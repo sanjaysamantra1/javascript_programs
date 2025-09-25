@@ -1,21 +1,14 @@
-<html>
-  <body>
-    <script>
-      //Template literals or interpolation in other languages is a way to output variables in the string
-      var first = "sachin";
-      var last = " tendulkar";
-      var id = 101;
+<script>
+  //Template literals or interpolation  is a way to output variables in the string
+  name = "sachin";
+  age = 35;
+  add = "mumbai";
 
-      var a = "Your name is " + first + " " + last + ".";
-      var b = "http://localhost:3000/api/messages/" + id;
+  //ES-5
+  document.write("my name is " + name + " my age is " + age + " i am from " + add);
 
-      var x = `Your name is ${first} ${last}.`;
-      var y = `http://localhost:3000/api/messages/${id}`;
+  document.write("<br>");
 
-      console.log(a);
-      console.log(b);
-      console.log(x);
-      console.log(y);
-    </script>
-  </body>
-</html>
+  //ES-6
+  document.write(`my name is ${name} my age is ${age} I am from ${add}`);
+</script>
