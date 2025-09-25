@@ -1,0 +1,20 @@
+<script>
+  const counter = {
+  count: 0,
+  increaseRegular: function() {
+    setTimeout(function() {
+      this.count++;
+      console.log("Regular:", this.count);
+    }, 1000);
+  },
+  increaseArrow: function() {
+    setTimeout(() => {
+      this.count++;
+      console.log("Arrow:", this.count);
+    }, 2000);
+  }
+};
+
+counter.increaseRegular(); // ❌ "Regular: NaN" (this = global, not counter)
+counter.increaseArrow();  
+</script>
