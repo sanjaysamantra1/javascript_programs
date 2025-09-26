@@ -1,0 +1,58 @@
+<script>
+    class Order {
+        constructor(orderId, items) {
+            this.orderId = orderId;
+            this.items = items;
+            this.status = 'Pending';
+        }
+        calculateTotal() {
+            return this.items.reduce((totalPrice, item) => totalPrice + item.price * item.qty, 0);
+        }
+        updateStatus(newStatus) {
+            this.status = newStatus;
+            console.log(`Order #${this.orderId} is now ${this.status}`)
+        }
+    }
+
+    class DineInOrder extends Order {
+        constructor(orderId, items, tableNumber) {
+            super(orderId, items); // calls parent constructor
+            this.tableNumber = tableNumber;
+        }
+        assignWaiter(waiterName) {
+            console.log(`Waiter ${waiterName} assigned to table ${this.tableNumber}`)
+        }
+    }
+
+    class DeliveryOrder extends Order {
+        constructor(orderId, items, address, deliveryFee) {
+            super(orderId, items); // calls parent constructor
+            this.address = address;
+            this.deliveryFee = deliveryFee;
+        }
+        calculateTotal() { // method overriding
+            return super.calculateTotal() + this.deliveryFee;
+        }
+        assignDeliveryPerson(deliveryPerson) {
+            console.log(`DeliveryPerson ${deliveryPerson} assigned to deliver your order at ${this.address}`)
+        }
+    }
+
+    const dineInObj = new DineInOrder(101,
+        [
+            { name: 'Biriyani', price: 100, qty: 2 },
+            { name: 'Coke', price: 15, qty: 4 },
+        ], 5);
+    dineInObj.assignWaiter('Sanjay');
+    console.log('Dine-In Total: ', dineInObj.calculateTotal());
+
+    const deliveryObj = new DeliveryOrder(102,
+        [
+            { name: 'Biriyani', price: 100, qty: 2 },
+            { name: 'Coke', price: 15, qty: 4 },
+        ], 'Marathahalli , Bangalore, 560037', 40);
+    deliveryObj.assignDeliveryPerson('Bob');
+    console.log('Delivery Total: ', deliveryObj.calculateTotal())
+    deliveryObj.updateStatus('On the Way!!')
+
+</script>

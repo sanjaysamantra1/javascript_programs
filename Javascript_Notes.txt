@@ -768,7 +768,6 @@ Array
 array creation:
 ---------------
 var arr1 = [10,20,30,40,50];
-var arr2 = new Array(5); 
 var arr3 = new Array(10,20,30,40,50);
 
 -iterating over an array: 1.loop   2.for-in   3.for-of	 4.forEach()
@@ -1068,15 +1067,40 @@ ES-6 Features (ES-2015)
 17. collection-Map,weakmap,Set,weakset
 18. promise and async-await
 19. generators
-20. Tail Calls
+
 
 
 
 Modules
 =======
+-Modules allow us to split our code into separate files, each focusing on a specific feature.
+-Easier to maintain, Reusable 
+
 -2 Module Systems   
 	a. CommonJS Module System      (module.exports , require())
 	b. ECMASCRIPT Module System    (export , import)
+
+ESM imports & exports
+=====================
+-Default import:
+  import DefaultMember from 'src/my_lib';
+-Named imports:
+  import { name1, name2 } from 'src/my_lib';
+-Combining a default import with named imports
+  import DefaultMember, { name1, name2 } from 'src/my_lib';
+  import React, { Component } from 'react';
+
+
+Named Export vs Default Export
+==============================
+-Only one default export is allowed per file,where as multiple named exports are allowed per file.
+-Named exports are useful to export several values. 
+-A default export can be a function, a class, an object(cann't be variables). 
+ This value is to be considered as the “main” exported value since it will be the simplest to import
+-The name of imported module has to be the same as the name of the exported module for named exports.
+-The naming of import is completely independent in default export and we can use any name we like.
+ex: import MyReact, { MyComponent } from "react";
+           correct    wrong-namedExport
 
 
 
