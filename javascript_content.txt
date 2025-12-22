@@ -1,5 +1,9 @@
+What is javascript
+Where JS Runs (Browser / NodeJS)
+Javascript & Typescript
 DataTypes 
-Variables
+Variables (var,let,const)
 Functions
 Arrow Function
+IIFE, CallBack, HigherOrder
   
