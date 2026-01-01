@@ -1,21 +1,18 @@
 <script>
-	let str = "hello world";  
-	let obj = {};
-	for (char of str) {
-		if (obj[char]) {
-			obj[char]++;
-		} else {
-			obj[char] = 1;
-		}
-	}
+  const str = "javascript";
 
-	let max = 0, maxChar = '';
-	for (let char in obj) {
-		let charCount = obj[char]; 
-		if (charCount > max) {
-			max = charCount;
-			maxChar = char;
-		}
-	}
-	console.log(maxChar)
+  const charMap = {};
+  let highestFrequency = 0;
+  let mostFrequentChar = "";
+
+  for (const character of str) {
+    charMap[character] = (charMap[character] ?? 0) + 1;
+
+    if (charMap[character] > highestFrequency) {
+      highestFrequency = charMap[character];
+      mostFrequentChar = character;
+    }
+  }
+
+  console.log(mostFrequentChar, highestFrequency);
 </script>

@@ -1,49 +1,48 @@
-1. Find the department with the highest average salary
+// 1. Find the department with the highest average salary
 const employees = [
   { name: "Alice", department: "HR", salary: 40000 },
   { name: "Bob", department: "IT", salary: 50000 },
   { name: "Charlie", department: "IT", salary: 60000 },
   { name: "David", department: "HR", salary: 45000 }
 ];
-// Output: "IT" (average salary 55000);
+// Output: "IT" (average salary 55000)
 
-
-2. Get the top 2 products with highest total sales (price × quantity)
-const products = [
+// 2. Get the top 2 products with highest total sales (price × quantity)
+const products1 = [
   { name: "Laptop", price: 1000, quantity: 4 },
   { name: "Phone", price: 500, quantity: 10 },
   { name: "Tablet", price: 800, quantity: 5 }
 ];
 // Output: ["Phone", "Tablet"]
 
-3. Group books by genre , output = {fiction:[] , non-fiction:[]}
+// 3. Group books by genre
 const books = [
   { title: "Book A", genre: "Fiction", year: 2015 },
   { title: "Book B", genre: "Non-Fiction", year: 2020 },
   { title: "Book C", genre: "Fiction", year: 2018 },
   { title: "Book D", genre: "Non-Fiction", year: 2010 }
 ];
+// Output: { fiction: [...], "non-fiction": [...] }
 
-4. Get list of customers who placed orders in the last 30 days
+// 4. Get list of customers who placed orders in the last 30 days
 const orders = [
   { id: 1, customer: "Alice", date: "2025-07-20" },
   { id: 2, customer: "Bob", date: "2025-08-05" },
   { id: 3, customer: "Charlie", date: "2025-06-15" }
 ];
-// Assume today = 2025-08-08   // Output: ["Alice", "Bob"]
+// Assume today = 2025-08-08
+// Output: ["Alice", "Bob"]
 
-
-5. Create leaderboard from game scores (each player’s highest score counts)
+// 5. Create leaderboard from game scores (each player’s highest score counts)
 const games = [
   { player: "Alice", score: 40 },
   { player: "Bob", score: 60 },
   { player: "Alice", score: 70 },
   { player: "Bob", score: 55 }
 ];
-// Output: [{player:"Alice",score:70},{player:"Bob",score:60}]
+// Output: [{ player: "Alice", score: 70 }, { player: "Bob", score: 60 }]
 
-
-6. Merge orders with customer details (join by id)
+// 6. Merge orders with customer details (join by id)
 const customers = [
   { id: 1, name: "Alice" },
   { id: 2, name: "Bob" }
@@ -57,24 +56,30 @@ const ordersList = [
 //   { orderId: 102, customerId: 2, name: "Bob" }
 // ]
 
-
-7. Find overlapping bookings
+// 7. Find overlapping bookings
 const bookings = [
   { id: 1, start: "2025-08-01", end: "2025-08-05" },
   { id: 2, start: "2025-08-04", end: "2025-08-06" },
   { id: 3, start: "2025-08-10", end: "2025-08-12" }
 ];
-// Output: [[1,2]]  // booking 1 and 2 overlap
+// Output: [[1, 2]]
 
-
-const products = [
+// 8. Group products by price range: Low (≤ 5000), Medium (> 5000 and ≤ 20000), High (> 20000)
+const products2 = [
   { id: 1, name: "Laptop", price: 50000, quantity: 2 },
   { id: 2, name: "Mobile", price: 20000, quantity: 5 },
   { id: 3, name: "Headphones", price: 2000, quantity: 10 },
   { id: 4, name: "Keyboard", price: 1500, quantity: 4 },
   { id: 5, name: "Monitor", price: 12000, quantity: 3 }
 ];
+// Output: { low: [...], medium: [...], high: [...] }
 
-// 8. Group products by price range: Low (≤ 5000) , Medium (> 5000 and ≤ 20000) , High (> 20000)
-	 // output = {low:[] , medium:[],high:[]}
-
+// 9. Total value of medicines per category
+const medicines = [
+  { id: 1, name: "Paracetamol", price: 20, quantity: 10, category: "Pain Relief" },
+  { id: 2, name: "Amoxicillin", price: 50, quantity: 5, category: "Antibiotic" },
+  { id: 3, name: "Cetirizine", price: 15, quantity: 20, category: "Allergy" },
+  { id: 4, name: "Ibuprofen", price: 30, quantity: 7, category: "Pain Relief" },
+  { id: 5, name: "Azithromycin", price: 100, quantity: 3, category: "Antibiotic" }
+];
+// Output: { "Pain Relief": 410, "Antibiotic": 650, "Allergy": 300 }

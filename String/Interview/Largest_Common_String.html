@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html>
-<body>
-	<script>
-		function largestCommonString(arr){
-			let sortedArr = arr.sort();			
-			first = sortedArr[0];
-			last = sortedArr[sortedArr.length-1]
-			let i = 0;
-			while(i<first.length && first.charAt(i)==last.charAt(i) ){
-				i++;
-			}
-		  return first.substring(0,i)
-		}
-		let arr = ['me','men','mexico','media','meat'];
-		
-		result = largestCommonString(arr)
-		console.log(result	)
-	</script>
-</body>
-</html>
+<script>
+  // compare characters column by column across all strings.The moment a mismatch occurs, I return the prefix found so far
+  
+  function longestCommonPrefix(words) {
+    if (words.length === 0) return "";
+
+    const firstWord = words[0];
+    let index = 0;
+
+    for (const char of firstWord) {
+      for (const word of words) {
+        if (word[index] !== char) {
+          return firstWord.slice(0, index);
+        }
+      }
+      index++;
+    }
+
+    return firstWord;
+  }
+
+  let words = ["flower", "flow", "flight"];
+  console.log(longestCommonPrefix(words));
+</script>
