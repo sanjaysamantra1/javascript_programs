@@ -1,3 +1,23 @@
+1. convert array of letters to array of words
+		const inputArr = [ 
+				'b', 'a', 'k', 'e', '',
+				'c', 'a', 'k', 'e', '',
+				'e', 'a', 't'
+				];
+	   output = ['bake','cake','eat'];
+
+const medicines = [
+  { id: 1, name: "Paracetamol", category: "Pain Relief", price: 30, expiry: "2026-01-01" },
+  { id: 2, name: "Amoxicillin", category: "Antibiotic", price: 120, expiry: "2025-12-01" },
+  { id: 3, name: "Cetirizine", category: "Allergy", price: 50, expiry: "2024-05-01" },
+  { id: 4, name: "Ibuprofen", category: "Pain Relief", price: 90, expiry: "2026-03-01" },
+  { id: 5, name: "Cough Syrup", category: "Cold", price: 75, expiry: "2025-08-01" },
+];
+2. Get all expired medicines (compare with today)
+
+3. Group medicines by category and count total stock.
+
+
 // 1. Find the department with the highest average salary
 const employees = [
   { name: "Alice", department: "HR", salary: 40000 },
