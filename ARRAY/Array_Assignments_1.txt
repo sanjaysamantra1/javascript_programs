@@ -36,3 +36,5 @@ let employees = [
 
 10. Find the total salary of all 'Male' employees 
 
+11. Count employees by gender. ex:{male:2,female:3}
+
